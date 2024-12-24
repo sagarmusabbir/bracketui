@@ -1,5 +1,6 @@
 {
   "name": "@thirdbracket/bracketui",
+  "repository": "https://github.com/sagarmusabbir/bracketui.git",
   "version": "1.0.0-alpha.0",
   "private": false,
   "main": "./dist/index.js",
