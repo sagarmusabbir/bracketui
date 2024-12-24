@@ -1,0 +1,15 @@
+{
+  "mode": "pre",
+  "tag": "alpha",
+  "initialVersions": {
+    "@thirdbracket/docs": "0.0.0",
+    "@thirdbracket/bracketui": "0.0.0",
+    "@thirdbracket/eslint-config": "0.0.0",
+    "@thirdbracket/core": "0.0.0",
+    "@thirdbracket/tsconfig": "0.0.0",
+    "@thirdbracket/utils": "0.0.0"
+  },
+  "changesets": [
+    "eighty-colts-cough"
+  ]
+}
