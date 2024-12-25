@@ -14,7 +14,7 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
-     permissions:  
+    permissions:
       contents: write
       pull-requests: write
       id-token: write
@@ -34,15 +34,15 @@ jobs:
           registry-url: "https://registry.npmjs.org"
 
       - name: Install Dependencies
-        
+
         run: npm ci
 
       - name: Build Package
-      
+
         run: npm run build --filter=bracketui^...
 
       - name: Verify Build
-        
+
         working-directory: packages/bracketui
         run: |
           if [ ! -d "dist" ]; then
@@ -54,7 +54,6 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          
           version: npm run version
           publish: npm run release
           commit: "chore(release): version @thirdbracket/bracketui"
@@ -66,7 +65,7 @@ jobs:
 
       - name: Verify Package Publication
         if: steps.changesets.outputs.published == 'true'
-       
+
         working-directory: packages/bracketui
         run: |
           PACKAGE_VERSION=$(node -p "require('./package.json').version")
