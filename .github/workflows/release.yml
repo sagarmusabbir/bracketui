@@ -83,6 +83,7 @@ jobs:
           max-attempts: 3
           wait-seconds: 10 # Wait 10 seconds between retries
         id: verify_publication
+        working-directory: packages/bracketui
         run: |
           PACKAGE_VERSION=$(node -p "require('./package.json').version")
           echo "Verifying publication of version $PACKAGE_VERSION"
