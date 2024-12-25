@@ -67,30 +67,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      # - name: Verify Package Publication
-      #   if: steps.changesets.outputs.published == 'true'
-
-      #   working-directory: packages/bracketui
-      #   run: |
-      #     PACKAGE_VERSION=$(node -p "require('./package.json').version")
-      #     echo "Verifying publication of version $PACKAGE_VERSION"
-      #     npm view @thirdbracket/bracketui@$PACKAGE_VERSION
-
       - name: Verify Package Publication
         if: steps.changesets.outputs.published == 'true'
-        uses: actions/retry@v3
-        with:
-          max-attempts: 3
-          wait-seconds: 10 # Wait 10 seconds between retries
-        id: verify_publication
+
         working-directory: packages/bracketui
         run: |
           PACKAGE_VERSION=$(node -p "require('./package.json').version")
           echo "Verifying publication of version $PACKAGE_VERSION"
-          npm view @thirdbracket/bracketui@$PACKAGE_VERSION || echo "Package might not be available yet due to propagation delays"
-
-      - name: Fail if Publication Failed
-        if: steps.verify_publication.outcome != 'success'
-        run: |
-          echo "Package publication verification failed. Exiting workflow."
-          exit 1
+          sleep 30
+          npm view @thirdbracket/bracketui@$PACKAGE_VERSION
