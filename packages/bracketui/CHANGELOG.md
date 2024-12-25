@@ -1,5 +1,11 @@
 # @thirdbracket/bracketui
 
+## 2.0.0-alpha.2
+
+### Patch Changes
+
+- [`ca60e1f`](https://github.com/sagarmusabbir/bracketui/commit/ca60e1f3ecf9453a4113b374efaa54ceae291b38) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - fix-filter-name
+
 ## 2.0.0-alpha.1
 
 ### Patch Changes
