@@ -29,13 +29,16 @@ jobs:
           registry-url: "https://registry.npmjs.org"
 
       - name: Install Dependencies
+        # Install at root level
         run: npm ci
 
       - name: Build Package
+        # Build using turbo from root
         run: npm run build --filter=bracketui^...
 
       - name: Verify Build
-      working-directory: packages/bracketui
+        # Explicitly set working directory for bracketui package
+        working-directory: packages/bracketui
         run: |
           if [ ! -d "dist" ]; then
             echo "Build failed - dist directory is missing"
@@ -46,6 +49,7 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
+          # These commands run from root
           version: npm run version
           publish: npm run release
           commit: "chore(release): version @thirdbracket/bracketui"
@@ -57,6 +61,8 @@ jobs:
 
       - name: Verify Package Publication
         if: steps.changesets.outputs.published == 'true'
+        # Explicitly set working directory for package.json check
+        working-directory: packages/bracketui
         run: |
           PACKAGE_VERSION=$(node -p "require('./package.json').version")
           echo "Verifying publication of version $PACKAGE_VERSION"
