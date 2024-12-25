@@ -4,7 +4,7 @@ export interface CardProps {
   children: React.ReactNode;
   className?: string;
 }
-//the comment another comment
+//the comment another comment another
 export const Card: React.FC<CardProps> = ({ children, className = "" }) => {
   return (
     <div
