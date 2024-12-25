@@ -39,7 +39,11 @@ jobs:
 
       - name: Build Package
 
-        run: npm run build --filter=bracketui
+        run: npm run build --filter=@thirdbracket/bracketui
+
+      - name: Setup npm authentication
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
 
       - name: Verify Build
 
