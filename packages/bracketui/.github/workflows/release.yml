@@ -1,0 +1,63 @@
+name: Release @thirdbracket/bracketui
+
+on:
+  push:
+    branches:
+      - dev
+    paths:
+      - "packages/bracketui/**"
+      - ".changeset/**"
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Package
+        run: npm run build --filter=bracketui^...
+
+      - name: Verify Build
+      working-directory: packages/bracketui
+        run: |
+          if [ ! -d "dist" ]; then
+            echo "Build failed - dist directory is missing"
+            exit 1
+          fi
+
+      - name: Create GitHub Release
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          version: npm run version
+          publish: npm run release
+          commit: "chore(release): version @thirdbracket/bracketui"
+          title: "chore(release): version @thirdbracket/bracketui"
+          createGithubReleases: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Verify Package Publication
+        if: steps.changesets.outputs.published == 'true'
+        run: |
+          PACKAGE_VERSION=$(node -p "require('./package.json').version")
+          echo "Verifying publication of version $PACKAGE_VERSION"
+          npm view @thirdbracket/bracketui@$PACKAGE_VERSION

@@ -1,7 +1,10 @@
 {
   "name": "@thirdbracket/bracketui",
-  "repository": "https://github.com/sagarmusabbir/bracketui.git",
-  "version": "1.0.0-alpha.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sagarmusabbir/bracketui.git"
+  },
+  "version": "1.0.0",
   "private": false,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
