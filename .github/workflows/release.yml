@@ -39,7 +39,7 @@ jobs:
 
       - name: Build Package
 
-        run: npm run build --filter=bracketui^...
+        run: npm run build --filter=bracketui
 
       - name: Verify Build
 
