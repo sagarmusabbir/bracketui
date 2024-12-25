@@ -1,5 +1,13 @@
 # @thirdbracket/bracketui
 
+## 2.0.0-alpha.3
+
+### Patch Changes
+
+- [`9db6676`](https://github.com/sagarmusabbir/bracketui/commit/9db6676e57663ae97f969683d48de57c945fb5bf) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - more-delay-publish-verification
+
+- [`ba8d4e1`](https://github.com/sagarmusabbir/bracketui/commit/ba8d4e160362f6681ef9e405fb38fa585b116ab6) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - added delay to verify publish
+
 ## 2.0.0-alpha.2
 
 ### Patch Changes
