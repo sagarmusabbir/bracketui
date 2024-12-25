@@ -1,5 +1,13 @@
 # @thirdbracket/bracketui
 
+## 2.0.0-alpha.1
+
+### Patch Changes
+
+- [`e6d1cb2`](https://github.com/sagarmusabbir/bracketui/commit/e6d1cb202ee9ed52bc06c035f1157289b7d7f0d0) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - chore: trigger release
+
+- [`4c7ecff`](https://github.com/sagarmusabbir/bracketui/commit/4c7ecff517216676aedbe1a4fc7aa8cbe2e629a9) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Testing release workflow
+
 ## 2.0.0-alpha.0
 
 ### Major Changes

@@ -10,9 +10,11 @@
     "@thirdbracket/utils": "0.0.0"
   },
   "changesets": [
+    "clever-kiwis-pretend",
     "dry-boxes-kiss",
     "eighty-colts-cough",
     "few-dryers-shop",
+    "lazy-lies-judge",
     "new-jobs-sneeze",
     "young-cooks-tie"
   ]
