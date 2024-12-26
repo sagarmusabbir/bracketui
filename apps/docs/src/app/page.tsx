@@ -10,6 +10,7 @@ export default function Page() {
       </Card>
       <Card className="bg-blue-500">
         <h1>My Card</h1>
+        <Button>Me</Button>
       </Card>
     </>
   );
