@@ -1,0 +1,98 @@
+// export interface ButtonProps {
+//   children: React.ReactNode;
+// }
+
+// export function Button(props: ButtonProps) {
+//   return <button>{props.children}</button>;
+// }
+
+// Button.displayName = "Button";
+
+import { FC } from "react";
+
+type ButtonVariant = "default" | "pill" | "flat" | "outline" | "sharp";
+
+type ButtonColor = "blue" | "green" | "red" | "orange" | "beige" | "gray";
+
+type ButtonSize = "sm" | "md" | "lg" | "xl";
+
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ButtonVariant;
+  color?: ButtonColor;
+  size?: ButtonSize;
+  children: React.ReactNode;
+}
+
+const Button: FC<ButtonProps> = ({
+  variant = "default",
+  color = "beige",
+  size = "md",
+  children,
+
+  ...props
+}) => {
+  const baseClasses = `
+    inline-flex
+    items-center
+    justify-center
+    transition
+    duration-200
+    ease-in-out
+  `;
+
+  const sizeClasses = {
+    sm: "h-8 px-3 text-xs ",
+    md: "px-4 h-10 text-sm ",
+    lg: "h-11 px-6 text-base",
+    xl: "h-12 px-8 text-lg",
+  }[size];
+
+  const variantClasses = {
+    default: "rounded-md bg-opacity-100",
+    pill: "rounded-2xl",
+
+    flat: "rounded-md bg-opacity-70 hover:bg-opacity-75",
+    outline: "rounded-md border  ",
+    sharp: "rounded-none",
+  }[variant];
+
+  const colorClasses = {
+    blue: "bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-500",
+    green: "bg-green-500 text-white hover:bg-green-600 focus:ring-green-500",
+    red: "bg-red-500 text-white hover:bg-red-600 focus:ring-red-500",
+    orange:
+      "bg-orange-500 text-white hover:bg-orange-600 focus:ring-orange-500 border-orange-500",
+
+    beige: "bg-slate-500 text-white hover:bg-slate-600 focus:ring-slate-500",
+    gray: "bg-gray-800 text-white hover:bg-gray-900 focus:ring-gray-700",
+  }[color];
+
+  // Modified colorClasses for outline variant
+  const outlineColorClasses = {
+    blue: "text-blue-600 hover:bg-blue-600 bg-transparent border-blue-600 hover:text-white",
+    green:
+      "text-green-700 hover:bg-green-700 bg-transparent border-green-700 hover:text-white",
+    red: "text-red-600 hover:bg-red-600 hover:text-white bg-transparent border-red-600",
+    orange:
+      "text-orange-600 hover:bg-orange-600 hover:text-white border-orange-600 bg-transparent",
+
+    beige:
+      "text-gray-600 hover:bg-slate-500 hover:text-white border-slate-500 bg-transparent",
+    gray: "text-gray-800 hover:bg-slate-800 hover:text-white border-slate-800 bg-transparent",
+    // ... (Add other colors as needed)
+  };
+
+  return (
+    <button
+      type="button"
+      className={`${baseClasses} ${sizeClasses} ${variantClasses} 
+      ${variant === "outline" ? outlineColorClasses[color] : colorClasses}
+      `}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+};
+
+export default Button;
