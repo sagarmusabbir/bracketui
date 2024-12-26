@@ -52,33 +52,33 @@ const Button: FC<ButtonProps> = ({
     pill: "rounded-2xl",
 
     flat: "rounded-md bg-opacity-70 hover:bg-opacity-75",
-    outline: "rounded-md border  ",
+    outline: "rounded-md border-2",
     sharp: "rounded-none",
   }[variant];
 
   const colorClasses = {
-    blue: "bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-500",
-    green: "bg-green-500 text-white hover:bg-green-600 focus:ring-green-500",
-    red: "bg-red-500 text-white hover:bg-red-600 focus:ring-red-500",
+    blue: "bg-blue-700 text-white hover:bg-blue-800 focus:ring-blue-700",
+    green: "bg-green-700 text-white hover:bg-green-800 focus:ring-green-700",
+    red: "bg-red-700 text-white hover:bg-red-800 focus:ring-red-700",
     orange:
-      "bg-orange-500 text-white hover:bg-orange-600 focus:ring-orange-500 border-orange-500",
+      "bg-orange-700 text-white hover:bg-orange-700 focus:ring-orange-800 border-orange-700",
 
-    beige: "bg-slate-500 text-white hover:bg-slate-600 focus:ring-slate-500",
-    gray: "bg-gray-800 text-white hover:bg-gray-900 focus:ring-gray-700",
+    beige: "bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-700",
+    gray: "bg-black text-white hover:bg-gray-900 focus:ring-black",
   }[color];
 
   // Modified colorClasses for outline variant
   const outlineColorClasses = {
-    blue: "text-blue-600 hover:bg-blue-600 bg-transparent border-blue-600 hover:text-white",
+    blue: "text-blue-700 hover:bg-blue-700 bg-transparent border-blue-700 hover:text-white",
     green:
       "text-green-700 hover:bg-green-700 bg-transparent border-green-700 hover:text-white",
-    red: "text-red-600 hover:bg-red-600 hover:text-white bg-transparent border-red-600",
+    red: "text-red-700 hover:bg-red-700 hover:text-white bg-transparent border-red-700",
     orange:
-      "text-orange-600 hover:bg-orange-600 hover:text-white border-orange-600 bg-transparent",
+      "text-orange-700 hover:bg-orange-700 hover:text-white border-orange-700 bg-transparent",
 
     beige:
-      "text-gray-600 hover:bg-slate-500 hover:text-white border-slate-500 bg-transparent",
-    gray: "text-gray-800 hover:bg-slate-800 hover:text-white border-slate-800 bg-transparent",
+      "text-gray-700 hover:bg-slate-700 hover:text-white border-slate-500 bg-transparent",
+    gray: "text-gray-900 hover:bg-slate-900 hover:text-white border-slate-900 bg-transparent",
     // ... (Add other colors as needed)
   };
 
