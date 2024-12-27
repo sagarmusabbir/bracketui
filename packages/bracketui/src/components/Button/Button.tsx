@@ -12,7 +12,7 @@ import { FC } from "react";
 
 type ButtonVariant = "default" | "pill" | "flat" | "outline" | "sharp";
 
-type ButtonColor = "blue" | "green" | "red" | "orange" | "beige" | "gray";
+type ButtonColor = "blue" | "green" | "red" | "orange" | "default" | "gray";
 
 type ButtonSize = "sm" | "md" | "lg" | "xl";
 
@@ -25,7 +25,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button: FC<ButtonProps> = ({
   variant = "default",
-  color = "beige",
+  color = "default",
   size = "md",
   children,
 
@@ -37,7 +37,8 @@ const Button: FC<ButtonProps> = ({
     justify-center
     transition
     duration-200
-    ease-in-out
+    ease-in-out 
+    focus:outline-none font-medium
   `;
 
   const sizeClasses = {
@@ -48,23 +49,23 @@ const Button: FC<ButtonProps> = ({
   }[size];
 
   const variantClasses = {
-    default: "rounded-md bg-opacity-100",
-    pill: "rounded-2xl",
+    default: "rounded-md ",
+    pill: "rounded-3xl",
 
-    flat: "rounded-md bg-opacity-70 hover:bg-opacity-75",
+    flat: "rounded-md bg-opacity-90 border backdrop-blur-lg hover:bg-opacity-95",
     outline: "rounded-md border-2",
     sharp: "rounded-none",
   }[variant];
 
   const colorClasses = {
-    blue: "bg-blue-700 text-white hover:bg-blue-800 focus:ring-blue-700",
+    blue: "bg-blue-900 text-white hover:bg-blue-800 focus:ring-blue-900",
     green: "bg-green-700 text-white hover:bg-green-800 focus:ring-green-700",
     red: "bg-red-700 text-white hover:bg-red-800 focus:ring-red-700",
     orange:
       "bg-orange-700 text-white hover:bg-orange-700 focus:ring-orange-800 border-orange-700",
 
-    beige: "bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-700",
-    gray: "bg-black text-white hover:bg-gray-900 focus:ring-black",
+    default: "bg-gray-900 text-white hover:bg-gray-950 focus:ring-gray-900",
+    gray: "bg-gray-200 text-black hover:bg-gray-300 focus:ring-gray-200",
   }[color];
 
   // Modified colorClasses for outline variant
@@ -76,8 +77,8 @@ const Button: FC<ButtonProps> = ({
     orange:
       "text-orange-700 hover:bg-orange-700 hover:text-white border-orange-700 bg-transparent",
 
-    beige:
-      "text-gray-700 hover:bg-slate-700 hover:text-white border-slate-500 bg-transparent",
+    default:
+      "text-black hover:bg-black hover:text-white border-black bg-transparent",
     gray: "text-gray-900 hover:bg-slate-900 hover:text-white border-slate-900 bg-transparent",
     // ... (Add other colors as needed)
   };
