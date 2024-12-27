@@ -17,6 +17,12 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "tailwind.config.js", // Add this line
-    "postcss.config.js" // Add this line
+    "postcss.config.js", // Add this line
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts",
+    "next.config.mjs",
+    ".next/types/**/*.ts",
+    "eslint.config.js"
   ]
 }
