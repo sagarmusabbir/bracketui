@@ -27,24 +27,25 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "dependencies": {
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "react-router": "^7.1.1"
   },
   "devDependencies": {
+    "@thirdbracket/eslint-config": "*",
     "@thirdbracket/tsconfig": "*",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
+    "autoprefixer": "^10.4.17",
     "eslint": "^8.57.0",
-    "@thirdbracket/eslint-config": "*",
-    "tsup": "^8.0.2",
-    "typescript": "5.5.4",
-    "tailwindcss": "^3.4.1",
     "postcss": "^8.4.35",
-    "autoprefixer": "^10.4.17"
+    "tailwindcss": "^3.4.1",
+    "tsup": "^8.0.2",
+    "typescript": "5.5.4"
   },
   "peerDependencies": {
-    "tailwindcss": "^3.4.1",
+    "autoprefixer": "^10.4.17",
     "postcss": "^8.4.35",
-    "autoprefixer": "^10.4.17"
+    "tailwindcss": "^3.4.1"
   },
   "publishConfig": {
     "access": "public"

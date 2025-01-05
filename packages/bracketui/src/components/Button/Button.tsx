@@ -8,6 +8,8 @@
 
 // Button.displayName = "Button";
 
+"use client";
+
 import { FC } from "react";
 
 type ButtonVariant = "default" | "pill" | "flat" | "outline" | "sharp";
@@ -89,6 +91,9 @@ const Button: FC<ButtonProps> = ({
       className={`${baseClasses} ${sizeClasses} ${variantClasses} 
       ${variant === "outline" ? outlineColorClasses[color] : colorClasses}
       `}
+      onClick={() => {
+        alert("Button clicked");
+      }}
       {...props}
     >
       {children}

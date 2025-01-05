@@ -1,4 +1,4 @@
-import { Button, Card } from "@thirdbracket/bracketui";
+import { Button, Card, Navbar } from "@thirdbracket/bracketui";
 
 export default function Page() {
   return (
@@ -11,7 +11,6 @@ export default function Page() {
         </h2>
         <div className="flex flex-wrap gap-4 items-baseline">
           <h3 className="text-3xl">Vairients:</h3>
-
           <Button variant="default" color="default">
             Click me
           </Button>
@@ -26,6 +25,13 @@ export default function Page() {
             Click me
           </Button>
           <Button variant="sharp" color="default">
+            Click me
+          </Button>
+
+          <Button variant="default" color="default">
+            Click me
+          </Button>
+          <Button variant="pill" color="default">
             Click me
           </Button>
         </div>
@@ -80,6 +86,7 @@ export default function Page() {
             Collection of useful tools and generators for Tailwind to create,
             design and customize all kind of web components using a
           </Card>
+          <Navbar brandName="My Navbar">My Navbar</Navbar>
         </div>
       </section>
     </main>
