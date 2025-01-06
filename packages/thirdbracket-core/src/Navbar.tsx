@@ -1,31 +1,34 @@
 import { FC, useState } from "react";
 
 export interface NavbarProps {
-  brandName: string;
-  image?: string;
+  brand: { name: string; logo?: string };
+
   children?: React.ReactNode;
 }
 
 const Navbar: FC<NavbarProps> = ({
-  brandName = "My Website",
-  image,
+  brand,
+
   children,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-
   return (
-    <nav className="bg-gray-200 p-4">
-      <div className="container mx-auto flex justify-between items-center h-screen">
-        <div className="flex shrink-0 items-center justify-between text-gray-900">
-          {image && (
+    <nav className="bg-black p-4  shadow-md">
+      <div className="mx-auto  flex justify-between items-center ">
+        {/* <div className="flex-shrink-0"> */}
+        <a href="#" className=" flex items-center gap-0  shrink-0">
+          {brand.logo && (
             <img
-              src={image}
-              alt="Logo"
-              className="w-full h-auto object-cover p-4"
+              src={brand.logo}
+              alt="Logo Image"
+              className="h-8 object-cover   p-2"
             />
           )}
-          <h1>{brandName}</h1>
-        </div>
+
+          <span className="text-white text-xl font-semibold">{brand.name}</span>
+        </a>
+        {/* </div> */}
+
         {/* Hamburger Menu for mobile */}
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -67,15 +70,15 @@ const Navbar: FC<NavbarProps> = ({
 
         {/* Navigation Links */}
         <div
-          className={`w-full  md:flex md:items-center md:w-auto 
+          className={`w-full h-full    md:flex md:items-center md:w-auto  
                     md:space-x-4 absolute md:relative top-16 left-0 md:top-0 
-                    md:left-0 p-4 md:p-0 bg-green-600 md:bg-transparent 
+                    md:left-0 p-4 md:p-0 bg-gray-900 md:bg-transparent 
                     transition-all duration-500 ease-in-out transform ${
                       isOpen ? "translate-x-0" : "translate-x-full"
                     } md:translate-x-0`}
         >
           <a
-            href="#home"
+            href="#"
             className="block py-2 px-4 text-white hover:text-gray-200
                                    md:inline-block"
           >
@@ -95,7 +98,6 @@ const Navbar: FC<NavbarProps> = ({
           >
             Contact
           </a>
-
           {children}
         </div>
       </div>

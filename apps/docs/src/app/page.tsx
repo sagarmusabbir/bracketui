@@ -1,4 +1,4 @@
-import { Button, Card, Navbar } from "@thirdbracket/bracketui";
+import { Button, Card } from "@thirdbracket/core";
 
 export default function Page() {
   return (
@@ -11,51 +11,37 @@ export default function Page() {
         </h2>
         <div className="flex flex-wrap gap-4 items-baseline">
           <h3 className="text-3xl">Vairients:</h3>
-          <Button variant="default" color="default">
-            Click me
-          </Button>
-          <Button variant="pill" color="default">
-            Click me
-          </Button>
+          <Button>Click me</Button>
+          <Button>Click me</Button>
 
-          <Button variant="flat" color="default">
-            Click me
-          </Button>
-          <Button variant="outline" color="default">
-            Click me
-          </Button>
-          <Button variant="sharp" color="default">
-            Click me
-          </Button>
+          <Button>Click me</Button>
+          <Button>Click me</Button>
+          <Button>Click me</Button>
 
-          <Button variant="default" color="default">
-            Click me
-          </Button>
-          <Button variant="pill" color="default">
-            Click me
-          </Button>
+          <Button>Click me</Button>
+          <Button>Click me</Button>
         </div>
         <div className="flex flex-wrap gap-4 items-baseline">
           <h3 className="text-3xl">Sizes:</h3>
-          <Button size="sm">Click me</Button>
+          <Button>Click me</Button>
 
-          <Button size="md">Click me</Button>
-          <Button size="lg">Click me</Button>
-          <Button size="xl">Click me</Button>
+          <Button>Click me</Button>
+          <Button>Click me</Button>
+          <Button>Click me</Button>
         </div>
         <div className="flex flex-wrap gap-4 items-baseline">
           <h3 className="text-3xl">Colors:</h3>
 
-          <Button color="default">Click me</Button>
-          <Button color="blue">Click me</Button>
+          <Button>Click me</Button>
+          <Button>Click me</Button>
 
-          <Button color="green">Click me</Button>
-          <Button color="red">Click me</Button>
-          <Button color="orange">Click me</Button>
-          <Button color="gray">Click me</Button>
+          <Button>Click me</Button>
+          <Button>Click me</Button>
+          <Button>Click me</Button>
+          <Button>Click me</Button>
         </div>
       </section>
-      <section className="space-y-8 py-16 ">
+      <section className="px-4 space-y-8 py-16 ">
         <h1 className="text-5xl font-semibold text-center">Feature</h1>
         <h2 className="text-2xl  text-center max-w-2xl mx-auto">
           It is a long established fact that a reader will be distracted by the
@@ -86,7 +72,6 @@ export default function Page() {
             Collection of useful tools and generators for Tailwind to create,
             design and customize all kind of web components using a
           </Card>
-          <Navbar brandName="My Navbar">My Navbar</Navbar>
         </div>
       </section>
     </main>

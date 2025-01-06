@@ -1,31 +1,17 @@
-import { FC, useState } from "react";
+"use client";
+import React, { useState } from "react";
 
-export interface NavbarProps {
-  brandName: string;
-  image?: string;
-  children?: React.ReactNode;
-}
-
-const Navbar: FC<NavbarProps> = ({
-  brandName = "My Website",
-  image,
-  children,
-}) => {
+const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-200 p-4">
-      <div className="container mx-auto flex justify-between items-center h-screen">
-        <div className="flex shrink-0 items-center justify-between text-gray-900">
-          {image && (
-            <img
-              src={image}
-              alt="Logo"
-              className="w-full h-auto object-cover p-4"
-            />
-          )}
-          <h1>{brandName}</h1>
-        </div>
+    <nav className="bg-black-600 p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        {/* Brand Name */}
+        <a href="/" className="text-white text-lg font-semibold">
+          GeeksforGeeks
+        </a>
+
         {/* Hamburger Menu for mobile */}
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -67,9 +53,9 @@ const Navbar: FC<NavbarProps> = ({
 
         {/* Navigation Links */}
         <div
-          className={`w-full  md:flex md:items-center md:w-auto 
-                    md:space-x-4 absolute md:relative top-16 left-0 md:top-0 
-                    md:left-0 p-4 md:p-0 bg-green-600 md:bg-transparent 
+          className={`w-full md:flex md:items-center md:w-auto
+                    md:space-x-4 absolute md:relative top-16 left-0 md:top-0
+                    md:left-0 p-4 md:p-0 bg-green-600 md:bg-transparent
                     transition-all duration-500 ease-in-out transform ${
                       isOpen ? "translate-x-0" : "translate-x-full"
                     } md:translate-x-0`}
@@ -90,17 +76,15 @@ const Navbar: FC<NavbarProps> = ({
           </a>
           <a
             href="#contact"
-            className="block py-2 px-4 text-white hover:text-gray-200 
+            className="block py-2 px-4 text-white hover:text-gray-200
                                    md:inline-block"
           >
             Contact
           </a>
-
-          {children}
         </div>
       </div>
     </nav>
   );
 };
 
-export default Navbar;
+export default Nav;
