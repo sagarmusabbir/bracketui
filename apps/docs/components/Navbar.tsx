@@ -1,90 +1,70 @@
+// export default Navbar;
 "use client";
 import React, { useState } from "react";
 
-const Nav = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <nav className="bg-black-600 p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        {/* Brand Name */}
-        <a href="/" className="text-white text-lg font-semibold">
-          GeeksforGeeks
-        </a>
-
-        {/* Hamburger Menu for mobile */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="text-white focus:outline-none md:hidden"
-        >
-          {/* Hamburger Icon and Close Icon */}
-          {isOpen ? (
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          ) : (
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
-          )}
-        </button>
-
-        {/* Navigation Links */}
-        <div
-          className={`w-full md:flex md:items-center md:w-auto
-                    md:space-x-4 absolute md:relative top-16 left-0 md:top-0
-                    md:left-0 p-4 md:p-0 bg-green-600 md:bg-transparent
-                    transition-all duration-500 ease-in-out transform ${
-                      isOpen ? "translate-x-0" : "translate-x-full"
-                    } md:translate-x-0`}
-        >
-          <a
-            href="#home"
-            className="block py-2 px-4 text-white hover:text-gray-200
-                                   md:inline-block"
-          >
-            Home
-          </a>
-          <a
-            href="#about"
-            className="block py-2 px-4 text-white hover:text-gray-200
-                                   md:inline-block"
-          >
-            About
-          </a>
-          <a
-            href="#contact"
-            className="block py-2 px-4 text-white hover:text-gray-200
-                                   md:inline-block"
-          >
-            Contact
+    <nav className="bg-white py-2 px-4   backdrop-blur-2xl bg-opacity-80 shadow-sm text-black">
+      <div className=" mx-auto flex justify-between items-center ">
+        <div className="flex items-center ">
+          <a href="#" className=" font-medium text-xl">
+            BRACKET<strong>UI</strong>
           </a>
         </div>
+        <div className="hidden md:flex space-x-4">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+        <div className="md:hidden">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-black focus:outline-none"
+          >
+            <svg
+              className="h-6 w-6 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              {isOpen ? (
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M4 6h16v1H4V6zm16 4H4v1h16v-1zm-16 5h16v1H4v-1z"
+                />
+              ) : (
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M3 18v-2h18v2H3zm0-7h18v2H3v-2zm0-7h18v2H3V4z"
+                />
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
+      {/* Mobile Menu */}
+      {isOpen && (
+        <ul className="md:hidden mt-4 h-screen text-black   space-y-4 py-2  ">
+          <li className="py-2 ">
+            <a href="#" className="block  ">
+              Home
+            </a>
+          </li>
+          <li className="py-2  ">
+            <a href="#" className="block  ">
+              About
+            </a>
+          </li>
+          <li className="py-2  ">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      )}
     </nav>
   );
 };
 
-export default Nav;
+export default Navbar;

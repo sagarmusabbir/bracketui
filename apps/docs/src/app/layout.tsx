@@ -1,10 +1,12 @@
 // import { Card, Test } from "@thirdbracket/bracketui";
 
 // import { Navbar } from "@thirdbracket/core";
+
+import Navbar from "../../components/Navbar";
 import "./globals.css";
 import { GeistSans } from "geist/font/sans";
 
-import { Navbar } from "@thirdbracket/core";
+// import { Navbar } from "@thirdbracket/core";
 
 export default function RootLayout({
   children,
@@ -12,14 +14,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${GeistSans.className} antialiased `}>
+    <html lang="en" className={`${GeistSans.className} antialiased`}>
       <body>
-        <Navbar
+        {/* <Navbar
           brand={{
             name: "UI",
             logo: "/logo.svg",
           }}
-        ></Navbar>
+        ></Navbar> */}
+        <Navbar />
 
         {/* <Nav /> */}
 
