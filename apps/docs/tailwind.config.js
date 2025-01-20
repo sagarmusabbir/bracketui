@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
     // Path to your component library
     "../../packages/bracketui/src/**/*.{js,ts,jsx,tsx}", // During development
 

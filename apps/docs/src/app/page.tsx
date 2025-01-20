@@ -2,7 +2,7 @@ import { Button, Card } from "@thirdbracket/core";
 
 export default function Page() {
   return (
-    <main className="grid grid-rows-[screen_1fr_screen] items-center justify-items-center min-h-screen p-4  gap-16 divide-y">
+    <main className="grid grid-rows-[screen_1fr_screen] items-center justify-items-center min-h-screen p-4  gap-16 divide-y space-y-8 lg:space-y-12  m-auto">
       <section className="space-y-8 py-16 ">
         <h1 className="text-5xl font-semibold text-center ">Buttons</h1>
         <h2 className="text-2xl  text-center max-w-2xl mx-auto">

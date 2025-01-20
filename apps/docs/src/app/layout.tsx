@@ -2,7 +2,8 @@
 
 // import { Navbar } from "@thirdbracket/core";
 
-import Navbar from "../../components/Navbar";
+import NavBar from "./Nav";
+
 import "./globals.css";
 import { GeistSans } from "geist/font/sans";
 
@@ -22,11 +23,12 @@ export default function RootLayout({
             logo: "/logo.svg",
           }}
         ></Navbar> */}
-        <Navbar />
+        {/* <Navbar /> */}
+
+        <NavBar />
 
         {/* <Nav /> */}
-
-        {children}
+        <main className="">{children}</main>
       </body>
     </html>
   );
