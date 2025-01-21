@@ -1,79 +1,107 @@
-import { Button, Card } from "@thirdbracket/core";
+// import { Button, Card } from "@thirdbracket/core";
+
+import { Button, Card } from "@thirdbracket/bracketui";
 
 export default function Page() {
   return (
-    <main className="grid grid-rows-[screen_1fr_screen] items-center justify-items-center min-h-screen p-4  gap-16 divide-y space-y-8 lg:space-y-12  m-auto">
-      <section className="space-y-8 py-16 ">
-        <h1 className="text-5xl font-semibold text-center ">Buttons</h1>
-        <h2 className="text-2xl  text-center max-w-2xl mx-auto">
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout.
-        </h2>
-        <div className="flex flex-wrap gap-4 items-baseline">
-          <h3 className="text-3xl">Vairients:</h3>
-          <Button>Click me</Button>
-          <Button>Click me</Button>
+    <main>
+      <div>
+        <section className="container px-4 py-8 mx-auto text-center lg:py-16 lg:px-12">
+          <h1 className="p-4 md:p-8 mt-16  font-extrabold text-center text-transparent text-4xl md:text-5xl lg:text-6xl leading-none from-gray-800 via-slate-700 to-gray-950 bg-gradient-to-r bg-clip-text border border-dashed">
+            The Minimal UI Component Library for React
+          </h1>
+          <p className="p-4 md:p-8 text-base md:text-lg lg:text-xl  text-center max-w-2xl mx-auto border-x border-b  border-dashed text-gray-700">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout.
+          </p>
+          <div className="flex flex-wrap gap-2 items-center mx-auto justify-center py-8 ">
+            <div className="hidden lg:flex">
+              <Button size="xl">Get Started</Button>
+            </div>
+            <div className="hidden lg:flex">
+              <Button size="xl">Our Components</Button>
+            </div>
+            <div className="lg:hidden ">
+              <Button size="lg">Get Started</Button>
+            </div>
+            <div className="lg:hidden">
+              <Button size="lg">Our Components</Button>
+            </div>
+          </div>
+        </section>
+        <section className="container px-4 py-8 mx-auto text-center lg:py-16 lg:px-12">
+          <div className="lg:flex items-center justify-center gap-4 space-y-2 lg:space-y-0">
+            <h1 className="   font-extrabold text-center text-transparent text-2xl md:text-3xl lg:text-4xl leading-none from-gray-800 via-slate-700 to-gray-950 bg-gradient-to-r bg-clip-text ">
+              Whats in Bracket UI?
+            </h1>
+            <p className=" text-base md:text-lg lg:text-xl  text-center    text-gray-700">
+              It is a long established fact that a reader will be distracted
+            </p>
+          </div>
 
-          <Button>Click me</Button>
-          <Button>Click me</Button>
-          <Button>Click me</Button>
+          <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch mx-auto justify-center py-8 ">
+            <div className="col-span-2 grid grid-cols-2 gap-4">
+              <Card header="Main Feature">
+                It is a long established fact that a reader will be distracted.
+              </Card>
 
-          <Button>Click me</Button>
-          <Button>Click me</Button>
-        </div>
-        <div className="flex flex-wrap gap-4 items-baseline">
-          <h3 className="text-3xl">Sizes:</h3>
-          <Button>Click me</Button>
+              <Card header="Card">
+                It is a long established fact that a reader will be distracted.
+              </Card>
+              <Card header="Main Feature">
+                It is a long established fact that a reader will be distracted.
+              </Card>
 
-          <Button>Click me</Button>
-          <Button>Click me</Button>
-          <Button>Click me</Button>
-        </div>
-        <div className="flex flex-wrap gap-4 items-baseline">
-          <h3 className="text-3xl">Colors:</h3>
+              <Card header="Card">
+                It is a long established fact that a reader will be distracted.
+              </Card>
+            </div>
+            <div>
+              <Card image="./button.svg" header="Badge">
+                It is a long established fact that a reader will be distracted.
+              </Card>
+            </div>
+          </div>
+        </section>
+        <section className="container px-4 py-8 mx-auto text-center lg:py-16 lg:px-12">
+          <h1 className="p-8   font-extrabold text-center text-transparent text-2xl md:text-3xl lg:text-4xl leading-none from-gray-800 via-slate-700 to-gray-950 bg-gradient-to-r bg-clip-text border border-dashed">
+            Our Components
+          </h1>
 
-          <Button>Click me</Button>
-          <Button>Click me</Button>
-
-          <Button>Click me</Button>
-          <Button>Click me</Button>
-          <Button>Click me</Button>
-          <Button>Click me</Button>
-        </div>
-      </section>
-      <section className="px-4 space-y-8 py-16 ">
-        <h1 className="text-5xl font-semibold text-center">Feature</h1>
-        <h2 className="text-2xl  text-center max-w-2xl mx-auto">
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout.
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3   grid-flow-row gap-4">
-          <Card header="NoCard" image="./card3.svg">
-            Automatic Image, Font, and Script Optimizations for improved UX and
-            Core Web Vitals.
-          </Card>
-          <Card header="NoCard" image="./card2.svg">
-            Automatic Image, Font, and Script Optimizations for improved UX and
-            Core Web Vitals.
-          </Card>
-          <Card header="NoCard" image="./card4.svg">
-            Automatic Image, Font, and Script Optimizations for improved UX and
-            Core Web Vitals.
-          </Card>
-          <Card header="My Card Random">
-            Automatic Image, Font, and Script Optimizations for improved UX and
-            Core Web Vitals.
-          </Card>
-          <Card header="Another Card">
-            Free Download Activity 54 SVG vector file in monocolor and
-            multicolor type for Sketch and Figma
-          </Card>
-          <Card header="Card">
-            Collection of useful tools and generators for Tailwind to create,
-            design and customize all kind of web components using a
-          </Card>
-        </div>
-      </section>
+          <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4 items-center mx-auto justify-center py-8 ">
+            <div>
+              <Card image="./button.svg" header="Button">
+                It is a long established fact that a reader will be distracted.
+              </Card>
+            </div>
+            <div>
+              <Card image="./button.svg" header="Card">
+                It is a long established fact that a reader will be distracted.
+              </Card>
+            </div>
+            <div>
+              <Card image="./button.svg" header="Navbar">
+                It is a long established fact that a reader will be distracted.
+              </Card>
+            </div>
+            <div>
+              <Card image="./button.svg" header="Footer">
+                It is a long established fact that a reader will be distracted.
+              </Card>
+            </div>
+            <div>
+              <Card image="./button.svg" header="Badge">
+                It is a long established fact that a reader will be distracted.
+              </Card>
+            </div>
+            <div>
+              <Card image="./button.svg" header="Form">
+                It is a long established fact that a reader will be distracted.
+              </Card>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
   );
 }

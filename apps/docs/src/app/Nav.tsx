@@ -36,9 +36,9 @@ const NavBar = () => {
                 <Image
                   src="./g1.svg"
                   alt=""
-                  width={113}
-                  height={30}
-                  className="w-20 h-full opacity-80 group-hover:opacity-100"
+                  width={206}
+                  height={40}
+                  className="w-24 h-full opacity-80 group-hover:opacity-100"
                 ></Image>
 
                 <span className="text-md   border-gray-950 bg-gray-950 rounded-sm px-1  ml-1  font-extrabold bg-opacity-85 text-white group-hover:bg-opacity-100">

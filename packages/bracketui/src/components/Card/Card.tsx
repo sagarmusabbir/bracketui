@@ -18,16 +18,16 @@ const Card: FC<CardProps> = ({
   children,
 }) => {
   return (
-    <div className="rounded-lg bg-gray-400 border overflow-hidden border-gray-200 p-4 shadow-md">
+    <div className="rounded-lg  border overflow-hidden  p-4 shadow-sm bg-gray-100  bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10  border-gray-100">
       {image && (
         <img
           src={image}
           alt="Card Image"
-          className="w-full h-auto object-cover p-4"
+          className="size-40 object-cover p-4 mx-auto"
         />
       )}
-      <div className="px-2">
-        <h2 className="text-xl font-bold mb-2 ">{header}</h2>
+      <div className="space-y-1 text-left">
+        <h2 className="text-xl font-bold  ">{header}</h2>
         <p className="text-gray-600">{children}</p>
       </div>
     </div>
