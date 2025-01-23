@@ -2,7 +2,7 @@
 
 // import { Navbar } from "@thirdbracket/core";
 
-import Header from "../../components/Navbar";
+import Header from "./Navbar";
 
 import "./globals.css";
 import { GeistSans } from "geist/font/sans";
@@ -18,9 +18,10 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.className} antialiased`}>
       <body>
         {/* <NavBar /> */}
+
         <Header />
 
-        <main className="">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );

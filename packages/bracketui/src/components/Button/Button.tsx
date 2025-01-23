@@ -5,11 +5,20 @@ export interface ButtonProps {
   size?: "sm" | "md" | "lg" | "xl";
   href?: string;
   onClick?: () => MouseEventHandler<HTMLButtonElement>;
+  variant?: "default" | "outline";
 }
 
-const Button: FC<ButtonProps> = ({ children, size = "lg", href, onClick }) => {
-  const buttonClasses = `
-    inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-gray-800 via-slate-700 to-gray-950   hover:opacity-90 transition-opacity ease-in-out duration-300 text-white font-medium  tracking-tight ${
+const Button: FC<ButtonProps> = ({
+  children,
+  size = "lg",
+  href,
+  onClick,
+  variant = "default",
+}) => {
+  const baseClasses = `
+   inline-flex items-center justify-center rounded-lg 
+    transition-all ease-in-out duration-300 
+    font-medium tracking-tight ${
       {
         sm: "px-3 h-8 text-xs",
         md: "px-4 h-10 text-sm",
@@ -17,6 +26,15 @@ const Button: FC<ButtonProps> = ({ children, size = "lg", href, onClick }) => {
         xl: "px-8 h-12 text-lg",
       }[size]
     }`;
+
+  const varientClasses = {
+    default:
+      "bg-gradient-to-r from-gray-800 via-slate-700/90 to-gray-800 text-white hover:opacity-90",
+    outline:
+      "border-2 border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white",
+  }[variant];
+
+  const buttonClasses = `${baseClasses} ${varientClasses}`;
 
   if (href) {
     return (
