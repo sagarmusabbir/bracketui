@@ -29,9 +29,9 @@ const Button: FC<ButtonProps> = ({
 
   const varientClasses = {
     default:
-      "bg-gradient-to-r from-gray-800 via-slate-700/90 to-gray-800 text-white hover:opacity-90",
+      "bg-gray-950 dark:bg-slate-100 text-white dark:text-gray-950 hover:opacity-90",
     outline:
-      "border-2 border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white",
+      "border-2 border-gray-950 dark:border-slate-100 text-gray-950 dark:text-white hover:bg-gray-950 dark:hover:bg-slate-100 hover:text-white dark:hover:text-gray-950",
   }[variant];
 
   const buttonClasses = `${baseClasses} ${varientClasses}`;

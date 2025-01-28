@@ -4,13 +4,16 @@ import { Button, Card } from "@thirdbracket/bracketui";
 
 export default function Page() {
   return (
-    <main>
+    <main className="bg-white dark:bg-gray-950 text-gray-950 dark:text-white">
       <div>
         <section className="container  px-4 py-8 mx-auto text-center lg:py-16 lg:px-12">
-          <h1 className="p-4 md:p-8 mt-16  font-extrabold text-center text-transparent text-4xl md:text-5xl lg:text-6xl leading-none from-gray-900 via-slate-700/90  to-gray-900 bg-gradient-to-r bg-clip-text ">
+          <h1
+            className="p-4 md:p-8 mt-16  font-extrabold text-center text-transparent text-4xl md:text-5xl lg:text-6xl leading-none from-black
+          dark:from-slate-50  via-gray-800 dark:via-white to-gray-950 dark:to-slate-50 bg-gradient-to-r bg-clip-text "
+          >
             The Minimal UI Component Library for React
           </h1>
-          <p className="p-4 md:p-8 text-base md:text-lg lg:text-xl  text-center max-w-2xl mx-auto  text-gray-700">
+          <p className="p-4 md:p-8 text-base md:text-lg lg:text-xl  text-center max-w-2xl mx-auto  text-gray-700 dark:text-gray-300">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout.
           </p>
@@ -36,10 +39,10 @@ export default function Page() {
 
         <section className="container px-4 py-8 mx-auto text-center lg:py-16 lg:px-12">
           <div className="lg:flex items-center justify-center gap-4 space-y-2 lg:space-y-0">
-            <h1 className="   font-extrabold text-center text-transparent text-2xl md:text-3xl lg:text-4xl leading-none from-gray-800 via-slate-700 to-gray-950 bg-gradient-to-r bg-clip-text ">
+            <h1 className="   font-extrabold text-center text-transparent text-2xl md:text-3xl lg:text-4xl leading-none from-gray-950 dark:from-gray-50 via-gray-800 dark:via-slate-50 to-gray-950 dark:to-gray-50 bg-gradient-to-r bg-clip-text ">
               Whats in Bracket UI?
             </h1>
-            <p className=" text-base md:text-lg lg:text-xl  text-center    text-gray-700">
+            <p className=" text-base md:text-lg lg:text-xl  text-center    text-gray-600 dark:text-gray-500">
               It is a long established fact that a reader will be distracted
             </p>
           </div>
@@ -69,9 +72,12 @@ export default function Page() {
           </div>
         </section>
         <section className="container px-4 py-8 mx-auto text-center lg:py-16 lg:px-12">
-          <h1 className="p-8   font-extrabold text-center text-transparent text-2xl md:text-3xl lg:text-4xl leading-none from-gray-800 via-slate-700 to-gray-950 bg-gradient-to-r bg-clip-text border border-dashed">
+          <h1 className="   font-extrabold text-center text-transparent text-2xl md:text-3xl lg:text-4xl leading-none from-gray-950 dark:from-gray-50 via-gray-800 dark:via-slate-50 to-gray-950 dark:to-gray-50 bg-gradient-to-r bg-clip-text  ">
             Our Components
           </h1>
+          <p className=" text-base md:text-lg lg:text-xl  text-center    text-gray-600 dark:text-gray-500 mt-2">
+            It is a long established fact that a reader will be distracted
+          </p>
 
           <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4 items-center mx-auto justify-center py-8 ">
             <div>
