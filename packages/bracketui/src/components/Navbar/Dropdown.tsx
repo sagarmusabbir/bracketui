@@ -175,9 +175,10 @@ import { FC, useState, useEffect } from "react";
 export interface DropdownProps {
   label: string;
   children?: React.ReactNode;
+  className?: string;
 }
 
-const Dropdown: FC<DropdownProps> = ({ label, children }) => {
+const Dropdown: FC<DropdownProps> = ({ label, children, className }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   // Close dropdown when clicking outside (Desktop Only)
@@ -218,7 +219,7 @@ const Dropdown: FC<DropdownProps> = ({ label, children }) => {
 
       {/* Dropdown Menu */}
       <div
-        className={`transition-all duration-200 overflow-hidden space-y-2 ${
+        className={`${className} transition-all duration-200 overflow-hidden  ${
           isOpen ? "block" : "hidden"
         } md:absolute md:left-0 md:mt-2 md:w-48 md:bg-white md:dark:bg-gray-900 md:shadow-md md:rounded-md md:z-50`}
       >

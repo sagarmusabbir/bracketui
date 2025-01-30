@@ -329,7 +329,7 @@ const Navbar: FC<NavbarProps> = ({ children }) => {
               <Navlink href="#">About</Navlink>
 
               {/* Mobile Services Dropdown */}
-              <Dropdown label="Services">
+              <Dropdown label="Services" className="space-y-2 py-2">
                 <Navlink href="#" isDropdownItem>
                   Web Development
                 </Navlink>
