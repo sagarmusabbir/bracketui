@@ -200,11 +200,11 @@ const Dropdown: FC<DropdownProps> = ({ label, children }) => {
       {/* Trigger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between w-full py-2 px-4 gap-2 text-gray-950 dark:text-white opacity-80 hover:opacity-100"
+        className="flex items-center justify-between w-full py-2 px-4  text-gray-950 dark:text-white opacity-80 hover:opacity-100"
       >
         {label}
         <svg
-          className={`w-5 h-5 lg:w-4 lg:h-4   transition-transform pr-1 ${
+          className={`w-4 h-4 md:ml-2  transition-transform  ${
             isOpen ? "rotate-180" : "rotate-0"
           }`}
           fill="none"
@@ -218,7 +218,7 @@ const Dropdown: FC<DropdownProps> = ({ label, children }) => {
 
       {/* Dropdown Menu */}
       <div
-        className={`transition-all duration-200 overflow-hidden ${
+        className={`transition-all duration-200 overflow-hidden space-y-1 ${
           isOpen ? "block" : "hidden"
         } md:absolute md:left-0 md:mt-2 md:w-48 md:bg-white md:dark:bg-gray-900 md:shadow-md md:rounded-md md:z-50`}
       >
