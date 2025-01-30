@@ -2,7 +2,7 @@
 
 // import { Navbar } from "@thirdbracket/core";
 
-import { Navbar, ThemeScript } from "@thirdbracket/bracketui";
+import { Navbar, Navbrand, ThemeScript } from "@thirdbracket/bracketui";
 
 import "./globals.css";
 import { GeistSans } from "geist/font/sans";
@@ -25,13 +25,17 @@ export default function RootLayout({
       </head>
       <body>
         <Navbar>
-          <Image
-            src="/path.svg"
-            alt=""
-            width={120}
-            height={27}
-            className="w-full mr-1 h-5 sm:h-6 dark:invert"
-          ></Image>
+          <Navbrand>
+            {" "}
+            <Image
+              src="/path.svg"
+              alt=""
+              width={120}
+              height={27}
+              className="w-full mr-1 h-5 sm:h-6 dark:invert"
+            ></Image>
+            <span>UI</span>
+          </Navbrand>
         </Navbar>
 
         <main>{children}</main>

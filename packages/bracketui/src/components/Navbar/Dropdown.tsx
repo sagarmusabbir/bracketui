@@ -197,7 +197,7 @@ const Dropdown: FC<DropdownProps> = ({ label, children, className }) => {
   }, []);
 
   return (
-    <div className="dropdown-container relative w-full md:w-auto">
+    <div className="dropdown-container relative w-full md:w-auto text-base md:text-sm">
       {/* Trigger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -205,7 +205,7 @@ const Dropdown: FC<DropdownProps> = ({ label, children, className }) => {
       >
         {label}
         <svg
-          className={`w-4 h-4 md:ml-2  transition-transform  ${
+          className={`w-4 h-4 md:ml-1  transition-transform  ${
             isOpen ? "rotate-180" : "rotate-0"
           }`}
           fill="none"

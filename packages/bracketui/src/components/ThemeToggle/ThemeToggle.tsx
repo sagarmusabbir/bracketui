@@ -138,12 +138,12 @@ const ThemeToggle: FC<ThemeToggleProps> = ({ onThemeChange }) => {
         <button
           key={t}
           onClick={() => handleThemeChange(t)}
-          className="relative z-10 flex items-center justify-center w-7 h-7 sm:w-9 sm:h-9 "
+          className="relative z-10 flex items-center justify-center w-7 h-7 md:w-9 md:h-9 "
           aria-label={`Use ${t} theme`}
         >
           {t === "light" && (
             <svg
-              className="h-4 w-4 sm:h-5 sm:w-5  text-gray-600 dark:text-gray-400"
+              className="h-4 w-4 md:h-5 md:w-5  text-gray-600 dark:text-gray-400"
               fill="none"
               stroke="currentColor"
               strokeWidth="1.5"
@@ -164,7 +164,7 @@ const ThemeToggle: FC<ThemeToggleProps> = ({ onThemeChange }) => {
           )}
           {t === "dark" && (
             <svg
-              className="h-4 w-4 sm:h-5 sm:w-5 text-gray-600 dark:text-gray-400"
+              className="h-4 w-4 md:h-5 md:w-5 text-gray-600 dark:text-gray-400"
               fill="none"
               stroke="currentColor"
               strokeWidth="1.5"
@@ -177,7 +177,7 @@ const ThemeToggle: FC<ThemeToggleProps> = ({ onThemeChange }) => {
           )}
           {t === "system" && (
             <svg
-              className="h-4 w-4 sm:h-5 sm:w-5 text-gray-600 dark:text-gray-400"
+              className="h-4 w-4 md:h-5 md:w-5 text-gray-600 dark:text-gray-400"
               fill="none"
               stroke="currentColor"
               strokeWidth="1.5"

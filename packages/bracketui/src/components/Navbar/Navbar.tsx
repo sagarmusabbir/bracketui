@@ -254,36 +254,43 @@ const Navbar: FC<NavbarProps> = ({ children }) => {
         <div className="border-b border-gray-200/50 dark:border-gray-800/50">
           <div className="mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between h-16 items-center ">
-              <Navbrand logo="/path.svg">UI</Navbrand>
+              {/* <Navbrand logo="/path.svg">UI</Navbrand> */}
+              <div className="flex items-center justify-between space-x-8">
+                {children}
 
-              {/* Desktop Navigation */}
-              <div className="hidden md:flex items-center space-x-3">
-                <Navlink href="#">Home</Navlink>
-                <Navlink href="#">About</Navlink>
+                {/* Desktop Navigation */}
+                <div
+                  className="hidden md:flex items-center
+                "
+                >
+                  <Navlink href="#">Home</Navlink>
+                  <Navlink href="#">About</Navlink>
 
-                {/* Services Dropdown */}
-                <Dropdown label="Services">
-                  <Navlink href="#" isDropdownItem>
-                    Web Development
-                  </Navlink>
-                  <Navlink href="#" isDropdownItem>
-                    UI/UX Design
-                  </Navlink>
-                  <Navlink href="#" isDropdownItem>
-                    SEO Optimization
-                  </Navlink>
-                </Dropdown>
+                  {/* Services Dropdown */}
+                  <Dropdown label="Services">
+                    <Navlink href="#" isDropdownItem>
+                      Web Development
+                    </Navlink>
+                    <Navlink href="#" isDropdownItem>
+                      UI/UX Design
+                    </Navlink>
+                    <Navlink href="#" isDropdownItem>
+                      SEO Optimization
+                    </Navlink>
+                  </Dropdown>
 
-                <Navlink href="#">Contact</Navlink>
+                  <Navlink href="#">Contact</Navlink>
+                </div>
               </div>
 
               {/* Mobile Menu Button */}
-              <div className="flex items-center gap-4">
-                <ThemeToggle />
-
+              <div className="flex items-center justify-between space-x-4">
+                <div className="">
+                  <ThemeToggle />
+                </div>
                 <button
                   onClick={() => setIsOpen(!isOpen)}
-                  className="md:hidden p-2"
+                  className="md:hidden p-2 "
                   aria-label="Toggle Menu"
                 >
                   <svg
