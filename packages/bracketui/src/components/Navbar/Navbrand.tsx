@@ -10,14 +10,14 @@ const Navbrand: FC<NavbrandProps> = ({ logo, children }) => {
   return (
     <a
       href="/"
-      className=" group hover:opacity-80 transition-opacity ease-in-out duration-500 flex items-center"
+      className=" group hover:opacity-80 transition-opacity ease-in-out duration-500 flex items-center gap-1"
     >
       {logo &&
         (typeof logo === "string" ? (
           <img
             src={logo}
             alt="logo"
-            className="mr-1 w-full h-5 sm:h-7 dark:invert"
+            className=" w-full h-5 sm:h-6 dark:invert"
           />
         ) : (
           logo

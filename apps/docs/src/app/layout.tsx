@@ -2,11 +2,10 @@
 
 // import { Navbar } from "@thirdbracket/core";
 
-import { ThemeScript } from "@thirdbracket/bracketui";
+import { Navbar, ThemeScript } from "@thirdbracket/bracketui";
 
 import "./globals.css";
 import { GeistSans } from "geist/font/sans";
-import Header from "./Navbar";
 
 // import { Navbar } from "@thirdbracket/core";
 
@@ -24,10 +23,7 @@ export default function RootLayout({
         <ThemeScript />
       </head>
       <body>
-        {/* <NavBar /> */}
-
-        <Header />
-        {/* <Navbar /> */}
+        <Navbar />
 
         <main>{children}</main>
       </body>

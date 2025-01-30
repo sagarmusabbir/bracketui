@@ -18,29 +18,56 @@
 
 // export default Navlink;
 
+// import { FC } from "react";
+
+// export interface NavLinkProps {
+//   href?: string;
+//   children?: React.ReactNode;
+//   className?: string;
+//   isDropdownItem?: boolean;
+// }
+
+// const Navlink: FC<NavLinkProps> = ({
+//   href = "#",
+//   children,
+//   className,
+//   isDropdownItem = false,
+// }) => {
+//   const baseStyles =
+//     "transition-opacity ease-in-out duration-200  block py-2.5 hover:opacity-100 text-gray-950 dark:text-white ";
+//   const dropdownStyles = isDropdownItem ? "opacity-60   " : "opacity-80   ";
+
+//   return (
+//     <a
+//       href={href}
+//       className={`${baseStyles} ${dropdownStyles} ${className || ""}`}
+//     >
+//       {children}
+//     </a>
+//   );
+// };
+
+// export default Navlink;
+
 import { FC } from "react";
 
-export interface NavLinkProps {
+export interface NavlinkProps {
   href?: string;
   children?: React.ReactNode;
-  className?: string;
   isDropdownItem?: boolean;
 }
 
-const Navlink: FC<NavLinkProps> = ({
+const Navlink: FC<NavlinkProps> = ({
   href = "#",
   children,
-  className,
-  isDropdownItem = false,
+  isDropdownItem,
 }) => {
-  const baseStyles =
-    "transition-opacity ease-in-out duration-200  block py-2.5 hover:opacity-100 text-gray-950 dark:text-white ";
-  const dropdownStyles = isDropdownItem ? "opacity-60   " : "opacity-80   ";
-
   return (
     <a
       href={href}
-      className={`${baseStyles} ${dropdownStyles} ${className || ""}`}
+      className={`block px-4 py-2 transition-opacity ease-in-out duration-200 
+        ${isDropdownItem ? "opacity-60 hover:opacity-80" : "opacity-80 hover:opacity-100"}
+        text-gray-950 dark:text-white`}
     >
       {children}
     </a>
