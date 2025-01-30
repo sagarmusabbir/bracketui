@@ -6,6 +6,7 @@ import { Navbar, ThemeScript } from "@thirdbracket/bracketui";
 
 import "./globals.css";
 import { GeistSans } from "geist/font/sans";
+import Image from "next/image";
 
 // import { Navbar } from "@thirdbracket/core";
 
@@ -23,7 +24,15 @@ export default function RootLayout({
         <ThemeScript />
       </head>
       <body>
-        <Navbar />
+        <Navbar>
+          <Image
+            src="/path.svg"
+            alt=""
+            width={120}
+            height={27}
+            className="w-full mr-1 h-5 sm:h-6 dark:invert"
+          ></Image>
+        </Navbar>
 
         <main>{children}</main>
       </body>
