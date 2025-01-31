@@ -201,7 +201,7 @@ const Dropdown: FC<DropdownProps> = ({ label, children, className }) => {
       {/* Trigger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between w-full py-2 px-4  text-gray-950 dark:text-white opacity-80 hover:opacity-100"
+        className="flex items-center justify-between w-full py-2 px-4  text-black dark:text-white opacity-80 hover:opacity-100"
       >
         {label}
         <svg
@@ -221,7 +221,7 @@ const Dropdown: FC<DropdownProps> = ({ label, children, className }) => {
       <div
         className={`${className} transition-all duration-200 overflow-hidden  ${
           isOpen ? "block" : "hidden"
-        } md:absolute md:left-0 md:mt-2 md:w-48 md:bg-white md:dark:bg-gray-900 md:shadow-md md:rounded-md md:z-50`}
+        } md:absolute md:left-0 md:mt-2 md:w-48 md:bg-white md:dark:bg-black md:shadow-md md:rounded-md md:z-50`}
       >
         {children}
       </div>
