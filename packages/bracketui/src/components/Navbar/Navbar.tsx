@@ -330,7 +330,7 @@ const Navbar: FC<NavbarProps> = ({ children }) => {
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-black bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#111827_1px,transparent_1px)] [background-size:16px_16px]">
+        <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-black bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#030712_1px,transparent_1px)] [background-size:16px_16px]">
           <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_10%_200px,#ffffff,transparent)] dark:bg-[radial-gradient(circle_500px_at_10%_200px,#000000,transparent)]">
             <div className="py-20 px-4  space-y-2">
               <Navlink href="#">Home</Navlink>
