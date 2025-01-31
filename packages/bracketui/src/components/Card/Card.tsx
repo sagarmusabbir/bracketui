@@ -18,7 +18,7 @@ const Card: FC<CardProps> = ({
   children,
 }) => {
   return (
-    <div className="rounded-lg  border overflow-hidden  p-4 shadow-sm    bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10  border-gray-200 dark:border-gray-800">
+    <div className="rounded-lg  border overflow-hidden  p-4 shadow-sm    bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10  border-gray-100/80 dark:border-gray-950/80">
       {image && (
         <img
           src={image}
