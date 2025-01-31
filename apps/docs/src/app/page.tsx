@@ -4,7 +4,7 @@ import { Button, Card } from "@thirdbracket/bracketui";
 
 export default function Page() {
   return (
-    <main className="bg-white dark:bg-gray-950 text-gray-950 dark:text-white">
+    <main className="bg-white dark:bg-black text-gray-950 dark:text-white">
       <div>
         <section className="container  px-4 py-8 mx-auto text-center lg:py-16 lg:px-12">
           <h1
