@@ -233,6 +233,7 @@
 
 // export default Navbar;
 
+
 "use client";
 
 import { FC, useState } from "react";
@@ -250,8 +251,8 @@ const Navbar: FC<NavbarProps> = ({ children }) => {
 
   return (
     <>
-      <nav className="bg-white dark:bg-gray-950 text-gray-950 dark:text-white fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-opacity-80 ">
-        <div className="border-b border-gray-200/50 dark:border-gray-800/50">
+      <nav className="bg-white dark:bg-black text-black dark:text-white fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-opacity-80 ">
+        <div className="border-b border-gray-100/70 dark:border-gray-950/70">
           <div className="mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between h-16 items-center ">
               {/* <Navbrand logo="/path.svg">UI</Navbrand> */}
@@ -325,11 +326,11 @@ const Navbar: FC<NavbarProps> = ({ children }) => {
 
       {/* Overlay + Mobile Menu */}
       <div
-        className={`md:hidden fixed inset-0 z-40 bg-white dark:bg-gray-950 transition-transform duration-300 ease-in-out ${
+        className={`md:hidden fixed inset-0 z-40 bg-white dark:bg-black transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-gray-950 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#1f2937_1px,transparent_1px)] [background-size:16px_16px]">
+        <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-black bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#1f2937_1px,transparent_1px)] [background-size:16px_16px]">
           <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_10%_200px,#ffffff,transparent)] dark:bg-[radial-gradient(circle_500px_at_10%_200px,#000000,transparent)]">
             <div className="py-20 px-4  space-y-2">
               <Navlink href="#">Home</Navlink>
@@ -348,7 +349,11 @@ const Navbar: FC<NavbarProps> = ({ children }) => {
                 </Navlink>
               </Dropdown>
 
+              <Navlink href="#">Products</Navlink>
+
+ <Navlink href="#">Features</Navlink>
               <Navlink href="#">Contact</Navlink>
+
             </div>
           </div>
         </div>
