@@ -127,7 +127,7 @@ const ThemeToggle: FC<ThemeToggleProps> = ({ onThemeChange }) => {
     <div className="relative inline-flex items-center justify-between rounded-full bg-gray-200 dark:bg-gray-800 ">
       {/* Sliding Background */}
       <div
-        className="absolute inset-y-0 left-0  w-1/3 rounded-full border border-gray-200 dark:border-gray-800  bg-white  dark:bg-gray-800 transition-all duration-200 ease-in-out"
+        className="absolute inset-y-0 left-0  w-1/3 rounded-full border border-gray-200 dark:border-gray-800  bg-white  dark:bg-black transition-all duration-200 ease-in-out"
         style={{
           transform: `translateX(${themes.indexOf(theme) * 100}%)`,
         }}
@@ -146,7 +146,7 @@ const ThemeToggle: FC<ThemeToggleProps> = ({ onThemeChange }) => {
               className="h-4 w-4 md:h-5 md:w-5  text-gray-600 dark:text-gray-400"
               fill="none"
               stroke="currentColor"
-              strokeWidth="1.5"
+              strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
               viewBox="0 0 24 24"
@@ -167,7 +167,7 @@ const ThemeToggle: FC<ThemeToggleProps> = ({ onThemeChange }) => {
               className="h-4 w-4 md:h-5 md:w-5 text-gray-600 dark:text-gray-400"
               fill="none"
               stroke="currentColor"
-              strokeWidth="1.5"
+              strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
               viewBox="0 0 24 24"
@@ -180,7 +180,7 @@ const ThemeToggle: FC<ThemeToggleProps> = ({ onThemeChange }) => {
               className="h-4 w-4 md:h-5 md:w-5 text-gray-600 dark:text-gray-400"
               fill="none"
               stroke="currentColor"
-              strokeWidth="1.5"
+              strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
               viewBox="0 0 24 24"
