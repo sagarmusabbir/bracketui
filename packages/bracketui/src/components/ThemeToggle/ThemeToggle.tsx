@@ -124,10 +124,10 @@ const ThemeToggle: FC<ThemeToggleProps> = ({ onThemeChange }) => {
   };
 
   return (
-    <div className="relative inline-flex items-center justify-between rounded-full bg-gray-200 dark:bg-gray-700 ">
+    <div className="relative inline-flex items-center justify-between rounded-full bg-gray-200 dark:bg-gray-800 ">
       {/* Sliding Background */}
       <div
-        className="absolute inset-y-0 left-0  w-1/3 rounded-full border border-gray-200 dark:border-gray-700  bg-white  dark:bg-gray-800 transition-all duration-200 ease-in-out"
+        className="absolute inset-y-0 left-0  w-1/3 rounded-full border border-gray-200 dark:border-gray-800  bg-white  dark:bg-gray-800 transition-all duration-200 ease-in-out"
         style={{
           transform: `translateX(${themes.indexOf(theme) * 100}%)`,
         }}
