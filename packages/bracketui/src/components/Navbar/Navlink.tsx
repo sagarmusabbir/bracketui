@@ -67,7 +67,7 @@ const Navlink: FC<NavlinkProps> = ({
       href={href}
       className={`block px-4 py-2 transition-opacity ease-in-out duration-200 
         ${isDropdownItem ? "opacity-60 hover:opacity-80" : "opacity-80 hover:opacity-100"}
-        text-gray-950 dark:text-white text-base md:text-sm`}
+        text-black dark:text-white text-base md:text-sm`}
     >
       {children}
     </a>
