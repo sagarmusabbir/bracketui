@@ -25,7 +25,7 @@ const FooterBrand: FC<FooterBrandProps> = ({
         <img src={logo} alt="Brand Logo" className="h-6 w-auto dark:invert" />
       )}
       {children && (
-        <div className="text-sm text-gray-600 dark:text-gray-500 ">
+        <div className="text-sm text-gray-600 dark:text-gray-500">
           {children}
         </div>
       )}
