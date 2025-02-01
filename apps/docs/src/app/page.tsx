@@ -16,13 +16,13 @@ export default function Page() {
   return (
     <main className="bg-white dark:bg-gray-950 text-gray-950 dark:text-white">
       <div>
-        <section className="container  px-4 py-8 mx-auto text-center lg:py-16 lg:px-12">
+        <section className="container   py-8 mx-auto text-center lg:py-16 px-4 sm:px-6 lg:px-8">
           <h1 className="p-4 md:p-8 mt-16  font-bold text-center text-gray-950 dark:text-white text-4xl md:text-5xl lg:text-6xl leading-none ">
             The Minimal UI Component Library for React
           </h1>
           <p className="p-4 md:p-8 text-base md:text-lg lg:text-xl  text-center max-w-2xl mx-auto  text-gray-500 ">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout.
+            A modern, minimal UI component library for React applications with
+            TypeScript support.
           </p>
           <div className="flex flex-wrap gap-2 items-center mx-auto justify-center py-8 ">
             <div className="hidden lg:flex">
@@ -44,42 +44,7 @@ export default function Page() {
           </div>
         </section>
 
-        {/* <section className="container px-4 py-8 mx-auto text-center lg:py-16 lg:px-12">
-          <div className="lg:flex items-center justify-center gap-4 space-y-2 lg:space-y-0">
-            <h2 className="font-semibold text-center  text-3xl md:text-4xl lg:text-5xl leading-none text-gray-950 dark:text-white ">
-              Whats in Bracket UI?
-            </h2>
-            <p className=" text-base md:text-lg lg:text-xl  text-center    text-gray-600 dark:text-gray-500">
-              It is a long established fact that a reader will be distracted
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch mx-auto justify-center py-8 ">
-            <div className="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
-              <Card header="Main Feature">
-                It is a long established fact that a reader will be distracted.
-              </Card>
-
-              <Card header="Card">
-                It is a long established fact that a reader will be distracted.
-              </Card>
-              <Card header="Main Feature">
-                It is a long established fact that a reader will be distracted.
-              </Card>
-
-              <Card header="Card">
-                It is a long established fact that a reader will be distracted.
-              </Card>
-            </div>
-            <div>
-              <Card header="Bracket UI" cover={<BracketUIIcon />}>
-                A modern, minimal UI component library built for React
-                applications
-              </Card>
-            </div>
-          </div>
-        </section> */}
-        <section className="container px-4 py-8 mx-auto text-center lg:py-16 lg:px-12">
+        <section className="container px-4 sm:px-6 lg:px-8 py-8 mx-auto text-center lg:py-16 ">
           <div className="lg:flex items-center justify-center gap-4 space-y-2 lg:space-y-0">
             <h2 className="font-semibold text-center text-3xl md:text-4xl lg:text-5xl leading-none text-gray-950 dark:text-white">
               What's in Bracket UI?
@@ -121,7 +86,7 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="container px-4 py-8 mx-auto text-center lg:py-16 lg:px-12">
+        <section className="container  py-8 mx-auto text-center lg:py-16 px-4 sm:px-6 lg:px-8">
           <h1 className="font-semibold text-center  text-3xl md:text-4xl lg:text-5xl leading-none text-gray-950 dark:text-white">
             Our Components
           </h1>

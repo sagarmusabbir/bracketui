@@ -17,13 +17,15 @@ const Navbrand: FC<NavbrandProps> = ({ logo, children }) => {
           <img
             src={logo}
             alt="logo"
-            className="w-full mr-1 h-5 sm:h-6 dark:invert"
+            className="w-auto mr-1 h-5 sm:h-6 dark:invert"
           />
         ) : (
           logo
         ))}
 
-      {children}
+      <span className="self-center whitespace-nowrap font-semibold text-gray-950 dark:text-white">
+        {children}
+      </span>
     </a>
   );
 };
