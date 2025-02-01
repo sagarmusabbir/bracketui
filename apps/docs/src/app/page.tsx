@@ -21,8 +21,8 @@ export default function Page() {
             The Minimal UI Component Library for React
           </h1>
           <p className="p-4 md:p-8 text-base md:text-lg lg:text-xl  text-center max-w-2xl mx-auto  text-gray-500 ">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout.
+            A modern, minimal UI component library for React applications with
+            TypeScript support.
           </p>
           <div className="flex flex-wrap gap-2 items-center mx-auto justify-center py-8 ">
             <div className="hidden lg:flex">
