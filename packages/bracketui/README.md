@@ -8,12 +8,31 @@ BracketUI is a React component library that provides a set of reusable UI compon
 npm install @thirdbracket/bracketui
 ```
 
+## Add the plugin to your Tailwind config
+
+```js
+// tailwind.config.js
+const { bracketuiPlugin } = require("@thirdbracket/bracketui");
+
+module.exports = {
+  darkMode: "class", // Required for @thirdbracket/bracketui
+  content: [
+    // ... your content paths
+    "./node_modules/@thirdbracket/bracketui/**/*.{js,ts,jsx,tsx}",
+  ],
+  plugins: [
+    bracketuiPlugin,
+    // ... other plugins
+  ],
+};
+```
+
 ## Usage
 
 Import components from the library:
 
 ```jsx
-import { Component } from '@thirdbracket/bracketui';
+import { Component } from "@thirdbracket/bracketui";
 ```
 
 ## Development

@@ -124,10 +124,10 @@ const ThemeToggle: FC<ThemeToggleProps> = ({ onThemeChange }) => {
   };
 
   return (
-    <div className="relative inline-flex items-center justify-between rounded-full bg-gray-200 dark:bg-gray-900 ">
+    <div className="relative inline-flex items-center justify-between rounded-full bg-gray-200 dark:bg-gray-800 ">
       {/* Sliding Background */}
       <div
-        className="absolute inset-y-0 left-0  w-1/3 rounded-full border border-gray-200 dark:border-gray-900  bg-white  dark:bg-gray-700 transition-all duration-200 ease-in-out"
+        className="absolute inset-y-0 left-0  w-1/3 rounded-full border border-gray-200 dark:border-gray-800  bg-white  dark:bg-gray-600 transition-all duration-200 ease-in-out"
         style={{
           transform: `translateX(${themes.indexOf(theme) * 100}%)`,
         }}
@@ -138,15 +138,15 @@ const ThemeToggle: FC<ThemeToggleProps> = ({ onThemeChange }) => {
         <button
           key={t}
           onClick={() => handleThemeChange(t)}
-          className="relative z-10 flex items-center justify-center w-7 h-7 md:w-9 md:h-9 "
+          className="relative z-10 flex items-center justify-center w-7 h-7 md:w-8 md:h-8 "
           aria-label={`Use ${t} theme`}
         >
           {t === "light" && (
             <svg
-              className="h-4 w-4 md:h-5 md:w-5  text-gray-600 dark:text-gray-400"
+              className="h-4 w-4 text-gray-700 dark:text-gray-300"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="1.8"
               strokeLinecap="round"
               strokeLinejoin="round"
               viewBox="0 0 24 24"
@@ -164,10 +164,10 @@ const ThemeToggle: FC<ThemeToggleProps> = ({ onThemeChange }) => {
           )}
           {t === "dark" && (
             <svg
-              className="h-4 w-4 md:h-5 md:w-5 text-gray-600 dark:text-gray-400"
+              className="h-4 w-4  text-gray-700 dark:text-gray-300"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="1.8"
               strokeLinecap="round"
               strokeLinejoin="round"
               viewBox="0 0 24 24"
@@ -177,10 +177,10 @@ const ThemeToggle: FC<ThemeToggleProps> = ({ onThemeChange }) => {
           )}
           {t === "system" && (
             <svg
-              className="h-4 w-4 md:h-5 md:w-5 text-gray-600 dark:text-gray-400"
+              className="h-4 w-4  text-gray-700 dark:text-gray-300"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="1.8"
               strokeLinecap="round"
               strokeLinejoin="round"
               viewBox="0 0 24 24"

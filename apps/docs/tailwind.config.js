@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
+const { bracketuiPlugin } = require("@thirdbracket/bracketui");
 module.exports = {
   darkMode: "class",
   content: [
@@ -15,5 +17,5 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [bracketuiPlugin],
 };
