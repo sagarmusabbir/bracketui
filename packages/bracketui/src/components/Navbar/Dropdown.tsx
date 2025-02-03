@@ -49,7 +49,7 @@ const Dropdown: FC<DropdownProps> = ({ label, children, className }) => {
 
       {/* Dropdown Menu */}
       <div
-        className={`${className} transition-all duration-200 overflow-hidden  ${
+        className={`${className} transition-all duration-200 overflow-hidden md:border border-gray-200 dark:border-gray-800  ${
           isOpen ? "block" : "hidden"
         } md:absolute md:left-0 md:mt-2 md:w-48 md:bg-white md:dark:bg-gray-950 md:shadow-md md:rounded-md md:z-50`}
       >
