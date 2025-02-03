@@ -5,9 +5,10 @@
 import "./globals.css";
 import { GeistSans } from "geist/font/sans";
 
-import Header from "../../components/Header";
+// import Header from "../../components/Header";
 import { ThemeScript } from "@thirdbracket/bracketui";
 import SiteFooter from "../../components/Footer";
+import Header from "../../components/Header";
 
 // import { Navbar } from "@thirdbracket/core";
 
@@ -26,7 +27,6 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
-
         <main>{children}</main>
         <SiteFooter />
       </body>
