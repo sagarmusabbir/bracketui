@@ -15,7 +15,7 @@ const FooterSection: FC<FooterSectionProps> = ({
   return (
     <div className={className}>
       {title && (
-        <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100  tracking-wider mb-4">
+        <h3 className="text-sm font-semibold text-gray-800 dark:text-gray-200  tracking-wider mb-4">
           {title}
         </h3>
       )}

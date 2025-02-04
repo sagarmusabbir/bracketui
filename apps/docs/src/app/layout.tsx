@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${GeistSans.className} antialiased dark:bg-gray-950 dark:text-white`}
+      className={`${GeistSans.className}  antialiased dark:bg-gray-950 dark:text-white`}
     >
       <head>
         <ThemeScript />

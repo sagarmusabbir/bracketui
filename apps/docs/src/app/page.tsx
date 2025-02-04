@@ -17,10 +17,10 @@ export default function Page() {
     <main className="bg-white dark:bg-gray-950 text-gray-950 dark:text-white">
       <div>
         <section className="container   py-8 mx-auto text-center lg:py-16  px-6 lg:px-8">
-          <h1 className="p-4 md:p-8 mt-16  font-bold text-center text-gray-950 dark:text-white text-4xl md:text-5xl lg:text-6xl leading-none ">
+          <h1 className="p-4 md:p-8 mt-16  font-bold text-center text-gray-950 dark:text-white text-4xl md:text-5xl lg:text-6xl  max-w-3xl mx-auto">
             The Minimal UI Component Library for React
           </h1>
-          <p className="p-4 md:p-8 text-base md:text-lg lg:text-xl  text-center max-w-2xl mx-auto  text-gray-500 ">
+          <p className="p-4 md:p-8 text-base md:text-lg lg:text-xl  text-center max-w-2xl mx-auto  text-gray-500 leading-tight">
             A modern, minimal UI component library for React applications with
             TypeScript support.
           </p>

@@ -15,7 +15,11 @@ module.exports = {
     // "./node_modules/@thirdbracket/bracketui/**/*.{js,ts,jsx,tsx}" // When installed from npm
   ],
   theme: {
-    extend: {},
+    extend: {
+      // fontFamily: {
+      //   anta: ["Anta"],
+      // },
+    },
   },
   plugins: [bracketuiPlugin],
 };
