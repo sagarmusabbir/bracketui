@@ -1,5 +1,11 @@
 # @thirdbracket/bracketui
 
+## 3.0.0
+
+### Major Changes
+
+- [`29c0afc`](https://github.com/sagarmusabbir/bracketui/commit/29c0afc899ce947a4b788ab00a3a007f4d743342) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Megamenu Added to Navbar
+
 ## 2.0.0
 
 ### Major Changes
