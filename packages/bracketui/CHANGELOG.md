@@ -1,5 +1,11 @@
 # @thirdbracket/bracketui
 
+## 3.0.1
+
+### Patch Changes
+
+- [`cf2df90`](https://github.com/sagarmusabbir/bracketui/commit/cf2df9052b6b240d0cc2999946e6a4c2afeec110) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Navbar layout fix minor
+
 ## 3.0.0
 
 ### Major Changes
