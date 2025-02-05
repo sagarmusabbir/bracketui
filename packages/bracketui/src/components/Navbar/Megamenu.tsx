@@ -34,7 +34,7 @@ const Megamenu: FC<MegamenuProps> = ({ label, children, className }) => {
       >
         {label}
         <svg
-          className={`w-6 h-6 md:ml-1 transition-transform ${
+          className={`w-6  h-6 md:ml-1 transition-transform ${
             isOpen ? "rotate-180" : "rotate-0"
           }`}
           fill="currentColor"

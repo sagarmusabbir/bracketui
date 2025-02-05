@@ -6,7 +6,7 @@
 
 npm run changeset
 
-- Choose the version type (major/minor/patch)
+- Choose the version type (major/minor/patch) ignore with enter. Use Tab to select.
 
 - Add a description of your changes
 

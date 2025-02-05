@@ -188,7 +188,7 @@ const Navbar: FC<NavbarProps> = ({ children, className = "" }) => {
 
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="md:hidden p-2 "
+                className="md:hidden "
                 aria-label="Toggle Menu"
               >
                 <svg
