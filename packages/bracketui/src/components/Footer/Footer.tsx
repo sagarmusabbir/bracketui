@@ -20,7 +20,7 @@ export interface FooterProps {
 
 const Footer: FC<FooterProps> = ({ children }) => {
   return (
-    <footer className="bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800">
+    <footer className="bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 ">
       <div className="mx-auto px-6 lg:px-8">
         <div className="py-12 md:py-16">
           {/* <div className="grid lg:auto-cols-fr lg:grid-flow-col grid-cols-1  gap-8 "> */}

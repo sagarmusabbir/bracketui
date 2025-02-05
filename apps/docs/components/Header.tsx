@@ -1,30 +1,55 @@
-import { Dropdown, Navbar, Navbrand, Navlink } from "@thirdbracket/bracketui";
+import {
+  Dropdown,
+  MobileNav,
+  Navbar,
+  Navbrand,
+  NavItem,
+  Navlink,
+} from "@thirdbracket/bracketui";
 
 const Header = () => {
   return (
     <Navbar>
-      <Navbrand logo="/path.svg">My Brand</Navbrand>
+      <Navbrand logo="/path.svg">UI</Navbrand>
+      <NavItem>
+        <Navlink href="#">Home</Navlink>
+        <Navlink href="#">About</Navlink>
 
-      <Navlink href="/">Home</Navlink>
-      <Navlink href="/about">About</Navlink>
+        <Dropdown label="Services">
+          <Navlink href="#" isDropdownItem>
+            Web Development
+          </Navlink>
+          <Navlink href="#" isDropdownItem>
+            UI/UX Design
+          </Navlink>
+          <Navlink href="#" isDropdownItem>
+            SEO Optimization
+          </Navlink>
+        </Dropdown>
 
-      <Dropdown label="Services">
-        <Navlink href="/web" isDropdownItem>
-          Web Development
-        </Navlink>
-        <Navlink href="/mobile" isDropdownItem>
-          Mobile Apps
-        </Navlink>
-      </Dropdown>
+        <Navlink href="#">Contact</Navlink>
+      </NavItem>
+      <MobileNav>
+        <Navlink href="#">Home</Navlink>
+        <Navlink href="#">About</Navlink>
 
-      <Dropdown label="Products">
-        <Navlink href="/product/1" isDropdownItem>
-          Product 1
-        </Navlink>
-        <Navlink href="/product/2" isDropdownItem>
-          Product 2
-        </Navlink>
-      </Dropdown>
+        <Dropdown label="Services" className="space-y-1 ">
+          <Navlink href="#" isDropdownItem>
+            Web Development
+          </Navlink>
+          <Navlink href="#" isDropdownItem>
+            UI/UX Design
+          </Navlink>
+          <Navlink href="#" isDropdownItem>
+            SEO Optimization
+          </Navlink>
+        </Dropdown>
+
+        <Navlink href="#">Products</Navlink>
+
+        <Navlink href="#">Features</Navlink>
+        <Navlink href="#">Contact</Navlink>
+      </MobileNav>
     </Navbar>
   );
 };

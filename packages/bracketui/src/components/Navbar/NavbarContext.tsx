@@ -1,34 +1,22 @@
-// NavbarContext.tsx
 "use client";
+import { createContext, useContext, ReactNode } from "react";
 
-import { createContext, useContext, useState } from "react";
+// Define the context type
+interface NavbarContextType {
+  setDesktopNav: (children: ReactNode) => void;
+  setMobileNav: (children: ReactNode) => void;
+}
 
-type NavbarContextType = {
-  isMobileOpen: boolean;
-  toggleMobileMenu: () => void;
-  closeMobileMenu: () => void;
+// Create the context
+const NavbarContext = createContext<NavbarContextType | undefined>(undefined);
+
+// Custom hook to use the context
+export const useNavbarContext = () => {
+  const context = useContext(NavbarContext);
+  if (!context) {
+    throw new Error("useNavbarContext must be used within a Navbar");
+  }
+  return context;
 };
 
-const NavbarContext = createContext<NavbarContextType>({
-  isMobileOpen: false,
-  toggleMobileMenu: () => {},
-  closeMobileMenu: () => {},
-});
-
-export const useNavbar = () => useContext(NavbarContext);
-
-export const NavbarProvider = ({ children }: { children: React.ReactNode }) => {
-  const [isMobileOpen, setIsMobileOpen] = useState(false);
-
-  return (
-    <NavbarContext.Provider
-      value={{
-        isMobileOpen,
-        toggleMobileMenu: () => setIsMobileOpen(!isMobileOpen),
-        closeMobileMenu: () => setIsMobileOpen(false),
-      }}
-    >
-      {children}
-    </NavbarContext.Provider>
-  );
-};
+export default NavbarContext;
