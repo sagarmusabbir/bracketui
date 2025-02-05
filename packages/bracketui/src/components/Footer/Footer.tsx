@@ -12,6 +12,7 @@ import {
   PhoneIcon,
   WhatsAppIcon,
 } from "./icons";
+import { ThemeToggle } from "../ThemeToggle";
 
 export interface FooterProps {
   children?: React.ReactNode;
@@ -19,8 +20,8 @@ export interface FooterProps {
 
 const Footer: FC<FooterProps> = ({ children }) => {
   return (
-    <footer className="bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 ">
+      <div className="mx-auto px-6 lg:px-8">
         <div className="py-12 md:py-16">
           {/* <div className="grid lg:auto-cols-fr lg:grid-flow-col grid-cols-1  gap-8 "> */}
           <div className="grid grid-flow-row auto-rows-fr gap-8 md:grid-flow-col md:auto-cols-fr">
@@ -28,10 +29,11 @@ const Footer: FC<FooterProps> = ({ children }) => {
           </div>
         </div>
 
-        <div className="py-4 md:py-6 border-t border-gray-200 dark:border-gray-800 flex items-center justify-between md:justify-center mx-auto">
-          <FooterText>
-            © 2024 Third Bracket Solution. All rights reserved.
-          </FooterText>
+        <div className="py-4 md:py-8 border-t border-gray-200 dark:border-gray-800 flex items-center justify-between  mx-auto">
+          <FooterText>© 2024 Third Bracket Solution.</FooterText>
+          <div>
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </footer>

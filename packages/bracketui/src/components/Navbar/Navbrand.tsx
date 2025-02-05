@@ -14,11 +14,7 @@ const Navbrand: FC<NavbrandProps> = ({ logo, children }) => {
     >
       {logo &&
         (typeof logo === "string" ? (
-          <img
-            src={logo}
-            alt="logo"
-            className="w-auto mr-1 h-5 sm:h-6 dark:invert"
-          />
+          <img src={logo} alt="logo" className="w-auto mr-1 h-5 dark:invert" />
         ) : (
           logo
         ))}

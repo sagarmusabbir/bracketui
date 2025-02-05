@@ -1,15 +1,19 @@
-// packages/bracketui/src/components/Navbar/MobileMenuSection.tsx
-import { FC } from "react";
+import { ReactNode, useEffect } from "react";
+import { useNavbarContext } from "./NavbarContext";
 
 export interface NavItemProps {
-  children: React.ReactNode;
-  className?: string;
+  children: ReactNode;
 }
 
-const NavItem: FC<NavItemProps> = ({ children, className = "" }) => {
-  return (
-    <div className={`hidden md:flex items-center ${className}`}>{children}</div>
-  );
+const NavItem: React.FC<NavItemProps> = ({ children }) => {
+  const { setDesktopNav } = useNavbarContext();
+
+  useEffect(() => {
+    setDesktopNav(children);
+    return () => setDesktopNav(null); // Cleanup on unmount
+  }, [children, setDesktopNav]);
+
+  return null; // This component doesn't render anything directly
 };
 
 export default NavItem;

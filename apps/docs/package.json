@@ -10,6 +10,7 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.0",
     "@thirdbracket/bracketui": "*",
     "@thirdbracket/core": "*",
     "@thirdbracket/utils": "*",

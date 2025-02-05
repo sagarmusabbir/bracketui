@@ -4,54 +4,27 @@
 // import Navlink from "./Navlink";
 // import Navbrand from "./Navbrand";
 // import Dropdown from "./Dropdown";
-// import { ThemeToggle } from "../ThemeToggle";
-// import NavbarSection from "./NavbarSection";
-// import MobileMenu from "./MobileMenuSection";
-// import NavSection from "./NavbarSection";
-// import NavItem from "./NavItem";
 
 // export interface NavbarProps {
 //   children?: React.ReactNode;
+//   className?: string;
 // }
 
-// const Navbar: FC<NavbarProps> = ({ children }) => {
+// const Navbar: FC<NavbarProps> = ({ children, className = "" }) => {
 //   const [isOpen, setIsOpen] = useState(false);
 
 //   return (
 //     <>
-//       <nav className="bg-white dark:bg-gray-950 text-gray-950 dark:text-white fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-opacity-80 ">
+//       <nav
+//         className={`bg-white dark:bg-gray-950 text-gray-950 dark:text-white fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-opacity-80 ${className}`}
+//       >
 //         <div className="border-b border-gray-200 dark:border-gray-800">
-//           <div className="mx-auto px-4 sm:px-6 lg:px-8">
+//           <div className="px-6 lg:px-8">
 //             <div className="flex justify-between h-16 items-center ">
-//               {/* <div className="flex items-center justify-between space-x-8">
-//                 {children}
-
-//                 <div
-//                   className="hidden md:flex items-center
-//                 "
-//                 >
-//                   <Navlink href="#">Home</Navlink>
-//                   <Navlink href="#">About</Navlink>
-
-//                   <Dropdown label="Services">
-//                     <Navlink href="#" isDropdownItem>
-//                       Web Development
-//                     </Navlink>
-//                     <Navlink href="#" isDropdownItem>
-//                       UI/UX Design
-//                     </Navlink>
-//                     <Navlink href="#" isDropdownItem>
-//                       SEO Optimization
-//                     </Navlink>
-//                   </Dropdown>
-
-//                   <Navlink href="#">Contact</Navlink>
-//                 </div>
-//               </div> */}
 //               <Navbrand logo="/path.svg">UI</Navbrand>
 
 //               <div className="flex items-center justify-between space-x-8">
-//                 <NavItem>
+//                 <div className="hidden md:flex items-center">
 //                   <Navlink href="#">Home</Navlink>
 //                   <Navlink href="#">About</Navlink>
 
@@ -68,43 +41,38 @@
 //                   </Dropdown>
 
 //                   <Navlink href="#">Contact</Navlink>
-//                 </NavItem>
+//                 </div>
 //               </div>
 
-//               <div className="flex items-center justify-between space-x-4">
-//                 <div className="">
-//                   <ThemeToggle />
-//                 </div>
-//                 <button
-//                   onClick={() => setIsOpen(!isOpen)}
-//                   className="md:hidden p-2 "
-//                   aria-label="Toggle Menu"
+//               <button
+//                 onClick={() => setIsOpen(!isOpen)}
+//                 className="md:hidden p-2 "
+//                 aria-label="Toggle Menu"
+//               >
+//                 <svg
+//                   className="w-6 h-6"
+//                   fill="none"
+//                   strokeLinecap="square"
+//                   strokeLinejoin="inherit"
+//                   viewBox="0 0 24 24"
+//                   stroke="currentColor"
 //                 >
-//                   <svg
-//                     className="w-6 h-6"
-//                     fill="none"
-//                     strokeLinecap="square"
-//                     strokeLinejoin="inherit"
-//                     viewBox="0 0 24 24"
-//                     stroke="currentColor"
-//                   >
-//                     <path
-//                       d="M2 8h20"
-//                       className={`transform transition-transform duration-300 ease-in-out origin-center ${
-//                         isOpen ? "rotate-45" : ""
-//                       }`}
-//                       strokeWidth="1"
-//                     />
-//                     <path
-//                       d="M2 16h20"
-//                       className={`transform transition-transform duration-300 ease-in-out origin-center ${
-//                         isOpen ? "-rotate-45" : ""
-//                       }`}
-//                       strokeWidth="2"
-//                     />
-//                   </svg>
-//                 </button>
-//               </div>
+//                   <path
+//                     d="M2 8h20"
+//                     className={`transform transition-transform duration-300 ease-in-out origin-center ${
+//                       isOpen ? "rotate-45" : ""
+//                     }`}
+//                     strokeWidth="1"
+//                   />
+//                   <path
+//                     d="M2 16h20"
+//                     className={`transform transition-transform duration-300 ease-in-out origin-center ${
+//                       isOpen ? "-rotate-45" : ""
+//                     }`}
+//                     strokeWidth="2"
+//                   />
+//                 </svg>
+//               </button>
 //             </div>
 //           </div>
 //         </div>
@@ -118,11 +86,11 @@
 //       >
 //         <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-gray-950 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#1f2937_1px,transparent_1px)] [background-size:16px_16px]">
 //           <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_10%_200px,#ffffff,transparent)] dark:bg-[radial-gradient(circle_500px_at_10%_200px,#030712,transparent)]">
-//             {/* <div className="py-20 px-4 flex flex-col space-y-2">
+//             <div className="py-20 px-2 flex flex-col space-y-1">
 //               <Navlink href="#">Home</Navlink>
 //               <Navlink href="#">About</Navlink>
 
-//               <Dropdown label="Services" className="space-y-2 py-2">
+//               <Dropdown label="Services" className="space-y-1 ">
 //                 <Navlink href="#" isDropdownItem>
 //                   Web Development
 //                 </Navlink>
@@ -138,28 +106,7 @@
 
 //               <Navlink href="#">Features</Navlink>
 //               <Navlink href="#">Contact</Navlink>
-//             </div> */}
-//             <MobileMenu>
-//               <Navlink href="#">Home</Navlink>
-//               <Navlink href="#">About</Navlink>
-
-//               <Dropdown label="Services" className="space-y-2 py-2">
-//                 <Navlink href="#" isDropdownItem>
-//                   Web Development
-//                 </Navlink>
-//                 <Navlink href="#" isDropdownItem>
-//                   UI/UX Design
-//                 </Navlink>
-//                 <Navlink href="#" isDropdownItem>
-//                   SEO Optimization
-//                 </Navlink>
-//               </Dropdown>
-
-//               <Navlink href="#">Products</Navlink>
-
-//               <Navlink href="#">Features</Navlink>
-//               <Navlink href="#">Contact</Navlink>
-//             </MobileMenu>
+//             </div>
 //           </div>
 //         </div>
 //       </div>
@@ -171,15 +118,9 @@
 
 "use client";
 
-import { FC, useState } from "react";
-import Navlink from "./Navlink";
-import Navbrand from "./Navbrand";
-import Dropdown from "./Dropdown";
-import { ThemeToggle } from "../ThemeToggle";
-import NavbarSection from "./NavbarSection";
-import MobileMenu from "./MobileMenuSection";
-import NavSection from "./NavbarSection";
-import NavItem from "./NavItem";
+import { FC, useEffect, useState } from "react";
+
+import NavbarContext from "./NavbarContext";
 
 export interface NavbarProps {
   children?: React.ReactNode;
@@ -188,50 +129,45 @@ export interface NavbarProps {
 
 const Navbar: FC<NavbarProps> = ({ children, className = "" }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [desktopNav, setDesktopNav] = useState<React.ReactNode>(null);
+  const [mobileNav, setMobileNav] = useState<React.ReactNode>(null);
+
+  // Add the useEffect here
+  useEffect(() => {
+    // Only apply scroll lock on mobile screens
+    if (window.innerWidth < 768) {
+      // Using 768px
+      if (isOpen) {
+        // Prevent body scrolling when mobile menu is open
+        document.body.style.overflow = "hidden";
+      } else {
+        // Re-enable body scrolling when mobile menu is closed
+        document.body.style.overflow = "unset";
+      }
+    }
+
+    return () => {
+      // Cleanup
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]); // Depends on isOpen state
 
   return (
-    <>
+    <NavbarContext.Provider value={{ setDesktopNav, setMobileNav }}>
       <nav
         className={`bg-white dark:bg-gray-950 text-gray-950 dark:text-white fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-opacity-80 ${className}`}
       >
         <div className="border-b border-gray-200 dark:border-gray-800">
-          {/* Remove the px-4 from here and add container class */}
-          {/* <div className="mx-auto px-4 sm:px-6 lg:px-8"> */}
-
-          {/* <div className="bracketui-container"> */}
-          {/* Add consistent padding here */}
-          <div className="px-4 sm:px-6 lg:px-8">
+          <div className="px-6 lg:px-8">
             <div className="flex justify-between h-16 items-center ">
-              {/* <div className="flex items-center justify-between space-x-8">
-                {children}
-
-                <div
-                  className="hidden md:flex items-center
-                "
-                >
-                  <Navlink href="#">Home</Navlink>
-                  <Navlink href="#">About</Navlink>
-
-                  <Dropdown label="Services">
-                    <Navlink href="#" isDropdownItem>
-                      Web Development
-                    </Navlink>
-                    <Navlink href="#" isDropdownItem>
-                      UI/UX Design
-                    </Navlink>
-                    <Navlink href="#" isDropdownItem>
-                      SEO Optimization
-                    </Navlink>
-                  </Dropdown>
-
-                  <Navlink href="#">Contact</Navlink>
-                </div>
-              </div> */}
-              <Navbrand logo="/path.svg">UI</Navbrand>
+              {children}
+              {/* <Navbrand logo="/path.svg">UI</Navbrand> */}
 
               <div className="flex items-center justify-between space-x-8">
-                <NavItem>
-                  <Navlink href="#">Home</Navlink>
+                {/* Desktop Navbar Section */}
+                <div className="hidden md:flex items-center">
+                  {desktopNav}
+                  {/* <Navlink href="#">Home</Navlink>
                   <Navlink href="#">About</Navlink>
 
                   <Dropdown label="Services">
@@ -246,63 +182,59 @@ const Navbar: FC<NavbarProps> = ({ children, className = "" }) => {
                     </Navlink>
                   </Dropdown>
 
-                  <Navlink href="#">Contact</Navlink>
-                </NavItem>
+                  <Navlink href="#">Contact</Navlink> */}
+                </div>
               </div>
 
-              <div className="flex items-center justify-between space-x-4">
-                <div className="">
-                  <ThemeToggle />
-                </div>
-                <button
-                  onClick={() => setIsOpen(!isOpen)}
-                  className="md:hidden p-2 "
-                  aria-label="Toggle Menu"
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="md:hidden "
+                aria-label="Toggle Menu"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  strokeLinecap="square"
+                  strokeLinejoin="inherit"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    strokeLinecap="square"
-                    strokeLinejoin="inherit"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      d="M2 8h20"
-                      className={`transform transition-transform duration-300 ease-in-out origin-center ${
-                        isOpen ? "rotate-45" : ""
-                      }`}
-                      strokeWidth="1"
-                    />
-                    <path
-                      d="M2 16h20"
-                      className={`transform transition-transform duration-300 ease-in-out origin-center ${
-                        isOpen ? "-rotate-45" : ""
-                      }`}
-                      strokeWidth="2"
-                    />
-                  </svg>
-                </button>
-              </div>
+                  <path
+                    d="M2 8h20"
+                    className={`transform transition-transform duration-300 ease-in-out origin-center ${
+                      isOpen ? "rotate-45" : ""
+                    }`}
+                    strokeWidth="1"
+                  />
+                  <path
+                    d="M2 16h20"
+                    className={`transform transition-transform duration-300 ease-in-out origin-center ${
+                      isOpen ? "-rotate-45" : ""
+                    }`}
+                    strokeWidth="2"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
-          {/* </div> */}
         </div>
       </nav>
 
       {/* Overlay + Mobile Menu */}
       <div
-        className={`md:hidden fixed inset-0 z-40 bg-white dark:bg-gray-950 transition-transform duration-300 ease-in-out ${
+        className={`md:hidden fixed inset-0 z-40 bg-white dark:bg-gray-950 transition-transform duration-300 ease-in-out overflow-y-auto ${
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-gray-950 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#1f2937_1px,transparent_1px)] [background-size:16px_16px]">
           <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_10%_200px,#ffffff,transparent)] dark:bg-[radial-gradient(circle_500px_at_10%_200px,#030712,transparent)]">
-            {/* <div className="py-20 px-4 flex flex-col space-y-2">
-              <Navlink href="#">Home</Navlink>
+            {/* Mobile Navbar Section */}
+            <div className="py-20 px-2 flex flex-col space-y-1">
+              {mobileNav}
+              {/* <Navlink href="#">Home</Navlink>
               <Navlink href="#">About</Navlink>
 
-              <Dropdown label="Services" className="space-y-2 py-2">
+              <Dropdown label="Services" className="space-y-1 ">
                 <Navlink href="#" isDropdownItem>
                   Web Development
                 </Navlink>
@@ -317,35 +249,12 @@ const Navbar: FC<NavbarProps> = ({ children, className = "" }) => {
               <Navlink href="#">Products</Navlink>
 
               <Navlink href="#">Features</Navlink>
-              <Navlink href="#">Contact</Navlink>
-            </div> */}
-            {/* <div className="bracketui-container"> */}
-            <MobileMenu>
-              <Navlink href="#">Home</Navlink>
-              <Navlink href="#">About</Navlink>
-
-              <Dropdown label="Services" className="space-y-2 py-2">
-                <Navlink href="#" isDropdownItem>
-                  Web Development
-                </Navlink>
-                <Navlink href="#" isDropdownItem>
-                  UI/UX Design
-                </Navlink>
-                <Navlink href="#" isDropdownItem>
-                  SEO Optimization
-                </Navlink>
-              </Dropdown>
-
-              <Navlink href="#">Products</Navlink>
-
-              <Navlink href="#">Features</Navlink>
-              <Navlink href="#">Contact</Navlink>
-            </MobileMenu>
-            {/* </div> */}
+              <Navlink href="#">Contact</Navlink> */}
+            </div>
           </div>
         </div>
       </div>
-    </>
+    </NavbarContext.Provider>
   );
 };
 

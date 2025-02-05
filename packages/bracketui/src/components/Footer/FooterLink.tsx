@@ -17,7 +17,7 @@ const FooterLink: FC<FooterLinkProps> = ({
   return (
     <a
       href={href}
-      className={`block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors ${className}`}
+      className={`block text-sm text-gray-600 dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-100 transition-colors ease-in-out duration-300 ${className}`}
       {...props}
     >
       {children}

@@ -8,7 +8,7 @@ export interface FooterTextProps {
 
 const FooterText: FC<FooterTextProps> = ({ children, className = "" }) => {
   return (
-    <p className={`text-xs  text-gray-500/80  ${className}`}>{children}</p>
+    <p className={`text-sm  text-gray-500/80  ${className}`}>{children}</p>
   );
 };
 

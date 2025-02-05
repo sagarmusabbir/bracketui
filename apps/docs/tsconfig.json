@@ -24,6 +24,7 @@
     "next.config.mjs",
     ".next/types/**/*.ts",
     "eslint.config.js",
-    "components/Navbar.jsx"
+    "components/Navbar.jsx",
+    "../../packages/bracketui/src/components/Header/Nav.tsx"
   ]
 }
