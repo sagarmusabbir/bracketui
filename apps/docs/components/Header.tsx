@@ -6,11 +6,24 @@ import {
   NavItem,
   Navlink,
 } from "@thirdbracket/bracketui";
+import Image from "next/image";
 
 const Header = () => {
   return (
-    <Navbar>
-      <Navbrand logo="/path.svg">UI</Navbrand>
+    <Navbar mobileBreakpoint={500}>
+      <Navbrand
+        logo={
+          <Image
+            src="path.svg"
+            alt="Brand Logo"
+            width={120}
+            height={27}
+            className="h-5 w-auto"
+          />
+        }
+      >
+        UI
+      </Navbrand>
       <NavItem>
         <Navlink href="#">Home</Navlink>
         <Navlink href="#">About</Navlink>

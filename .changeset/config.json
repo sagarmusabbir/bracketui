@@ -10,5 +10,12 @@
   "access": "public",
   "baseBranch": "dev",
   "updateInternalDependencies": "patch",
-  "ignore": []
+  "ignore": [],
+  "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
+    "defaultSummaries": {
+      "patch": "Bug fixes and minor updates",
+      "minor": "New feature added",
+      "major": "Updated to new version"
+    }
+  }
 }

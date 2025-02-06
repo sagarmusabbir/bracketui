@@ -8,11 +8,19 @@ import {
   MobileNav,
 } from "@thirdbracket/bracketui";
 import Image from "next/image";
+import { GiServerRack } from "react-icons/gi";
+import {
+  MdBusiness,
+  MdCloud,
+  MdDesignServices,
+  MdDeveloperMode,
+} from "react-icons/md";
+import { TbSeo } from "react-icons/tb";
 
 const HeaderWithMegamenu = () => {
   return (
     <Navbar>
-      <Navbrand logo="path.svg">
+      <Navbrand logo="path.svg" className="dark:invert">
         <span className="font-bold">UI</span>
       </Navbrand>
 
@@ -196,76 +204,106 @@ const HeaderWithMegamenu = () => {
         <Navlink href="/">Home</Navlink>
 
         <Megamenu label="Solutions">
-          <div className="space-y-1 ">
-            {/* Development Solutions */}
-
-            <div className="py-1">
-              <h3 className="pl-4  dark:text-gray-700 text-gray-400 flex items-center   mb-1">
+          <div className="space-y-4">
+            {/* Infrastructure Section */}
+            <div>
+              <h3 className="mb-2 text-sm  flex items-center gap-4   text-gray-500 dark:text-gray-400  ">
+                <GiServerRack />
                 <span>Infrastructure</span>
-                <hr className="ml-4 flex-grow border-[0.5px] border-gray-200 dark:border-gray-700  m-0" />
+                <hr className="flex-grow border-[0.5px] border-gray-200/60 dark:border-gray-800/80 border-dashed mr-4" />
               </h3>
-              <div className="pb-2 border-x border-b border-gray-200 dark:border-gray-700 ">
-                <Navlink href="/web-development" isDropdownItem>
+              <div className=" overflow-hidden  border-r-[0.5px] border-gray-200 dark:border-gray-800 border-dashed">
+                <Navlink href="/serverless" isDropdownItem>
                   Serverless
                 </Navlink>
-                <Navlink href="/mobile-development" isDropdownItem>
+                <Navlink href="/headless" isDropdownItem>
                   Headless Integration
                 </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
+                <Navlink href="/wordpress" isDropdownItem>
                   Custom Wordpress
                 </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
+                <Navlink href="/vps" isDropdownItem>
                   VPS Setup
                 </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
+                <Navlink href="/migration" isDropdownItem>
                   Migration
                 </Navlink>
               </div>
             </div>
 
-            <div className="py-1">
-              <h3 className="pl-4  dark:text-gray-700 text-gray-400 flex items-center   mb-1">
+            {/* Cloud Section */}
+            <div>
+              <h3 className="mb-2 text-sm  flex items-center gap-4   text-gray-500 dark:text-gray-400">
+                <MdCloud />
                 <span>Cloud</span>
-                <hr className="ml-4 flex-grow border-[0.5px] border-gray-200 dark:border-gray-700  m-0" />
+                <hr className="flex-grow border-[0.5px] border-gray-200/60 dark:border-gray-800/80 border-dashed mr-4" />
               </h3>
-              <div className="pb-2 border-x border-b border-gray-200 dark:border-gray-700 ">
-                <Navlink href="/mobile-development" isDropdownItem>
+              <div className=" overflow-hidden  border-r-[0.5px] border-gray-200 dark:border-gray-800 border-dashed">
+                <Navlink href="/aws" isDropdownItem>
                   AWS Infrastructure
                 </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
+                <Navlink href="/serverless-arch" isDropdownItem>
                   Serverless Architecture
                 </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
+                <Navlink href="/server-management" isDropdownItem>
                   Server Management
                 </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
+                <Navlink href="/paas" isDropdownItem>
                   PaaS Integration
                 </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
+                <Navlink href="/automation" isDropdownItem>
                   Automation
                 </Navlink>
               </div>
             </div>
 
-            <div className="py-1">
-              <h3 className="pl-4  dark:text-gray-700 text-gray-400 flex items-center   mb-1">
+            {/* Cloud Section */}
+            <div>
+              <h3 className="mb-2 text-sm  flex items-center gap-4   text-gray-500 dark:text-gray-400">
+                <MdBusiness />
                 <span>Business</span>
-                <hr className="ml-4 flex-grow border-[0.5px] border-gray-200 dark:border-gray-700  m-0" />
+                <hr className="flex-grow border-[0.5px] border-gray-200/60 dark:border-gray-800/80 border-dashed mr-4" />
               </h3>
-              <div className="pb-2 border-x border-b border-gray-200 dark:border-gray-700 ">
-                <Navlink href="/mobile-development" isDropdownItem>
+              <div className=" overflow-hidden  border-r-[0.5px] border-gray-200 dark:border-gray-800 border-dashed">
+                <Navlink href="/consulting" isDropdownItem>
                   Consulting
                 </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
+                <Navlink href="/strategy" isDropdownItem>
                   Strategy
                 </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
+                <Navlink href="/brand-development" isDropdownItem>
                   Brand Development
                 </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
+                <Navlink href="/lead-generation" isDropdownItem>
                   Lead Generation
                 </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
+                <Navlink href="/analytics" isDropdownItem>
+                  Analytics
+                </Navlink>
+              </div>
+            </div>
+
+            {/* Cloud Section */}
+            <div>
+              <h3 className="mb-2 text-sm  flex items-center gap-4   text-gray-500 dark:text-gray-400">
+                <MdBusiness />
+                <span>Business</span>
+                <hr className="flex-grow border-[0.5px] border-gray-200/60 dark:border-gray-800/80 border-dashed mr-4" />
+              </h3>
+              <div className=" overflow-hidden  border-r-[0.5px] border-gray-200 dark:border-gray-800 border-dashed">
+                <Navlink href="/consulting" isDropdownItem>
+                  Consulting
+                </Navlink>
+                <Navlink href="/strategy" isDropdownItem>
+                  Strategy
+                </Navlink>
+                <Navlink href="/brand-development" isDropdownItem>
+                  Brand Development
+                </Navlink>
+                <Navlink href="/lead-generation" isDropdownItem>
+                  Lead Generation
+                </Navlink>
+                <Navlink href="/analytics" isDropdownItem>
                   Analytics
                 </Navlink>
               </div>
@@ -274,158 +312,72 @@ const HeaderWithMegamenu = () => {
         </Megamenu>
 
         <Megamenu label="Services">
-          <div className="space-y-1 ">
-            {/* Development Solutions */}
-
-            <div className="py-1">
-              <h3 className="pl-4  dark:text-gray-700 text-gray-400 flex items-center   mb-1">
+          <div className="space-y-4">
+            {/* Cloud Section */}
+            <div>
+              <h3 className="mb-2 text-sm  flex items-center gap-4   text-gray-500 dark:text-gray-400">
+                <MdDeveloperMode />
                 <span>Development</span>
-                <hr className="ml-4 flex-grow border-[0.5px] border-gray-200 dark:border-gray-700  m-0" />
+                <hr className="flex-grow border-[0.5px] border-gray-200/60 dark:border-gray-800/80 border-dashed mr-4" />
               </h3>
-              <div className="pb-2 border-x border-b border-gray-200 dark:border-gray-700 ">
-                <Navlink href="/web-development" isDropdownItem>
-                  Frontend Development
+              <div className=" overflow-hidden  border-r-[0.5px] border-gray-200 dark:border-gray-800 border-dashed">
+                <Navlink href="/frontend" isDropdownItem>
+                  Frontend
                 </Navlink>
-                <Navlink href="/mobile-development" isDropdownItem>
-                  Backend Development
+                <Navlink href="/backend" isDropdownItem>
+                  Backend
                 </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
-                  Full-Stack Development
+                <Navlink href="/fullstack" isDropdownItem>
+                  Full-Stack
                 </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
+                <Navlink href="/performance" isDropdownItem>
                   Performance Optimization
                 </Navlink>
               </div>
             </div>
 
-            <div className="py-1">
-              <h3 className="pl-4  dark:text-gray-700 text-gray-400 flex items-center   mb-1">
+            {/* Cloud Section */}
+            <div>
+              <h3 className="mb-2 text-sm  flex items-center gap-4   text-gray-500 dark:text-gray-400">
+                <MdDesignServices />
                 <span>UI/UX</span>
-                <hr className="ml-4 flex-grow border-[0.5px] border-gray-200 dark:border-gray-700  m-0" />
+                <hr className="flex-grow border-[0.5px] border-gray-200/60 dark:border-gray-800/80 border-dashed mr-4" />
               </h3>
-              <div className="pb-2 border-x border-b border-gray-200 dark:border-gray-700 ">
-                <Navlink href="/mobile-development" isDropdownItem>
+              <div className=" overflow-hidden  border-r-[0.5px] border-gray-200 dark:border-gray-800 border-dashed">
+                <Navlink href="/ui-design" isDropdownItem>
                   UI/UX Design
                 </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
+                <Navlink href="/web-interface" isDropdownItem>
                   Web Interface Design
                 </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
-                  Brand Identity Design
-                </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
+                <Navlink href="/responsive" isDropdownItem>
                   Responsive Design
                 </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
+                <Navlink href="/theme-dev" isDropdownItem>
                   Theme Development
                 </Navlink>
               </div>
             </div>
 
-            <div className="py-1">
-              <h3 className="pl-4  dark:text-gray-700 text-gray-400 flex items-center   mb-1">
+            {/* Cloud Section */}
+            <div>
+              <h3 className="mb-2 text-sm  flex items-center gap-4    text-gray-500 dark:text-gray-400">
+                <TbSeo />
                 <span>Digital Marketing</span>
-                <hr className="ml-4 flex-grow border-[0.5px] border-gray-200 dark:border-gray-700  m-0" />
+                <hr className="flex-grow border-[0.5px] border-gray-200/60 dark:border-gray-800/80 border-dashed mr-4" />
               </h3>
-              <div className="pb-2 border-x border-b border-gray-200 dark:border-gray-700 ">
-                <Navlink href="/mobile-development" isDropdownItem>
-                  SEO
+              <div className=" overflow-hidden  border-r-[0.5px] border-gray-200 dark:border-gray-800 border-dashed">
+                <Navlink href="/ui-design" isDropdownItem>
+                  UI/UX Design
                 </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
-                  Content Writing
+                <Navlink href="/web-interface" isDropdownItem>
+                  Web Interface Design
                 </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
-                  Blog
+                <Navlink href="/responsive" isDropdownItem>
+                  Responsive Design
                 </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
-                  Social Media Management
-                </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
-                  Advertise
-                </Navlink>
-              </div>
-            </div>
-
-            <div className="py-1">
-              <h3 className="pl-4  dark:text-gray-700 text-gray-400 flex items-center   mb-1">
-                <span>Consulting</span>
-                <hr className="ml-4 flex-grow border-[0.5px] border-gray-200 dark:border-gray-700  m-0" />
-              </h3>
-              <div className="pb-2 border-x border-b border-gray-200 dark:border-gray-700 ">
-                <Navlink href="/mobile-development" isDropdownItem>
-                  Technical Consultation
-                </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
-                  Infrastructure Planning
-                </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
-                  Digital Strategy
-                </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
-                  Security Assessment
-                </Navlink>
-              </div>
-            </div>
-          </div>
-        </Megamenu>
-
-        <Megamenu label="Products">
-          <div className="space-y-1 ">
-            {/* Development Solutions */}
-
-            <div className="py-1">
-              <h3 className="pl-4  dark:text-gray-700 text-gray-400 flex items-center   mb-1">
-                <span>UI Components</span>
-                <hr className="ml-4 flex-grow border-[0.5px] border-gray-200 dark:border-gray-700  m-0" />
-              </h3>
-              <div className="pb-2 border-x border-b border-gray-200 dark:border-gray-700 ">
-                <Navlink href="/web-development" isDropdownItem>
-                  BracketUI Component Library
-                </Navlink>
-                <Navlink href="/mobile-development" isDropdownItem>
-                  Custom UI Packages
-                </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
-                  Design System
-                </Navlink>
-              </div>
-            </div>
-
-            <div className="py-1">
-              <h3 className="pl-4  dark:text-gray-700 text-gray-400 flex items-center   mb-1">
-                <span>Themes</span>
-                <hr className="ml-4 flex-grow border-[0.5px] border-gray-200 dark:border-gray-700  m-0" />
-              </h3>
-              <div className="pb-2 border-x border-b border-gray-200 dark:border-gray-700 ">
-                <Navlink href="/mobile-development" isDropdownItem>
-                  Next.js Themes
-                </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
-                  WordPress Themes
-                </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
-                  E-commerce Templates
-                </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
-                  Hugo Theme
-                </Navlink>
-              </div>
-            </div>
-
-            <div className="py-1">
-              <h3 className="pl-4  dark:text-gray-700 text-gray-400 flex items-center   mb-1">
-                <span>Tools & Utilities</span>
-                <hr className="ml-4 flex-grow border-[0.5px] border-gray-200 dark:border-gray-700  m-0" />
-              </h3>
-              <div className="pb-2 border-x border-b border-gray-200 dark:border-gray-700 ">
-                <Navlink href="/mobile-development" isDropdownItem>
-                  Development Tools
-                </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
-                  Automation Scripts
-                </Navlink>
-                <Navlink href="/api-integration" isDropdownItem>
-                  Custom Packages
+                <Navlink href="/theme-dev" isDropdownItem>
+                  Theme Development
                 </Navlink>
               </div>
             </div>

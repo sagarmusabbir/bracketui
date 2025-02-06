@@ -8,7 +8,6 @@ import { GeistSans } from "geist/font/sans";
 // import Header from "../../components/Header";
 import { ThemeScript } from "@thirdbracket/bracketui";
 import SiteFooter from "../../components/Footer";
-
 import HeaderWithMegamenu from "../../components/MegaHeader";
 
 // import { Navbar } from "@thirdbracket/core";
