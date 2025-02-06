@@ -58,8 +58,8 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          version: npm run version
-          publish: npm run release
+          version: version
+          publish: publish
           commit: "chore(release): version @thirdbracket/bracketui"
           title: "chore(release): version @thirdbracket/bracketui"
           createGithubReleases: true

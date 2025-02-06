@@ -1,9 +1,12 @@
 import {
   Footer,
+  FooterBottom,
   FooterBrand,
   FooterLink,
   FooterSection,
   FooterSocial,
+  FooterText,
+  ThemeToggle,
 } from "@thirdbracket/bracketui";
 import { EmailIcon, FacebookIcon, LinkedInIcon, PhoneIcon } from "./icons";
 
@@ -59,6 +62,12 @@ const SiteFooter = () => {
         <FooterLink href="/templates">Templates</FooterLink>
         <FooterLink href="/pricing">Pricing</FooterLink>
       </FooterSection>
+      <FooterBottom>
+        <FooterText>© 2024 Third Bracket Solution.</FooterText>
+        <div>
+          <ThemeToggle />
+        </div>
+      </FooterBottom>
     </Footer>
   );
 };
