@@ -167,7 +167,11 @@ const Navbar: FC<NavbarProps> = ({
     className
   );
 
-  const containerClasses = clsx("border-b", theme.border, containerClassName);
+  const containerClasses = clsx(
+    "border-b-[0.5px]",
+    theme.border,
+    containerClassName
+  );
 
   const mobileMenuClasses = clsx(
     "md:hidden",

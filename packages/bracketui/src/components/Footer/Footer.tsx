@@ -16,7 +16,7 @@ const Footer: FC<FooterProps> = ({ children, className }) => {
   return (
     <FooterContext.Provider value={{ setFooterBottom }}>
       <footer
-        className={`bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 ${className}`}
+        className={`bg-white dark:bg-gray-950 border-t-[0.5px] border-gray-200 dark:border-gray-800 ${className}`}
       >
         <div className="mx-auto px-6 lg:px-8">
           <div className="py-12 md:py-16">
@@ -25,7 +25,7 @@ const Footer: FC<FooterProps> = ({ children, className }) => {
             </div>
           </div>
 
-          <div className="py-4 md:py-8 border-t border-gray-200 dark:border-gray-800 flex items-center justify-between  mx-auto">
+          <div className="py-4 md:py-8 border-t-[0.5px] border-gray-200 dark:border-gray-800 flex items-center justify-between  mx-auto">
             {footerBottom}
           </div>
         </div>
