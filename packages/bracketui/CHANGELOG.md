@@ -1,5 +1,17 @@
 # @thirdbracket/bracketui
 
+## 3.1.0
+
+### Minor Changes
+
+- [`e762acf`](https://github.com/sagarmusabbir/bracketui/commit/e762acffaf43545f95a23d1dadb53d7702f52bc4) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - New feature:Next.js Link feature on Navlink
+
+- [`cf04034`](https://github.com/sagarmusabbir/bracketui/commit/cf040344df4e0a0a1b85a78dfdf28da03a40f4b0) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - New features: Next.js Link and its features are available in Navlink. The bracktui package will automatically detect if they are in a Next.js project. Both App and Pages router is supported. This also automatically detects if the href is an external value.
+
+### Patch Changes
+
+- [`d74dfc9`](https://github.com/sagarmusabbir/bracketui/commit/d74dfc9b9adfd08bd40cb3310125c2baf3f06cb9) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - chore:release workflow fixed and make Next.js feature Link available
+
 ## 3.0.1
 
 ### Patch Changes
