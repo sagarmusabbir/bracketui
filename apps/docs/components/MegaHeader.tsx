@@ -26,8 +26,6 @@ const HeaderWithMegamenu = () => {
 
       {/* Desktop Navigation */}
       <NavItem>
-        <Navlink href="/">Home</Navlink>
-
         <Megamenu label="Solutions">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2">
             {/* Development Solutions */}
@@ -201,8 +199,6 @@ const HeaderWithMegamenu = () => {
 
       {/* Mobile Navigation */}
       <MobileNav>
-        <Navlink href="/">Home</Navlink>
-
         <Megamenu label="Solutions">
           <div className="space-y-4">
             {/* Infrastructure Section */}

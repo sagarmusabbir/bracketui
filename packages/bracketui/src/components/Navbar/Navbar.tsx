@@ -180,7 +180,9 @@ const Navbar: FC<NavbarProps> = ({
     }
   );
 
-  const desktopNavClasses = clsx("hidden md:flex items-center");
+  const desktopNavClasses = clsx(
+    "hidden md:flex items-center justify-between space-x-8"
+  );
 
   const toggleButtonClasses = clsx("md:hidden text-gray-950 dark:text-white");
 

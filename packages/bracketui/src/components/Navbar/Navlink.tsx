@@ -1,46 +1,3 @@
-// import clsx from "clsx";
-// import { FC, MouseEventHandler } from "react";
-
-// export interface NavlinkProps {
-//   href?: string;
-//   children?: React.ReactNode;
-//   isDropdownItem?: boolean;
-//   className?: string;
-// }
-
-// const Navlink: FC<NavlinkProps> = ({
-//   href = "#",
-//   children,
-//   isDropdownItem,
-//   className = "",
-// }) => {
-//   return (
-//     <a
-//       href={href}
-//       className={clsx(
-//         "block transition-opacity ease-in-out duration-200",
-//         // Base text styles
-//         "text-gray-950 dark:text-white",
-//         // Text size and padding
-//         isDropdownItem
-//           ? "text-base py-3 px-4" // More padding for dropdown items
-//           : "text-base md:text-sm py-2",
-//         // Opacity states
-//         isDropdownItem
-//           ? "opacity-60 hover:opacity-100 border-b border-gray-100 dark:border-gray-800 last:border-0"
-//           : "opacity-80 hover:opacity-100",
-//         // Additional hover effect for dropdown items
-//         isDropdownItem && "hover:bg-gray-100/50 dark:hover:bg-gray-800/50",
-//         className
-//       )}
-//     >
-//       {children}
-//     </a>
-//   );
-// };
-
-// export default Navlink;
-
 import clsx from "clsx";
 import { FC, MouseEventHandler } from "react";
 
@@ -63,7 +20,7 @@ const Navlink: FC<NavlinkProps> = ({
   onClick,
   className = "",
   theme = {
-    text: "text-gray-950 dark:text-white",
+    text: "text-gray-900 dark:text-gray-100 opacity-80",
     hover: "hover:opacity-100",
   },
 }) => {
@@ -76,8 +33,13 @@ const Navlink: FC<NavlinkProps> = ({
         "block transition-opacity ease-in-out duration-200",
         theme.text,
 
-        // Size and spacing
-        "text-base md:text-sm font-normal  py-2 ",
+        // Size and spacing.
+        {
+          // Dropdown item styling
+          "text-sm md:text-xs font-normal py-1.5 md:py-1.5": isDropdownItem,
+
+          "text-base md:text-sm font-normal py-2": !isDropdownItem,
+        },
 
         // Opacity states
         isDropdownItem ? "opacity-60 " : "opacity-80 ",

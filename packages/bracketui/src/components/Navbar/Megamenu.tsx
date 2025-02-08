@@ -88,8 +88,8 @@ const Megamenu: FC<MegamenuProps> = ({
   buttonClassName,
   mobileBreakpoint = 768,
   theme = {
-    button: "text-gray-950 dark:text-white opacity-80 hover:opacity-100 ",
-    menu: " p-2 rounded-sm    bg-clip-padding backdrop-filter backdrop-blur-xl ",
+    button: "text-gray-900 dark:text-gray-100 opacity-80 hover:opacity-100 ",
+    menu: "py-2  bg-clip-padding backdrop-filter backdrop-blur-2xl bg-white dark:bg-gray-950 ",
   },
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -129,19 +129,15 @@ const Megamenu: FC<MegamenuProps> = ({
   );
 
   const buttonClasses = clsx(
-    "flex items-center justify-between w-full py-2",
+    "flex items-center  justify-between w-full py-2 text-base md:text-sm",
     theme.button,
     buttonClassName
   );
 
-  const iconClasses = clsx(
-    "w-6 h-6 md:ml-1",
-    "transition-transform duration-200",
-    {
-      "rotate-180": isOpen,
-      "rotate-0": !isOpen,
-    }
-  );
+  const iconClasses = clsx("w-6 h-6 p-0", "transition-transform duration-200", {
+    "rotate-180": isOpen,
+    "rotate-0": !isOpen,
+  });
 
   const menuClasses = clsx(
     "transition-all duration-200 overflow-hidden",
@@ -153,7 +149,7 @@ const Megamenu: FC<MegamenuProps> = ({
     "w-full ",
     // Desktop styles
     "md:fixed md:p-6 md:left-0 md:right-0 md:mt-2",
-    "md:shadow-md md:border-y",
+    "md:shadow-md md:border-y border-gray-200 dark:border-gray-800",
     theme.menu,
     className
   );
