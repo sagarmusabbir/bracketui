@@ -1,58 +1,104 @@
 // "use client";
 
 // import { FC, useEffect, useState } from "react";
-
+// import clsx from "clsx";
 // import NavbarContext from "./NavbarContext";
 
 // export interface NavbarProps {
 //   children?: React.ReactNode;
 //   className?: string;
+//   containerClassName?: string;
+//   mobileBreakpoint?: number;
+//   enableScrollLock?: boolean;
+//   position?: "fixed" | "sticky" | "relative" | "absolute";
+//   theme?: {
+//     background?: string;
+//     border?: string;
+//     mobileMenu?: string;
+//   };
 // }
 
-// const Navbar: FC<NavbarProps> = ({ children, className = "" }) => {
+// const Navbar: FC<NavbarProps> = ({
+//   children,
+//   className = "",
+//   containerClassName = "",
+//   mobileBreakpoint = 768,
+//   enableScrollLock = true,
+//   position = "fixed",
+//   theme = {
+//     background: "bg-white dark:bg-gray-950 bg-opacity-80",
+//     border: "border-gray-200 dark:border-gray-800",
+//     mobileMenu: "bg-white dark:bg-gray-950",
+//   },
+// }) => {
 //   const [isOpen, setIsOpen] = useState(false);
 //   const [desktopNav, setDesktopNav] = useState<React.ReactNode>(null);
 //   const [mobileNav, setMobileNav] = useState<React.ReactNode>(null);
 
-//   // Add the useEffect here
 //   useEffect(() => {
-//     // Only apply scroll lock on mobile screens
-//     if (window.innerWidth < 768) {
-//       // Using 768px
-//       if (isOpen) {
-//         // Prevent body scrolling when mobile menu is open
-//         document.body.style.overflow = "hidden";
-//       } else {
-//         // Re-enable body scrolling when mobile menu is closed
-//         document.body.style.overflow = "unset";
+//     if (!enableScrollLock) return;
+
+//     const handleScrollLock = () => {
+//       if (window.innerWidth < mobileBreakpoint) {
+//         document.body.style.overflow = isOpen ? "hidden" : "unset";
 //       }
-//     }
+//     };
+
+//     handleScrollLock();
+//     window.addEventListener("resize", handleScrollLock);
 
 //     return () => {
-//       // Cleanup
 //       document.body.style.overflow = "unset";
+//       window.removeEventListener("resize", handleScrollLock);
 //     };
-//   }, [isOpen]); // Depends on isOpen state
+//   }, [isOpen, mobileBreakpoint, enableScrollLock]);
+
+//   // Use standard Tailwind classes instead of dynamic ones
+//   const navClasses = clsx(
+//     position,
+//     "top-0 left-0 right-0 z-50 backdrop-blur-md",
+//     theme.background,
+//     className
+//   );
+
+//   const containerClasses = clsx(
+//     "border-b-[0.5px]",
+//     theme.border,
+//     containerClassName
+//   );
+
+//   const mobileMenuClasses = clsx(
+//     "md:hidden",
+//     "fixed inset-0 z-40",
+//     theme.mobileMenu,
+//     "transition-transform duration-300 ease-in-out overflow-y-auto",
+//     {
+//       "translate-y-0": isOpen,
+//       "-translate-y-full": !isOpen,
+//     }
+//   );
+
+//   const desktopNavClasses = clsx(
+//     "hidden md:flex items-center justify-between space-x-8"
+//   );
+
+//   const toggleButtonClasses = clsx("md:hidden text-gray-950 dark:text-white");
 
 //   return (
 //     <NavbarContext.Provider value={{ setDesktopNav, setMobileNav }}>
-//       <nav
-//         className={`bg-white dark:bg-gray-950 text-gray-950 dark:text-white fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-opacity-80 ${className}`}
-//       >
-//         <div className="border-b border-gray-200 dark:border-gray-800">
+//       <nav className={navClasses}>
+//         <div className={containerClasses}>
 //           <div className="px-6 lg:px-8">
-//             <div className="flex justify-between h-16 items-center ">
+//             <div className="flex justify-between h-16 items-center">
 //               {children}
-
 //               <div className="flex items-center justify-between space-x-8">
-//                 {/* Desktop Navbar Section */}
-//                 <div className="hidden md:flex items-center">{desktopNav}</div>
+//                 <div className={desktopNavClasses}>{desktopNav}</div>
 //               </div>
-
 //               <button
 //                 onClick={() => setIsOpen(!isOpen)}
-//                 className="md:hidden "
+//                 className={toggleButtonClasses}
 //                 aria-label="Toggle Menu"
+//                 aria-expanded={isOpen}
 //               >
 //                 <svg
 //                   className="w-6 h-6"
@@ -64,16 +110,18 @@
 //                 >
 //                   <path
 //                     d="M2 8h20"
-//                     className={`transform transition-transform duration-300 ease-in-out origin-center ${
-//                       isOpen ? "rotate-45" : ""
-//                     }`}
+//                     className={clsx(
+//                       "transform transition-transform duration-300 ease-in-out origin-center",
+//                       { "rotate-45": isOpen }
+//                     )}
 //                     strokeWidth="1"
 //                   />
 //                   <path
 //                     d="M2 16h20"
-//                     className={`transform transition-transform duration-300 ease-in-out origin-center ${
-//                       isOpen ? "-rotate-45" : ""
-//                     }`}
+//                     className={clsx(
+//                       "transform transition-transform duration-300 ease-in-out origin-center",
+//                       { "-rotate-45": isOpen }
+//                     )}
 //                     strokeWidth="2"
 //                   />
 //                 </svg>
@@ -83,16 +131,10 @@
 //         </div>
 //       </nav>
 
-//       {/* Overlay + Mobile Menu */}
-//       <div
-//         className={`md:hidden fixed inset-0 z-40 bg-white dark:bg-gray-950 transition-transform duration-300 ease-in-out overflow-y-auto ${
-//           isOpen ? "translate-y-0" : "-translate-y-full"
-//         }`}
-//       >
-//         <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-gray-950 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#1f2937_1px,transparent_1px)] [background-size:16px_16px]">
+//       <div className={mobileMenuClasses}>
+//         <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#1f2937_1px,transparent_1px)] [background-size:16px_16px]">
 //           <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_10%_200px,#ffffff,transparent)] dark:bg-[radial-gradient(circle_500px_at_10%_200px,#030712,transparent)]">
-//             {/* Mobile Navbar Section */}
-//             <div className="py-20 px-2 flex flex-col space-y-1">
+//             <div className="py-20 px-6 lg:px-8 flex flex-col space-y-1">
 //               {mobileNav}
 //             </div>
 //           </div>
@@ -106,7 +148,7 @@
 
 "use client";
 
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useState, useMemo, useCallback } from "react";
 import clsx from "clsx";
 import NavbarContext from "./NavbarContext";
 
@@ -141,6 +183,14 @@ const Navbar: FC<NavbarProps> = ({
   const [desktopNav, setDesktopNav] = useState<React.ReactNode>(null);
   const [mobileNav, setMobileNav] = useState<React.ReactNode>(null);
 
+  // Memoize context value to prevent unnecessary updates
+  const contextValue = useMemo(() => ({ setDesktopNav, setMobileNav }), []);
+
+  // Prevent unnecessary re-renders of toggle function
+  const toggleMenu = useCallback(() => setIsOpen((prev) => !prev), []);
+
+  // Optimize scroll lock effect
+
   useEffect(() => {
     if (!enableScrollLock) return;
 
@@ -159,50 +209,28 @@ const Navbar: FC<NavbarProps> = ({
     };
   }, [isOpen, mobileBreakpoint, enableScrollLock]);
 
-  // Use standard Tailwind classes instead of dynamic ones
-  const navClasses = clsx(
-    position,
-    "top-0 left-0 right-0 z-50 backdrop-blur-md",
-    theme.background,
-    className
-  );
-
-  const containerClasses = clsx(
-    "border-b-[0.5px]",
-    theme.border,
-    containerClassName
-  );
-
-  const mobileMenuClasses = clsx(
-    "md:hidden",
-    "fixed inset-0 z-40",
-    theme.mobileMenu,
-    "transition-transform duration-300 ease-in-out overflow-y-auto",
-    {
-      "translate-y-0": isOpen,
-      "-translate-y-full": !isOpen,
-    }
-  );
-
-  const desktopNavClasses = clsx(
-    "hidden md:flex items-center justify-between space-x-8"
-  );
-
-  const toggleButtonClasses = clsx("md:hidden text-gray-950 dark:text-white");
-
   return (
-    <NavbarContext.Provider value={{ setDesktopNav, setMobileNav }}>
-      <nav className={navClasses}>
-        <div className={containerClasses}>
+    <NavbarContext.Provider value={contextValue}>
+      <nav
+        className={clsx(
+          position,
+          "top-0 left-0 right-0 z-50 backdrop-blur-md",
+          theme.background,
+          className
+        )}
+      >
+        <div
+          className={clsx("border-b-[0.5px]", theme.border, containerClassName)}
+        >
           <div className="px-6 lg:px-8">
             <div className="flex justify-between h-16 items-center">
               {children}
-              <div className="flex items-center justify-between space-x-8">
-                <div className={desktopNavClasses}>{desktopNav}</div>
+              <div className="hidden md:flex items-center justify-between space-x-6">
+                {desktopNav}
               </div>
               <button
-                onClick={() => setIsOpen(!isOpen)}
-                className={toggleButtonClasses}
+                onClick={toggleMenu}
+                className="md:hidden text-gray-950 dark:text-white"
                 aria-label="Toggle Menu"
                 aria-expanded={isOpen}
               >
@@ -237,13 +265,16 @@ const Navbar: FC<NavbarProps> = ({
         </div>
       </nav>
 
-      <div className={mobileMenuClasses}>
-        <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#1f2937_1px,transparent_1px)] [background-size:16px_16px]">
-          <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_10%_200px,#ffffff,transparent)] dark:bg-[radial-gradient(circle_500px_at_10%_200px,#030712,transparent)]">
-            <div className="py-20 px-6 lg:px-8 flex flex-col space-y-1">
-              {mobileNav}
-            </div>
-          </div>
+      <div
+        className={clsx(
+          "md:hidden fixed inset-0 z-40",
+          theme.mobileMenu,
+          "transition-transform duration-300 ease-in-out overflow-y-auto",
+          { "translate-y-0": isOpen, "-translate-y-full": !isOpen }
+        )}
+      >
+        <div className="py-20 px-6 lg:px-8 flex flex-col space-y-1">
+          {mobileNav}
         </div>
       </div>
     </NavbarContext.Provider>

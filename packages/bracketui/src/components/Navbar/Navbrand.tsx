@@ -14,18 +14,26 @@ const Navbrand: FC<NavbrandProps> = ({
   href = "/",
   className = "",
 }) => {
+  if (!logo && !children) {
+    throw new Error(
+      "Navbrand requires at least one prop: 'logo' or 'children'."
+    );
+  }
   return (
     <a
-      href="/"
+      href={href}
       className={clsx(
-        "group hover:opacity-80 transition-opacity ease-in-out duration-500",
-        "flex items-center gap-1",
+        "flex items-center gap-2 transition-opacity duration-300 hover:opacity-80",
         className
       )}
     >
       {logo &&
         (typeof logo === "string" ? (
-          <img src={logo} alt="Brand Logo" className={clsx("h-5 w-auto")} />
+          <img
+            src={logo}
+            alt="Brand Logo"
+            className={clsx("h-5 w-auto object-contain")}
+          />
         ) : (
           logo
         ))}
