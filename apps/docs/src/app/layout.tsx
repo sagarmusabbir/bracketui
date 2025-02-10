@@ -5,7 +5,8 @@
 import "./globals.css";
 import { GeistSans } from "geist/font/sans";
 
-// import Header from "../../components/Header";
+// import Header from "..npm run dev
+// /../components/Header";
 import { ThemeScript } from "@thirdbracket/bracketui";
 import SiteFooter from "../../components/Footer";
 
@@ -27,7 +28,6 @@ export default function RootLayout({
         <ThemeScript />
       </head>
       <body>
-        {/* <HeaderWithMegamenu /> */}
         <MegaHeader />
 
         <main>{children}</main>
