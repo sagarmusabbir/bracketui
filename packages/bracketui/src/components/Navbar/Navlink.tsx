@@ -177,6 +177,8 @@ export type NavlinkProps<T extends ElementType> = {
   children?: React.ReactNode;
   isDropdownItem?: boolean;
   isExternal?: boolean;
+  cto?: boolean;
+
   theme?: {
     text?: string;
     states?: string;
@@ -190,22 +192,27 @@ const Navlink = forwardRef(function Navlink<T extends ElementType = "a">(
     isExternal,
     isDropdownItem,
     children,
+
+    cto,
     theme = {
-      text: "text-gray-900 dark:text-gray-100",
-      states: " hover:opacity-100",
+      text: "text-gray-950 dark:text-white",
+      states: "opacity-80 hover:opacity-100",
     },
     ...props
   }: NavlinkProps<T>,
   ref: React.Ref<any>
 ) {
   // Base styles that should always be applied
+
   const baseStyles =
-    " py-2 transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out text-base md:text-sm block";
+    " transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out text-base  md:flex block py-2 md:py-1";
+
+  const varientSize = cto ? " lg:text-lg font-semibold " : "md:text-sm";
 
   // Conditional styles based on isDropdownItem
   const variantStyles = isDropdownItem
-    ? " hover:underline  hover:decoration-[0.5px] md:hover:no-underline  opacity-70 "
-    : " opacity-80";
+    ? " hover:underline  hover:decoration-[0.5px]   "
+    : "";
 
   // Theme styles
   const themeStyles = clsx(theme.text, theme.states);
@@ -215,6 +222,8 @@ const Navlink = forwardRef(function Navlink<T extends ElementType = "a">(
     baseStyles,
     variantStyles,
     themeStyles,
+    varientSize,
+
     className // Consumer className takes precedence
   );
 

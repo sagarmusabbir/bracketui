@@ -121,7 +121,7 @@ const Megamenu: FC<MegamenuProps> = ({
 
   const buttonClasses = clsx(
     // Base styles
-    "flex items-center transition-all duration-200",
+    "transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out text-base flex",
     // Responsive layout
     "w-full md:w-auto",
     "justify-between md:justify-start",
