@@ -1,49 +1,46 @@
 import { FC } from "react";
 
 export interface CardProps {
-  header: string;
+  header?: string;
   cover?: string | React.ReactElement;
   children: React.ReactNode;
-  href: string;
+  href?: string;
 }
 
-const Card: FC<CardProps> = ({
-  header = "My Awesome Card",
-  cover,
-  href = "#",
-  children,
-}) => {
+const Card: FC<CardProps> = ({ header, cover, href = "#", children }) => {
   return (
     <a
       href={href}
-      className="rounded-lg border hover:border-gray-400 dark:hover:border-gray-600 border-gray-200 dark:border-gray-800 overflow-hidden bg-clip-padding backdrop-filter backdrop-blur-xl  h-auto  bg-opacity-10 hover:bg-opacity-100 flex flex-col justify-center transition-all ease-in duration-200 p-4 max-h-fit"
+      className="rounded-md border hover:border-gray-400 dark:hover:border-gray-600 border-gray-200 dark:border-gray-800 overflow-hidden  flex flex-col justify-center items-stretch gap-y-3 transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out p-4 max-h-fit "
     >
       {/* Cover Section */}
-      <div className="mx-auto ">
-        {
-          cover &&
-            // <div className="mx-auto size-40 bg-slate-50">
-            (typeof cover === "string" ? (
-              <img
-                src={cover}
-                alt="Card Image"
-                className=" object-cover mx-auto"
-              />
-            ) : (
-              <div>{cover}</div>
-            ))
-          // </div>
-        }
-      </div>
+      {/* <div className="object-left md:object-cover bg-gray-50 dark:bg-gray-900 bg-opacity-20 w-full h-full"> */}
+      {
+        cover &&
+          (typeof cover === "string" ? (
+            <div className="object-left md:object-cover    w-full h-full bg-clip-padding backdrop-filter backdrop-blur-xl  opacity-80  ">
+              <img src={cover} alt="Card Image" />
+            </div>
+          ) : (
+            <div className="object-left md:object-cover     w-full h-full bg-clip-padding backdrop-filter backdrop-blur-xl  opacity-80  ">
+              {cover}
+            </div>
+          ))
+        // </div>
+      }
+      {/* </div> */}
 
       {/* Content Section */}
-
-      <h2 className="text-xl text-left font-semibold text-gray-950 dark:text-white mb-2">
-        {header}
-      </h2>
-      <p className="text-gray-600 dark:text-gray-500 text-sm text-left">
-        {children}
-      </p>
+      <div className=" space-y-1 ">
+        {header && (
+          <h2 className="text-xl text-left font-semibold text-gray-950 dark:text-gray-50 ">
+            {header}
+          </h2>
+        )}
+        <p className="text-gray-600 dark:text-gray-500 text-sm text-left">
+          {children}
+        </p>
+      </div>
     </a>
   );
 };

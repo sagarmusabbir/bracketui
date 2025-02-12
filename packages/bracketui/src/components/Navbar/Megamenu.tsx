@@ -129,7 +129,7 @@ const Megamenu: FC<MegamenuProps> = ({
     "py-2 md:py-1",
     "gap-1",
     // Text size
-    "text-base md:text-sm",
+    "text-base md:text-sm leading-none",
     // Theme styles - match Navlink's default appearance
     theme.text,
     theme.states,
