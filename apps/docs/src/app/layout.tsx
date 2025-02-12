@@ -10,7 +10,7 @@ import { GeistSans } from "geist/font/sans";
 import { ThemeScript } from "@thirdbracket/bracketui";
 import SiteFooter from "../../components/Footer";
 
-import MegaHeader from "../../components/megamenu";
+import HeaderBal from "../../components/Nav";
 
 // import { Navbar } from "@thirdbracket/core";
 
@@ -28,7 +28,9 @@ export default function RootLayout({
         <ThemeScript />
       </head>
       <body>
-        <MegaHeader />
+        {/* <MegaHeader /> */}
+
+        <HeaderBal />
 
         <main>{children}</main>
         <SiteFooter />
