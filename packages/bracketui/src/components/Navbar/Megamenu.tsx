@@ -145,7 +145,7 @@ const Megamenu: FC<MegamenuProps> = ({
       hidden: !isOpen,
     },
     // Mobile styles
-    "w-full py-1  ",
+    "w-full",
     // Desktop styles
     "md:fixed w-full md:py-6  md:px-6 lg:px-8 md:top-16   md:left-0 md:right-0 ",
     "md:shadow-md md:border-y-[0.5px] border-gray-200 dark:border-gray-800",
