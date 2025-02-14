@@ -45,8 +45,8 @@ const Navlink = forwardRef(function Navlink<T extends ElementType = "a">(
 
   // Conditional styles based on isDropdownItem
   const variantStyles = isDropdownItem
-    ? "opacity-60  font-light "
-    : "opacity-80 font-normal ";
+    ? "opacity-60  font-normal "
+    : "opacity-80 font-medium ";
 
   // Theme styles
   const themeStyles = clsx(theme.text, theme.states);
