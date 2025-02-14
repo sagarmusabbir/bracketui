@@ -38,7 +38,12 @@ const HeaderBal: FC = () => {
           <Navlink href="#">Development</Navlink>
           <Navlink href="#">Infrastructures</Navlink>
           <Navlink href="#">DevOps</Navlink>
+          <Megamenu label="Digital Marketing">
+          <Navlink href="#">Seo</Navlink>
+          <Navlink href="#">Social Media</Navlink>
+          <Navlink href="#">Content</Navlink>
           
+        </Megamenu>
         </Megamenu>
 <Navlink href="#">Business</Navlink>
 <Navlink href="#">Contact</Navlink>
