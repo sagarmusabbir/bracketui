@@ -16,7 +16,7 @@ const Button: FC<ButtonProps> = ({
   variant = "default",
 }) => {
   const baseClasses = `
-   inline-flex items-center justify-center rounded-lg font-medium group 
+   inline-flex items-center justify-center rounded-lg font-semibold group 
     transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out
      leading-none ${
        {

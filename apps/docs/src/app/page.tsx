@@ -236,13 +236,13 @@ export default function Page() {
             </div>
 
             <div className="lg:hidden ">
-              <Button size="lg" variant="outline">
+              <Button size="md" variant="outline">
                 Get Started
               </Button>
             </div>
 
             <div className="lg:hidden">
-              <Button size="lg">Our Components</Button>
+              <Button size="md">Our Components</Button>
             </div>
           </div>
         </section>

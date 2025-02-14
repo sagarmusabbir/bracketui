@@ -123,7 +123,7 @@ const Megamenu: FC<MegamenuProps> = ({
 
   const variantStyles = isDropdownItem
     ? "opacity-60 font-normal"
-    : "opacity-80 font-medium";
+    : "opacity-70 font-medium";
 
   const buttonClasses = clsx(
     // Base styles

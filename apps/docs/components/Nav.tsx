@@ -44,9 +44,9 @@ const HeaderBal: FC = () => {
             About
           </Navlink>
           <Megamenu label="Solutions">
-            <div className="p-0.5">
+            <div className="p-0.5 py-2 space-y-1">
               <Megamenu label="Development" isDropdownItem>
-                <div className="px-1">
+                <div className="px-1 py-1 space-y-1">
                   <Navlink
                     as={Link}
                     href="/services/fullstack/performance"
@@ -84,7 +84,7 @@ const HeaderBal: FC = () => {
                 </div>
               </Megamenu>
               <Megamenu label="Infrastructures" isDropdownItem>
-                <div className="px-1">
+                <div className="px-1 py-1 space-y-1">
                   <Navlink as={Link} href="#" isDropdownItem>
                     Serverless Configuration
                   </Navlink>
@@ -111,7 +111,7 @@ const HeaderBal: FC = () => {
                 </div>
               </Megamenu>
               <Megamenu label="DevOps" isDropdownItem>
-                <div className="px-1">
+                <div className="px-1 py-1 space-y-1">
                   <Navlink as={Link} href="#" isDropdownItem>
                     Edge Configuration
                   </Navlink>
@@ -147,314 +147,198 @@ const HeaderBal: FC = () => {
             </div>
           </Megamenu>
 
-          <Megamenu label="Solutions">
-            <div className="p-0.5">
-              <Megamenu label="Development" isDropdownItem>
-                <div className="px-1">
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
-                    Custom Next.js
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Headless Integration
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Feature Development
-                  </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
-                    API & Backend
-                  </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
-                    UI Develepment
-                  </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
-                    Wordpress Development
-                  </Navlink>
-                </div>
-              </Megamenu>
-              <Megamenu label="Infrastructures" isDropdownItem>
-                <div className="px-1">
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Serverless Configuration
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    AWS Infrastructures
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Wordpress Optimization
-                  </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
-                    VPS Setup
-                  </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
-                    Cloud Migration
-                  </Navlink>
-                </div>
-              </Megamenu>
-              <Megamenu label="DevOps" isDropdownItem>
-                <div className="px-1">
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Edge Configuration
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    CI/CD & Workflow
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    AWS Serverless
-                  </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
-                    Cloud Management
-                  </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
-                    Release Management
-                  </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/search-form"
-                    isDropdownItem
-                  >
-                    Cost Optimization
-                  </Navlink>
-                </div>
-              </Megamenu>
-            </div>
-          </Megamenu>
           <Megamenu label="Services">
-            <div className="p-0.5">
-              <Megamenu label="Development" isDropdownItem>
-                <div className="px-1">
+            <div className="p-0.5 py-2 space-y-1">
+              <Megamenu label="Frontend & UI" isDropdownItem>
+                <div className="px-1 py-1 space-y-1">
                   <Navlink
                     as={Link}
                     href="/services/fullstack/performance"
                     isDropdownItem
                   >
-                    Custom Next.js
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Headless Integration
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Feature Development
+                    Custom React & Next.js
                   </Navlink>
                   <Navlink
                     as={Link}
                     href="/services/fullstack/performance"
                     isDropdownItem
                   >
-                    API & Backend
+                    Tailwindcss & Headless UI
                   </Navlink>
                   <Navlink
                     as={Link}
                     href="/services/fullstack/performance"
                     isDropdownItem
                   >
-                    UI Develepment
+                    Custom SVG & Icons
+                  </Navlink>
+
+                  <Navlink
+                    as={Link}
+                    href="/services/fullstack/performance"
+                    isDropdownItem
+                  >
+                    Themeing Solution
                   </Navlink>
                   <Navlink
                     as={Link}
                     href="/services/fullstack/performance"
                     isDropdownItem
                   >
-                    Wordpress Development
+                    Animations
+                  </Navlink>
+                  <Navlink
+                    as={Link}
+                    href="/services/fullstack/performance"
+                    isDropdownItem
+                  >
+                    UI/UX Enhancement
+                  </Navlink>
+                  <Navlink
+                    as={Link}
+                    href="/services/fullstack/performance"
+                    isDropdownItem
+                  >
+                    Wordpress Theme Development
+                  </Navlink>
+                  <Navlink
+                    as={Link}
+                    href="/services/fullstack/performance"
+                    isDropdownItem
+                  >
+                    Elementor Template
                   </Navlink>
                 </div>
               </Megamenu>
-              <Megamenu label="Infrastructures" isDropdownItem>
-                <div className="px-1">
+              <Megamenu label="Backend & API" isDropdownItem>
+                <div className="px-1 py-1 space-y-1">
                   <Navlink as={Link} href="#" isDropdownItem>
-                    Serverless Configuration
+                    Next.js API Routes
                   </Navlink>
                   <Navlink as={Link} href="#" isDropdownItem>
-                    AWS Infrastructures
+                    Node.js
                   </Navlink>
                   <Navlink as={Link} href="#" isDropdownItem>
-                    Wordpress Optimization
+                    GraphQL
                   </Navlink>
                   <Navlink
                     as={Link}
                     href="/services/fullstack/performance"
                     isDropdownItem
                   >
-                    VPS Setup
+                    Serverless Function
                   </Navlink>
                   <Navlink
                     as={Link}
                     href="/services/fullstack/performance"
                     isDropdownItem
                   >
-                    Cloud Migration
+                    API Integration
                   </Navlink>
                 </div>
               </Megamenu>
-              <Megamenu label="DevOps" isDropdownItem>
-                <div className="px-1">
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Edge Configuration
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    CI/CD & Workflow
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    AWS Serverless
-                  </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
-                    Cloud Management
-                  </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
-                    Release Management
-                  </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/search-form"
-                    isDropdownItem
-                  >
-                    Cost Optimization
-                  </Navlink>
-                </div>
-              </Megamenu>
+              <Navlink
+                as={Link}
+                href="/services/fullstack/performance"
+                isDropdownItem
+              >
+                Cloud Deployment
+              </Navlink>
+              <Navlink
+                as={Link}
+                href="/services/fullstack/performance"
+                isDropdownItem
+              >
+                Github Actions
+              </Navlink>
+              <Navlink
+                as={Link}
+                href="/services/fullstack/performance"
+                isDropdownItem
+              >
+                Authenctication
+              </Navlink>
+              <Navlink
+                as={Link}
+                href="/services/fullstack/performance"
+                isDropdownItem
+              >
+                Payment Setup
+              </Navlink>
             </div>
           </Megamenu>
-          <Navlink as={Link} href="#">
-            Business
-          </Navlink>
+          <Megamenu label="Business">
+            <div className="p-0.5 py-2 space-y-1">
+              <Navlink as={Link} href="#" isDropdownItem>
+                SEO & Content
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Social Media Management
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Paid Ad & PPC
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Email Marketing
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Branding
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Conversion Optimization
+              </Navlink>
+            </div>
+          </Megamenu>
 
           <Megamenu label="Resources">
-            <div className="p-0.5">
-              <Megamenu label="Development" isDropdownItem>
-                <div className="px-1">
+            <div className="p-0.5 py-2 space-y-1">
+              <Megamenu label="UI Components" isDropdownItem>
+                <div className="px-1 py-1 space-y-1">
                   <Navlink
                     as={Link}
                     href="/services/fullstack/performance"
                     isDropdownItem
                   >
-                    Custom Next.js
+                    Bracket UI Component
                   </Navlink>
                   <Navlink as={Link} href="#" isDropdownItem>
-                    Headless Integration
+                    Bracket UI Block
                   </Navlink>
                   <Navlink as={Link} href="#" isDropdownItem>
-                    Feature Development
-                  </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
-                    API & Backend
-                  </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
-                    UI Develepment
-                  </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
-                    Wordpress Development
+                    Bracket UI Npm Package
                   </Navlink>
                 </div>
               </Megamenu>
-              <Megamenu label="Infrastructures" isDropdownItem>
-                <div className="px-1">
+              <Megamenu label="Themes" isDropdownItem>
+                <div className="px-1 py-1 space-y-1">
                   <Navlink as={Link} href="#" isDropdownItem>
-                    Serverless Configuration
+                    Wordpress Themes
                   </Navlink>
                   <Navlink as={Link} href="#" isDropdownItem>
-                    AWS Infrastructures
+                    Tailwind Themes
                   </Navlink>
                   <Navlink as={Link} href="#" isDropdownItem>
-                    Wordpress Optimization
+                    Next.js Themes
                   </Navlink>
                   <Navlink
                     as={Link}
                     href="/services/fullstack/performance"
                     isDropdownItem
                   >
-                    VPS Setup
-                  </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
-                    Cloud Migration
+                    Hugo Themes
                   </Navlink>
                 </div>
               </Megamenu>
-              <Megamenu label="DevOps" isDropdownItem>
-                <div className="px-1">
+              <Megamenu label="Templates" isDropdownItem>
+                <div className="px-1 py-1 space-y-1">
                   <Navlink as={Link} href="#" isDropdownItem>
-                    Edge Configuration
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    CI/CD & Workflow
+                    Elementor Templates
                   </Navlink>
                   <Navlink as={Link} href="#" isDropdownItem>
-                    AWS Serverless
+                    Tailwind Templates
                   </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
-                    Cloud Management
-                  </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
-                    Release Management
-                  </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/search-form"
-                    isDropdownItem
-                  >
-                    Cost Optimization
+                  <Navlink as={Link} href="#" isDropdownItem>
+                    HTML5 Templates
                   </Navlink>
                 </div>
               </Megamenu>
