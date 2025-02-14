@@ -20,25 +20,28 @@ const HeaderBal: FC = () => {
       </Navbrand>
 
       <NavItem>
-        <Navlink href="#">My Link</Navlink>
-        <Navlink href="#">My Link</Navlink>
-        <Megamenu label="Cat">
-          <Navlink href="#">My Link</Navlink>
-          <Navlink href="#">My Link</Navlink>
-          <Navlink href="#">My Link</Navlink>
-          <Navlink href="#">My Link</Navlink>
+        <Navlink href="#">Features</Navlink>
+        <Navlink href="#">About</Navlink>
+        <Megamenu label="Solutions">
+          <Navlink href="#">Development</Navlink>
+          <Navlink href="#">Infrastructures</Navlink>
+          <Navlink href="#">DevOps</Navlink>
+          
         </Megamenu>
+<Navlink href="#">Business</Navlink>
+<Navlink href="#">Contact</Navlink>
       </NavItem>
       <MobileNav>
-        <Navlink href="#">My Link</Navlink>
-        <Navlink href="#">My Link</Navlink>
-        <Megamenu label="Dog">
-          <Navlink href="#">My Link</Navlink>
-          <Navlink href="#">My Link</Navlink>
-          <Navlink href="#">My Link</Navlink>
-          <Navlink href="#">My Link</Navlink>
-          <Navlink href="#">My Link</Navlink>
+        <Navlink href="#">Features</Navlink>
+        <Navlink href="#">About</Navlink>
+        <Megamenu label="Solutions">
+          <Navlink href="#">Development</Navlink>
+          <Navlink href="#">Infrastructures</Navlink>
+          <Navlink href="#">DevOps</Navlink>
+          
         </Megamenu>
+<Navlink href="#">Business</Navlink>
+<Navlink href="#">Contact</Navlink>
       </MobileNav>
     </Navbar>
   );
