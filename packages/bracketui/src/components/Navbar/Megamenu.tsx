@@ -8,6 +8,7 @@ export interface MegamenuProps {
   className?: string;
   buttonClassName?: string;
   mobileBreakpoint?: number;
+  isDropdownItem?: boolean;
   theme?: {
     text?: string;
     states?: string;
@@ -21,10 +22,11 @@ const Megamenu: FC<MegamenuProps> = ({
   className,
   buttonClassName,
   mobileBreakpoint = 768,
+  isDropdownItem,
   theme = {
     // Match exactly with Navlink's default theme
     text: "text-gray-900 dark:text-gray-100 text-base md:text-sm",
-    states: "opacity-80 hover:opacity-100",
+    states: " hover:opacity-100",
     menu: "bg-white dark:bg-gray-950",
   },
 }) => {
@@ -119,9 +121,13 @@ const Megamenu: FC<MegamenuProps> = ({
     "w-full md:w-auto"
   );
 
+  const variantStyles = isDropdownItem
+    ? "opacity-60 font-light"
+    : "opacity-80 font-normal";
+
   const buttonClasses = clsx(
     // Base styles
-    "transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out text-base flex",
+    "transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out flex",
     // Responsive layout
     "w-full md:w-auto",
     "justify-between md:justify-start",
@@ -130,6 +136,7 @@ const Megamenu: FC<MegamenuProps> = ({
     "gap-1",
     // Text size
     "text-base md:text-sm leading-none",
+    variantStyles,
     // Theme styles - match Navlink's default appearance
     theme.text,
     theme.states,
@@ -175,13 +182,13 @@ const Megamenu: FC<MegamenuProps> = ({
         <span>{label}</span>
         <svg
           className={clsx(
-            "md:hidden w-4 h-4 transition-transform duration-200",
+            "md:hidden w-4 h-4 transition-transform duration-200 fill-none stroke-current stroke-2",
             {
-              "rotate-180": isOpen,
-              "rotate-0": !isOpen,
+              "rotate-0": isOpen,
+              "-rotate-90": !isOpen,
             }
           )}
-          fill="currentColor"
+          // fill="currentColor"
           viewBox="0 0 24 24"
           aria-hidden="true"
         >

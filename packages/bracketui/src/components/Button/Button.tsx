@@ -16,22 +16,22 @@ const Button: FC<ButtonProps> = ({
   variant = "default",
 }) => {
   const baseClasses = `
-   inline-flex items-center justify-center rounded-lg 
-    transition-all ease-in-out duration-300 
-    font-medium tracking-tight ${
-      {
-        sm: "px-3 h-8 text-xs",
-        md: "px-4 h-10 text-sm",
-        lg: "px-6 h-11 text-base",
-        xl: "px-8 h-12 text-lg",
-      }[size]
-    }`;
+   inline-flex items-center justify-center rounded-lg font-medium group 
+    transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out
+     leading-none ${
+       {
+         sm: "px-4 h-9 text-xs",
+         md: "px-5 h-11 text-sm",
+         lg: "px-6 h-12 text-base",
+         xl: "px-7 h-14 text-lg",
+       }[size]
+     }`;
 
   const varientClasses = {
     default:
       "bg-gray-950 dark:bg-slate-100 text-white dark:text-gray-950 hover:opacity-90",
     outline:
-      "border-2 border-gray-950 dark:border-slate-100 text-gray-950 dark:text-white hover:bg-gray-950 dark:hover:bg-slate-100 hover:text-white dark:hover:text-gray-950",
+      "border border-gray-200 dark:border-gray-800 text-gray-950 dark:text-white bg-clip-padding backdrop-filter backdrop-blur-sm hover:opacity-85",
   }[variant];
 
   const buttonClasses = `${baseClasses} ${varientClasses}`;
