@@ -35,13 +35,13 @@ const HeaderBal: FC = () => {
         <Navlink href="#">Features</Navlink>
         <Navlink href="#">About</Navlink>
         <Megamenu label="Solutions">
-          <Navlink href="#">Development</Navlink>
-          <Navlink href="#">Infrastructures</Navlink>
-          <Navlink href="#">DevOps</Navlink>
+          <Navlink className="px-0.5" href="#">Development</Navlink>
+          <Navlink className="px-0.5" href="#">Infrastructures</Navlink>
+          <Navlink className="px-0.5" href="#">DevOps</Navlink>
           <Megamenu label="Digital Marketing">
-          <Navlink href="#">Seo</Navlink>
-          <Navlink href="#">Social Media</Navlink>
-          <Navlink href="#">Content</Navlink>
+          <Navlink className="px-1" href="#">Seo</Navlink>
+          <Navlink className="px-1" href="#">Social Media</Navlink>
+          <Navlink className="px-1" href="#">Content</Navlink>
           
         </Megamenu>
         </Megamenu>
