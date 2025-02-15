@@ -93,8 +93,8 @@ const Button = forwardRef(function Button<T extends ElementType = "button">(
   // Size classes
   const sizeClasses = clsx({
     "px-3 h-8 text-xs": size === "sm",
-    "px-4 h-10 text-sm": size === "md",
-    "px-5 h-12 text-base": size === "lg",
+    "px-5 h-11 text-sm": size === "md",
+    "px-6 h-12 text-base": size === "lg",
     "px-6 h-14 text-lg": size === "xl",
   });
 

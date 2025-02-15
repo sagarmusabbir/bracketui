@@ -222,7 +222,7 @@ export default function Page() {
           <h1 className="p-4 md:p-8 mt-20  font-extrabold text-center text-gray-950 dark:text-white text-[36px] leading-none md:text-[54px]  mx-auto ">
             Bringing Enterprise Web Solutions within Your Budget
           </h1>
-          <p className="p-4 md:p-8 text-base md:text-lg lg:text-xl  text-center max-w-2xl mx-auto  text-gray-500 leading-relaxed">
+          <p className="p-4 md:p-8 text-base md:text-lg lg:text-xl  text-center max-w-2xl mx-auto  text-gray-500 ">
             We’re a team of top-rated freelancers from leading marketplaces,
             offering custom web development, enterprise-grade infrastructure,
             and efficient business solutions.
