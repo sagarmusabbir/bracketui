@@ -411,19 +411,18 @@ const Megamenu: FC<MegamenuProps> = ({
         aria-label={`${label} megamenu`}
       >
         {/* Back button header - only show on mobile */}
-        <div className="md:hidden flex  items-center p-4   sticky top-16 bg-inherit z-20 ">
-          <Button
+        <div className="md:hidden flex  items-center p-5   sticky top-16 bg-inherit z-20 ">
+          <button
             // onClick={() => {
             //   setIsOpen(false);
             //   onBack?.();
             // }}
-            outline
-            size="sm"
+
             onClick={handleBack}
             className="flex items-center text-gray-600 dark:text-gray-300"
           >
             <svg
-              className="w-4 h-4 mr-2"
+              className="w-6 h-6 mr-2 p-0.5 bg-gray-50 dark:bg-gray-900 rounded-full"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -432,11 +431,11 @@ const Megamenu: FC<MegamenuProps> = ({
               <path d="M15 19l-7-7 7-7" />
             </svg>
             {/* <span>Back</span> */}
-          </Button>
+          </button>
         </div>
 
         {/* Menu content */}
-        <div className="py-14 px-4 md:p-0 flex-1 overflow-auto">{children}</div>
+        <div className="mt-14 px-6 md:p-0 flex-1 overflow-auto">{children}</div>
       </div>
     </div>
   );
