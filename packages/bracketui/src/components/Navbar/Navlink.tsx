@@ -42,12 +42,10 @@ const Navlink = forwardRef(function Navlink<T extends ElementType = "a">(
 
   const varientSize = cto
     ? "text-xl font-extrabold  py-3 "
-    : "text-base  md:text-sm";
+    : "text-base  md:text-sm font-normal";
 
   // Conditional styles based on isDropdownItem
-  const variantStyles = isDropdownItem
-    ? "opacity-60  font-normal "
-    : "opacity-65 font-medium ";
+  const variantStyles = isDropdownItem ? "opacity-60   " : "opacity-65  ";
 
   // Theme styles
   const themeStyles = clsx(theme.text, theme.states);

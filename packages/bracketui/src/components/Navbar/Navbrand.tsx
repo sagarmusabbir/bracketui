@@ -32,7 +32,7 @@ const Navbrand: FC<NavbrandProps> = ({
           <img
             src={logo}
             alt="Brand Logo"
-            className={clsx("h-5 md:h-6 w-auto object-contain")}
+            className={clsx("h-6  w-auto object-contain")}
           />
         ) : (
           logo

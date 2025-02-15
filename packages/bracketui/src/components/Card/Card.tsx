@@ -18,7 +18,7 @@ const Card: FC<CardProps> = ({ header, cover, href = "#", children }) => {
       {
         cover &&
           (typeof cover === "string" ? (
-            <div className="object-left md:object-cover    w-full h-full bg-clip-padding backdrop-filter backdrop-blur-xl  opacity-80  ">
+            <div className="   w-full h-full bg-clip-padding backdrop-filter backdrop-blur-xl  opacity-80  p-0">
               <img src={cover} alt="Card Image" />
             </div>
           ) : (

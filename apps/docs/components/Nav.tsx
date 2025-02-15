@@ -19,7 +19,7 @@ import { FaCodeCommit } from "react-icons/fa6";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { PiStackSimpleLight } from "react-icons/pi";
 
-import { RiArrowRightUpLine, RiRecycleLine } from "react-icons/ri";
+// import { RiArrowRightUpLine, RiRecycleLine } from "react-icons/ri";
 
 const HeaderBal: FC = () => {
   return (
@@ -240,7 +240,7 @@ const HeaderBal: FC = () => {
         </Megamenu>
       </NavItem>
       <MobileNav>
-        <div className="space-y-2">
+        <div className="space-y-3">
           <Navlink as={Link} href="/services/fullstack/performance">
             Features
           </Navlink>
@@ -248,9 +248,9 @@ const HeaderBal: FC = () => {
             About
           </Navlink>
           <Megamenu label="Solutions">
-            <div className="p-0.5 py-2 space-y-1">
+            <div className="space-y-2">
               <Megamenu label="Development" isDropdownItem>
-                <div className="px-1 py-1 space-y-1">
+                <div className="  space-y-2">
                   <Navlink
                     as={Link}
                     href="/services/fullstack/performance"
@@ -288,7 +288,7 @@ const HeaderBal: FC = () => {
                 </div>
               </Megamenu>
               <Megamenu label="Infrastructures" isDropdownItem>
-                <div className="px-1 py-1 space-y-1">
+                <div className="space-y-2">
                   <Navlink as={Link} href="#" isDropdownItem>
                     Serverless Configuration
                   </Navlink>
@@ -315,7 +315,7 @@ const HeaderBal: FC = () => {
                 </div>
               </Megamenu>
               <Megamenu label="DevOps" isDropdownItem>
-                <div className="px-1 py-1 space-y-1">
+                <div className="space-y-2">
                   <Navlink as={Link} href="#" isDropdownItem>
                     Edge Configuration
                   </Navlink>
@@ -352,9 +352,9 @@ const HeaderBal: FC = () => {
           </Megamenu>
 
           <Megamenu label="Services">
-            <div className="p-0.5 py-2 space-y-1">
+            <div className="space-y-2">
               <Megamenu label="Frontend & UI" isDropdownItem>
-                <div className="px-1 py-1 space-y-1">
+                <div className="space-y-2">
                   <Navlink
                     as={Link}
                     href="/services/fullstack/performance"
@@ -415,7 +415,7 @@ const HeaderBal: FC = () => {
                 </div>
               </Megamenu>
               <Megamenu label="Backend & API" isDropdownItem>
-                <div className="px-1 py-1 space-y-1">
+                <div className="space-y-2">
                   <Navlink as={Link} href="#" isDropdownItem>
                     Next.js API Routes
                   </Navlink>
@@ -472,7 +472,7 @@ const HeaderBal: FC = () => {
             </div>
           </Megamenu>
           <Megamenu label="Business">
-            <div className="p-0.5 py-2 space-y-1">
+            <div className="space-y-2">
               <Navlink as={Link} href="#" isDropdownItem>
                 SEO & Content
               </Navlink>
@@ -495,9 +495,9 @@ const HeaderBal: FC = () => {
           </Megamenu>
 
           <Megamenu label="Resources">
-            <div className="p-0.5 py-2 space-y-1">
+            <div className="space-y-2">
               <Megamenu label="UI Components" isDropdownItem>
-                <div className="px-1 py-1 space-y-1">
+                <div className="space-y-2">
                   <Navlink
                     as={Link}
                     href="/services/fullstack/performance"
@@ -514,7 +514,7 @@ const HeaderBal: FC = () => {
                 </div>
               </Megamenu>
               <Megamenu label="Themes" isDropdownItem>
-                <div className="px-1 py-1 space-y-1">
+                <div className="space-y-2">
                   <Navlink as={Link} href="#" isDropdownItem>
                     Wordpress Themes
                   </Navlink>
@@ -534,7 +534,7 @@ const HeaderBal: FC = () => {
                 </div>
               </Megamenu>
               <Megamenu label="Templates" isDropdownItem>
-                <div className="px-1 py-1 space-y-1">
+                <div className="space-y-2">
                   <Navlink as={Link} href="#" isDropdownItem>
                     Elementor Templates
                   </Navlink>
@@ -551,20 +551,6 @@ const HeaderBal: FC = () => {
           <Navlink as={Link} href="#">
             Contact
           </Navlink>
-          <div className="py-4 space-y-3 flex flex-col ">
-            <Button outline size="md">
-              Bracket UI
-              <span className="inline-flex items-center ml-2">
-                <RiArrowRightUpLine />
-              </span>
-            </Button>
-            <Button size="md">
-              Our Ecosystem{" "}
-              <span className="inline-flex items-center ml-2">
-                <RiRecycleLine />
-              </span>
-            </Button>
-          </div>
         </div>
       </MobileNav>
     </Navbar>
