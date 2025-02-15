@@ -130,7 +130,7 @@ const Megamenu: FC<MegamenuProps> = ({
     "transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out flex",
     // Responsive layout
     "w-full md:w-auto",
-    "justify-between md:justify-start",
+    "justify-between items-center md:justify-start",
     // Spacing
     "py-2 md:py-1",
     "gap-1",
@@ -182,7 +182,7 @@ const Megamenu: FC<MegamenuProps> = ({
         <span>{label}</span>
         <svg
   className={clsx(
-    "w-4 h-4 transition-transform duration-200",
+    "w-5 h-5 transition-transform duration-200",
     {
       "fill-current stroke-none": !isDropdownItem, // Default button
       "fill-none stroke-current stroke-2": isDropdownItem, // Dropdown item button
