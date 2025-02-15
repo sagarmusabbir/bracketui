@@ -248,7 +248,7 @@ const HeaderBal: FC = () => {
         </Megamenu>
       </NavItem>
       <MobileNav>
-        <div className="space-y-3">
+        <div className="space-y-4">
           <Navlink as={Link} href="/services/fullstack/performance">
             Features
           </Navlink>
@@ -296,7 +296,7 @@ const HeaderBal: FC = () => {
                 </div>
               </Megamenu>
               <Megamenu label="Infrastructures" isDropdownItem>
-                <div className="space-y-2">
+                <div className=" space-y-3">
                   <Navlink as={Link} href="#" isDropdownItem>
                     Serverless Configuration
                   </Navlink>
@@ -323,7 +323,7 @@ const HeaderBal: FC = () => {
                 </div>
               </Megamenu>
               <Megamenu label="DevOps" isDropdownItem>
-                <div className="space-y-2">
+                <div className=" space-y-3">
                   <Navlink as={Link} href="#" isDropdownItem>
                     Edge Configuration
                   </Navlink>
@@ -360,9 +360,9 @@ const HeaderBal: FC = () => {
           </Megamenu>
 
           <Megamenu label="Services">
-            <div className="space-y-2">
+            <div className=" space-y-3">
               <Megamenu label="Frontend & UI" isDropdownItem>
-                <div className="space-y-2">
+                <div className=" space-y-3">
                   <Navlink
                     as={Link}
                     href="/services/fullstack/performance"
@@ -423,7 +423,7 @@ const HeaderBal: FC = () => {
                 </div>
               </Megamenu>
               <Megamenu label="Backend & API" isDropdownItem>
-                <div className="space-y-2">
+                <div className=" space-y-3">
                   <Navlink as={Link} href="#" isDropdownItem>
                     Next.js API Routes
                   </Navlink>
@@ -480,7 +480,7 @@ const HeaderBal: FC = () => {
             </div>
           </Megamenu>
           <Megamenu label="Business">
-            <div className="space-y-2">
+            <div className=" space-y-3">
               <Navlink as={Link} href="#" isDropdownItem>
                 SEO & Content
               </Navlink>
@@ -503,9 +503,9 @@ const HeaderBal: FC = () => {
           </Megamenu>
 
           <Megamenu label="Resources">
-            <div className="space-y-2">
+            <div className=" space-y-3">
               <Megamenu label="UI Components" isDropdownItem>
-                <div className="space-y-2">
+                <div className=" space-y-3">
                   <Navlink
                     as={Link}
                     href="/services/fullstack/performance"
@@ -542,7 +542,7 @@ const HeaderBal: FC = () => {
                 </div>
               </Megamenu>
               <Megamenu label="Templates" isDropdownItem>
-                <div className="space-y-2">
+                <div className=" space-y-3">
                   <Navlink as={Link} href="#" isDropdownItem>
                     Elementor Templates
                   </Navlink>

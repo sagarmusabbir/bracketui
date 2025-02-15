@@ -219,7 +219,7 @@ export default function Page() {
     <main className="bg-white dark:bg-gray-950 text-gray-950 dark:text-white">
       <div>
         <section className="container space-y-8   py-8 mx-auto text-center lg:py-16  px-6 lg:px-8">
-          <h1 className="max-w-xl md:max-w-7xl mt-20 font-extrabold  text-center text-gray-950 dark:text-white text-4xl md:text-5xl lg:text-6xl  mx-auto ">
+          <h1 className="max-w-xl md:max-w-4xl mt-20 font-extrabold  text-center text-gray-950 dark:text-white text-4xl md:text-5xl lg:text-6xl  mx-auto ">
             Bringing Enterprise Web Solutions within Your Budget
           </h1>
           <p className="text-base md:text-lg lg:text-xl  text-center max-w-2xl mx-auto  text-gray-500 ">
