@@ -181,19 +181,20 @@ const Megamenu: FC<MegamenuProps> = ({
       >
         <span>{label}</span>
         <svg
-          className={clsx(
-            "md:hidden w-4 h-4 transition-transform duration-200 fill-none stroke-current stroke-2",
-            {
-              "rotate-0": isOpen,
-              "-rotate-90": !isOpen,
-            }
-          )}
-          // fill="currentColor"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
-          <path d="M19 9l-7 7-7-7" />
-        </svg>
+  className={clsx(
+    "w-4 h-4 transition-transform duration-200",
+    {
+      "fill-current stroke-none": !isDropdownItem, // Default button
+      "fill-none stroke-current stroke-2": isDropdownItem, // Dropdown item button
+      "rotate-0": isOpen,
+      "-rotate-90": !isOpen,
+    }
+  )}
+  viewBox="0 0 24 24"
+  aria-hidden="true"
+>
+  <path d="M19 9l-7 7-7-7" />
+</svg>
       </button>
 
       <div
