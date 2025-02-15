@@ -3,7 +3,14 @@
 // import { Navbar } from "@thirdbracket/core";
 
 import "./globals.css";
-import { GeistSans } from "geist/font/sans";
+
+import { Plus_Jakarta_Sans } from "next/font/google";
+
+const plus = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-raleway",
+});
 
 // import Header from "..npm run dev
 // /../components/Header";
@@ -22,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${GeistSans.className} font-anta  antialiased dark:bg-gray-950 dark:text-white`}
+      className={`${plus.className}    antialiased dark:bg-gray-950 dark:text-white`}
     >
       <head>
         <ThemeScript />

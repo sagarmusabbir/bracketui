@@ -3,7 +3,6 @@
 import { Button, Card } from "@thirdbracket/bracketui";
 
 import {
-  BracketUIIcon,
   ButtonIcon,
   CardIcon,
   FooterIcon,
@@ -50,6 +49,7 @@ import {
 } from "react-icons/si";
 import Table from "../../components/table";
 import Link from "next/link";
+import { PiBracketsSquareBold } from "react-icons/pi";
 
 export default function Page() {
   const tableData = [
@@ -218,16 +218,16 @@ export default function Page() {
   return (
     <main className="bg-white dark:bg-gray-950 text-gray-950 dark:text-white">
       <div>
-        <section className="container   py-8 mx-auto text-center lg:py-16  px-6 lg:px-8">
-          <h1 className="p-4 md:p-8 mt-20  font-extrabold text-center text-gray-950 dark:text-white text-[36px] leading-none md:text-[54px]  mx-auto ">
+        <section className="container space-y-8   py-8 mx-auto text-center lg:py-16  px-6 lg:px-8">
+          <h1 className="max-w-xl md:max-w-7xl mt-20 font-extrabold  text-center text-gray-950 dark:text-white text-4xl md:text-5xl lg:text-6xl  mx-auto ">
             Bringing Enterprise Web Solutions within Your Budget
           </h1>
-          <p className="p-4 md:p-8 text-base md:text-lg lg:text-xl  text-center max-w-2xl mx-auto  text-gray-500 ">
+          <p className="text-base md:text-lg lg:text-xl  text-center max-w-2xl mx-auto  text-gray-500 ">
             We’re a team of top-rated freelancers from leading marketplaces,
             offering custom web development, enterprise-grade infrastructure,
             and efficient business solutions.
           </p>
-          <div className="flex flex-wrap gap-2 items-center mx-auto justify-center py-8 ">
+          <div className="flex flex-wrap gap-2 items-center mx-auto justify-center  ">
             <div className="hidden md:flex">
               <Button size="lg" outline as={Link} href="/about">
                 Let's Grow
@@ -255,7 +255,7 @@ export default function Page() {
 
         <section className="container px-6 lg:px-8 py-8 mx-auto text-center lg:py-16 ">
           <div className="lg:flex items-center justify-center gap-4 space-y-2 lg:space-y-0">
-            <h2 className="font-bold text-center text-3xl md:text-4xl lg:text-5xl leading-none text-gray-950 dark:text-white">
+            <h2 className="font-bold text-center text-3xl md:text-4xl leading-none text-gray-950 dark:text-white">
               What's in Bracket UI?
             </h2>
             <p className="text-base md:text-lg lg:text-xl  text-center max-w-2xl mx-auto  text-gray-500 leading-relaxed">
@@ -286,7 +286,11 @@ export default function Page() {
               </Card>
             </div>
             <div className="col-span-1">
-              <Card href="#" header="Bracket UI" cover={<BracketUIIcon />}>
+              <Card
+                href="#"
+                header="Bracket UI"
+                cover={<PiBracketsSquareBold size={50} />}
+              >
                 A modern, minimal UI component library built for React
                 applications with focus on developer experience and design
                 consistency.

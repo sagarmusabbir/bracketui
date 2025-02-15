@@ -27,7 +27,7 @@ const Navlink = forwardRef(function Navlink<T extends ElementType = "a">(
 
     cto,
     theme = {
-      text: "text-gray-950 dark:text-gray-50",
+      text: "text-gray-950 dark:text-white",
       states:
         "focus-within:opacity-100 active:opacity-100 md:hover:opacity-100",
     },
@@ -41,11 +41,11 @@ const Navlink = forwardRef(function Navlink<T extends ElementType = "a">(
     "transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out   md:flex block  leading-none py-2 md:py-1";
 
   const varientSize = cto
-    ? "text-xl font-extrabold  py-3 "
+    ? "text-xl font-bold  py-3 "
     : "text-base  md:text-sm font-normal";
 
   // Conditional styles based on isDropdownItem
-  const variantStyles = isDropdownItem ? "opacity-60   " : "opacity-65  ";
+  const variantStyles = isDropdownItem ? "opacity-60   " : "opacity-70  ";
 
   // Theme styles
   const themeStyles = clsx(theme.text, theme.states);

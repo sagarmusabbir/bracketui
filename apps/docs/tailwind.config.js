@@ -16,9 +16,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        anta: ["Anta"],
-      },
+      // fontFamily: {
+      //   anta: ["Anta"],
+      // },
     },
   },
   plugins: [bracketuiPlugin],

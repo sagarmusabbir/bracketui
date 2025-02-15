@@ -18,6 +18,13 @@ import { BsArrowUpRight } from "react-icons/bs";
 import { FaCodeCommit } from "react-icons/fa6";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { PiStackSimpleLight } from "react-icons/pi";
+import {
+  RiFacebookLine,
+  RiGithubLine,
+  RiLinkedinLine,
+  RiMediumLine,
+  RiStackOverflowLine,
+} from "react-icons/ri";
 
 // import { RiArrowRightUpLine, RiRecycleLine } from "react-icons/ri";
 
@@ -25,7 +32,15 @@ const HeaderBal: FC = () => {
   return (
     <Navbar>
       <Navbrand
-        logo="/tb.svg"
+        logo={
+          <Image
+            src="/tb.svg"
+            alt=""
+            width={577}
+            height={155}
+            className="h-5 w-auto"
+          />
+        }
         href="/"
         className="text-lg text-gray-950 dark:text-white font-bold dark:invert"
       ></Navbrand>
@@ -241,6 +256,23 @@ const HeaderBal: FC = () => {
       </NavItem>
       <MobileNav>
         <div className="space-y-3">
+          <div className="flex items-center gap-2 md:hidden     bg-inherit z-20 ">
+            <Button outline size="sm">
+              <RiFacebookLine className="w-4 h-4" />
+            </Button>
+            <Button outline size="sm">
+              <RiLinkedinLine className="w-4 h-4" />
+            </Button>
+            <Button outline size="sm">
+              <RiGithubLine className="w-4 h-4" />
+            </Button>
+            <Button outline size="sm">
+              <RiStackOverflowLine className="w-4 h-4" />
+            </Button>
+            <Button outline size="sm">
+              <RiMediumLine className="w-4 h-4" />
+            </Button>
+          </div>
           <Navlink as={Link} href="/services/fullstack/performance">
             Features
           </Navlink>
