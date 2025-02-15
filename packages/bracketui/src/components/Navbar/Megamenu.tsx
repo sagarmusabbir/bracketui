@@ -26,7 +26,7 @@ const Megamenu: FC<MegamenuProps> = ({
   theme = {
     // Match exactly with Navlink's default theme
     text: "text-gray-900 dark:text-gray-100 text-base md:text-sm",
-    states: " hover:opacity-100",
+    states: "focus-within:opacity-100 active:opacity-100 md:hover:opacity-100",
     menu: "bg-white dark:bg-gray-950",
   },
 }) => {
@@ -130,10 +130,10 @@ const Megamenu: FC<MegamenuProps> = ({
     "transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out flex",
     // Responsive layout
     "w-full md:w-auto",
-    "justify-between items-center md:justify-start",
+    "justify-between items-center md:justify-start gap-1",
     // Spacing
     "py-2 md:py-1",
-    "gap-1",
+
     // Text size
     "text-base md:text-sm leading-none",
     variantStyles,
@@ -181,20 +181,20 @@ const Megamenu: FC<MegamenuProps> = ({
       >
         <span>{label}</span>
         <svg
-  className={clsx(
-    "w-5 h-5 transition-transform duration-200",
-    {
-      "fill-current stroke-none": !isDropdownItem, // Default button
-      "fill-none stroke-current stroke-2": isDropdownItem, // Dropdown item button
-      "rotate-0": isOpen,
-      "-rotate-90": !isOpen,
-    }
-  )}
-  viewBox="0 0 24 24"
-  aria-hidden="true"
->
-  <path d="M19 9l-7 7-7-7" />
-</svg>
+          className={clsx(
+            "md:hidden  transition-transform duration-200 w-4 h-4",
+            {
+              "fill-current stroke-none ": !isDropdownItem, // Default button
+              "fill-none stroke-current stroke-2 ": isDropdownItem, // Dropdown item button
+              "rotate-0": isOpen,
+              "-rotate-90": !isOpen,
+            }
+          )}
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path d="M19 9l-7 7-7-7" />
+        </svg>
       </button>
 
       <div

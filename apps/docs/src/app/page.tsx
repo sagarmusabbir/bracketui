@@ -49,6 +49,7 @@ import {
   SiAwslambda,
 } from "react-icons/si";
 import Table from "../../components/table";
+import Link from "next/link";
 
 export default function Page() {
   const tableData = [
@@ -218,41 +219,46 @@ export default function Page() {
     <main className="bg-white dark:bg-gray-950 text-gray-950 dark:text-white">
       <div>
         <section className="container   py-8 mx-auto text-center lg:py-16  px-6 lg:px-8">
-          <h1 className="p-4 md:p-8 mt-16  font-bold text-center text-gray-950 dark:text-white text-4xl md:text-5xl lg:text-6xl  max-w-3xl mx-auto">
-            The Minimal UI Component Library for React
+          <h1 className="p-4 md:p-8 mt-20  font-extrabold text-center text-gray-950 dark:text-white text-[36px] leading-none md:text-[54px]  mx-auto ">
+            Bringing Enterprise Web Solutions within Your Budget
           </h1>
-          <p className="p-4 md:p-8 text-base md:text-lg lg:text-xl  text-center max-w-2xl mx-auto  text-gray-500 leading-tight">
-            A modern, minimal UI component library for React applications with
-            TypeScript support.
+          <p className="p-4 md:p-8 text-base md:text-lg lg:text-xl  text-center max-w-2xl mx-auto  text-gray-500 leading-relaxed">
+            We’re a team of top-rated freelancers from leading marketplaces,
+            offering custom web development, enterprise-grade infrastructure,
+            and efficient business solutions.
           </p>
           <div className="flex flex-wrap gap-2 items-center mx-auto justify-center py-8 ">
-            <div className="hidden lg:flex">
-              <Button size="xl" variant="outline">
-                Get Started
+            <div className="hidden md:flex">
+              <Button size="lg" outline as={Link} href="/about">
+                Let's Grow
               </Button>
             </div>
-            <div className="hidden lg:flex">
-              <Button size="xl">Our Components</Button>
-            </div>
-
-            <div className="lg:hidden ">
-              <Button size="md" variant="outline">
-                Get Started
+            <div className="hidden md:flex">
+              <Button size="lg" as={Link} href="/about">
+                Our Solutions
               </Button>
             </div>
 
-            <div className="lg:hidden">
-              <Button size="md">Our Components</Button>
+            <div className="md:hidden ">
+              <Button size="md" as={Link} href="/about" outline>
+                Let's Grow
+              </Button>
+            </div>
+
+            <div className="md:hidden">
+              <Button size="md" as={Link} href="/about">
+                Our Solutions
+              </Button>
             </div>
           </div>
         </section>
 
         <section className="container px-6 lg:px-8 py-8 mx-auto text-center lg:py-16 ">
           <div className="lg:flex items-center justify-center gap-4 space-y-2 lg:space-y-0">
-            <h2 className="font-semibold text-center text-3xl md:text-4xl lg:text-5xl leading-none text-gray-950 dark:text-white">
+            <h2 className="font-bold text-center text-3xl md:text-4xl lg:text-5xl leading-none text-gray-950 dark:text-white">
               What's in Bracket UI?
             </h2>
-            <p className="text-base md:text-lg lg:text-xl text-center text-gray-600 dark:text-gray-500">
+            <p className="text-base md:text-lg lg:text-xl  text-center max-w-2xl mx-auto  text-gray-500 leading-relaxed">
               Modern components for building responsive React applications
             </p>
           </div>

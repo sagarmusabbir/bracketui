@@ -25,12 +25,10 @@ const HeaderBal: FC = () => {
   return (
     <Navbar>
       <Navbrand
-        logo="/path.svg"
+        logo="/tb.svg"
         href="/"
         className="text-lg text-gray-950 dark:text-white font-bold dark:invert"
-      >
-        UI
-      </Navbrand>
+      ></Navbrand>
 
       <NavItem>
         <Navlink as={Link} href="/services/fullstack/performance">
@@ -553,8 +551,8 @@ const HeaderBal: FC = () => {
           <Navlink as={Link} href="#">
             Contact
           </Navlink>
-          <div className="py-2.5 space-y-3 flex flex-col ">
-            <Button variant="outline" size="md">
+          <div className="py-4 space-y-3 flex flex-col ">
+            <Button outline size="md">
               Bracket UI
               <span className="inline-flex items-center ml-2">
                 <RiArrowRightUpLine />

@@ -28,7 +28,8 @@ const Navlink = forwardRef(function Navlink<T extends ElementType = "a">(
     cto,
     theme = {
       text: "text-gray-950 dark:text-gray-50",
-      states: " hover:opacity-100",
+      states:
+        "focus-within:opacity-100 active:opacity-100 md:hover:opacity-100",
     },
     ...props
   }: NavlinkProps<T>,
@@ -37,16 +38,16 @@ const Navlink = forwardRef(function Navlink<T extends ElementType = "a">(
   // Base styles that should always be applied
 
   const baseStyles =
-    " transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out   md:flex block  leading-none py-2 md:py-1";
+    "transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out   md:flex block  leading-none py-2 md:py-1";
 
   const varientSize = cto
-    ? "text-xl font-bold  py-2.5 tracking-tight"
+    ? "text-xl font-extrabold  py-3 "
     : "text-base  md:text-sm";
 
   // Conditional styles based on isDropdownItem
   const variantStyles = isDropdownItem
     ? "opacity-60  font-normal "
-    : "opacity-70 font-medium ";
+    : "opacity-65 font-medium ";
 
   // Theme styles
   const themeStyles = clsx(theme.text, theme.states);
