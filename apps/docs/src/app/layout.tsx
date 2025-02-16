@@ -39,7 +39,9 @@ export default function RootLayout({
 
         <HeaderBal />
 
-        <main>{children}</main>
+        <main className="min-h-screen pt-16 md:pt-24 dark:bg-gray-950 dark:text-white">
+          {children}
+        </main>
         <SiteFooter />
       </body>
     </html>

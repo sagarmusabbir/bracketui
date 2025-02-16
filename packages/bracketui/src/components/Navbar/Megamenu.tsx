@@ -435,7 +435,9 @@ const Megamenu: FC<MegamenuProps> = ({
         </div>
 
         {/* Menu content */}
-        <div className="py-16 px-6 md:p-0 flex-1 overflow-auto">{children}</div>
+        <div className="py-16 px-6 md:p-0 flex-1 overflow-auto ">
+          {children}
+        </div>
       </div>
     </div>
   );

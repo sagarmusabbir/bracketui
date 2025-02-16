@@ -1,5 +1,4 @@
 import {
-  Button,
   Card,
   Megamenu,
   MobileNav,
@@ -12,12 +11,7 @@ import Image from "next/image";
 
 import Link from "next/link";
 import { FC } from "react";
-import { AiOutlineSolution } from "react-icons/ai";
-import { BiChevronRight, BiCode } from "react-icons/bi";
-import { BsArrowUpRight } from "react-icons/bs";
-import { FaCodeCommit } from "react-icons/fa6";
-import { MdOutlineArrowForwardIos } from "react-icons/md";
-import { PiStackSimpleLight } from "react-icons/pi";
+import { BiChevronRight } from "react-icons/bi";
 
 // import { RiArrowRightUpLine, RiRecycleLine } from "react-icons/ri";
 
@@ -31,7 +25,7 @@ const HeaderBal: FC = () => {
             alt=""
             width={577}
             height={155}
-            className="h-5 w-auto"
+            className="h-5 sm:h-6 w-auto"
           />
         }
         href="/"
@@ -46,206 +40,460 @@ const HeaderBal: FC = () => {
           About
         </Navlink>
         <Megamenu label="Solutions">
-          <div className="grid grid-cols-5 gap-8 ">
-            <div className="space-y-6">
-              <h3 className="text-sm text-gray-500 flex items-center gap-1">
-                <span>
-                  <AiOutlineSolution />
-                </span>
-                Explore Solutions
-              </h3>
-              <div className="space-y-2">
-                <Navlink
-                  cto
-                  as={Link}
-                  href="/services/wordpress/customization"
-                  className="group flex items-center justify-start"
-                >
+          <div className="grid w-full grid-flow-col gap-x-8 grid-cols-[repeat(4,minmax(100px,1fr))_300px]">
+            <div className="flex flex-col h-full ">
+              <div className="mb-4">
+                <h3 className="text-xs leading-none text-gray-500">
+                  Explore Solutions
+                </h3>
+              </div>
+              <div className="flex flex-col space-y-2 ">
+                <Navlink href="/blog" as={Link} cto>
                   Development
-                  <MdOutlineArrowForwardIos className="size-4 opacity-0 group-hover:opacity-100 translate-x-0.5 group-hover:translate-x-1 transition-all duration-300 ease-in-out" />
                 </Navlink>
-                <Navlink
-                  cto
-                  as={Link}
-                  href="/services/wordpress/customization"
-                  className="group flex items-center justify-start"
-                >
-                  Infrastructures
-                  <MdOutlineArrowForwardIos className="size-4 opacity-0 group-hover:opacity-100 translate-x-0.5 group-hover:translate-x-1 transition-all duration-300 ease-in-out" />
+                <Navlink href="/blog" as={Link} cto>
+                  Infeastructures
                 </Navlink>
-
-                <Navlink
-                  cto
-                  as={Link}
-                  href="/services/wordpress/customization"
-                  className="group flex items-center justify-start"
-                >
+                <Navlink href="/blog" as={Link} cto>
                   DevOps
-                  <MdOutlineArrowForwardIos className="size-4 opacity-0 group-hover:opacity-100 translate-x-0.5 group-hover:translate-x-1 transition-all duration-300 ease-in-out" />
                 </Navlink>
               </div>
-              <Navlink href="#" className="flex items-center gap-1 py-3 ">
-                <Image
-                  src="/path.svg"
-                  width={120}
-                  height={27}
-                  className="h-2 w-auto grayscale filter drop-shadow dark:invert"
-                  alt=""
-                />
-                <span className="text-[8px] font-light">UI</span>
-                <span>
-                  <BsArrowUpRight className="size-2" />
-                </span>
-              </Navlink>
-            </div>
-            <div className="space-y-3 flex-col justify-between">
-              <h3 className="text-sm text-gray-500 flex items-center gap-1 ">
-                <span>
-                  <BiCode />
-                </span>
-                Development
-              </h3>
-              <div>
+              <div className="flex-grow"></div>
+
+              <div className=" mt-4 ">
                 <Navlink
                   as={Link}
-                  href="/services/fullstack/react-next"
+                  href="/services/fullstack/search-form"
+                  className="block md:inline-flex md:items-center gap-1"
                   isDropdownItem
                 >
-                  React/Next.js
+                  Explore All
+                  <span>
+                    <BiChevronRight
+                      className="inline-flex items-center"
+                      size={20}
+                    />
+                  </span>
+                </Navlink>
+              </div>
+            </div>
+            <div className="flex flex-col h-full">
+              <div className="mb-4">
+                <h3 className="text-xs leading-none text-gray-500">
+                  Development
+                </h3>
+              </div>
+              <div className="flex flex-col space-y-1">
+                <Navlink
+                  as={Link}
+                  href="/services/fullstack/performance"
+                  isDropdownItem
+                >
+                  Custom Next.js
+                </Navlink>
+                <Navlink as={Link} href="#" isDropdownItem>
+                  Headless Integration
+                </Navlink>
+                <Navlink as={Link} href="#" isDropdownItem>
+                  Feature Development
                 </Navlink>
                 <Navlink
                   as={Link}
-                  href="/services/fullstack/api-backend"
+                  href="/services/fullstack/performance"
                   isDropdownItem
                 >
                   API & Backend
                 </Navlink>
                 <Navlink
                   as={Link}
-                  href="/services/fullstack/search-form"
+                  href="/services/fullstack/performance"
                   isDropdownItem
                 >
-                  Search & Form Integrations
+                  UI Develepment
                 </Navlink>
                 <Navlink
                   as={Link}
                   href="/services/fullstack/performance"
                   isDropdownItem
                 >
-                  Performance Optimization
+                  Wordpress Development
                 </Navlink>
               </div>
-              <Navlink
-                as={Link}
-                href="/services/fullstack/performance"
-                className="group flex items-center font-medium"
-              >
-                More
-                <span>
-                  <BiChevronRight />
-                </span>
-              </Navlink>
-            </div>
-            <div className="space-y-3 flex-col justify-between">
-              <h3 className="text-sm text-gray-500 flex items-center gap-1">
-                <span>
-                  <PiStackSimpleLight />
-                </span>
-                Infrastructures
-              </h3>
-              <div>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/react-next"
-                  isDropdownItem
-                >
-                  Headless Solution
-                </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/api-backend"
-                  isDropdownItem
-                >
-                  AWS System
-                </Navlink>
+              <div className="flex-grow"></div>
+              <div className=" mt-4 ">
                 <Navlink
                   as={Link}
                   href="/services/fullstack/search-form"
+                  className="block md:inline-flex md:items-center gap-1"
                   isDropdownItem
                 >
-                  Custom Wordpress
+                  More
+                  <span>
+                    <BiChevronRight
+                      className="inline-flex items-center"
+                      size={20}
+                    />
+                  </span>
+                </Navlink>
+              </div>
+            </div>
+
+            <div className="flex flex-col h-full ">
+              <div className="mb-4">
+                <h3 className="text-xs leading-none text-gray-500">
+                  Infrastructures
+                </h3>{" "}
+              </div>
+              <div className="flex flex-col space-y-1">
+                <Navlink as={Link} href="#" isDropdownItem>
+                  Serverless Configuration
+                </Navlink>
+                <Navlink as={Link} href="#" isDropdownItem>
+                  AWS Infrastructures
+                </Navlink>
+                <Navlink as={Link} href="#" isDropdownItem>
+                  Wordpress Optimization
                 </Navlink>
                 <Navlink
                   as={Link}
                   href="/services/fullstack/performance"
                   isDropdownItem
                 >
-                  Serverless Setup
+                  VPS Setup
+                </Navlink>
+                <Navlink
+                  as={Link}
+                  href="/services/fullstack/performance"
+                  isDropdownItem
+                >
+                  Cloud Migration
                 </Navlink>
               </div>
-              <Navlink
-                as={Link}
-                href="/services/fullstack/performance"
-                className="group flex items-center font-medium"
-              >
-                More
-                <span>
-                  <BiChevronRight />
-                </span>
-              </Navlink>
-            </div>
-            <div className="space-y-3 flex-col justify-between">
-              <h3 className="text-sm text-gray-500 flex items-center gap-1">
-                <span>
-                  <FaCodeCommit />
-                </span>
-                DevOps
-              </h3>
-              <div>
+              <div className="flex-grow"></div>
+              <div className=" mt-4 ">
                 <Navlink
                   as={Link}
-                  href="/services/fullstack/react-next"
+                  href="/services/fullstack/search-form"
+                  className="block md:inline-flex md:items-center gap-1"
                   isDropdownItem
                 >
-                  Migration
+                  More
+                  <span>
+                    <BiChevronRight
+                      className="inline-flex items-center"
+                      size={20}
+                    />
+                  </span>
+                </Navlink>
+              </div>
+            </div>
+
+            <div className="flex flex-col h-full ">
+              <div className="flex flex-col space-y-1">
+                <h3 className="text-xs leading-none text-gray-500">DevOps</h3>
+              </div>
+              <div className="flex flex-col space-y-1 py-4">
+                <Navlink as={Link} href="#" isDropdownItem>
+                  Edge Configuration
+                </Navlink>
+                <Navlink as={Link} href="#" isDropdownItem>
+                  CI/CD & Workflow
+                </Navlink>
+                <Navlink as={Link} href="#" isDropdownItem>
+                  AWS Serverless
                 </Navlink>
                 <Navlink
                   as={Link}
-                  href="/services/fullstack/api-backend"
+                  href="/services/fullstack/performance"
                   isDropdownItem
                 >
-                  Automation
+                  Cloud Management
+                </Navlink>
+                <Navlink
+                  as={Link}
+                  href="/services/fullstack/performance"
+                  isDropdownItem
+                >
+                  Release Management
                 </Navlink>
                 <Navlink
                   as={Link}
                   href="/services/fullstack/search-form"
                   isDropdownItem
                 >
-                  Edge Computing
+                  Cost Optimization
                 </Navlink>
               </div>
-              <Navlink
-                as={Link}
-                href="/services/fullstack/performance"
-                className="group flex items-center font-medium "
-              >
-                More
-                <span>
-                  <BiChevronRight />
-                </span>
-              </Navlink>
+              <div className="flex-grow"></div>
+              <div className="mt-4 ">
+                <Navlink
+                  isDropdownItem
+                  as={Link}
+                  href="/services/fullstack/search-form"
+                  className="block md:inline-flex md:items-center gap-1"
+                >
+                  More
+                  <span>
+                    <BiChevronRight
+                      className="inline-flex items-center"
+                      size={20}
+                    />
+                  </span>
+                </Navlink>
+              </div>
             </div>
-            <div>
-              <Card href="#" cover="tb.svg" header="">
-                <div className="flex mt-6">
-                  <Button size="sm" variant="outline">
-                    Get Started Today
-                  </Button>
-                </div>
-              </Card>
+            <div className="w-[300px] flex flex-col h-full">
+              {/* <div className="flex flex-col space-y-1">
+                <h3 className="text-xs leading-none text-gray-500">DevOps</h3>
+              </div> */}
+              {/* <div className="flex flex-col space-y-1 py-4">
+                <Navlink as={Link} href="#" isDropdownItem>
+                  Edge Configuration
+                </Navlink>
+                <Navlink as={Link} href="#" isDropdownItem>
+                  CI/CD & Workflow
+                </Navlink>
+                <Navlink as={Link} href="#" isDropdownItem>
+                  AWS Serverless
+                </Navlink>
+                <Navlink
+                  as={Link}
+                  href="/services/fullstack/performance"
+                  isDropdownItem
+                >
+                  Cloud Management
+                </Navlink>
+                <Navlink
+                  as={Link}
+                  href="/services/fullstack/performance"
+                  isDropdownItem
+                >
+                  Release Management
+                </Navlink>
+                <Navlink
+                  as={Link}
+                  href="/services/fullstack/search-form"
+                  isDropdownItem
+                >
+                  Cost Optimization
+                </Navlink>
+              </div> */}
+              <div className="flex-grow"></div>
+              <div className="mt-4 ">
+                <Card>
+                  <Image
+                    src="logo.svg"
+                    alt=""
+                    width={144}
+                    height={30}
+                    className="dark:invert"
+                  ></Image>
+                </Card>
+              </div>
             </div>
           </div>
         </Megamenu>
+
+        <Megamenu label="Services">
+          <div className=" space-y-3">
+            <Megamenu label="Frontend & UI" isDropdownItem>
+              <div className=" space-y-3">
+                <Navlink
+                  as={Link}
+                  href="/services/fullstack/performance"
+                  isDropdownItem
+                >
+                  Custom React & Next.js
+                </Navlink>
+                <Navlink
+                  as={Link}
+                  href="/services/fullstack/performance"
+                  isDropdownItem
+                >
+                  Tailwindcss & Headless UI
+                </Navlink>
+                <Navlink
+                  as={Link}
+                  href="/services/fullstack/performance"
+                  isDropdownItem
+                >
+                  Custom SVG & Icons
+                </Navlink>
+
+                <Navlink
+                  as={Link}
+                  href="/services/fullstack/performance"
+                  isDropdownItem
+                >
+                  Themeing Solution
+                </Navlink>
+                <Navlink
+                  as={Link}
+                  href="/services/fullstack/performance"
+                  isDropdownItem
+                >
+                  Animations
+                </Navlink>
+                <Navlink
+                  as={Link}
+                  href="/services/fullstack/performance"
+                  isDropdownItem
+                >
+                  UI/UX Enhancement
+                </Navlink>
+                <Navlink
+                  as={Link}
+                  href="/services/fullstack/performance"
+                  isDropdownItem
+                >
+                  Wordpress Theme Development
+                </Navlink>
+                <Navlink
+                  as={Link}
+                  href="/services/fullstack/performance"
+                  isDropdownItem
+                >
+                  Elementor Template
+                </Navlink>
+              </div>
+            </Megamenu>
+            <Megamenu label="Backend & API" isDropdownItem>
+              <div className=" space-y-3">
+                <Navlink as={Link} href="#" isDropdownItem>
+                  Next.js API Routes
+                </Navlink>
+                <Navlink as={Link} href="#" isDropdownItem>
+                  Node.js
+                </Navlink>
+                <Navlink as={Link} href="#" isDropdownItem>
+                  GraphQL
+                </Navlink>
+                <Navlink
+                  as={Link}
+                  href="/services/fullstack/performance"
+                  isDropdownItem
+                >
+                  Serverless Function
+                </Navlink>
+                <Navlink
+                  as={Link}
+                  href="/services/fullstack/performance"
+                  isDropdownItem
+                >
+                  API Integration
+                </Navlink>
+              </div>
+            </Megamenu>
+            <Navlink
+              as={Link}
+              href="/services/fullstack/performance"
+              isDropdownItem
+            >
+              Cloud Deployment
+            </Navlink>
+            <Navlink
+              as={Link}
+              href="/services/fullstack/performance"
+              isDropdownItem
+            >
+              Github Actions
+            </Navlink>
+            <Navlink
+              as={Link}
+              href="/services/fullstack/performance"
+              isDropdownItem
+            >
+              Authenctication
+            </Navlink>
+            <Navlink
+              as={Link}
+              href="/services/fullstack/performance"
+              isDropdownItem
+            >
+              Payment Setup
+            </Navlink>
+          </div>
+        </Megamenu>
+        <Megamenu label="Business">
+          <div className=" space-y-3">
+            <Navlink as={Link} href="#" isDropdownItem>
+              SEO & Content
+            </Navlink>
+            <Navlink as={Link} href="#" isDropdownItem>
+              Social Media Management
+            </Navlink>
+            <Navlink as={Link} href="#" isDropdownItem>
+              Paid Ad & PPC
+            </Navlink>
+            <Navlink as={Link} href="#" isDropdownItem>
+              Email Marketing
+            </Navlink>
+            <Navlink as={Link} href="#" isDropdownItem>
+              Branding
+            </Navlink>
+            <Navlink as={Link} href="#" isDropdownItem>
+              Conversion Optimization
+            </Navlink>
+          </div>
+        </Megamenu>
+
+        <Megamenu label="Resources">
+          <div className=" space-y-3">
+            <Megamenu label="UI Components" isDropdownItem>
+              <div className=" space-y-3">
+                <Navlink
+                  as={Link}
+                  href="/services/fullstack/performance"
+                  isDropdownItem
+                >
+                  Bracket UI Component
+                </Navlink>
+                <Navlink as={Link} href="#" isDropdownItem>
+                  Bracket UI Block
+                </Navlink>
+                <Navlink as={Link} href="#" isDropdownItem>
+                  Bracket UI Npm Package
+                </Navlink>
+              </div>
+            </Megamenu>
+            <Megamenu label="Themes" isDropdownItem>
+              <div className="space-y-2">
+                <Navlink as={Link} href="#" isDropdownItem>
+                  Wordpress Themes
+                </Navlink>
+                <Navlink as={Link} href="#" isDropdownItem>
+                  Tailwind Themes
+                </Navlink>
+                <Navlink as={Link} href="#" isDropdownItem>
+                  Next.js Themes
+                </Navlink>
+                <Navlink
+                  as={Link}
+                  href="/services/fullstack/performance"
+                  isDropdownItem
+                >
+                  Hugo Themes
+                </Navlink>
+              </div>
+            </Megamenu>
+            <Megamenu label="Templates" isDropdownItem>
+              <div className=" space-y-3">
+                <Navlink as={Link} href="#" isDropdownItem>
+                  Elementor Templates
+                </Navlink>
+                <Navlink as={Link} href="#" isDropdownItem>
+                  Tailwind Templates
+                </Navlink>
+                <Navlink as={Link} href="#" isDropdownItem>
+                  HTML5 Templates
+                </Navlink>
+              </div>
+            </Megamenu>
+          </div>
+        </Megamenu>
+        <Navlink as={Link} href="#">
+          Contact
+        </Navlink>
       </NavItem>
       <MobileNav>
         <div className="space-y-4">

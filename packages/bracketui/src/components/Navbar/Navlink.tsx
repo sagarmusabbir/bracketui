@@ -38,7 +38,7 @@ const Navlink = forwardRef(function Navlink<T extends ElementType = "a">(
   // Base styles that should always be applied
 
   const baseStyles =
-    "transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out   md:flex block  leading-none py-2 md:py-1";
+    "transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out md:flex   md:items-center block  leading-none py-2 md:py-1";
 
   const varientSize = cto
     ? "text-xl font-bold  py-3 "

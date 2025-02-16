@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { FC } from "react";
 
 export interface CardProps {
@@ -5,13 +6,24 @@ export interface CardProps {
   cover?: string | React.ReactElement;
   children: React.ReactNode;
   href?: string;
+  className?: string;
 }
 
-const Card: FC<CardProps> = ({ header, cover, href = "#", children }) => {
+const Card: FC<CardProps> = ({
+  header,
+  cover,
+  href = "#",
+  children,
+  className = "",
+}) => {
   return (
     <a
       href={href}
-      className="rounded-lg border  border-gray-200 dark:border-gray-800 border-opacity-50 overflow-hidden  flex flex-col justify-center items-stretch gap-y-3 transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out p-4 max-h-fit focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100"
+      className={clsx(
+        "rounded-lg border  border-gray-200 dark:border-gray-800 border-opacity-50 overflow-hidden  flex flex-col justify-center items-stretch gap-y-3 transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out p-4 max-h-fit focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100",
+
+        className
+      )}
     >
       {/* Cover Section */}
       {/* <div className="object-left md:object-cover bg-gray-50 dark:bg-gray-900 bg-opacity-20 w-full h-full"> */}
