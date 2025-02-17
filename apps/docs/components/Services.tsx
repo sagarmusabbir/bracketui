@@ -17,7 +17,7 @@ const Services = () => {
   return (
     <section className="space-y-8 py-16 md:py-24">
       <div className="lg:flex items-center justify-center gap-4 space-y-2 lg:space-y-0">
-        <h2 className="font-semibold text-center text-3xl md:text-4xl lg:text-5xl leading-none text-gray-950 dark:text-white">
+        <h2 className="font-bold text-center text-3xl md:text-4xl lg:text-5xl leading-none text-gray-950 dark:text-white">
           Our Services
         </h2>
         <p className="text-base md:text-lg lg:text-xl text-center text-gray-600 dark:text-gray-500">
@@ -33,13 +33,13 @@ const Services = () => {
             isExternal
             className="relative"
             cover={
-              <div className="aspect-square relative ">
+              <div className="aspect-[5/3] relative ">
                 <Image
-                  src="/coding.svg"
+                  src="/app.svg"
                   alt="Custom Development"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
             }
@@ -74,11 +74,11 @@ const Services = () => {
             cover={
               <div className="aspect-[3/4] relative ">
                 <Image
-                  src="/app.svg"
+                  src="/tall.svg"
                   alt="Web Applications"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
             }
@@ -112,13 +112,13 @@ const Services = () => {
             href="#"
             className="relative"
             cover={
-              <div className="aspect-square relative ">
+              <div className="relative aspect-[5/3] ">
                 <Image
                   src="/app.svg"
                   alt="Analytics & Reporting"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
             }

@@ -34,7 +34,7 @@ const Features = () => {
           cover={
             <div className="relative aspect-[5/3]">
               <Image
-                src="/web.svg"
+                src="/app.svg"
                 alt="Web Development Solutions"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
