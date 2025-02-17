@@ -18,24 +18,24 @@ const Hero = () => {
       <div className="flex flex-wrap gap-4 items-center justify-center">
         {/* Desktop buttons */}
         <div className="hidden md:block">
-          <Button size="lg" outline as={Link} href="/about">
+          <Button size="lg" outline as={Link} href="#">
             Let's Grow
           </Button>
         </div>
         <div className="hidden md:block">
-          <Button size="lg" as={Link} href="/about">
+          <Button size="lg" as={Link} href="#">
             Our Solutions
           </Button>
         </div>
 
         {/* Mobile buttons */}
         <div className="md:hidden">
-          <Button size="md" outline as={Link} href="/about">
+          <Button size="md" outline as={Link} href="#">
             Let's Grow
           </Button>
         </div>
         <div className="md:hidden">
-          <Button size="md" as={Link} href="/about">
+          <Button size="md" as={Link} href="#">
             Our Solutions
           </Button>
         </div>

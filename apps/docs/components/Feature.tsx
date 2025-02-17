@@ -28,23 +28,26 @@ const Features = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start mx-auto justify-center py-8">
         {/* Left Column - Featured Solution Card */}
         <Card
-          href="/solutions/web-development"
+          href="#"
+          isExternal
           className="h-full"
           cover={
-            <div className="aspect-[5/3] relative bg-gray-100/60 dark:bg-gray-900/30 rounded-t-lg overflow-hidden">
+            <div className="relative aspect-[5/3]">
               <Image
-                src="/k.svg"
+                src="/web.svg"
                 alt="Web Development Solutions"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
-                className="object-contain "
+                className="object-contain"
               />
             </div>
           }
         >
           <div className="flex items-center gap-2 mb-2">
             <PiCodeLight className="w-6 h-6 text-gray-950 dark:text-white" />
-            <h3 className="text-xl font-bold text-gray-950 dark:text-white">Web Development</h3>
+            <h3 className="text-xl font-bold text-gray-950 dark:text-white">
+              Web Development
+            </h3>
           </div>
           <p className="text-gray-600 dark:text-gray-400">
             Modern web applications built with cutting-edge technologies. From
@@ -56,10 +59,12 @@ const Features = () => {
         {/* Right Column - Stack of Cards */}
         <div className="space-y-4">
           {/* Infrastructure */}
-          <Card href="/solutions/infrastructure">
+          <Card>
             <div className="flex items-center gap-2 mb-2">
               <PiCloudLight className="w-6 h-6 text-gray-950 dark:text-white" />
-              <h3 className="text-xl font-bold text-gray-950 dark:text-white">Infrastructure</h3>
+              <h3 className="text-xl font-bold text-gray-950 dark:text-white">
+                Infrastructure
+              </h3>
             </div>
             <p className="text-gray-600 dark:text-gray-400">
               Cloud-native infrastructure solutions with AWS, focusing on
@@ -68,10 +73,12 @@ const Features = () => {
           </Card>
 
           {/* DevOps */}
-          <Card href="/solutions/devops">
+          <Card>
             <div className="flex items-center gap-2 mb-2">
               <PiRocketLaunchLight className="w-6 h-6 text-gray-950 dark:text-white" />
-              <h3 className="text-xl font-bold text-gray-950 dark:text-white">DevOps</h3>
+              <h3 className="text-xl font-bold text-gray-950 dark:text-white">
+                DevOps
+              </h3>
             </div>
             <p className="text-gray-600 dark:text-gray-400">
               Streamline your development workflow with our CI/CD pipelines and
@@ -80,10 +87,12 @@ const Features = () => {
           </Card>
 
           {/* Digital Marketing */}
-          <Card href="/solutions/digital-marketing">
+          <Card>
             <div className="flex items-center gap-2 mb-2">
               <PiChartLineUpLight className="w-6 h-6 text-gray-950 dark:text-white" />
-              <h3 className="text-xl font-bold text-gray-950 dark:text-white">Digital Marketing</h3>
+              <h3 className="text-xl font-bold text-gray-950 dark:text-white">
+                Digital Marketing
+              </h3>
             </div>
             <p className="text-gray-600 dark:text-gray-400">
               Data-driven digital marketing strategies to increase your online
@@ -92,10 +101,12 @@ const Features = () => {
           </Card>
 
           {/* WordPress Solutions */}
-          <Card href="/solutions/wordpress">
+          <Card href="#" isExternal>
             <div className="flex items-center gap-2 mb-2">
               <PiDevicesLight className="w-6 h-6 text-gray-950 dark:text-white" />
-              <h3 className="text-xl font-bold text-gray-950 dark:text-white">WordPress Solutions</h3>
+              <h3 className="text-xl font-bold text-gray-950 dark:text-white">
+                WordPress Solutions
+              </h3>
             </div>
             <p className="text-gray-600 dark:text-gray-400">
               Custom WordPress development, optimization, and maintenance for
@@ -108,7 +119,7 @@ const Features = () => {
       <div className="flex justify-center mt-8">
         <Navlink
           as={Link}
-          href="/solutions"
+          href="#"
           className="inline-flex items-center gap-1 text-gray-950 dark:text-white"
         >
           Explore All Solutions

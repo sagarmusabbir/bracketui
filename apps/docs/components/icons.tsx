@@ -5,7 +5,7 @@ export const FacebookIcon = ({ size = 24, ...props }) => (
   <svg width={size} height={size} fill="currentColor" {...props}>
     <path fill="none" d="M0 0h24v24H0z"></path>{" "}
     <path
-      fill-rule="nonzero"
+      fillRule="nonzero"
       d="M13 9h4.5l-.5 2h-4v9h-2v-9H7V9h4V7.128c0-1.783.186-2.43.534-3.082a3.635 3.635 0 0 1 1.512-1.512C13.698 2.186 14.345 2 16.128 2c.522 0 .98.05 1.372.15V4h-1.372c-1.324 0-1.727.078-2.138.298-.304.162-.53.388-.692.692-.22.411-.298.814-.298 2.138V9z"
     ></path>
   </svg>
@@ -45,8 +45,8 @@ export const PhoneIcon = ({ size = 24, ...props }) => (
       height="18"
       rx="3"
       stroke="currentColor"
-      stroke-width="1.5"
-      stroke-linecap="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
       stroke-linejoin="round"
     ></rect>
     <path
@@ -66,45 +66,45 @@ export const WhatsAppIcon = ({ size = 24, ...props }) => (
     <path
       d="M84.7925 257.334C1.81069 106.044 237.525 -11.6463 321.16 119.453C396.366 237.339 251.357 391.573 150.736 312.145"
       stroke="currentColor"
-      stroke-width="24"
-      stroke-linecap="round"
+      strokeWidth="24"
+      strokeLinecap="round"
       stroke-linejoin="round"
     ></path>
     <path
       d="M89.5909 265.912C34.5405 357.344 49.8143 347.445 133.267 311.303"
       stroke="currentColor"
-      stroke-width="24"
-      stroke-linecap="round"
+      strokeWidth="24"
+      strokeLinecap="round"
       stroke-linejoin="round"
     ></path>{" "}
     <path
       d="M170.381 113.42C60.1005 141.74 240.793 341.184 288.582 236.047"
       stroke="currentColor"
-      stroke-width="10"
-      stroke-linecap="round"
+      strokeWidth="10"
+      strokeLinecap="round"
       stroke-linejoin="round"
     ></path>{" "}
     {/* <path
       d="M177.338 175.365C186.032 197.073 208.905 214.528 227.906 227.195"
       stroke="currentColor"
-      stroke-width="10"
-      stroke-linecap="round"
+      strokeWidth="10"
+      strokeLinecap="round"
       stroke-linejoin="round"
       strokeOpacity={0.9}
     ></path>{" "} */}
     <path
       d="M177.338 126.062C187.693 143.231 203.319 159.586 178.602 168.412"
       stroke="currentColor"
-      stroke-width="10"
-      stroke-linecap="round"
+      strokeWidth="10"
+      strokeLinecap="round"
       stroke-linejoin="round"
     ></path>{" "}
     {/* <path
       d="M285.431 228.46C262.184 210.573 250.584 200.134 232.965 225.301"
       stroke="currentColor"
-      stroke-width="10"
+      strokeWidth="10"
       strokeOpacity={0.9}
-      stroke-linecap="round"
+      strokeLinecap="round"
       stroke-linejoin="round"
     ></path> */}
   </svg>

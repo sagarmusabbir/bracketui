@@ -33,7 +33,7 @@ const HeaderBal: FC = () => {
       ></Navbrand>
 
       <NavItem>
-        <Navlink as={Link} href="/services/fullstack/performance">
+        <Navlink as={Link} href="#">
           Features
         </Navlink>
         <Navlink as={Link} href="#">
@@ -48,13 +48,13 @@ const HeaderBal: FC = () => {
                 </h3>
               </div>
               <div className="flex flex-col space-y-2 ">
-                <Navlink href="/blog" as={Link} cto>
+                <Navlink href="#" as={Link} cto>
                   Development
                 </Navlink>
-                <Navlink href="/blog" as={Link} cto>
+                <Navlink href="#" as={Link} cto>
                   Infeastructures
                 </Navlink>
-                <Navlink href="/blog" as={Link} cto>
+                <Navlink href="#" as={Link} cto>
                   DevOps
                 </Navlink>
               </div>
@@ -63,7 +63,7 @@ const HeaderBal: FC = () => {
               <div className=" mt-4 ">
                 <Navlink
                   as={Link}
-                  href="/services/fullstack/search-form"
+                  href="#"
                   className="block md:inline-flex md:items-center gap-1"
                   isDropdownItem
                 >
@@ -84,11 +84,7 @@ const HeaderBal: FC = () => {
                 </h3>
               </div>
               <div className="flex flex-col space-y-1">
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   Custom Next.js
                 </Navlink>
                 <Navlink as={Link} href="#" isDropdownItem>
@@ -97,25 +93,13 @@ const HeaderBal: FC = () => {
                 <Navlink as={Link} href="#" isDropdownItem>
                   Feature Development
                 </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   API & Backend
                 </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   UI Develepment
                 </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   Wordpress Development
                 </Navlink>
               </div>
@@ -123,7 +107,7 @@ const HeaderBal: FC = () => {
               <div className=" mt-4 ">
                 <Navlink
                   as={Link}
-                  href="/services/fullstack/search-form"
+                  href="#"
                   className="block md:inline-flex md:items-center gap-1"
                   isDropdownItem
                 >
@@ -154,18 +138,10 @@ const HeaderBal: FC = () => {
                 <Navlink as={Link} href="#" isDropdownItem>
                   Wordpress Optimization
                 </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   VPS Setup
                 </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   Cloud Migration
                 </Navlink>
               </div>
@@ -173,7 +149,7 @@ const HeaderBal: FC = () => {
               <div className=" mt-4 ">
                 <Navlink
                   as={Link}
-                  href="/services/fullstack/search-form"
+                  href="#"
                   className="block md:inline-flex md:items-center gap-1"
                   isDropdownItem
                 >
@@ -202,25 +178,13 @@ const HeaderBal: FC = () => {
                 <Navlink as={Link} href="#" isDropdownItem>
                   AWS Serverless
                 </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   Cloud Management
                 </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   Release Management
                 </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/search-form"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   Cost Optimization
                 </Navlink>
               </div>
@@ -229,7 +193,7 @@ const HeaderBal: FC = () => {
                 <Navlink
                   isDropdownItem
                   as={Link}
-                  href="/services/fullstack/search-form"
+                  href="#"
                   className="block md:inline-flex md:items-center gap-1"
                 >
                   More
@@ -280,7 +244,7 @@ const HeaderBal: FC = () => {
               </div> */}
               <div className="flex-grow"></div>
               <div className="mt-4 ">
-                <Card>
+                <Card href="#">
                   <Image
                     src="logo.svg"
                     alt=""
@@ -298,61 +262,29 @@ const HeaderBal: FC = () => {
           <div className=" space-y-3">
             <Megamenu label="Frontend & UI" isDropdownItem>
               <div className=" space-y-3">
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   Custom React & Next.js
                 </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   Tailwindcss & Headless UI
                 </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   Custom SVG & Icons
                 </Navlink>
 
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   Themeing Solution
                 </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   Animations
                 </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   UI/UX Enhancement
                 </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   Wordpress Theme Development
                 </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   Elementor Template
                 </Navlink>
               </div>
@@ -368,48 +300,24 @@ const HeaderBal: FC = () => {
                 <Navlink as={Link} href="#" isDropdownItem>
                   GraphQL
                 </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   Serverless Function
                 </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   API Integration
                 </Navlink>
               </div>
             </Megamenu>
-            <Navlink
-              as={Link}
-              href="/services/fullstack/performance"
-              isDropdownItem
-            >
+            <Navlink as={Link} href="#" isDropdownItem>
               Cloud Deployment
             </Navlink>
-            <Navlink
-              as={Link}
-              href="/services/fullstack/performance"
-              isDropdownItem
-            >
+            <Navlink as={Link} href="#" isDropdownItem>
               Github Actions
             </Navlink>
-            <Navlink
-              as={Link}
-              href="/services/fullstack/performance"
-              isDropdownItem
-            >
+            <Navlink as={Link} href="#" isDropdownItem>
               Authenctication
             </Navlink>
-            <Navlink
-              as={Link}
-              href="/services/fullstack/performance"
-              isDropdownItem
-            >
+            <Navlink as={Link} href="#" isDropdownItem>
               Payment Setup
             </Navlink>
           </div>
@@ -441,11 +349,7 @@ const HeaderBal: FC = () => {
           <div className=" space-y-3">
             <Megamenu label="UI Components" isDropdownItem>
               <div className=" space-y-3">
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   Bracket UI Component
                 </Navlink>
                 <Navlink as={Link} href="#" isDropdownItem>
@@ -467,11 +371,7 @@ const HeaderBal: FC = () => {
                 <Navlink as={Link} href="#" isDropdownItem>
                   Next.js Themes
                 </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
+                <Navlink as={Link} href="#" isDropdownItem>
                   Hugo Themes
                 </Navlink>
               </div>
@@ -497,7 +397,7 @@ const HeaderBal: FC = () => {
       </NavItem>
       <MobileNav>
         <div className="space-y-4">
-          <Navlink as={Link} href="/services/fullstack/performance">
+          <Navlink as={Link} href="#">
             Features
           </Navlink>
           <Navlink as={Link} href="#">
@@ -507,11 +407,7 @@ const HeaderBal: FC = () => {
             <div className="space-y-3">
               <Megamenu label="Development" isDropdownItem>
                 <div className="  space-y-3">
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     Custom Next.js
                   </Navlink>
                   <Navlink as={Link} href="#" isDropdownItem>
@@ -520,25 +416,13 @@ const HeaderBal: FC = () => {
                   <Navlink as={Link} href="#" isDropdownItem>
                     Feature Development
                   </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     API & Backend
                   </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     UI Develepment
                   </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     Wordpress Development
                   </Navlink>
                 </div>
@@ -554,18 +438,10 @@ const HeaderBal: FC = () => {
                   <Navlink as={Link} href="#" isDropdownItem>
                     Wordpress Optimization
                   </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     VPS Setup
                   </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     Cloud Migration
                   </Navlink>
                 </div>
@@ -581,25 +457,13 @@ const HeaderBal: FC = () => {
                   <Navlink as={Link} href="#" isDropdownItem>
                     AWS Serverless
                   </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     Cloud Management
                   </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     Release Management
                   </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/search-form"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     Cost Optimization
                   </Navlink>
                 </div>
@@ -611,61 +475,29 @@ const HeaderBal: FC = () => {
             <div className=" space-y-3">
               <Megamenu label="Frontend & UI" isDropdownItem>
                 <div className=" space-y-3">
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     Custom React & Next.js
                   </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     Tailwindcss & Headless UI
                   </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     Custom SVG & Icons
                   </Navlink>
 
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     Themeing Solution
                   </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     Animations
                   </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     UI/UX Enhancement
                   </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     Wordpress Theme Development
                   </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     Elementor Template
                   </Navlink>
                 </div>
@@ -681,48 +513,24 @@ const HeaderBal: FC = () => {
                   <Navlink as={Link} href="#" isDropdownItem>
                     GraphQL
                   </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     Serverless Function
                   </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     API Integration
                   </Navlink>
                 </div>
               </Megamenu>
-              <Navlink
-                as={Link}
-                href="/services/fullstack/performance"
-                isDropdownItem
-              >
+              <Navlink as={Link} href="#" isDropdownItem>
                 Cloud Deployment
               </Navlink>
-              <Navlink
-                as={Link}
-                href="/services/fullstack/performance"
-                isDropdownItem
-              >
+              <Navlink as={Link} href="#" isDropdownItem>
                 Github Actions
               </Navlink>
-              <Navlink
-                as={Link}
-                href="/services/fullstack/performance"
-                isDropdownItem
-              >
+              <Navlink as={Link} href="#" isDropdownItem>
                 Authenctication
               </Navlink>
-              <Navlink
-                as={Link}
-                href="/services/fullstack/performance"
-                isDropdownItem
-              >
+              <Navlink as={Link} href="#" isDropdownItem>
                 Payment Setup
               </Navlink>
             </div>
@@ -754,11 +562,7 @@ const HeaderBal: FC = () => {
             <div className=" space-y-3">
               <Megamenu label="UI Components" isDropdownItem>
                 <div className=" space-y-3">
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     Bracket UI Component
                   </Navlink>
                   <Navlink as={Link} href="#" isDropdownItem>
@@ -780,11 +584,7 @@ const HeaderBal: FC = () => {
                   <Navlink as={Link} href="#" isDropdownItem>
                     Next.js Themes
                   </Navlink>
-                  <Navlink
-                    as={Link}
-                    href="/services/fullstack/performance"
-                    isDropdownItem
-                  >
+                  <Navlink as={Link} href="#" isDropdownItem>
                     Hugo Themes
                   </Navlink>
                 </div>

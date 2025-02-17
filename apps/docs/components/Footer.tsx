@@ -8,7 +8,9 @@ import {
   FooterText,
   ThemeToggle,
 } from "@thirdbracket/bracketui";
-import { EmailIcon, FacebookIcon, LinkedInIcon, PhoneIcon } from "./icons";
+import { BiPhone } from "react-icons/bi";
+import { MdEmail } from "react-icons/md";
+import { RiFacebookLine, RiLinkedinLine } from "react-icons/ri";
 
 const SiteFooter = () => {
   return (
@@ -17,50 +19,50 @@ const SiteFooter = () => {
         <FooterBrand logo="/path.svg">
           Making the web a better place with beautiful UI components.
         </FooterBrand>
-        <div className="flex -ml-1.5 gap-x-4 justify-start items-center">
+        <div className="flex  gap-x-4 justify-start items-center">
           <FooterSocial
             href="https://facebook.com/yourpage"
-            icon={<FacebookIcon size={16} />}
+            icon={<RiFacebookLine size={16} />}
             label="Facebook"
           />
           <FooterSocial
             href="https://linkedin.com/in/yourprofile"
-            icon={<LinkedInIcon size={18} />}
+            icon={<RiLinkedinLine size={18} />}
             label="LinkedIn"
           />
           <FooterSocial
             href="mailto:your@email.com"
-            icon={<EmailIcon size={20} />}
+            icon={<MdEmail size={20} />}
             label="Email"
           />
           <FooterSocial
             href="tel:+1234567890"
-            icon={<PhoneIcon size={18} />}
+            icon={<BiPhone size={18} />}
             label="Phone"
           />
         </div>
       </FooterSection>
 
       <FooterSection title="About">
-        <FooterLink href="/components">Components</FooterLink>
-        <FooterLink href="/templates">Templates</FooterLink>
-        <FooterLink href="/pricing">Pricing</FooterLink>
+        <FooterLink href="#">Components</FooterLink>
+        <FooterLink href="#">Templates</FooterLink>
+        <FooterLink href="#">Pricing</FooterLink>
       </FooterSection>
 
       <FooterSection title="Resources">
-        <FooterLink href="/docs">Documentation</FooterLink>
-        <FooterLink href="/guides">Guides</FooterLink>
-        <FooterLink href="/support">Support</FooterLink>
+        <FooterLink href="#">Documentation</FooterLink>
+        <FooterLink href="#">Guides</FooterLink>
+        <FooterLink href="#">Support</FooterLink>
       </FooterSection>
 
       <FooterSection title="Legal">
-        <FooterLink href="/privacy">Privacy Policy</FooterLink>
-        <FooterLink href="/terms">Terms of Service</FooterLink>
+        <FooterLink href="#">Privacy Policy</FooterLink>
+        <FooterLink href="#">Terms of Service</FooterLink>
       </FooterSection>
       <FooterSection title="More">
-        <FooterLink href="/components">Components</FooterLink>
-        <FooterLink href="/templates">Templates</FooterLink>
-        <FooterLink href="/pricing">Pricing</FooterLink>
+        <FooterLink href="#">Components</FooterLink>
+        <FooterLink href="#">Templates</FooterLink>
+        <FooterLink href="#">Pricing</FooterLink>
       </FooterSection>
       <FooterBottom>
         <FooterText>© 2024 Third Bracket Solution.</FooterText>

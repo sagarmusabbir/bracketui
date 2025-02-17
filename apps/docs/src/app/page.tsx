@@ -1,15 +1,6 @@
 // import { Button, Card } from "@thirdbracket/core";
 
-import { Bracket, Card } from "@thirdbracket/bracketui";
-
-import {
-  ButtonIcon,
-  CardIcon,
-  FooterIcon,
-  HeaderIcon,
-  NavbarIcon,
-  ThemeToggleIcon,
-} from "../../components/icons";
+import { Bracket } from "@thirdbracket/bracketui";
 
 import {
   RiServerLine,
@@ -49,10 +40,12 @@ import {
 } from "react-icons/si";
 import Table from "../../components/table";
 
-import { PiBracketsSquareBold } from "react-icons/pi";
 import Hero from "../../components/Hero";
-import Feature from "../../components/Feature";
+
 import Services from "../../components/Services";
+import Feature from "../../components/Feature";
+// import Feature from "../../components/Feature";
+// import Services from "../../components/Services";
 
 export default function Page() {
   const tableData = [

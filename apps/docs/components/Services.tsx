@@ -29,12 +29,13 @@ const Services = () => {
         {/* Left Column - Main Service */}
         <div className="lg:col-span-1 space-y-8">
           <Card
-            href="/services/custom-development"
+            href="#"
+            isExternal
             className="relative"
             cover={
-              <div className="aspect-square relative bg-gray-100 dark:bg-gray-800 rounded-t-lg overflow-hidden">
+              <div className="aspect-square relative ">
                 <Image
-                  src="/web-programming.png"
+                  src="/coding.svg"
                   alt="Custom Development"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
@@ -53,7 +54,7 @@ const Services = () => {
             </p>
           </Card>
 
-          <Card href="/services/database-solutions">
+          <Card href="#">
             <div className="flex items-center gap-2 mb-2">
               <PiDatabaseLight className="w-6 h-6 text-gray-900 dark:text-white" />
               <h3 className="text-xl font-semibold">Database Solutions</h3>
@@ -68,12 +69,12 @@ const Services = () => {
         {/* Middle Column - Featured Service */}
         <div className="lg:col-span-1 space-y-8">
           <Card
-            href="/services/web-applications"
+            href="#"
             className="h-full"
             cover={
-              <div className="aspect-[3/4] relative bg-gray-100 dark:bg-gray-800 rounded-t-lg overflow-hidden">
+              <div className="aspect-[3/4] relative ">
                 <Image
-                  src="/marketing-network.png"
+                  src="/app.svg"
                   alt="Web Applications"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
@@ -96,7 +97,7 @@ const Services = () => {
 
         {/* Right Column - Additional Services */}
         <div className="lg:col-span-1 space-y-8">
-          <Card href="/services/ecommerce">
+          <Card href="#">
             <div className="flex items-center gap-2 mb-2">
               <PiShoppingCartLight className="w-6 h-6 text-gray-900 dark:text-white" />
               <h3 className="text-xl font-semibold">E-Commerce Solutions</h3>
@@ -108,12 +109,12 @@ const Services = () => {
           </Card>
 
           <Card
-            href="/services/analytics"
+            href="#"
             className="relative"
             cover={
-              <div className="aspect-square relative bg-gray-100 dark:bg-gray-800 rounded-t-lg overflow-hidden">
+              <div className="aspect-square relative ">
                 <Image
-                  src="/api.png"
+                  src="/app.svg"
                   alt="Analytics & Reporting"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
@@ -137,7 +138,7 @@ const Services = () => {
       <div className="flex justify-center mt-8">
         <Navlink
           as={Link}
-          href="/services"
+          href="#"
           className="inline-flex items-center gap-1 text-gray-950 dark:text-white"
         >
           View All Services

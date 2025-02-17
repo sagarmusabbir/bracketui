@@ -1,33 +1,23 @@
-// import React from "react";
-// import clsx from "clsx";
+// components/Card/CardHeader.tsx
+import { clsx } from "clsx";
+import { ReactNode } from "react";
 
-// interface CardHeaderProps {
-//   icon?: React.ReactElement | string;
-//   children: React.ReactNode;
-//   className?: string;
-// }
+export interface CardHeaderProps {
+  children: ReactNode;
+  className?: string;
+}
 
-// const CardHeader: React.FC<CardHeaderProps> = ({
-//   icon,
-//   children,
-//   className,
-// }) => {
-//   return (
-//     <div
-//       className={clsx(
-//         "flex items-center gap-2 p-4 text-xl font-semibold text-gray-950 dark:text-white",
-//         className
-//       )}
-//     >
-//       {icon &&
-//         (typeof icon === "string" ? (
-//           <img src={icon} alt="header icon" className="h-6 w-6" />
-//         ) : (
-//           icon
-//         ))}
-//       {children}
-//     </div>
-//   );
-// };
+const CardHeader = ({ children, className }: CardHeaderProps) => {
+  return (
+    <div
+      className={clsx(
+        "flex items-center justify-between gap-2 mb-2",
+        className
+      )}
+    >
+      {children}
+    </div>
+  );
+};
 
-// export default CardHeader;
+export default CardHeader;

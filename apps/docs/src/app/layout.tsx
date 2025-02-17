@@ -30,11 +30,12 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${plus.className}    antialiased dark:bg-gray-950 dark:text-white`}
+      suppressHydrationWarning
     >
       <head>
         <ThemeScript />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         {/* <MegaHeader /> */}
 
         <HeaderBal />
