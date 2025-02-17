@@ -310,14 +310,14 @@ const Card = forwardRef(function Card<T extends ElementType = "div">(
       {...externalProps}
       {...props}
       className={clsx(
-        "rounded-lg border border-gray-200 dark:border-gray-800 border-opacity-50 overflow-hidden flex flex-col justify-center items-stretch transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100",
+        "rounded-lg border border-gray-200 dark:border-gray-800 border-opacity-50 overflow-hidden flex flex-col justify-center items-stretch transition-all  motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100",
         className
       )}
     >
       {/* Cover Section */}
       {cover && (
-        <div className="relative bg-gray-100/60 dark:bg-gray-900/30 rounded-t-lg overflow-hidden -mx-4 -mt-4 px-8 pt-8">
-          <div className="opacity-75 dark:opacity-60 dark:invert dark:hue-rotate-180 ">
+        <div className="relative bg-gray-100/60 dark:bg-gray-900/50 rounded-t-lg overflow-hidden -mx-4 -mt-4 px-8 pt-8">
+          <div className="opacity-75  dark:invert dark:hue-rotate-180 backdrop-grayscale-50 ">
             {cover}
           </div>
         </div>

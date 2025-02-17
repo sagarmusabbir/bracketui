@@ -6,21 +6,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card, Navlink } from "@thirdbracket/bracketui";
 import {
-  PiCodeLight,
   PiDatabaseLight,
   PiBrowsersLight,
   PiShoppingCartLight,
   PiChartLineUpLight,
+  PiCodeBlock,
 } from "react-icons/pi";
 
 const Services = () => {
   return (
     <section className="space-y-8 py-16 md:py-24">
       <div className="lg:flex items-center justify-center gap-4 space-y-2 lg:space-y-0">
-        <h2 className="font-bold text-center text-3xl md:text-4xl lg:text-5xl leading-none text-gray-950 dark:text-white">
+        <h2 className="font-bold text-center text-3xl md:text-4xl lg:text-5xl leading-none text-gray-950 dark:text-white tracking-tight">
           Our Services
         </h2>
-        <p className="text-base md:text-lg lg:text-xl text-center text-gray-600 dark:text-gray-500">
+        <p className="text-sm md:text-base lg:text-lg text-center text-gray-500  leading-relaxed">
           Comprehensive digital services for your business needs
         </p>
       </div>
@@ -45,10 +45,12 @@ const Services = () => {
             }
           >
             <div className="flex items-center gap-2 mb-2">
-              <PiCodeLight className="w-6 h-6 text-gray-900 dark:text-white" />
-              <h3 className="text-xl font-semibold">Custom Development</h3>
+              <PiCodeBlock className="w-6 h-6 text-gray-900 dark:text-white" />
+              <h3 className="text-xl font-bold text-gray-950 dark:text-white">
+                Custom Development
+              </h3>
             </div>
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-gray-500  tracking-normal leading-relaxed">
               Tailored software solutions built with modern technologies to meet
               your specific business requirements.
             </p>
@@ -57,9 +59,11 @@ const Services = () => {
           <Card href="#">
             <div className="flex items-center gap-2 mb-2">
               <PiDatabaseLight className="w-6 h-6 text-gray-900 dark:text-white" />
-              <h3 className="text-xl font-semibold">Database Solutions</h3>
+              <h3 className="text-xl font-bold text-gray-950 dark:text-white">
+                Database Solutions
+              </h3>
             </div>
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-gray-500  tracking-normal leading-relaxed">
               Robust database design and optimization services for efficient
               data management.
             </p>
@@ -85,9 +89,11 @@ const Services = () => {
           >
             <div className="flex items-center gap-2 mb-2">
               <PiBrowsersLight className="w-6 h-6 text-gray-900 dark:text-white" />
-              <h3 className="text-xl font-semibold">Web Applications</h3>
+              <h3 className="text-xl font-bold text-gray-950 dark:text-white">
+                Web Applications
+              </h3>
             </div>
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-gray-500  tracking-normal leading-relaxed">
               Full-stack web applications with modern UI/UX design and robust
               backend architecture. Built for scale and performance using the
               latest web technologies.
@@ -100,9 +106,11 @@ const Services = () => {
           <Card href="#">
             <div className="flex items-center gap-2 mb-2">
               <PiShoppingCartLight className="w-6 h-6 text-gray-900 dark:text-white" />
-              <h3 className="text-xl font-semibold">E-Commerce Solutions</h3>
+              <h3 className="text-xl font-bold text-gray-950 dark:text-white">
+                E-Commerce Solutions
+              </h3>
             </div>
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-gray-500  tracking-normal leading-relaxed">
               Custom e-commerce platforms with seamless payment integration and
               inventory management.
             </p>
@@ -125,9 +133,11 @@ const Services = () => {
           >
             <div className="flex items-center gap-2 mb-2">
               <PiChartLineUpLight className="w-6 h-6 text-gray-900 dark:text-white" />
-              <h3 className="text-xl font-semibold">Analytics & Reporting</h3>
+              <h3 className="text-xl font-bold text-gray-950 dark:text-white">
+                Analytics & Reporting
+              </h3>
             </div>
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-gray-500  tracking-normal leading-relaxed">
               Data-driven insights and custom reporting solutions for informed
               decision making.
             </p>

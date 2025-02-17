@@ -6,21 +6,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card, Navlink } from "@thirdbracket/bracketui";
 import {
-  PiCodeLight,
   PiCloudLight,
   PiRocketLaunchLight,
   PiChartLineUpLight,
   PiDevicesLight,
+  PiWebhooksLogoFill,
 } from "react-icons/pi";
 
 const Features = () => {
   return (
     <section className="space-y-8 py-16 md:py-24">
       <div className="lg:flex items-center justify-center gap-4 space-y-2 lg:space-y-0">
-        <h2 className="font-bold text-center text-3xl md:text-4xl lg:text-5xl leading-none text-gray-950 dark:text-white">
+        <h2 className="font-bold text-center text-3xl md:text-4xl lg:text-5xl leading-none text-gray-950 dark:text-white tracking-tight">
           Our Solutions
         </h2>
-        <p className="text-base md:text-lg lg:text-xl text-center text-gray-600 dark:text-gray-500">
+        <p className="text-sm md:text-base lg:text-lg text-center text-gray-500  leading-relaxed">
           End-to-end digital solutions for modern businesses
         </p>
       </div>
@@ -34,22 +34,22 @@ const Features = () => {
           cover={
             <div className="relative aspect-[5/3]">
               <Image
-                src="/app.svg"
+                src="/dev.png"
                 alt="Web Development Solutions"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
-                className="object-contain"
+                className="object-contain "
               />
             </div>
           }
         >
           <div className="flex items-center gap-2 mb-2">
-            <PiCodeLight className="w-6 h-6 text-gray-950 dark:text-white" />
+            <PiWebhooksLogoFill className="w-6 h-6 text-gray-950 dark:text-white" />
             <h3 className="text-xl font-bold text-gray-950 dark:text-white">
               Web Development
             </h3>
           </div>
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-sm text-gray-500  tracking-normal leading-relaxed">
             Modern web applications built with cutting-edge technologies. From
             responsive websites to complex web applications, we deliver scalable
             solutions that drive business growth.
@@ -66,7 +66,7 @@ const Features = () => {
                 Infrastructure
               </h3>
             </div>
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-gray-500  tracking-normal leading-relaxed">
               Cloud-native infrastructure solutions with AWS, focusing on
               scalability, security, and cost optimization.
             </p>
@@ -80,7 +80,7 @@ const Features = () => {
                 DevOps
               </h3>
             </div>
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-gray-500  tracking-normal leading-relaxed">
               Streamline your development workflow with our CI/CD pipelines and
               automated deployment solutions.
             </p>
@@ -94,7 +94,7 @@ const Features = () => {
                 Digital Marketing
               </h3>
             </div>
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-gray-500  tracking-normal leading-relaxed">
               Data-driven digital marketing strategies to increase your online
               presence and drive customer engagement.
             </p>
@@ -108,7 +108,7 @@ const Features = () => {
                 WordPress Solutions
               </h3>
             </div>
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-gray-500  tracking-normal leading-relaxed">
               Custom WordPress development, optimization, and maintenance for
               business websites and e-commerce platforms.
             </p>

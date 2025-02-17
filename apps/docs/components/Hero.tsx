@@ -5,11 +5,11 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <section className="space-y-8 py-16 md:py-24">
-      <h1 className="max-w-md md:max-w-4xl mx-auto font-extrabold text-gray-950 dark:text-white text-4xl md:text-5xl lg:text-6xl text-center">
+      <h1 className="max-w-xl px-2 md:max-w-4xl mx-auto font-extrabold text-gray-950 dark:text-white text-4xl md:text-5xl lg:text-6xl text-center leading-none tracking-tight ">
         Bringing Enterprise Web Solutions within Your Budget
       </h1>
 
-      <p className="text-base md:text-lg lg:text-xl text-center max-w-2xl mx-auto text-gray-500">
+      <p className="text-sm px-2 md:text-base lg:text-lg text-center max-w-2xl mx-auto  leading-relaxed text-gray-500">
         We're a team of top-rated freelancers from leading marketplaces,
         offering custom web development, enterprise-grade infrastructure, and
         efficient business solutions.

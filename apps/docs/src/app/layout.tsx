@@ -4,12 +4,11 @@
 
 import "./globals.css";
 
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Manrope } from "next/font/google";
 
-const plus = Plus_Jakarta_Sans({
+const plus = Manrope({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-raleway",
 });
 
 // import Header from "..npm run dev
