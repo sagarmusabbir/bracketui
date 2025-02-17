@@ -5,7 +5,7 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <section className="space-y-8 py-16 md:py-24">
-      <h1 className="max-w-lg md:max-w-4xl mx-auto font-extrabold text-gray-950 dark:text-white text-4xl md:text-5xl lg:text-6xl text-center">
+      <h1 className="max-w-md md:max-w-4xl mx-auto font-bold text-gray-950 dark:text-white text-4xl md:text-5xl lg:text-6xl text-center">
         Bringing Enterprise Web Solutions within Your Budget
       </h1>
 
