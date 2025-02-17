@@ -17,7 +17,7 @@ const Features = () => {
   return (
     <section className="space-y-8 py-16 md:py-24">
       <div className="lg:flex items-center justify-center gap-4 space-y-2 lg:space-y-0">
-        <h2 className="font-semibold text-center text-3xl md:text-4xl lg:text-5xl leading-none text-gray-950 dark:text-white">
+        <h2 className="font-bold text-center text-3xl md:text-4xl lg:text-5xl leading-none text-gray-950 dark:text-white">
           Our Solutions
         </h2>
         <p className="text-base md:text-lg lg:text-xl text-center text-gray-600 dark:text-gray-500">
@@ -43,8 +43,8 @@ const Features = () => {
           }
         >
           <div className="flex items-center gap-2 mb-2">
-            <PiCodeLight className="w-6 h-6 text-gray-900 dark:text-white" />
-            <h3 className="text-xl font-semibold">Web Development</h3>
+            <PiCodeLight className="w-6 h-6 text-gray-950 dark:text-white" />
+            <h3 className="text-xl font-bold text-gray-950 dark:text-white">Web Development</h3>
           </div>
           <p className="text-gray-600 dark:text-gray-400">
             Modern web applications built with cutting-edge technologies. From
@@ -58,8 +58,8 @@ const Features = () => {
           {/* Infrastructure */}
           <Card href="/solutions/infrastructure">
             <div className="flex items-center gap-2 mb-2">
-              <PiCloudLight className="w-6 h-6 text-gray-900 dark:text-white" />
-              <h3 className="text-xl font-semibold">Infrastructure</h3>
+              <PiCloudLight className="w-6 h-6 text-gray-950 dark:text-white" />
+              <h3 className="text-xl font-bold text-gray-950 dark:text-white">Infrastructure</h3>
             </div>
             <p className="text-gray-600 dark:text-gray-400">
               Cloud-native infrastructure solutions with AWS, focusing on
@@ -70,8 +70,8 @@ const Features = () => {
           {/* DevOps */}
           <Card href="/solutions/devops">
             <div className="flex items-center gap-2 mb-2">
-              <PiRocketLaunchLight className="w-6 h-6 text-gray-900 dark:text-white" />
-              <h3 className="text-xl font-semibold">DevOps</h3>
+              <PiRocketLaunchLight className="w-6 h-6 text-gray-950 dark:text-white" />
+              <h3 className="text-xl font-bold text-gray-950 dark:text-white">DevOps</h3>
             </div>
             <p className="text-gray-600 dark:text-gray-400">
               Streamline your development workflow with our CI/CD pipelines and
@@ -82,8 +82,8 @@ const Features = () => {
           {/* Digital Marketing */}
           <Card href="/solutions/digital-marketing">
             <div className="flex items-center gap-2 mb-2">
-              <PiChartLineUpLight className="w-6 h-6 text-gray-900 dark:text-white" />
-              <h3 className="text-xl font-semibold">Digital Marketing</h3>
+              <PiChartLineUpLight className="w-6 h-6 text-gray-950 dark:text-white" />
+              <h3 className="text-xl font-bold text-gray-950 dark:text-white">Digital Marketing</h3>
             </div>
             <p className="text-gray-600 dark:text-gray-400">
               Data-driven digital marketing strategies to increase your online
@@ -94,8 +94,8 @@ const Features = () => {
           {/* WordPress Solutions */}
           <Card href="/solutions/wordpress">
             <div className="flex items-center gap-2 mb-2">
-              <PiDevicesLight className="w-6 h-6 text-gray-900 dark:text-white" />
-              <h3 className="text-xl font-semibold">WordPress Solutions</h3>
+              <PiDevicesLight className="w-6 h-6 text-gray-950 dark:text-white" />
+              <h3 className="text-xl font-bold text-gray-950 dark:text-white">WordPress Solutions</h3>
             </div>
             <p className="text-gray-600 dark:text-gray-400">
               Custom WordPress development, optimization, and maintenance for
