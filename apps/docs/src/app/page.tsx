@@ -42,8 +42,9 @@ import Table from "../../components/table";
 
 import Hero from "../../components/Hero";
 
-import Services from "../../components/Services";
 import Feature from "../../components/Feature";
+import EnterpriseFeatures from "../../components/Services";
+import TabService from "../../components/Tab";
 
 // import Feature from "../../components/Feature";
 // import Services from "../../components/Services";
@@ -218,7 +219,8 @@ export default function Page() {
         <Hero />
         <Feature />
 
-        <Services />
+        <EnterpriseFeatures />
+        <TabService />
 
         <section className="space-y-8 py-16 md:py-24">
           <div>

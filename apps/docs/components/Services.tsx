@@ -1,157 +1,152 @@
-// components/Services.tsx
+// components/EnterpriseFeatures.tsx
 "use client";
 
 import { BiChevronRight } from "react-icons/bi";
-import Image from "next/image";
-import Link from "next/link";
-import { Card, Navlink } from "@thirdbracket/bracketui";
 import {
-  PiDatabaseLight,
-  PiBrowsersLight,
-  PiShoppingCartLight,
-  PiChartLineUpLight,
-  PiCodeBlock,
-} from "react-icons/pi";
+  RiCloudLine,
+  RiShieldLine,
+  RiSpeedLine,
+  RiTeamLine,
+  RiCodeLine,
+  RiDatabaseLine,
+} from "react-icons/ri";
+import Link from "next/link";
+import { Button, Card, Navlink } from "@thirdbracket/bracketui";
+import { PiCloud } from "react-icons/pi";
+import { MdSecurity } from "react-icons/md";
 
-const Services = () => {
+const EnterpriseFeatures = () => {
   return (
-    <section className="space-y-2  py-12 sm:py-16 md:py-20">
-      <div className="lg:flex items-center justify-center gap-4 space-y-2 lg:space-y-0">
-        <h2 className="font-bold text-center text-[28px] sm:text-4xl lg:text-5xl    text-gray-950 dark:text-white ">
-          Our Services
+    <section className="py-12 sm:py-16 md:py-20">
+      {/* Header Section */}
+      <div className="max-w-3xl mx-auto text-center mb-12 space-y-2">
+        <h2 className="font-bold text-center text-2xl sm:text-3xl lg:text-4xl    text-gray-950 dark:text-white">
+          Enterprise Solutions
         </h2>
-        <p className="text-base lg:text-lg  text-center text-gray-500 ">
-          Comprehensive digital services for your business needs
+        <p className="text-base lg:text-lg text-center  text-gray-500  ">
+          Powerful features designed to transform your business operations
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mx-auto justify-center py-8">
-        {/* Left Column - Main Service */}
-        <div className="lg:col-span-1 space-y-8">
+      {/* Main Grid Layout */}
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {/* Featured Card - Spans 2 columns */}
           <Card
             href="#"
             isExternal
-            className="relative"
+            className="lg:col-span-2 h-full"
             cover={
-              <div className="aspect-[5/3] relative ">
-                <Image
-                  src="/app.svg"
-                  alt="Custom Development"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
-                  className="object-contain"
-                />
+              <div className="w-full h-64 flex items-center justify-center bg-white dark:bg-gray-950 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#282828fg_1px,transparent_1px),linear-gradient(to_bottom,#282828fg_1px,transparent_1px)] bg-[size:24px_24px]">
+                <RiCloudLine className="w-32 h-32 text-gray-500" />
               </div>
             }
+            header={
+              <>
+                <PiCloud className="inline-flex mr-2 w-6 h-6" />
+                Cloud Infrastructure
+              </>
+            }
           >
-            <div className="flex items-center gap-2 mb-2">
-              <PiCodeBlock className="w-6 h-6 text-gray-900 dark:text-white" />
-              <h3 className="text-xl font-bold text-gray-950 dark:text-white">
-                Custom Development
-              </h3>
-            </div>
-            <p className="text-sm text-gray-500  tracking-normal leading-relaxed">
-              Tailored software solutions built with modern technologies to meet
-              your specific business requirements.
-            </p>
+            Enterprise-grade cloud infrastructure solutions built for scale,
+            security, and performance. Leverage our expertise in cloud-native
+            architectures and microservices.
           </Card>
 
-          <Card href="#">
-            <div className="flex items-center gap-2 mb-2">
-              <PiDatabaseLight className="w-6 h-6 text-gray-900 dark:text-white" />
-              <h3 className="text-xl font-bold text-gray-950 dark:text-white">
-                Database Solutions
-              </h3>
-            </div>
-            <p className="text-sm text-gray-500  tracking-normal leading-relaxed">
-              Robust database design and optimization services for efficient
-              data management.
-            </p>
-          </Card>
-        </div>
-
-        {/* Middle Column - Featured Service */}
-        <div className="lg:col-span-1 space-y-8">
+          {/* Security Card */}
           <Card
-            href="#"
             className="h-full"
             cover={
-              <div className="aspect-[3/4] relative ">
-                <Image
-                  src="/tall.svg"
-                  alt="Web Applications"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
-                  className="object-contain"
-                />
+              <div className="w-full  flex items-center justify-center bg-white dark:bg-gray-950 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#282828fg_1px,transparent_1px),linear-gradient(to_bottom,#282828fg_1px,transparent_1px)] bg-[size:24px_24px]">
+                <MdSecurity className="w-32 h-32 text-gray-500" />
+              </div>
+            }
+            header={
+              <div className="flex items-center gap-2">
+                <RiShieldLine className="w-6 h-6" />
+                <span>Security First</span>
               </div>
             }
           >
-            <div className="flex items-center gap-2 mb-2">
-              <PiBrowsersLight className="w-6 h-6 text-gray-900 dark:text-white" />
-              <h3 className="text-xl font-bold text-gray-950 dark:text-white">
-                Web Applications
-              </h3>
-            </div>
-            <p className="text-sm text-gray-500  tracking-normal leading-relaxed">
-              Full-stack web applications with modern UI/UX design and robust
-              backend architecture. Built for scale and performance using the
-              latest web technologies.
-            </p>
+            Advanced security measures and compliance protocols to protect your
+            business assets and customer data.
+          </Card>
+
+          {/* Performance Card */}
+          <Card
+            header={
+              <div className="flex items-center gap-2">
+                <RiSpeedLine className="w-6 h-6" />
+                <span>High Performance</span>
+              </div>
+            }
+          >
+            Optimized systems and architectures designed for maximum performance
+            and reliability.
+          </Card>
+
+          {/* Team Collaboration Card */}
+          <Card
+            header={
+              <div className="flex items-center gap-2">
+                <RiTeamLine className="w-6 h-6" />
+                <span>Team Collaboration</span>
+              </div>
+            }
+          >
+            Enhanced team productivity with integrated collaboration tools and
+            workflows.
+          </Card>
+
+          {/* Development Card */}
+          <Card
+            header={
+              <div className="flex items-center gap-2">
+                <RiCodeLine className="w-6 h-6" />
+                <span>Custom Development</span>
+              </div>
+            }
+          >
+            Tailored software solutions built to address your specific business
+            challenges.
           </Card>
         </div>
 
-        {/* Right Column - Additional Services */}
-        <div className="lg:col-span-1 space-y-8">
-          <Card href="#">
-            <div className="flex items-center gap-2 mb-2">
-              <PiShoppingCartLight className="w-6 h-6 text-gray-900 dark:text-white" />
-              <h3 className="text-xl font-bold text-gray-950 dark:text-white">
-                E-Commerce Solutions
-              </h3>
-            </div>
-            <p className="text-sm text-gray-500  tracking-normal leading-relaxed">
-              Custom e-commerce platforms with seamless payment integration and
-              inventory management.
-            </p>
-          </Card>
-
+        {/* Bottom Feature Card */}
+        <div className="mt-6">
           <Card
             href="#"
-            className="relative"
-            cover={
-              <div className="relative aspect-[5/3] ">
-                <Image
-                  src="/app.svg"
-                  alt="Analytics & Reporting"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
-                  className="object-contain"
-                />
-              </div>
+            isExternal
+            className="bg-gradient-to-r from-gray-50 to-slate-50 dark:from-gray-950 dark:to-slate-950"
+            header={
+              <>
+                <RiDatabaseLine className="inline-flex mr-2 w-6 h-6" />
+                Data Analytics Platform
+              </>
             }
           >
-            <div className="flex items-center gap-2 mb-2">
-              <PiChartLineUpLight className="w-6 h-6 text-gray-900 dark:text-white" />
-              <h3 className="text-xl font-bold text-gray-950 dark:text-white">
-                Analytics & Reporting
-              </h3>
+            <div className="flex flex-col md:flex-row items-center justify-between">
+              <p className="md:max-w-2xl">
+                Comprehensive data analytics platform with real-time insights,
+                custom dashboards, and predictive analytics capabilities.
+              </p>
+
+              <Button size="sm" href="#" outline>
+                Learn More
+              </Button>
             </div>
-            <p className="text-sm text-gray-500  tracking-normal leading-relaxed">
-              Data-driven insights and custom reporting solutions for informed
-              decision making.
-            </p>
           </Card>
         </div>
       </div>
 
-      <div className="flex justify-center mt-8">
+      {/* CTA Section */}
+      <div className="flex justify-center mt-12">
         <Navlink
           as={Link}
           href="#"
           className="inline-flex items-center gap-1 text-gray-950 dark:text-white"
         >
-          View All Services
+          Explore Enterprise Solutions
           <span className="inline-flex items-center">
             <BiChevronRight size={20} />
           </span>
@@ -161,4 +156,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default EnterpriseFeatures;

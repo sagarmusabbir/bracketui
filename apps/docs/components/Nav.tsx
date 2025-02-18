@@ -25,13 +25,14 @@ const HeaderBal: FC = () => {
             alt=""
             width={512}
             height={430}
-            className="h-[18px] sm:h-[22px]  w-auto"
+            className="h-[18px] sm:h-[22px]  w-auto dark:invert"
           />
         }
         href="/"
-        className="text-lg text-gray-950 dark:text-white font-bold dark:invert"
       >
-        <span className="text-[22px] sm:text-2xl font-medium  ">BRACKET</span>
+        <span className="text-[22px] sm:text-2xl font-medium   text-gray-950 dark:text-white">
+          BRACKET
+        </span>
       </Navbrand>
 
       <NavItem>
