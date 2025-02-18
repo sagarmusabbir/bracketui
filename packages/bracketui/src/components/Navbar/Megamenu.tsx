@@ -347,7 +347,7 @@ const Megamenu: FC<MegamenuProps> = ({
     "py-2 md:py-1",
 
     // Text size
-    "text-base md:text-sm leading-none font-medium",
+    "text-base md:text-sm leading-none ",
     variantStyles,
     theme.text,
     theme.states,

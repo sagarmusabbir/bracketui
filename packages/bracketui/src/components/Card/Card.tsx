@@ -272,10 +272,8 @@ export type CardProps<T extends ElementType> = {
   children?: React.ReactNode;
   onClick?: () => void;
   cover?: React.ReactElement;
-  isExternal?: boolean;
-  // Add new props for header
   header?: string;
-  headerClassName?: string;
+  isExternal?: boolean;
 } & ComponentPropsWithRef<T>;
 
 const Card = forwardRef(function Card<T extends ElementType = "div">(
@@ -285,10 +283,9 @@ const Card = forwardRef(function Card<T extends ElementType = "div">(
     className = "",
     children,
     cover,
+    header,
     onClick,
     isExternal,
-    header,
-    headerClassName = "",
     ...props
   }: CardProps<T>,
   ref: React.Ref<any>
@@ -315,37 +312,24 @@ const Card = forwardRef(function Card<T extends ElementType = "div">(
       {...externalProps}
       {...props}
       className={clsx(
-        "rounded-lg border border-gray-200 dark:border-gray-800 border-opacity-50 overflow-hidden flex flex-col justify-center items-stretch transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100",
+        "rounded-lg border border-gray-200 dark:border-gray-800 border-opacity-50",
+        "overflow-hidden flex flex-col",
+        "transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out",
+        "focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100",
         className
       )}
     >
-      {/* Cover Section */}
       {cover && (
-        <div className="relative rounded-t-lg overflow-hidden -mx-4 -mt-4 px-8 pt-8">
-          {/* Grid Pattern Background */}
-
-          <div className=" dark:invert dark:hue-rotate-180 backdrop-grayscale-50">
-            {cover}
-          </div>
-        </div>
+        <div className="flex-1 flex items-center justify-center">{cover}</div>
       )}
-
-      {/* Content Section */}
-      <div className="p-4 space-y-3 ">
+      <div className="mt-auto p-4">
         {header && (
-          <div className="flex items-center justify-between">
-            <h2
-              className={clsx(
-                "text-xl font-bold text-gray-900 dark:text-gray-100",
-                headerClassName
-              )}
-            >
-              {header}
-              {href && isExternal && <ExternalLinkIcon />}
-            </h2>
-          </div>
+          <h2 className="text-xl font-semibold text-gray-950 dark:text-gray-50 mb-2">
+            {header}
+            {href && isExternal && <ExternalLinkIcon />}
+          </h2>
         )}
-        <div className="text-sm text-gray-500  tracking-normal leading-relaxed">
+        <div className="text-gray-600 dark:text-gray-500 text-sm">
           {children}
         </div>
       </div>

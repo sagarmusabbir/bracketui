@@ -21,16 +21,18 @@ const HeaderBal: FC = () => {
       <Navbrand
         logo={
           <Image
-            src="/tb.svg"
+            src="/22.svg"
             alt=""
-            width={577}
-            height={155}
-            className="h-5 sm:h-6 w-auto"
+            width={512}
+            height={430}
+            className="h-[18px] sm:h-[22px]  w-auto"
           />
         }
         href="/"
         className="text-lg text-gray-950 dark:text-white font-bold dark:invert"
-      ></Navbrand>
+      >
+        <span className="text-[22px] sm:text-2xl font-medium  ">BRACKET</span>
+      </Navbrand>
 
       <NavItem>
         <Navlink as={Link} href="#">
