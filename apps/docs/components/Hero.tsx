@@ -4,15 +4,16 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="space-y-8 py-16 md:py-24">
-      <h1 className="max-w-xl px-2 md:max-w-4xl mx-auto font-extrabold text-gray-950 dark:text-white text-4xl md:text-5xl lg:text-6xl text-center leading-none tracking-tight ">
-        Bringing Enterprise Web Solutions within Your Budget
+    <section className="space-y-8 py-16 sm:py-20 md:py-24">
+      {/* <h1 className="max-w-lg sm:max-w-xl     lg:max-w-4xl xl:max-w-6xl mx-auto font-extrabold text-gray-950 dark:text-white text-4xl sm:text-[44px] md:text-[50px]  leading-[1.1] lg:text-[60px] text-center  "> */}
+      <h1 className="px-6 md:px-0 text-[40px] sm:text-5xl leading-none font-extrabold mx-auto text-center lg:text-6xl md:max-w-4xl">
+        Bringing Enterprise Solutions within Your Budget
       </h1>
 
-      <p className="text-sm px-2 md:text-base lg:text-lg text-center max-w-2xl mx-auto  leading-relaxed text-gray-500">
+      <p className="text-base md:text-lg/8  text-center  px-8 md:px-0 md:max-w-2xl mx-auto   text-gray-500 ">
         We're a team of top-rated freelancers from leading marketplaces,
-        offering custom web development, enterprise-grade infrastructure, and
-        efficient business solutions.
+        offering <strong>custom web development</strong>, enterprise-grade
+        infrastructure, and efficient business solutions.
       </p>
 
       <div className="flex flex-wrap gap-4 items-center justify-center">

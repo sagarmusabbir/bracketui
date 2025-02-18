@@ -15,12 +15,12 @@ import {
 
 const Services = () => {
   return (
-    <section className="space-y-8 py-16 md:py-24">
+    <section className="space-y-2  py-12 sm:py-16 md:py-20">
       <div className="lg:flex items-center justify-center gap-4 space-y-2 lg:space-y-0">
-        <h2 className="font-bold text-center text-3xl md:text-4xl lg:text-5xl leading-none text-gray-950 dark:text-white tracking-tight">
+        <h2 className="font-bold text-center text-[28px] sm:text-4xl lg:text-5xl    text-gray-950 dark:text-white ">
           Our Services
         </h2>
-        <p className="text-sm md:text-base lg:text-lg text-center text-gray-500  leading-relaxed">
+        <p className="text-base lg:text-lg  text-center text-gray-500 ">
           Comprehensive digital services for your business needs
         </p>
       </div>

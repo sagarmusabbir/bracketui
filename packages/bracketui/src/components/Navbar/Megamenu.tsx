@@ -235,7 +235,7 @@ const Megamenu: FC<MegamenuProps> = ({
   onBack,
   theme = {
     // Match exactly with Navlink's default theme
-    text: "text-gray-900 dark:text-gray-100 text-base md:text-sm",
+    text: "text-gray-800 dark:text-gray-100 text-base md:text-sm",
     states: "focus-within:opacity-100 active:opacity-100 md:hover:opacity-100",
     menu: "bg-white dark:bg-gray-950",
   },
@@ -347,7 +347,7 @@ const Megamenu: FC<MegamenuProps> = ({
     "py-2 md:py-1",
 
     // Text size
-    "text-base md:text-sm leading-none font-normal",
+    "text-base md:text-sm leading-none font-medium",
     variantStyles,
     theme.text,
     theme.states,

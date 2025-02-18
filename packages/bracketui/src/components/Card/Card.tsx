@@ -256,12 +256,12 @@ import { ComponentPropsWithRef, ElementType, forwardRef } from "react";
 
 const ExternalLinkIcon = () => (
   <svg
-    className="absolute top-4 right-4 w-4 h-4 text-gray-500 dark:text-gray-400"
-    viewBox="0 0 32 32"
+    className="inline-block w-4 h-4 ml-1.5 -translate-y-px"
     fill="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M 5 5 L 5 27 L 27 27 L 27 5 Z M 7 7 L 25 7 L 25 25 L 7 25 Z M 13 10 L 13 12 L 18.5625 12 L 9.28125 21.28125 L 10.71875 22.71875 L 20 13.4375 L 20 19 L 22 19 L 22 10 Z" />
+    <path d="M8 7C8 6.44772 8.44772 6 9 6L17 6C17.5523 6 18 6.44772 18 7V15C18 15.5523 17.5523 16 17 16C16.4477 16 16 15.5523 16 15V9.41421L7.70711 17.7071C7.31658 18.0976 6.68342 18.0976 6.29289 17.7071C5.90237 17.3166 5.90237 16.6834 6.29289 16.2929L14.5858 8L9 8C8.44772 8 8 7.55228 8 7Z" />
   </svg>
 );
 
@@ -273,6 +273,9 @@ export type CardProps<T extends ElementType> = {
   onClick?: () => void;
   cover?: React.ReactElement;
   isExternal?: boolean;
+  // Add new props for header
+  header?: string;
+  headerClassName?: string;
 } & ComponentPropsWithRef<T>;
 
 const Card = forwardRef(function Card<T extends ElementType = "div">(
@@ -284,6 +287,8 @@ const Card = forwardRef(function Card<T extends ElementType = "div">(
     cover,
     onClick,
     isExternal,
+    header,
+    headerClassName = "",
     ...props
   }: CardProps<T>,
   ref: React.Ref<any>
@@ -310,23 +315,39 @@ const Card = forwardRef(function Card<T extends ElementType = "div">(
       {...externalProps}
       {...props}
       className={clsx(
-        "rounded-lg border border-gray-200 dark:border-gray-800 border-opacity-50 overflow-hidden flex flex-col justify-center items-stretch transition-all  motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100",
+        "rounded-lg border border-gray-200 dark:border-gray-800 border-opacity-50 overflow-hidden flex flex-col justify-center items-stretch transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100",
         className
       )}
     >
       {/* Cover Section */}
       {cover && (
-        <div className="relative bg-gray-100/60 dark:bg-gray-900/50 rounded-t-lg overflow-hidden -mx-4 -mt-4 px-8 pt-8">
-          <div className="opacity-75  dark:invert dark:hue-rotate-180 backdrop-grayscale-50 ">
+        <div className="relative rounded-t-lg overflow-hidden -mx-4 -mt-4 px-8 pt-8">
+          {/* Grid Pattern Background */}
+
+          <div className=" dark:invert dark:hue-rotate-180 backdrop-grayscale-50">
             {cover}
           </div>
         </div>
       )}
 
       {/* Content Section */}
-      <div className="p-4 space-y-1 relative">
-        {href && isExternal && <ExternalLinkIcon />}
-        {children}
+      <div className="p-4 space-y-3 ">
+        {header && (
+          <div className="flex items-center justify-between">
+            <h2
+              className={clsx(
+                "text-xl font-bold text-gray-900 dark:text-gray-100",
+                headerClassName
+              )}
+            >
+              {header}
+              {href && isExternal && <ExternalLinkIcon />}
+            </h2>
+          </div>
+        )}
+        <div className="text-sm text-gray-500  tracking-normal leading-relaxed">
+          {children}
+        </div>
       </div>
     </Component>
   );

@@ -4,11 +4,11 @@
 
 import "./globals.css";
 
-import { Manrope } from "next/font/google";
+import { Raleway } from "next/font/google";
 
-const plus = Manrope({
+const plus = Raleway({
   subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 // import Header from "..npm run dev
@@ -39,7 +39,7 @@ export default function RootLayout({
 
         <HeaderBal />
 
-        <main className="min-h-screen pt-16 md:pt-24 dark:bg-gray-950 dark:text-white">
+        <main className="min-h-screen pt-16 lg:pt-24 dark:bg-gray-950 dark:text-white">
           {children}
         </main>
         <SiteFooter />
