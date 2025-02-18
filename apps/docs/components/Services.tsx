@@ -29,7 +29,7 @@ const EnterpriseFeatures = () => {
       </div>
 
       {/* Main Grid Layout */}
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Featured Card - Spans 2 columns */}
           <Card
