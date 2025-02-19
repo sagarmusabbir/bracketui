@@ -409,16 +409,10 @@ const HeaderBal: FC = () => {
       </NavItem>
       <MobileNav>
         <div className="md:hidden py-2">
-          <Button
-         
-size="sm"
-            outline
-            className="flex items-center "
-          >
-            
+          <Navlink as={Link} href="#" isDropdownItem className="flex items-center">
             <span>Free AI Consultation</span>
-<RiChatAiLine className="w-5 h-5 ml-2     "/>
-          </Button>
+<RiChatAiLine className="w-5 h-5 ml-2"/>
+          </Navlink>
         </div>
           <Megamenu label="Web Development">
             <div className="space-y-2">
