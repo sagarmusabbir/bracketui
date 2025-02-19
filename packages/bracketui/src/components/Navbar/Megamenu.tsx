@@ -335,7 +335,7 @@ const Megamenu: FC<MegamenuProps> = ({
     "w-full md:w-auto"
   );
 
-  const variantStyles = isDropdownItem ? "opacity-60 " : "opacity-70 ";
+  const variantStyles = isDropdownItem ? "opacity-50 " : "opacity-60 ";
 
   const buttonClasses = clsx(
     // Base styles
@@ -347,7 +347,7 @@ const Megamenu: FC<MegamenuProps> = ({
     "py-2 md:py-1",
 
     // Text size
-    "text-base md:text-sm leading-none ",
+    "text-base md:text-sm leading-none font-normal",
     variantStyles,
     theme.text,
     theme.states,
@@ -411,18 +411,13 @@ const Megamenu: FC<MegamenuProps> = ({
         aria-label={`${label} megamenu`}
       >
         {/* Back button header - only show on mobile */}
-        <div className="md:hidden flex  items-center p-5  sticky top-16 bg-inherit z-20 ">
+        <div className="md:hidden flex  items-center   sticky  top-16  z-20 px-5 py-3  bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
           <button
-            // onClick={() => {
-            //   setIsOpen(false);
-            //   onBack?.();
-            // }}
-
             onClick={handleBack}
             className="flex items-center text-gray-600 dark:text-gray-300"
           >
             <svg
-              className="w-5 h-5 mr-2     "
+              className="w-4 h-4 mr-2     "
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -435,7 +430,7 @@ const Megamenu: FC<MegamenuProps> = ({
         </div>
 
         {/* Menu content */}
-        <div className="py-16 px-6 md:p-0 flex-1 overflow-auto ">
+        <div className="py-16 mt-2 px-6 md:p-0 flex-1 overflow-auto ">
           {children}
         </div>
       </div>

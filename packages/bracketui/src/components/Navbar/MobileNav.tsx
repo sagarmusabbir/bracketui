@@ -29,7 +29,10 @@ export interface MobileNavProps {
 const MobileNav: React.FC<MobileNavProps> = ({ children }) => {
   const { setMobileNav } = useNavbarContext();
 
-  const memoizedChildren = useMemo(() => children, [children]);
+  const memoizedChildren = useMemo(
+    () => <div className="px-6  py-2  fixed">{children}</div>,
+    [children]
+  );
 
   useEffect(() => {
     setMobileNav(memoizedChildren);

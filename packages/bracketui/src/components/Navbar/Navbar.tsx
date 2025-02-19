@@ -125,7 +125,13 @@ const Navbar: FC<NavbarProps> = ({
           { "translate-y-0": isOpen, "-translate-y-full": !isOpen }
         )}
       >
-        <div className="py-20 px-6 lg:px-8 flex flex-col space-y-1">
+        <div className="   flex-1 overflow-auto py-16">
+          <a
+            href="#"
+            className="px-6 py-3 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-gray-600 dark:text-gray-300 flex items-center gap-2"
+          >
+            Get Free Consultation <span className="rotate-45">&#8599;</span>
+          </a>
           {mobileNav}
         </div>
       </div>
