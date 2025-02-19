@@ -406,12 +406,18 @@ const HeaderBal: FC = () => {
         </Navlink>
       </NavItem>
       <MobileNav>
-        <div className="space-y-2 ">
-  <div className="md:hidden flex  items-center p-4  sticky top-16 bg-inherit z-20 ">
-          <Navlink href="#"isDropdownItem>
-                Get a Free Consultation
-              </Navlink>
-</div>
+        <div className="md:hidden flex  items-center p-5  sticky top-16 bg-inherit z-20 ">
+          <button
+         
+
+            
+            className="flex items-center text-gray-600 dark:text-gray-300"
+          >
+            
+            <span>Free AI Consultation</span>
+<RiChatAiLine className="w-5 h-5 ml-2     "/>
+          </button>
+        </div>
           <Megamenu label="Web Development">
             <div className="space-y-2">
               <Navlink as={Link} href="#" isDropdownItem>
