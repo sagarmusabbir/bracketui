@@ -10,7 +10,7 @@ const Hero = () => {
         Bringing Enterprise Solutions within Your Budget
       </h1>
 
-      <p className="text-sm/7 lg:text-lg/8 text-center  text-gray-500   mx-auto px-3 md:px-0 md:max-w-5xl    ">
+      <p className="text-base/7 lg:text-lg/8 text-center  text-gray-500   mx-auto px-3 md:px-0 md:max-w-5xl    ">
         We're a team of top-rated freelancers from leading marketplaces,
         offering <strong>custom web development</strong>, enterprise-grade
         infrastructure, and efficient business solutions.
