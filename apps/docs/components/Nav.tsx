@@ -6,6 +6,7 @@ import {
   Navbrand,
   NavItem,
   Navlink,
+Button
 } from "@thirdbracket/bracketui";
 import Image from "next/image";
 
@@ -407,17 +408,17 @@ const HeaderBal: FC = () => {
         </Navlink>
       </NavItem>
       <MobileNav>
-        <div className="md:hidden flex  items-center p-5  sticky top-16 bg-inherit z-20 ">
-          <button
+        <div className="md:hidden py-2">
+          <Button
          
-
-            
-            className="flex items-center text-gray-600 dark:text-gray-300"
+size="sm"
+            outline
+            className="flex items-center "
           >
             
             <span>Free AI Consultation</span>
 <RiChatAiLine className="w-5 h-5 ml-2     "/>
-          </button>
+          </Button>
         </div>
           <Megamenu label="Web Development">
             <div className="space-y-2">
