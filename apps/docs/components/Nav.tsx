@@ -12,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 import { BiChevronRight } from "react-icons/bi";
+import { RiChatAiLine } from "react-icons/ri";
 
 // import { RiArrowRightUpLine, RiRecycleLine } from "react-icons/ri";
 
