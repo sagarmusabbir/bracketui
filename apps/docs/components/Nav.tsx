@@ -406,57 +406,32 @@ const HeaderBal: FC = () => {
         </Navlink>
       </NavItem>
       <MobileNav>
-        <div className="space-y-4">
-          <Navlink as={Link} href="#">
-            Features
-          </Navlink>
-          <Navlink as={Link} href="#">
-            About
-          </Navlink>
-          <Megamenu label="Solutions">
-            <div className="space-y-3">
-              <Megamenu label="Development" isDropdownItem>
-                <div className="  space-y-3">
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Custom Next.js
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Headless Integration
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Feature Development
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    API & Backend
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    UI Develepment
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Wordpress Development
-                  </Navlink>
-                </div>
-              </Megamenu>
-              <Megamenu label="Infrastructures" isDropdownItem>
-                <div className=" space-y-3">
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Serverless Configuration
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    AWS Infrastructures
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Wordpress Optimization
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    VPS Setup
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Cloud Migration
-                  </Navlink>
-                </div>
-              </Megamenu>
-              <Megamenu label="DevOps" isDropdownItem>
+        <div className="space-y-2 ">
+          <Megamenu label="Web Development">
+            <div className="space-y-2">
+              <Navlink as={Link} href="#" isDropdownItem>
+                Next.js Development
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                WordPress Development
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Headless & Serverless Solutions
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Custom Backend & API Development
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                UI/UX Design & Prototyping
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Performance Optimization
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Other
+              </Navlink>
+
+              {/* <Megamenu label="DevOps" isDropdownItem>
                 <div className=" space-y-3">
                   <Navlink as={Link} href="#" isDropdownItem>
                     Edge Configuration
@@ -477,101 +452,44 @@ const HeaderBal: FC = () => {
                     Cost Optimization
                   </Navlink>
                 </div>
-              </Megamenu>
+              </Megamenu> */}
             </div>
           </Megamenu>
 
-          <Megamenu label="Services">
-            <div className=" space-y-3">
-              <Megamenu label="Frontend & UI" isDropdownItem>
-                <div className=" space-y-3">
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Custom React & Next.js
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Tailwindcss & Headless UI
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Custom SVG & Icons
-                  </Navlink>
+          <Megamenu label="Business Solutions">
+            <div className="space-y-2">
+              <Navlink as={Link} href="#" isDropdownItem>
+                Business 360
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                SEO & Web Visibility
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Branding & Design
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Social Media Marketing
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                PPC & Social Ad
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Content strategy & Copywriting
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Other
+              </Navlink>
+            </div>
+          </Megamenu>
 
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Themeing Solution
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Animations
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    UI/UX Enhancement
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Wordpress Theme Development
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Elementor Template
-                  </Navlink>
-                </div>
-              </Megamenu>
-              <Megamenu label="Backend & API" isDropdownItem>
-                <div className=" space-y-3">
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Next.js API Routes
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Node.js
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    GraphQL
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Serverless Function
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    API Integration
-                  </Navlink>
-                </div>
-              </Megamenu>
-              <Navlink as={Link} href="#" isDropdownItem>
-                Cloud Deployment
-              </Navlink>
-              <Navlink as={Link} href="#" isDropdownItem>
-                Github Actions
-              </Navlink>
-              <Navlink as={Link} href="#" isDropdownItem>
-                Authenctication
-              </Navlink>
-              <Navlink as={Link} href="#" isDropdownItem>
-                Payment Setup
-              </Navlink>
-            </div>
-          </Megamenu>
-          <Megamenu label="Business">
-            <div className=" space-y-3">
-              <Navlink as={Link} href="#" isDropdownItem>
-                SEO & Content
-              </Navlink>
-              <Navlink as={Link} href="#" isDropdownItem>
-                Social Media Management
-              </Navlink>
-              <Navlink as={Link} href="#" isDropdownItem>
-                Paid Ad & PPC
-              </Navlink>
-              <Navlink as={Link} href="#" isDropdownItem>
-                Email Marketing
-              </Navlink>
-              <Navlink as={Link} href="#" isDropdownItem>
-                Branding
-              </Navlink>
-              <Navlink as={Link} href="#" isDropdownItem>
-                Conversion Optimization
-              </Navlink>
-            </div>
-          </Megamenu>
+          <Navlink as={Link} href="#">
+            About
+          </Navlink>
 
           <Megamenu label="Resources">
-            <div className=" space-y-3">
+            <div className=" space-y-2">
               <Megamenu label="UI Components" isDropdownItem>
-                <div className=" space-y-3">
+                <div className=" space-y-2">
                   <Navlink as={Link} href="#" isDropdownItem>
                     Bracket UI Component
                   </Navlink>
@@ -600,7 +518,7 @@ const HeaderBal: FC = () => {
                 </div>
               </Megamenu>
               <Megamenu label="Templates" isDropdownItem>
-                <div className=" space-y-3">
+                <div className=" space-y-2">
                   <Navlink as={Link} href="#" isDropdownItem>
                     Elementor Templates
                   </Navlink>
@@ -614,6 +532,9 @@ const HeaderBal: FC = () => {
               </Megamenu>
             </div>
           </Megamenu>
+          <Navlink as={Link} href="#">
+            Blog
+          </Navlink>
           <Navlink as={Link} href="#">
             Contact
           </Navlink>

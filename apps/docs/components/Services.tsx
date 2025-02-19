@@ -38,7 +38,7 @@ const EnterpriseFeatures = () => {
             className="lg:col-span-2 h-full"
             cover={
               <div className="w-full h-64 flex items-center justify-center bg-white dark:bg-gray-950 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#282828fg_1px,transparent_1px),linear-gradient(to_bottom,#282828fg_1px,transparent_1px)] bg-[size:24px_24px]">
-                <RiCloudLine className="w-32 h-32 text-gray-500" />
+                <RiCloudLine className="w-32 h-32 text-gray-500 bg-white dark:bg-gray-950" />
               </div>
             }
             header={

@@ -324,7 +324,7 @@ const Card = forwardRef(function Card<T extends ElementType = "div">(
       )}
       <div className="mt-auto p-4">
         {header && (
-          <h2 className="text-xl font-semibold text-gray-950 dark:text-gray-50 mb-2">
+          <h2 className="text-xl font-bold text-gray-950 dark:text-gray-50 mb-2">
             {header}
             {href && isExternal && <ExternalLinkIcon />}
           </h2>

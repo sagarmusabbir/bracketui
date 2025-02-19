@@ -117,10 +117,10 @@ const Features = () => {
   return (
     <section className="space-y-2 py-12 sm:py-16 md:py-20">
       <div className="lg:flex items-center justify-center gap-4 space-y-2 lg:space-y-0">
-        <h2 className="font-bold text-center text-2xl sm:text-3xl lg:text-4xl text-gray-950 dark:text-white">
+        <h2 className="font-bold text-center text-3xl sm:text-4xl lg:text-5xl text-gray-950 dark:text-white">
           Key Features
         </h2>
-        <p className="text-sm/6 lg:text-lg/8 text-center text-gray-500">
+        <p className="text-base/7 lg:text-lg/8 text-center text-gray-500">
           Modern UI components designed for seamless development
         </p>
       </div>
@@ -138,12 +138,12 @@ const Features = () => {
                 viewBox="0 0 24 24"
                 xmlSpace="preserve"
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-48 h-48 fill-gray-500"
+                className="size-40 sm:size-60 text-gray-500 bg-white dark:bg-gray-950 p-4 "
               >
                 <path
                   d="m10.944 2.4375c0.5833-0.58334 1.5291-0.58333 2.1124 0l2.8567 2.8566c0.5833 0.58333 0.5833 1.5291 0 2.1124l-2.8567 2.8566c-0.5833 0.5834-1.5291 0.5834-2.1124 0l-2.8567-2.8566c-0.58334-0.58334-0.58334-1.5291 0-2.1124l2.8567-2.8566zm1.0562 1.7722-2.1407 2.1407 2.1407 2.1407 2.1407-2.1407-2.1407-2.1407zm-6.7059 3.8774c0.58335-0.58334 1.5291-0.58334 2.1125 0l2.8566 2.8567c0.5834 0.5833 0.5834 1.5291 0 2.1124l-2.8566 2.8567c-0.58334 0.5833-1.5291 0.5833-2.1125 0l-2.8566-2.8567c-0.58334-0.5833-0.58333-1.5291 0-2.1124l2.8566-2.8567zm1.0562 1.7722-2.1407 2.1407 2.1407 2.1407 2.1407-2.1407-2.1407-2.1407zm10.243-1.7722c0.5833-0.58334 1.5291-0.58334 2.1125 0l2.8566 2.8567c0.5833 0.5833 0.5833 1.5291 0 2.1124l-2.8566 2.8567c-0.5834 0.5833-1.5292 0.5833-2.1125 0l-2.8566-2.8567c-0.5834-0.5833-0.5834-1.5291 0-2.1124l2.8566-2.8567zm1.0562 1.7722-2.1406 2.1407 2.1406 2.1407 2.1407-2.1407-2.1407-2.1407zm-6.7058 3.8775c0.5833-0.5834 1.5291-0.5834 2.1124 0l2.8567 2.8566c0.5833 0.5833 0.5833 1.5291 0 2.1125l-2.8567 2.8566c-0.5833 0.5833-1.5291 0.5833-2.1124 0l-2.8567-2.8566c-0.58334-0.5834-0.58334-1.5292 0-2.1125l2.8567-2.8566zm1.0562 1.7722-2.1407 2.1406 2.1407 2.1407 2.1407-2.1407-2.1407-2.1406z"
                   clip-rule="evenodd"
-                  fill="#0F1729"
+                  fill="#9ca3af"
                   fill-rule="evenodd"
                 />
               </svg>
