@@ -423,12 +423,12 @@ const Megamenu: FC<MegamenuProps> = ({
       >
         {/* Back button header - only show on mobile */}
         <div
-          className="md:hidden flex  items-center   sticky  top-16  z-20 px-5 py-4  bg-gradient-to-r from-gray-400/10 to-gray-300/10 text-sm
+          className="md:hidden flex  items-center   sticky  top-16  z-20 px-5 py-4  bg-gradient-to-r from-gray-400/10 to-gray-300/10 
     backdrop-filter backdrop-blur-md tracking-wide leading-none
       
     text-gray-600 dark:text-gray-300
     justify-between
-    transition-all duration-300 ease-in-out
+    transition-all duration-300 ease-in-out text-sm
     hover:bg-gradient-to-r hover:from-gray-400/15 hover:to-gray-300/15
     hover:border-gray-300/30"
         >
@@ -437,7 +437,7 @@ const Megamenu: FC<MegamenuProps> = ({
             className="flex items-center text-gray-600 dark:text-gray-300"
           >
             <svg
-              className="w-5 h-5 mr-3     "
+              className="w-4 h-4 mr-3     "
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
