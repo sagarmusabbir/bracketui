@@ -335,14 +335,14 @@ const Megamenu: FC<MegamenuProps> = ({
     "w-full md:w-auto"
   );
 
-  const variantStyles = isDropdownItem ? "opacity-50 " : "opacity-60 ";
+  const variantStyles = isDropdownItem ? "opacity-60 " : "opacity-70 ";
 
   const buttonClasses = clsx(
     // Base styles
-    "transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out flex items-center gap-2",
+    "transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out flex items-center gap-3 ",
     // Responsive layout
     "w-full md:w-auto",
-    "justify-between items-center md:justify-start gap-1",
+    " ",
     // Spacing
     "py-2 md:py-1",
 
@@ -399,7 +399,7 @@ const Megamenu: FC<MegamenuProps> = ({
         </span> */}
         <svg
           className={clsx(
-            "md:hidden transition-transform duration-200 w-4 h-4 fill-none stroke-current stroke-2 -rotate-90"
+            "md:hidden transition-transform duration-200 w-5 h-5 fill-none stroke-current stroke-2 -rotate-90"
             // {
             //   "fill-current stroke-none": !isDropdownItem,
             //   "fill-none stroke-current stroke-2": isDropdownItem,
@@ -422,13 +422,22 @@ const Megamenu: FC<MegamenuProps> = ({
         aria-label={`${label} megamenu`}
       >
         {/* Back button header - only show on mobile */}
-        <div className="md:hidden flex  items-center   sticky  top-16  z-20 px-5 py-3  bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
+        <div
+          className="md:hidden flex  items-center   sticky  top-16  z-20 px-5 py-4  bg-gradient-to-r from-gray-400/10 to-gray-300/10 text-sm
+    backdrop-filter backdrop-blur-md tracking-wide leading-none
+      
+    text-gray-600 dark:text-gray-300
+    justify-between
+    transition-all duration-300 ease-in-out
+    hover:bg-gradient-to-r hover:from-gray-400/15 hover:to-gray-300/15
+    hover:border-gray-300/30"
+        >
           <button
             onClick={handleBack}
             className="flex items-center text-gray-600 dark:text-gray-300"
           >
             <svg
-              className="w-4 h-4 mr-2     "
+              className="w-5 h-5 mr-3     "
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"

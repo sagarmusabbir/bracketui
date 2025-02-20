@@ -406,31 +406,32 @@ const HeaderBal: FC = () => {
         </Navlink>
       </NavItem>
       <MobileNav>
-        <Megamenu label="Web Development">
-          <div>
-            <Navlink as={Link} href="#" isDropdownItem>
-              Next.js Development
-            </Navlink>
-            <Navlink as={Link} href="#" isDropdownItem>
-              WordPress Development
-            </Navlink>
-            <Navlink as={Link} href="#" isDropdownItem>
-              Headless & Serverless Solutions
-            </Navlink>
-            <Navlink as={Link} href="#" isDropdownItem>
-              Custom Backend & API Development
-            </Navlink>
-            <Navlink as={Link} href="#" isDropdownItem>
-              UI/UX Design & Prototyping
-            </Navlink>
-            <Navlink as={Link} href="#" isDropdownItem>
-              Performance Optimization
-            </Navlink>
-            <Navlink as={Link} href="#" isDropdownItem>
-              Other
-            </Navlink>
+        <div className="space-y-2 py-1">
+          <Megamenu label="Web Development">
+            <div className="space-y-2 py-1">
+              <Navlink as={Link} href="#" isDropdownItem>
+                Next.js Development
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                WordPress Development
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Headless & Serverless Solutions
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Custom Backend & API Development
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                UI/UX Design & Prototyping
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Performance Optimization
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Other
+              </Navlink>
 
-            {/* <Megamenu label="DevOps" isDropdownItem>
+              {/* <Megamenu label="DevOps" isDropdownItem>
                 <div className=" space-y-3">
                   <Navlink as={Link} href="#" isDropdownItem>
                     Edge Configuration
@@ -452,91 +453,92 @@ const HeaderBal: FC = () => {
                   </Navlink>
                 </div>
               </Megamenu> */}
-          </div>
-        </Megamenu>
+            </div>
+          </Megamenu>
 
-        <Megamenu label="Business Solutions">
-          <div className="">
-            <Navlink as={Link} href="#" isDropdownItem>
-              Business 360
-            </Navlink>
-            <Navlink as={Link} href="#" isDropdownItem>
-              SEO & Web Visibility
-            </Navlink>
-            <Navlink as={Link} href="#" isDropdownItem>
-              Branding & Design
-            </Navlink>
-            <Navlink as={Link} href="#" isDropdownItem>
-              Social Media Marketing
-            </Navlink>
-            <Navlink as={Link} href="#" isDropdownItem>
-              PPC & Social Ad
-            </Navlink>
-            <Navlink as={Link} href="#" isDropdownItem>
-              Content strategy & Copywriting
-            </Navlink>
-            <Navlink as={Link} href="#" isDropdownItem>
-              Other
-            </Navlink>
-          </div>
-        </Megamenu>
+          <Megamenu label="Business Solutions">
+            <div className="">
+              <Navlink as={Link} href="#" isDropdownItem>
+                Business 360
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                SEO & Web Visibility
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Branding & Design
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Social Media Marketing
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                PPC & Social Ad
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Content strategy & Copywriting
+              </Navlink>
+              <Navlink as={Link} href="#" isDropdownItem>
+                Other
+              </Navlink>
+            </div>
+          </Megamenu>
 
-        <Navlink as={Link} href="#">
-          About
-        </Navlink>
+          <Navlink as={Link} href="#">
+            About
+          </Navlink>
 
-        <Megamenu label="Resources">
-          <div className=" space-y-2">
-            <Megamenu label="UI Components" isDropdownItem>
-              <div className=" space-y-2">
-                <Navlink as={Link} href="#" isDropdownItem>
-                  Bracket UI Component
-                </Navlink>
-                <Navlink as={Link} href="#" isDropdownItem>
-                  Bracket UI Block
-                </Navlink>
-                <Navlink as={Link} href="#" isDropdownItem>
-                  Bracket UI Npm Package
-                </Navlink>
-              </div>
-            </Megamenu>
-            <Megamenu label="Themes" isDropdownItem>
-              <div className="space-y-2">
-                <Navlink as={Link} href="#" isDropdownItem>
-                  Wordpress Themes
-                </Navlink>
-                <Navlink as={Link} href="#" isDropdownItem>
-                  Tailwind Themes
-                </Navlink>
-                <Navlink as={Link} href="#" isDropdownItem>
-                  Next.js Themes
-                </Navlink>
-                <Navlink as={Link} href="#" isDropdownItem>
-                  Hugo Themes
-                </Navlink>
-              </div>
-            </Megamenu>
-            <Megamenu label="Templates" isDropdownItem>
-              <div className=" space-y-2">
-                <Navlink as={Link} href="#" isDropdownItem>
-                  Elementor Templates
-                </Navlink>
-                <Navlink as={Link} href="#" isDropdownItem>
-                  Tailwind Templates
-                </Navlink>
-                <Navlink as={Link} href="#" isDropdownItem>
-                  HTML5 Templates
-                </Navlink>
-              </div>
-            </Megamenu>
-          </div>
-        </Megamenu>
-        <Navlink as={Link} href="#">
-          Blog
-        </Navlink>
-        <Navlink as={Link} href="#">
-          Contact
-        </Navlink>
+          <Megamenu label="Resources">
+            <div className=" space-y-2">
+              <Megamenu label="UI Components" isDropdownItem>
+                <div className=" space-y-2">
+                  <Navlink as={Link} href="#" isDropdownItem>
+                    Bracket UI Component
+                  </Navlink>
+                  <Navlink as={Link} href="#" isDropdownItem>
+                    Bracket UI Block
+                  </Navlink>
+                  <Navlink as={Link} href="#" isDropdownItem>
+                    Bracket UI Npm Package
+                  </Navlink>
+                </div>
+              </Megamenu>
+              <Megamenu label="Themes" isDropdownItem>
+                <div className="space-y-2">
+                  <Navlink as={Link} href="#" isDropdownItem>
+                    Wordpress Themes
+                  </Navlink>
+                  <Navlink as={Link} href="#" isDropdownItem>
+                    Tailwind Themes
+                  </Navlink>
+                  <Navlink as={Link} href="#" isDropdownItem>
+                    Next.js Themes
+                  </Navlink>
+                  <Navlink as={Link} href="#" isDropdownItem>
+                    Hugo Themes
+                  </Navlink>
+                </div>
+              </Megamenu>
+              <Megamenu label="Templates" isDropdownItem>
+                <div className=" space-y-2">
+                  <Navlink as={Link} href="#" isDropdownItem>
+                    Elementor Templates
+                  </Navlink>
+                  <Navlink as={Link} href="#" isDropdownItem>
+                    Tailwind Templates
+                  </Navlink>
+                  <Navlink as={Link} href="#" isDropdownItem>
+                    HTML5 Templates
+                  </Navlink>
+                </div>
+              </Megamenu>
+            </div>
+          </Megamenu>
+          <Navlink as={Link} href="#">
+            Blog
+          </Navlink>
+          <Navlink as={Link} href="#">
+            Contact
+          </Navlink>
+        </div>
       </MobileNav>
     </Navbar>
   );
