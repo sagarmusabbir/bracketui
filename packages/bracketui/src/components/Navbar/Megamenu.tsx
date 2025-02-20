@@ -339,7 +339,7 @@ const Megamenu: FC<MegamenuProps> = ({
 
   const buttonClasses = clsx(
     // Base styles
-    "transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out flex",
+    "transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out flex items-center gap-2",
     // Responsive layout
     "w-full md:w-auto",
     "justify-between items-center md:justify-start gap-1",
@@ -386,21 +386,32 @@ const Megamenu: FC<MegamenuProps> = ({
         aria-controls="megamenu-content"
       >
         <span>{label}</span>
-        {/* <svg
+        {/* <span className="rotate-180">
+          <svg
+            className="w-4 h-4 mr-2     "
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path d="M15 19l-7-7 7-7" />
+          </svg>
+        </span> */}
+        <svg
           className={clsx(
-            "md:hidden transition-transform duration-200 w-4 h-4",
-            {
-              "fill-current stroke-none": !isDropdownItem,
-              "fill-none stroke-current stroke-2": isDropdownItem,
-              "rotate-0": isOpen,
-              "-rotate-90": !isOpen,
-            }
+            "md:hidden transition-transform duration-200 w-4 h-4 fill-none stroke-current stroke-2 -rotate-90"
+            // {
+            //   "fill-current stroke-none": !isDropdownItem,
+            //   "fill-none stroke-current stroke-2": isDropdownItem,
+            //   "rotate-0": isOpen,
+            //   "-rotate-90": !isOpen,
+            // }
           )}
           viewBox="0 0 24 24"
           aria-hidden="true"
         >
           <path d="M19 9l-7 7-7-7" />
-        </svg> */}
+        </svg>
       </button>
 
       {/* Overlay Menu */}
