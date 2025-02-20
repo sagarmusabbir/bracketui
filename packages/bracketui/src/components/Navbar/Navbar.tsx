@@ -206,7 +206,7 @@ const Navbar: FC<NavbarProps> = ({
                 </div>
               </span>
               <span className="text-xs font-medium whitespace-nowrap tracking-wide">
-                Build Symmetric & Minimal Interfaces.Faster.Smarter.
+                Build Interfaces. Faster. Smarter.
               </span>
             </div>
           </a>
