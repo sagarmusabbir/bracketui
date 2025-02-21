@@ -1,5 +1,11 @@
 # @thirdbracket/bracketui
 
+## 3.1.1
+
+### Patch Changes
+
+- [`1c46ba6`](https://github.com/sagarmusabbir/bracketui/commit/1c46ba61b5d56625b430a9660b233ebb7998d012) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - New Components: Tab, Form included.
+
 ## 3.1.0
 
 ### Minor Changes
