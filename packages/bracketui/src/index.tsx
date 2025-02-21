@@ -19,3 +19,5 @@ export * from "./components/Navbar";
 export * from "./components/Layout";
 
 export * from "./components/Tab";
+
+export * from "./components/Form";

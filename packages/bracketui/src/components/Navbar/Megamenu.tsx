@@ -422,7 +422,7 @@ const Megamenu: FC<MegamenuProps> = ({
         aria-label={`${label} megamenu`}
       >
         {/* Back button header - only show on mobile */}
-        <div
+        {/* <div
           className="md:hidden flex  items-center   sticky  top-16  z-20 px-5 py-4  bg-gradient-to-r from-gray-400/10 to-gray-300/10 
     backdrop-filter backdrop-blur-md tracking-wide leading-none
       
@@ -446,6 +446,42 @@ const Megamenu: FC<MegamenuProps> = ({
               <path d="M15 19l-7-7 7-7" />
             </svg>
             <span>Back</span>
+          </button>
+        </div> */}
+
+        <div
+          className="
+    md:hidden flex items-center sticky top-16 z-20 
+    px-6 py-4  
+    bg-gradient-to-r from-gray-400/10 to-gray-300/10 
+    backdrop-filter backdrop-blur-md 
+    text-gray-600 dark:text-gray-300
+    justify-between
+    transition-all duration-300 ease-in-out 
+    hover:bg-gradient-to-r hover:from-gray-400/15 hover:to-gray-300/15
+    hover:border-gray-300/30
+  "
+        >
+          <button
+            onClick={handleBack}
+            className="
+      group
+      flex items-center gap-3  // Changed to use gap instead of mr
+      text-sm font-medium tracking-wide leading-none  // Matched text styles with banner
+    "
+          >
+            <svg
+              className="h-4 w-4 opacity-50" // Added opacity to match logo style
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path d="M15 19l-7-7 7-7" />
+            </svg>
+            <span className="transition-opacity duration-300 group-hover:opacity-80">
+              Back
+            </span>
           </button>
         </div>
 

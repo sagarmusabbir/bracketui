@@ -83,7 +83,7 @@ const Button = forwardRef(function Button<T extends ElementType = "button">(
 ) {
   // Base styles
   const baseClasses =
-    "inline-flex items-center justify-center rounded-lg font-semibold group transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out leading-none opacity-100 focus-within:opacity-80 active:opacity-80  md:hover:opacity-80";
+    "inline-flex items-center justify-center rounded-lg font-medium group transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out leading-none opacity-100 focus-within:opacity-80 active:opacity-80  md:hover:opacity-80";
 
   // Varient classes
   const varientButton = outline

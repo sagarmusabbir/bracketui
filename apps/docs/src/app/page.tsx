@@ -43,6 +43,7 @@ import Table from "../../components/table";
 import Hero from "../../components/Hero";
 
 import Feature from "../../components/Feature";
+import Newsletter from "../../components/Newsletter";
 // import EnterpriseFeatures from "../../components/Services";
 
 // import Feature from "../../components/Feature";
@@ -225,6 +226,7 @@ export default function Page() {
             <Table data={tableData} />
           </div>
         </section>
+        <Newsletter />
       </Bracket>
     </main>
   );
