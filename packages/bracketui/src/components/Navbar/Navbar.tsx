@@ -143,7 +143,7 @@ const Navbar: FC<NavbarProps> = ({
           >
             <div className="flex items-center gap-2">
               <span className="text-sm  whitespace-nowrap tracking-wider">
-                Build clean, minimal React Interfaces →
+                Build clean, minimal Interfaces →
               </span>
               <span className="transition-opacity duration-300 group-hover:opacity-80 flex items-center gap-1 tracking-normal">
                 {/* Text BRACKET UI */}
