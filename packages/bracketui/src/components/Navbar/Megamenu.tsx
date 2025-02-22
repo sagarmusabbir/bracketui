@@ -453,13 +453,13 @@ const Megamenu: FC<MegamenuProps> = ({
           className="
     md:hidden flex items-center sticky top-16 z-20 
     px-6 py-4  
-    bg-gradient-to-r from-gray-400/10 to-gray-300/10 
+    bg-gradient-to-r from-slate-500/10 to-gray-500/10 
     backdrop-filter backdrop-blur-md 
     text-gray-600 dark:text-gray-300
     justify-between
     transition-all duration-300 ease-in-out 
-    hover:bg-gradient-to-r hover:from-gray-400/15 hover:to-gray-300/15 text-sm
-    hover:border-gray-300/30
+    hover:bg-gradient-to-r hover:from-gray-500/10 hover:to-slate-500/10 text-sm
+    
   "
         >
           <button

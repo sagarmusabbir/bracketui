@@ -132,12 +132,12 @@ const Navbar: FC<NavbarProps> = ({
             className="
     group
     px-6 py-4
-    bg-gradient-to-r from-slate-400/10 to-gray-500/10
+    bg-gradient-to-r from-slate-500/10 to-gray-500/10
     backdrop-filter backdrop-blur-md
     text-gray-700 dark:text-gray-300
     flex items-center justify-between
     transition-all duration-300 ease-in-out
-    hover:bg-gradient-to-r hover:from-slate-400/15 hover:to-gray-500/15
+    hover:bg-gradient-to-r hover:from-gray-500/10 hover:to-slate-500/10
     
   "
           >
