@@ -458,7 +458,7 @@ const Megamenu: FC<MegamenuProps> = ({
     text-gray-600 dark:text-gray-300
     justify-between
     transition-all duration-300 ease-in-out 
-    hover:bg-gradient-to-r hover:from-gray-400/15 hover:to-gray-300/15
+    hover:bg-gradient-to-r hover:from-gray-400/15 hover:to-gray-300/15 text-sm
     hover:border-gray-300/30
   "
         >
@@ -467,16 +467,16 @@ const Megamenu: FC<MegamenuProps> = ({
             className="
       group
       flex items-center gap-3  
-      text-sm font-medium 
+      
     "
           >
             <svg
-              className="h-4 w-4 fill-none stroke-current stroke-2" // Added opacity to match logo style
+              className="h-4 w-4 fill-none stroke-current stroke-2 opacity-75" // Added opacity to match logo style
               viewBox="0 0 24 24"
             >
               <path d="M15 19l-7-7 7-7" />
             </svg>
-            <span className="transition-opacity duration-300 group-hover:opacity-80">
+            <span className="transition-opacity duration-300 group-hover:opacity-90">
               Back
             </span>
           </button>

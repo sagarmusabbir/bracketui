@@ -30,8 +30,8 @@ const HeaderBal: FC = () => {
         }
         href="/"
       >
-        <span className="sm:text-2xl  text-xl font-medium   text-gray-950 dark:text-white">
-          <span className="font-light">THIRD</span>BRACKET
+        <span className="sm:text-2xl uppercase  text-xl font-medium   text-gray-950 dark:text-white">
+          <span className="font-light">third</span>bracket
         </span>
         {/* <Image
           src="/path.svg"
@@ -217,41 +217,6 @@ const HeaderBal: FC = () => {
               </div>
             </div>
             <div className="w-[300px] flex flex-col h-full">
-              {/* <div className="flex flex-col space-y-1">
-                <h3 className="text-xs leading-none text-gray-500">DevOps</h3>
-              </div> */}
-              {/* <div className="flex flex-col space-y-1 py-4">
-                <Navlink as={Link} href="#" isDropdownItem>
-                  Edge Configuration
-                </Navlink>
-                <Navlink as={Link} href="#" isDropdownItem>
-                  CI/CD & Workflow
-                </Navlink>
-                <Navlink as={Link} href="#" isDropdownItem>
-                  AWS Serverless
-                </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
-                  Cloud Management
-                </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/performance"
-                  isDropdownItem
-                >
-                  Release Management
-                </Navlink>
-                <Navlink
-                  as={Link}
-                  href="/services/fullstack/search-form"
-                  isDropdownItem
-                >
-                  Cost Optimization
-                </Navlink>
-              </div> */}
               <div className="flex-grow"></div>
               <div className="mt-4 ">
                 <Card href="#">
@@ -406,9 +371,9 @@ const HeaderBal: FC = () => {
         </Navlink>
       </NavItem>
       <MobileNav>
-        <div className="py-2 space-y-2">
+        <div className="py-2 space-y-2.5">
           <Megamenu label="Web Development">
-            <div>
+            <div className="py-2 space-y-2.5">
               <Navlink as={Link} href="#" isDropdownItem>
                 Next.js Development
               </Navlink>
@@ -434,7 +399,7 @@ const HeaderBal: FC = () => {
           </Megamenu>
 
           <Megamenu label="Business Solutions">
-            <div>
+            <div className="py-2 space-y-2.5">
               <Navlink as={Link} href="#" isDropdownItem>
                 Business 360
               </Navlink>
@@ -464,9 +429,9 @@ const HeaderBal: FC = () => {
           </Navlink>
 
           <Megamenu label="Resources">
-            <div>
+            <div className="py-2 space-y-2.5">
               <Megamenu label="UI Components" isDropdownItem>
-                <div>
+                <div className="py-2 space-y-2.5">
                   <Navlink as={Link} href="#" isDropdownItem>
                     Bracket UI Component
                   </Navlink>
@@ -479,7 +444,7 @@ const HeaderBal: FC = () => {
                 </div>
               </Megamenu>
               <Megamenu label="Themes" isDropdownItem>
-                <div>
+                <div className="py-2 space-y-2.5">
                   <Navlink as={Link} href="#" isDropdownItem>
                     Wordpress Themes
                   </Navlink>
@@ -495,7 +460,7 @@ const HeaderBal: FC = () => {
                 </div>
               </Megamenu>
               <Megamenu label="Templates" isDropdownItem>
-                <div>
+                <div className="py-2 space-y-2.5">
                   <Navlink as={Link} href="#" isDropdownItem>
                     Elementor Templates
                   </Navlink>
