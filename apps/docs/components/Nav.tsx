@@ -406,9 +406,9 @@ const HeaderBal: FC = () => {
         </Navlink>
       </NavItem>
       <MobileNav>
-        <div className="space-y-2 py-1">
+        <div className="">
           <Megamenu label="Web Development">
-            <div className="space-y-2 py-1">
+            <div>
               <Navlink as={Link} href="#" isDropdownItem>
                 Next.js Development
               </Navlink>
@@ -430,34 +430,11 @@ const HeaderBal: FC = () => {
               <Navlink as={Link} href="#" isDropdownItem>
                 Other
               </Navlink>
-
-              {/* <Megamenu label="DevOps" isDropdownItem>
-                <div className=" space-y-3">
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Edge Configuration
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    CI/CD & Workflow
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    AWS Serverless
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Cloud Management
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Release Management
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Cost Optimization
-                  </Navlink>
-                </div>
-              </Megamenu> */}
             </div>
           </Megamenu>
 
           <Megamenu label="Business Solutions">
-            <div className="">
+            <div>
               <Navlink as={Link} href="#" isDropdownItem>
                 Business 360
               </Navlink>
@@ -487,9 +464,9 @@ const HeaderBal: FC = () => {
           </Navlink>
 
           <Megamenu label="Resources">
-            <div className=" space-y-2">
+            <div>
               <Megamenu label="UI Components" isDropdownItem>
-                <div className=" space-y-2">
+                <div>
                   <Navlink as={Link} href="#" isDropdownItem>
                     Bracket UI Component
                   </Navlink>
@@ -502,7 +479,7 @@ const HeaderBal: FC = () => {
                 </div>
               </Megamenu>
               <Megamenu label="Themes" isDropdownItem>
-                <div className="space-y-2">
+                <div>
                   <Navlink as={Link} href="#" isDropdownItem>
                     Wordpress Themes
                   </Navlink>
@@ -518,7 +495,7 @@ const HeaderBal: FC = () => {
                 </div>
               </Megamenu>
               <Megamenu label="Templates" isDropdownItem>
-                <div className=" space-y-2">
+                <div>
                   <Navlink as={Link} href="#" isDropdownItem>
                     Elementor Templates
                   </Navlink>

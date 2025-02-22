@@ -215,13 +215,13 @@ const Navbar: FC<NavbarProps> = ({
           </a> */}
 
           <a
-            href="https://bracketui.dev"
+            href="#"
             className="
     group
     px-6 py-4
     bg-gradient-to-r from-gray-400/10 to-gray-500/10
     backdrop-filter backdrop-blur-md
-    text-gray-600 dark:text-gray-300
+    text-gray-700 dark:text-gray-300
     flex items-center justify-between
     transition-all duration-300 ease-in-out
     hover:bg-gradient-to-r hover:from-gray-400/15 hover:to-gray-500/15
@@ -234,9 +234,11 @@ const Navbar: FC<NavbarProps> = ({
               </span>
               <span className="transition-opacity duration-300 group-hover:opacity-80 flex items-center gap-1">
                 {/* Text BRACKET UI */}
-                <div className="flex items-center gap-1 text-gray-700 dark:text-gray-300">
-                  <span className=" text-sm font-medium ">BRACKET</span>
-                  <span className="bg-gray-300 dark:bg-gray-700 px-1  rounded font-bold text-xs  text-gray-800 dark:text-gray-200">
+                <div className="flex items-center gap-1 text-gray-800 dark:text-gray-300">
+                  <span className=" text-sm font-medium leading-none">
+                    BRACKET
+                  </span>
+                  <span className="bg-gray-600 dark:bg-gray-300 px-1  rounded font-bold text-xs  text-gray-100 dark:text-gray-900">
                     UI
                   </span>
                 </div>
