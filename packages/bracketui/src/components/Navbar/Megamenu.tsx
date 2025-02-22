@@ -399,7 +399,7 @@ const Megamenu: FC<MegamenuProps> = ({
         </span> */}
         <svg
           className={clsx(
-            "md:hidden transition-transform duration-200 w-5 h-5 fill-none stroke-current stroke-2 -rotate-90"
+            "md:hidden transition-transform duration-200 w-4 h-4 fill-none stroke-current stroke-2 -rotate-90"
             // {
             //   "fill-current stroke-none": !isDropdownItem,
             //   "fill-none stroke-current stroke-2": isDropdownItem,
@@ -466,16 +466,13 @@ const Megamenu: FC<MegamenuProps> = ({
             onClick={handleBack}
             className="
       group
-      flex items-center gap-3  // Changed to use gap instead of mr
-      text-sm font-medium tracking-wide leading-none  // Matched text styles with banner
+      flex items-center gap-3  
+      text-sm font-medium 
     "
           >
             <svg
-              className="h-4 w-4 opacity-50" // Added opacity to match logo style
+              className="h-4 w-4 fill-none stroke-current stroke-2" // Added opacity to match logo style
               viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
             >
               <path d="M15 19l-7-7 7-7" />
             </svg>

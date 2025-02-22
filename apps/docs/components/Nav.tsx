@@ -25,12 +25,12 @@ const HeaderBal: FC = () => {
             alt=""
             width={512}
             height={430}
-            className="h-5 sm:h-6    w-auto dark:invert"
+            className="sm:h-6 h-5     w-auto dark:invert"
           />
         }
         href="/"
       >
-        <span className="text-[22px] sm:text-2xl font-medium   text-gray-950 dark:text-white">
+        <span className="sm:text-2xl  text-xl font-medium   text-gray-950 dark:text-white">
           <span className="font-light">THIRD</span>BRACKET
         </span>
         {/* <Image

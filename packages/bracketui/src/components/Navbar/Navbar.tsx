@@ -219,36 +219,24 @@ const Navbar: FC<NavbarProps> = ({
             className="
     group
     px-6 py-4
-    bg-gradient-to-r from-gray-400/10 to-gray-300/10
+    bg-gradient-to-r from-gray-400/10 to-gray-500/10
     backdrop-filter backdrop-blur-md
     text-gray-600 dark:text-gray-300
     flex items-center justify-between
     transition-all duration-300 ease-in-out
-    hover:bg-gradient-to-r hover:from-gray-400/15 hover:to-gray-300/15
-    hover:border-gray-300/30
+    hover:bg-gradient-to-r hover:from-gray-400/15 hover:to-gray-500/15
+    
   "
           >
             <div className="flex items-center gap-3">
-              <span className="text-sm font-medium whitespace-nowrap tracking-wide leading-none">
+              <span className="text-sm font-medium whitespace-nowrap ">
                 Build clean, minimal React UIs faster →
               </span>
               <span className="transition-opacity duration-300 group-hover:opacity-80 flex items-center gap-1">
-                {/* ThirdBracket Logo */}
-                {/* <svg
-                  // width="24"
-                  // height="20"
-                  viewBox="0 0 24 20.156"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-3 w-auto opacity-50"
-                >
-                  <path d="m19.658 0.39712c0.937-0.469 2.028-0.419 2.919 0.131 0.891 0.551 1.423 1.505 1.423 2.553v13.994c0 1.048-0.532 2.002-1.423 2.553-0.891 0.55-1.982 0.6-2.919 0.131l-7.658-3.829v-11.703l7.658-3.829zm-16.658-0.319h12.824l-5.824 2.978v14.045l5.824 2.977h-12.824c-1.654 0-3-1.346-3-3v-14c0-1.654 1.346-3 3-3z" />
-                </svg> */}
-
                 {/* Text BRACKET UI */}
-                <div className="flex items-center gap-1">
-                  <span className="font-medium  text-xs">BRACKET</span>
-                  <span className="bg-gray-200 dark:bg-gray-800 px-1  rounded text-xs font-bold ">
+                <div className="flex items-center gap-1 text-gray-700 dark:text-gray-300">
+                  <span className=" text-sm font-medium ">BRACKET</span>
+                  <span className="bg-gray-300 dark:bg-gray-700 px-1  rounded font-bold text-xs  text-gray-800 dark:text-gray-200">
                     UI
                   </span>
                 </div>
