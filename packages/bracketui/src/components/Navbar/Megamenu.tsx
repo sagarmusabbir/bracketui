@@ -471,7 +471,7 @@ const Megamenu: FC<MegamenuProps> = ({
     "
           >
             <svg
-              className="h-4 w-4 fill-none stroke-current stroke-2 opacity-75" // Added opacity to match logo style
+              className="h-4 w-4 fill-none stroke-current stroke-2 " // Added opacity to match logo style
               viewBox="0 0 24 24"
             >
               <path d="M15 19l-7-7 7-7" />

@@ -147,9 +147,9 @@ const Navbar: FC<NavbarProps> = ({
               </span>
               <span className="transition-opacity duration-300 group-hover:opacity-80 flex items-center gap-1 tracking-normal">
                 {/* Text BRACKET UI */}
-                <span className="flex items-center gap-1 text-gray-800 dark:text-gray-300 text-sm">
+                <span className="flex items-center gap-1 text-gray-950 dark:text-gray-300 text-sm">
                   <span>BRACKET</span>
-                  <span className="px-1 bg-slate-300 dark:bg-slate-500  rounded ">
+                  <span className="px-1 font-medium bg-gray-200 dark:bg-gray-800  rounded ">
                     UI
                   </span>
                 </span>
