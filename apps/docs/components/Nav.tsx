@@ -406,7 +406,7 @@ const HeaderBal: FC = () => {
         </Navlink>
       </NavItem>
       <MobileNav>
-        <div className="py-2 space-y-1">
+        <div className="py-2 space-y-2">
           <Megamenu label="Web Development">
             <div>
               <Navlink as={Link} href="#" isDropdownItem>
