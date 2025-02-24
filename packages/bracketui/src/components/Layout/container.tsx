@@ -34,9 +34,9 @@ const Container: FC<ContainerProps> = ({
     },
     // Padding variations
     {
-      "px-4 sm:px-6 lg:px-8": padding === "medium",
-      "px-2 sm:px-4 lg:px-6": padding === "small",
-      "px-6 sm:px-8 lg:px-12": padding === "large",
+      "px-6 lg:px-8": padding === "medium",
+      "px-4 lg:px-6": padding === "small",
+      "px-8 lg:px-12": padding === "large",
       "px-0": padding === "none",
     },
     className
