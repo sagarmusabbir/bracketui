@@ -1,5 +1,11 @@
 # @thirdbracket/bracketui
 
+## 3.1.3
+
+### Patch Changes
+
+- [`abc8c43`](https://github.com/sagarmusabbir/bracketui/commit/abc8c437490a0f0c72fcd83501602b35a0575141) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Fix:Fixed Navbar Spacing
+
 ## 3.1.2
 
 ### Patch Changes
