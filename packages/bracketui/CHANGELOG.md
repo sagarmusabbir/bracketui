@@ -1,5 +1,11 @@
 # @thirdbracket/bracketui
 
+## 3.1.4
+
+### Patch Changes
+
+- [`59063c4`](https://github.com/sagarmusabbir/bracketui/commit/59063c4907b6e50d6bc5ff19ac3586739e07b9ef) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Fix: Spacing for Bracket Container
+
 ## 3.1.3
 
 ### Patch Changes
