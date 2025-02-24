@@ -1,5 +1,11 @@
 # @thirdbracket/bracketui
 
+## 3.1.2
+
+### Patch Changes
+
+- [`a269195`](https://github.com/sagarmusabbir/bracketui/commit/a2691958b5f1b722d723d562af8af12183a7a02f) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - patch:Fix mobile menu badge - final
+
 ## 3.1.1
 
 ### Patch Changes
