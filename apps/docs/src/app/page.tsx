@@ -44,6 +44,7 @@ import Hero from "../../components/Hero";
 
 import Feature from "../../components/Feature";
 import Newsletter from "../../components/Newsletter";
+import Sub from "../../components/Subscription";
 // import EnterpriseFeatures from "../../components/Services";
 
 // import Feature from "../../components/Feature";
@@ -226,6 +227,7 @@ export default function Page() {
             <Table data={tableData} />
           </div>
         </section>
+        <Sub />
         <Newsletter />
       </Bracket>
     </main>

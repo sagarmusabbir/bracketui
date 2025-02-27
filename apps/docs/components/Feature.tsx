@@ -112,6 +112,9 @@ import { BiChevronRight } from "react-icons/bi";
 
 import Link from "next/link";
 import { Card, Navlink } from "@thirdbracket/bracketui";
+import { MdAirplanemodeActive } from "react-icons/md";
+
+import Image from "next/image";
 
 const Features = () => {
   return (
@@ -159,10 +162,32 @@ const Features = () => {
         {/* Right Column - Stack of Cards */}
         <div className="space-y-4">
           {/* Theming System */}
-          <Card header="Theming System">
+          <Card
+            isIcon
+            cover={
+              <MdAirplanemodeActive
+                size={24}
+                className="text-gray-800 dark:text-gray-200"
+              />
+            }
+            header="Theming System"
+          >
             Powerful theming capabilities with dark mode support and
             customizable design tokens. Seamlessly integrate with your brand
             identity.
+          </Card>
+
+          <Card
+            isIcon
+            cover={
+              <MdAirplanemodeActive
+                size={24}
+                className="text-gray-600 dark:text-gray-400"
+              />
+            }
+            header="Card Title"
+          >
+            Card content here
           </Card>
 
           {/* Accessibility */}
@@ -183,6 +208,22 @@ const Features = () => {
             comprehensive type definitions and intelligent autocompletion.
           </Card>
         </div>
+
+        <Card
+          className="md:col-span-2" // Makes card span full width
+          cover={
+            <Image
+              src="/main.svg"
+              alt="Cover image"
+              width={1024}
+              height={460}
+              className="w-full h-full object-cover"
+            />
+          }
+          header="Full Width Card Title"
+        >
+          Card content here
+        </Card>
       </div>
 
       <div className="flex justify-center mt-8">

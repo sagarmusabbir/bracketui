@@ -265,15 +265,89 @@ const ExternalLinkIcon = () => (
   </svg>
 );
 
+// export type CardProps<T extends ElementType> = {
+//   as?: T;
+//   href?: string;
+//   className?: string;
+//   children?: React.ReactNode;
+//   onClick?: () => void;
+//   cover?: React.ReactElement;
+//   header?: string;
+//   isExternal?: boolean;
+// } & ComponentPropsWithRef<T>;
+
+// const Card = forwardRef(function Card<T extends ElementType = "div">(
+//   {
+//     as,
+//     href,
+//     className = "",
+//     children,
+//     cover,
+//     header,
+//     onClick,
+//     isExternal,
+//     ...props
+//   }: CardProps<T>,
+//   ref: React.Ref<any>
+// ) {
+//   const Component = as || (href ? "a" : "div");
+
+//   if (isExternal && !href) {
+//     throw new Error("isExternal prop can only be used with href");
+//   }
+
+//   const externalProps =
+//     href && isExternal
+//       ? {
+//           target: "_blank",
+//           rel: "noopener noreferrer",
+//         }
+//       : {};
+
+//   return (
+//     <Component
+//       ref={ref}
+//       onClick={onClick}
+//       {...(href ? { href } : {})}
+//       {...externalProps}
+//       {...props}
+//       className={clsx(
+//         "rounded-lg border border-gray-200 dark:border-gray-800 border-opacity-50",
+//         "overflow-hidden flex flex-col",
+//         "transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out",
+//         "focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100",
+//         className
+//       )}
+//     >
+//       {cover && (
+//         <div className="flex-1 flex items-center justify-center">{cover}</div>
+//       )}
+//       <div className="mt-auto p-4">
+//         {header && (
+//           <h2 className="text-xl font-bold text-gray-950 dark:text-gray-50 mb-2">
+//             {header}
+//             {href && isExternal && <ExternalLinkIcon />}
+//           </h2>
+//         )}
+//         <div className="text-gray-600 dark:text-gray-500 text-sm">
+//           {children}
+//         </div>
+//       </div>
+//     </Component>
+//   );
+// });
+
 export type CardProps<T extends ElementType> = {
   as?: T;
   href?: string;
   className?: string;
   children?: React.ReactNode;
   onClick?: () => void;
-  cover?: React.ReactElement;
+  cover?: string | React.ReactElement;
   header?: string;
   isExternal?: boolean;
+  isIcon?: boolean;
+  truncate?: boolean; // new prop
 } & ComponentPropsWithRef<T>;
 
 const Card = forwardRef(function Card<T extends ElementType = "div">(
@@ -286,6 +360,8 @@ const Card = forwardRef(function Card<T extends ElementType = "div">(
     header,
     onClick,
     isExternal,
+    isIcon = false,
+    truncate = false, // default to false
     ...props
   }: CardProps<T>,
   ref: React.Ref<any>
@@ -304,6 +380,37 @@ const Card = forwardRef(function Card<T extends ElementType = "div">(
         }
       : {};
 
+  const renderCover = () => {
+    if (!cover) return null;
+
+    const coverContent =
+      typeof cover === "string" ? (
+        <img
+          src={cover}
+          alt={header || "Card cover"}
+          className="w-full h-full object-cover"
+        />
+      ) : (
+        cover
+      );
+
+    return (
+      <div
+        className={clsx(
+          isIcon
+            ? "p-4 pb-0" // Icon styling
+            : "w-full aspect-video", // Image cover styling
+          {
+            "flex items-center justify-center": !isIcon,
+            "flex items-start": isIcon,
+          }
+        )}
+      >
+        <div className="w-full h-full">{coverContent}</div>
+      </div>
+    );
+  };
+
   return (
     <Component
       ref={ref}
@@ -319,17 +426,25 @@ const Card = forwardRef(function Card<T extends ElementType = "div">(
         className
       )}
     >
-      {cover && (
-        <div className="flex-1 flex items-center justify-center">{cover}</div>
-      )}
+      {renderCover()}
       <div className="mt-auto p-4">
         {header && (
-          <h2 className="text-xl font-bold text-gray-950 dark:text-gray-50 mb-2">
+          <h2
+            className={clsx(
+              "text-xl font-bold text-gray-950 dark:text-gray-50 mb-2 max-w-prose",
+              truncate && "line-clamp-1"
+            )}
+          >
             {header}
             {href && isExternal && <ExternalLinkIcon />}
           </h2>
         )}
-        <div className="text-gray-600 dark:text-gray-500 text-sm">
+        <div
+          className={clsx(
+            "text-gray-800/70 dark:text-gray-200/40 text-sm max-w-prose",
+            truncate && "line-clamp-2"
+          )}
+        >
           {children}
         </div>
       </div>
