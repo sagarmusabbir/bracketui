@@ -399,7 +399,7 @@ const Card = forwardRef(function Card<T extends ElementType = "div">(
         className={clsx(
           isIcon
             ? "p-4 pb-0" // Icon styling
-            : "w-full aspect-video", // Image cover styling
+            : "w-full", // Image cover styling
           {
             "flex items-center justify-center": !isIcon,
             "flex items-start": isIcon,

@@ -45,6 +45,7 @@ import Hero from "../../components/Hero";
 import Feature from "../../components/Feature";
 import Newsletter from "../../components/Newsletter";
 import Sub from "../../components/Subscription";
+import MasonryLayout from "../../components/Navbar/Mansorygrid";
 // import EnterpriseFeatures from "../../components/Services";
 
 // import Feature from "../../components/Feature";
@@ -219,6 +220,7 @@ export default function Page() {
       <Bracket>
         <Hero />
         <Feature />
+        <MasonryLayout />
 
         {/* <EnterpriseFeatures /> */}
 
