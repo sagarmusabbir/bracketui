@@ -108,17 +108,9 @@
 // components/Features.tsx
 "use client";
 
-import {
-  BiChevronRight,
-  BiCloud,
-  BiCode,
-  BiLock,
-  BiPaint,
-} from "react-icons/bi";
+import { BiCloud, BiCode, BiLock, BiPaint } from "react-icons/bi";
 
-import Link from "next/link";
-import { Card, Navlink } from "@thirdbracket/bracketui";
-import { MdAirplanemodeActive } from "react-icons/md";
+import { Card } from "@thirdbracket/bracketui";
 
 import Image from "next/image";
 
