@@ -427,7 +427,13 @@ const Card = forwardRef(function Card<T extends ElementType = "div">(
       )}
     >
       {renderCover()}
-      <div className="mt-auto p-4">
+      {/* <div className="mt-auto p-4"> */}
+      <div
+        className={clsx(
+          "p-4",
+          isIcon && "mt-auto" // Only add mt-auto when isIcon is true
+        )}
+      >
         {header && (
           <h2
             className={clsx(

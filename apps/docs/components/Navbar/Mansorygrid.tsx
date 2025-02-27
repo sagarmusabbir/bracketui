@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const MasonryLayout = () => {
   return (
-    <section className="px-4 py-12 sm:px-6 lg:px-8">
+    <section className="py-12 ">
       <div className="max-w-7xl mx-auto space-y-8">
         <div className="text-center">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
@@ -17,10 +17,11 @@ const MasonryLayout = () => {
 
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
           {/* Tall Image Card */}
+
           <Card
             className="break-inside-avoid mb-4"
             cover={
-              <div className="relative aspect-[3/4]">
+              <div className="relative aspect-[4/5]">
                 <Image
                   src="/tall.svg"
                   alt="Tall cover"
@@ -31,11 +32,20 @@ const MasonryLayout = () => {
             }
             header="Tall Feature Card"
           >
-            This card features a tall image to create visual interest in the
-            masonry layout.
+            This card features a tall image to create visual interest.
           </Card>
 
           {/* Icon Card */}
+          <Card
+            className="break-inside-avoid mb-4"
+            isIcon
+            cover={
+              <BiRocket className="w-8 h-8 text-gray-600 dark:text-gray-400" />
+            }
+            header="Quick Start"
+          >
+            Get started with our platform in minutes.
+          </Card>
           <Card
             className="break-inside-avoid mb-4"
             isIcon
@@ -53,7 +63,7 @@ const MasonryLayout = () => {
             cover={
               <div className="relative aspect-video">
                 <Image
-                  src="/wide.jpg"
+                  src="/wide.svg"
                   alt="Wide cover"
                   fill
                   className="object-cover"
@@ -123,7 +133,7 @@ const MasonryLayout = () => {
             cover={
               <div className="relative aspect-[4/3]">
                 <Image
-                  src="/vp.svg"
+                  src="/small.svg"
                   alt="Small cover"
                   fill
                   className="object-cover"

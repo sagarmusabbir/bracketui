@@ -53,7 +53,7 @@ const Newsletter = () => {
 
   return (
     <section className="py-12 sm:py-16 md:py-20">
-      <div className=" mx-auto space-y-2">
+      <div className="mx-auto space-y-2">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-12">
           {/* Left side content */}
           <div className="flex-1">

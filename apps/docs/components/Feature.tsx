@@ -134,16 +134,14 @@ const Features = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-fr">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-full">
         {" "}
         {/* added auto-rows-fr */}
         {/* First Column - Card with Image */}
         <Card
-          className="h-full"
+          className="h-full flex flex-col" // Added flex-col
           cover={
-            <div className="relative w-full h-full">
-              {" "}
-              {/* added flex-1 */}
+            <div className="relative flex-1 flex items-center justify-center bg-gray-50 dark:bg-gray-900">
               <Image
                 src="/card1.svg"
                 alt="Cover image"

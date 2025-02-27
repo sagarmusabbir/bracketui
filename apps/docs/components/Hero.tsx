@@ -18,7 +18,7 @@ const Hero = () => {
 
       <div className="flex flex-wrap gap-4 items-center justify-center">
         {/* Desktop buttons */}
-        <div className="hidden md:block">
+        {/* <div className="hidden md:block">
           <Button size="sm" as={Link} href="#">
             Let's Grow
           </Button>
@@ -27,8 +27,8 @@ const Hero = () => {
           <Button size="sm" outline as={Link} href="#">
             Let's Grow
           </Button>
-        </div>
-        <div className="hidden md:block">
+        </div> */}
+        {/* <div className="hidden md:block">
           <Button size="md" as={Link} href="#">
             Let's Grow
           </Button>
@@ -37,8 +37,8 @@ const Hero = () => {
           <Button size="md" outline as={Link} href="#">
             Let's Grow
           </Button>
-        </div>
-        <div className="hidden md:block">
+        </div> */}
+        {/* <div className="hidden md:block">
           <Button size="lg" as={Link} href="#">
             Let's Grow
           </Button>
@@ -47,7 +47,7 @@ const Hero = () => {
           <Button size="lg" outline as={Link} href="#">
             Let's Grow
           </Button>
-        </div>
+        </div> */}
         <div className="hidden md:block">
           <Button size="xl" as={Link} href="#">
             Let's Grow
@@ -61,22 +61,12 @@ const Hero = () => {
 
         {/* Mobile buttons */}
         <div className="md:hidden">
-          <Button size="sm" outline as={Link} href="#">
+          <Button size="md" outline as={Link} href="#">
             Let's Grow
           </Button>
         </div>
         <div className="md:hidden">
           <Button size="md" as={Link} href="#">
-            Our Solutions
-          </Button>
-        </div>
-        <div className="md:hidden">
-          <Button size="lg" outline as={Link} href="#">
-            Let's Grow
-          </Button>
-        </div>
-        <div className="md:hidden">
-          <Button size="xl" as={Link} href="#">
             Our Solutions
           </Button>
         </div>
