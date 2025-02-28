@@ -44,7 +44,7 @@ export function DefaultHero() {
           <Button href="#" size="xl" className=" hidden md:flex items-center">
             Let's Grow
             <svg
-              className="-mr-1 ml-2 size-4"
+              className="size-4"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ export function DefaultHero() {
           </Button>
           <Button outline size="xl" className="hidden md:flex items-center">
             <svg
-              className="-ml-1 mr-2 size-4"
+              className=" size-4"
               fill="currentColor"
               viewBox="0 0 1000 1000"
               xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ export function DefaultHero() {
             Get Consultation
           </Button>
 
-          <Button href="#" size="lg" className="md:hidden flex items-center justify-center gap-2">
+          <Button href="#" size="md" className="md:hidden flex items-center justify-center gap-2">
             Let's Grow
             <svg
               className=" h-4 w-4"
@@ -85,7 +85,7 @@ export function DefaultHero() {
               />
             </svg>
           </Button>
-          <Button outline size="lg" className=" md:hidden flex items-center justify-center gap-2">
+          <Button outline size="md" className=" md:hidden flex items-center justify-center gap-2">
             <svg
               className=" h-4 w-4"
               fill="currentColor"
