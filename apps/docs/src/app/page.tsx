@@ -4,10 +4,10 @@ import { Bracket } from "@thirdbracket/bracketui";
 
 import Feature from "../../components/Feature";
 
-import MasonryLayout from "../../components/Navbar/Mansorygrid";
 import Subscription from "../../components/Subscription";
 import Gallery from "../../components/Gallery";
-import { DefaultHero } from "../../components/hero-sections/default";
+import { DefaultHero } from "../../components/default";
+import MasonryLayout from "../../components/Mansorygrid";
 
 export default function Page() {
   return (
