@@ -33,7 +33,7 @@ export function DefaultHero() {
         <h1 className="mb-6 text-[2.75rem] font-black leading-none  bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text md:text-5xl lg:text-6xl">
           Enterprise Solutions Without Overhead Cost
         </h1>
-        <p className="mb-4 md:mb-8 text-base md:text-lg font-normal text-gray-800/70 dark:text-gray-200/40 sm:px-16 lg:text-xl xl:px-48">
+        <p className="mb-8 md:mb-16 text-base md:text-lg font-normal text-gray-800/70 dark:text-gray-200/40 sm:px-16 lg:text-xl xl:px-48">
           Everything you'd expect from an agency—resources, expertise, and
           strategy—at a price you'd normally pay a freelancer. Get custom web
           development and digital marketing designed for startups and growing
@@ -41,7 +41,7 @@ export function DefaultHero() {
         </p>
 
         <div className="mb-8  flex justify-center space-x-4  lg:mb-16">
-          <Button href="#" size="xl" className=" hidden md:flex">
+          <Button href="#" size="xl" className=" hidden md:flex items-center">
             Let's Grow
             <svg
               className="-mr-1 ml-2 size-4"
@@ -56,7 +56,7 @@ export function DefaultHero() {
               />
             </svg>
           </Button>
-          <Button outline size="xl" className="hidden md:flex">
+          <Button outline size="xl" className="hidden md:flex items-center">
             <svg
               className="-ml-1 mr-2 size-4"
               fill="currentColor"
@@ -70,7 +70,7 @@ export function DefaultHero() {
             Get Consultation
           </Button>
 
-          <Button href="#" size="lg" className="md:hidden ">
+          <Button href="#" size="lg" className="md:hidden flex items-center">
             Let's Grow
             <svg
               className="-mr-1 ml-2 h-4 w-4"
@@ -85,7 +85,7 @@ export function DefaultHero() {
               />
             </svg>
           </Button>
-          <Button outline size="lg" className=" md:hidden">
+          <Button outline size="lg" className=" md:hidden flex items-center">
             <svg
               className="-ml-1 mr-2 h-4 w-4"
               fill="currentColor"
