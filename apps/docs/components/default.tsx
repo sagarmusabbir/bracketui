@@ -39,7 +39,8 @@ export function DefaultHero() {
           development and digital marketing designed for startups and growing
           businesses.
         </p>
-        <div className="mb-8 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0 lg:mb-16">
+
+        <div className="mb-8  flex justify-center space-x-4  lg:mb-16">
           <Button href="#" size="xl" className=" hidden md:flex">
             Let's Grow
             <svg
