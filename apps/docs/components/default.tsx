@@ -70,10 +70,10 @@ export function DefaultHero() {
             Get Consultation
           </Button>
 
-          <Button href="#" size="lg" className="md:hidden flex items-center">
+          <Button href="#" size="lg" className="md:hidden flex items-center justify-center gap-2">
             Let's Grow
             <svg
-              className="-mr-1 ml-2 h-4 w-4"
+              className=" h-4 w-4"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -85,9 +85,9 @@ export function DefaultHero() {
               />
             </svg>
           </Button>
-          <Button outline size="lg" className=" md:hidden flex items-center">
+          <Button outline size="lg" className=" md:hidden flex items-center justify-center gap-2">
             <svg
-              className="-ml-1 mr-2 h-4 w-4"
+              className=" h-4 w-4"
               fill="currentColor"
               viewBox="0 0 1000 1000"
               xmlns="http://www.w3.org/2000/svg"
