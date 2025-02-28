@@ -6,7 +6,7 @@ export function DefaultHero() {
       <div className="mx-auto max-w-screen-xl  py-8 text-center  lg:py-16">
         <a
           href="#"
-          className="mb-6 inline-flex items-center justify-between rounded-full  p-0.5 pr-2 text-sm text-gray-700   dark:text-white bg-gradient-to-r dark:from-gray-900 dark:via-gray-800/50 dark:to-gray-900 from-gray-100 via-gray-50 to-gray-100 hover:opacity-90"
+          className="mb-6 inline-flex items-center justify-between rounded-full  p-1 pr-4 text-sm text-gray-700   dark:text-white bg-gradient-to-r dark:from-gray-900 dark:via-gray-800/50 dark:to-gray-900 from-gray-100 via-gray-50 to-gray-100 hover:opacity-90"
         >
           <span className="mr-3 rounded-full bg-emerald-200   px-2.5 py-0.5 md:px-3 md:py-1 text-xs md:text-sm text-gray-700 ">
             New
@@ -67,7 +67,7 @@ export function DefaultHero() {
             Get Consultation
           </Button>
 
-          <Button href="#" size="md" className="md:hidden">
+          <Button href="#" size="lg" className="md:hidden">
             Let's Grow
             <svg
               className="-mr-1 ml-2 h-4 w-4"
@@ -82,7 +82,7 @@ export function DefaultHero() {
               />
             </svg>
           </Button>
-          <Button outline size="md" className=" md:hidden">
+          <Button outline size="lg" className=" md:hidden">
             <svg
               className="-ml-1 mr-2 h-4 w-4"
               fill="currentColor"
