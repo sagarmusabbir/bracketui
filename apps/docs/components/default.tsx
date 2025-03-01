@@ -8,9 +8,13 @@ export function DefaultHero() {
       <div className="mx-auto max-w-screen-xl  py-8 text-center  lg:py-16">
         <a
           href="#"
-          className="mb-6 inline-flex items-center justify-between rounded-full  p-1 pr-4 text-sm text-gray-700   dark:text-white bg-gradient-to-r dark:from-gray-900 dark:via-gray-800/50 dark:to-gray-900 from-gray-100 via-gray-50 to-gray-100 hover:opacity-90"
+          // className="mb-7 inline-flex items-center justify-between  rounded-full  px-4 py-1 text-gray-700   dark:text-white bg-gradient-to-r text-sm dark:from-gray-900 dark:via-gray-800/50 dark:to-gray-900 from-gray-100 via-gray-50 to-gray-100 hover:opacity-90"
+          className="mb-7 inline-flex items-center justify-between rounded-full bg-gray-100 p-1 pr-4 text-sm text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
         >
-          <span className="mr-3 rounded-full dark:bg-slate-200 bg-gray-700 text-white    px-3 py-1 text-xs  dark:text-gray-800 ">
+          <span
+            // className="mr-3 rounded-full dark:bg-slate-200 bg-gray-700 text-white    px-4 py-1.5 text-xs  dark:text-gray-800 "
+            className="mr-3 rounded-full  px-4 py-1.5 text-xs text-white"
+          >
             New
           </span>
           &nbsp;
@@ -30,18 +34,18 @@ export function DefaultHero() {
             />
           </svg>
         </a>
-        <h1 className="mb-6 text-[2.75rem] font-black leading-none  bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text md:text-5xl lg:text-6xl">
-          Enterprise Solutions Without Overhead Cost
+        <h1 className="mb-8 text-4xl font-black leading-none  bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text md:text-6xl ">
+          Enterprise Solutions Without the Overhead Cost
         </h1>
-        <p className="mb-8 md:mb-16 text-base md:text-lg font-normal text-gray-800/70 dark:text-gray-200/40 sm:px-16 lg:text-xl xl:px-48">
+        <p className="mb-8  text-base md:text-lg font-normal text-gray-800/70 dark:text-gray-200/40 sm:px-16 lg:text-xl xl:px-48">
           Everything you'd expect from an agency—resources, expertise, and
           strategy—at a price you'd normally pay a freelancer. Get custom web
           development and digital marketing designed for startups and growing
           businesses.
         </p>
 
-        <div className="mb-8  flex justify-center space-x-4  lg:mb-16">
-          <Button href="#" size="xl" className=" hidden md:flex items-center">
+        <div className="mb-8  flex justify-center space-x-4  ">
+          <Button href="#" size="lg" className=" hidden md:flex items-center">
             Let's Grow
             <svg
               className="size-4"
@@ -56,7 +60,7 @@ export function DefaultHero() {
               />
             </svg>
           </Button>
-          <Button outline size="xl" className="hidden md:flex items-center">
+          <Button outline size="lg" className="hidden md:flex items-center">
             <svg
               className=" size-4"
               fill="currentColor"
@@ -70,7 +74,11 @@ export function DefaultHero() {
             Get Consultation
           </Button>
 
-          <Button href="#" size="md" className="md:hidden flex items-center justify-center gap-2">
+          <Button
+            href="#"
+            size="md"
+            className="md:hidden flex items-center justify-center gap-2"
+          >
             Let's Grow
             <svg
               className=" h-4 w-4"
@@ -85,7 +93,11 @@ export function DefaultHero() {
               />
             </svg>
           </Button>
-          <Button outline size="md" className=" md:hidden flex items-center justify-center gap-2">
+          <Button
+            outline
+            size="md"
+            className=" md:hidden flex items-center justify-center gap-2"
+          >
             <svg
               className=" h-4 w-4"
               fill="currentColor"
