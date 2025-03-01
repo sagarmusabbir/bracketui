@@ -6,6 +6,7 @@ import {
   Navbrand,
   NavItem,
   Navlink,
+  ThemeToggle,
 } from "@thirdbracket/bracketui";
 import Image from "next/image";
 
@@ -41,6 +42,7 @@ const HeaderBal: FC = () => {
           className="h-4 sm:h-5    w-auto dark:invert"
         /> */}
       </Navbrand>
+      <ThemeToggle />
 
       <NavItem>
         <Navlink as={Link} href="#">

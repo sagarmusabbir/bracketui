@@ -84,7 +84,7 @@ export type ButtonProps<T extends ElementType> = {
   children?: React.ReactNode;
   onClick?: () => void;
   variant?: "default" | "outline";
-  size?: "sm" | "md" | "lg" | "xl";
+  size?: "xs" | "sm" | "md" | "lg" | "xl";
   isLoading?: boolean;
   disabled?: boolean;
 } & ComponentPropsWithRef<T>;
@@ -107,19 +107,20 @@ const Button = forwardRef(function Button<T extends ElementType = "button">(
 ) {
   // Base styles
   const baseClasses =
-    "inline-flex items-center justify-center font-medium transition-opacity duration-200 ease-in-out motion-reduce:transition-none motion-reduce:hover:transform-none focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600";
+    "inline-flex items-center justify-center font-medium transition-opacity duration-200 ease-in-out motion-reduce:transition-none whitespace-nowrap motion-reduce:hover:transform-none focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600";
 
   // Variant classes with different hover opacities
   const variantButton = outline
-    ? "border border-gray-200 dark:border-gray-800 text-gray-950 dark:text-white bg-gray-50/70 dark:bg-gray-950/60 [@media(hover:hover)]:hover:bg-gray-100/80 [@media(hover:hover)]:dark:hover:bg-gray-900/80 active:bg-gray-100/70 dark:active:bg-gray-900/70"
-    : "border-none bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-white dark:text-gray-950 [@media(hover:hover)]:hover:opacity-90 active:opacity-80";
+    ? "border border-gray-200 dark:border-gray-800 text-gray-800 dark:text-white bg-gray-50/70 dark:bg-gray-950/60 [@media(hover:hover)]:hover:bg-gray-100/80 [@media(hover:hover)]:dark:hover:bg-gray-900/80 active:bg-gray-100/70 dark:active:bg-gray-900/70"
+    : "border-none bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-white dark:text-gray-800 [@media(hover:hover)]:hover:opacity-90 active:opacity-80";
 
   // Size classes with fixed heights
   const sizeClasses = clsx({
-    "px-3 h-9 text-xs rounded-lg": size === "sm",
-    "px-4 h-10 text-sm rounded-lg": size === "md",
-    "px-5 h-11 text-base rounded-lg": size === "lg",
-    "px-6 h-12 text-lg rounded-lg": size === "xl",
+    "px-3 py-1 h-8 text-xs rounded-md": size === "xs",
+    "px-3.5 py-1.5 h-9 text-sm rounded-md": size === "sm",
+    "px-4 py-2 h-10 text-sm rounded-lg": size === "md",
+    "px-5 py-2.5 h-11 text-base rounded-lg": size === "lg",
+    "px-6 py-3 h-12  text-base rounded-lg": size === "xl",
   });
 
   // Disabled and Loading classes
@@ -181,7 +182,7 @@ const Button = forwardRef(function Button<T extends ElementType = "button">(
               />
             </svg>
           </span>
-          <span className="invisible">{children}</span>
+          <span className="invisible ">{children}</span>
         </>
       ) : (
         children

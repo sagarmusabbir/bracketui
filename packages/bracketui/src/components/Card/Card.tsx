@@ -437,7 +437,7 @@ const Card = forwardRef(function Card<T extends ElementType = "div">(
         {header && (
           <h2
             className={clsx(
-              "text-xl font-bold text-gray-950 dark:text-gray-50 mb-2 max-w-prose",
+              "text-xl font-bold text-gray-800 dark:text-gray-100 mb-2 max-w-prose",
               truncate && "line-clamp-1"
             )}
           >
