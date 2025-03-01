@@ -34,8 +34,8 @@ export function DefaultHero() {
             />
           </svg>
         </a>
-        <h1 className="mb-8 text-4xl font-black leading-none  bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text md:text-6xl ">
-          Enterprise Solutions Without the Overhead Cost
+        <h1 className="mb-8 text-5xl font-bold leading-none  bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text md:text-6xl ">
+          Enterprise Solutions Without the Overhead&nbsp;Cost
         </h1>
         <p className="mb-8  text-base md:text-lg font-normal text-gray-800/70 dark:text-gray-200/40 sm:px-16 lg:text-xl xl:px-48">
           Everything you'd expect from an agency—resources, expertise, and

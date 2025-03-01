@@ -4,9 +4,9 @@
 
 import "./globals.css";
 
-import { Poppins } from "next/font/google";
+import { Roboto } from "next/font/google";
 
-const plus = Poppins({
+const plus = Roboto({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "700", "900"],
 });
