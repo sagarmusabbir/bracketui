@@ -116,7 +116,7 @@ import Image from "next/image";
 
 const Features = () => {
   return (
-    <section className="space-y-8 py-12 sm:py-16 md:py-20">
+    <section className="space-y-8 py-8 sm:py-16 lg:py-16">
       <div className="lg:flex items-center justify-center gap-4 space-y-2 lg:space-y-0">
         <h2 className="font-bold text-center text-3xl sm:text-4xl lg:text-5xl text-gray-950 dark:text-white">
           Key Features

@@ -9,11 +9,11 @@ export function DefaultHero() {
         <a
           href="#"
           // className="mb-7 inline-flex items-center justify-between  rounded-full  px-4 py-1 text-gray-700   dark:text-white bg-gradient-to-r text-sm dark:from-gray-900 dark:via-gray-800/50 dark:to-gray-900 from-gray-100 via-gray-50 to-gray-100 hover:opacity-90"
-          className="mb-7 inline-flex items-center justify-between rounded-full bg-gray-100 p-1 pr-4 text-sm text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
+          className="mb-7 inline-flex items-center justify-between rounded-full bg-gray-50 p-1 pr-4 text-xs md:text-sm text-gray-700 dark:bg-gray-900 dark:text-white transition-opacity duration-200 ease-in-out motion-reduce:transition-none motion-reduce:hover:transform-none hover:opacity-90"
         >
           <span
             // className="mr-3 rounded-full dark:bg-slate-200 bg-gray-700 text-white    px-4 py-1.5 text-xs  dark:text-gray-800 "
-            className="mr-3 rounded-full  px-4 py-1.5 text-xs text-white"
+            className="mr-3 rounded-full text-xs  px-4 py-1.5  text-white bg-gray-500"
           >
             New
           </span>
@@ -34,7 +34,7 @@ export function DefaultHero() {
             />
           </svg>
         </a>
-        <h1 className="mb-8 text-5xl font-bold leading-none  bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text md:text-6xl ">
+        <h1 className="mb-4 text-[2.80rem] md:text-5xl font-black leading-none  bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text lg:text-6xl ">
           Enterprise Solutions Without the Overhead&nbsp;Cost
         </h1>
         <p className="mb-8  text-base md:text-lg font-normal text-gray-800/70 dark:text-gray-200/40 sm:px-16 lg:text-xl xl:px-48">
@@ -44,8 +44,12 @@ export function DefaultHero() {
           businesses.
         </p>
 
-        <div className="mb-8  flex justify-center space-x-4  ">
-          <Button href="#" size="lg" className=" hidden md:flex items-center">
+        <div className=" mb-16  flex justify-center space-x-4  ">
+          <Button
+            href="#"
+            size="xl"
+            className=" hidden md:flex items-center gap-2"
+          >
             Let's Grow
             <svg
               className="size-4"
@@ -60,7 +64,11 @@ export function DefaultHero() {
               />
             </svg>
           </Button>
-          <Button outline size="lg" className="hidden md:flex items-center">
+          <Button
+            outline
+            size="xl"
+            className="hidden md:flex items-center gap-2"
+          >
             <svg
               className=" size-4"
               fill="currentColor"
@@ -76,7 +84,7 @@ export function DefaultHero() {
 
           <Button
             href="#"
-            size="md"
+            size="lg"
             className="md:hidden flex items-center justify-center gap-2"
           >
             Let's Grow
@@ -95,7 +103,7 @@ export function DefaultHero() {
           </Button>
           <Button
             outline
-            size="md"
+            size="lg"
             className=" md:hidden flex items-center justify-center gap-2"
           >
             <svg
@@ -118,13 +126,13 @@ export function DefaultHero() {
               href="#"
               className="mb-5 mr-5 hover:text-gray-800 dark:hover:text-gray-400 lg:mb-0"
             >
-              <Nextjs />
+              <Tailwind />
             </a>
             <a
               href="#"
               className="mb-5 mr-5 hover:text-gray-800 dark:hover:text-gray-400 lg:mb-0"
             >
-              <Tailwind />
+              <Nextjs />
             </a>
             <a
               href="#"

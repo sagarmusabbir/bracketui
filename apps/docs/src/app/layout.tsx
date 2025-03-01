@@ -4,11 +4,13 @@
 
 import "./globals.css";
 
-import { Roboto } from "next/font/google";
+import { Roboto_Flex } from "next/font/google";
 
-const plus = Roboto({
+const myFont = Roboto_Flex({
   subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "700", "900"],
+
+  display: "swap",
+  preload: true,
 });
 
 // import Header from "..npm run dev
@@ -28,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${plus.className}    antialiased dark:bg-gray-950 dark:text-white`}
+      className={`${myFont.className}    antialiased dark:bg-gray-950 dark:text-white`}
       suppressHydrationWarning
     >
       <head>

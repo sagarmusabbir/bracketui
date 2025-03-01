@@ -112,7 +112,7 @@ const Button = forwardRef(function Button<T extends ElementType = "button">(
   // Variant classes with different hover opacities
   const variantButton = outline
     ? "border border-gray-200 dark:border-gray-800 text-gray-950 dark:text-white bg-gray-50/70 dark:bg-gray-950/60 [@media(hover:hover)]:hover:bg-gray-100/80 [@media(hover:hover)]:dark:hover:bg-gray-900/80 active:bg-gray-100/70 dark:active:bg-gray-900/70"
-    : "border-none bg-gray-950 dark:bg-gray-100 text-white dark:text-gray-950 [@media(hover:hover)]:hover:opacity-90 active:opacity-80";
+    : "border-none bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-white dark:text-gray-950 [@media(hover:hover)]:hover:opacity-90 active:opacity-80";
 
   // Size classes with fixed heights
   const sizeClasses = clsx({
