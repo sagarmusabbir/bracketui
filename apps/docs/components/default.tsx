@@ -10,7 +10,7 @@ export function DefaultHero() {
           href="#"
           className="mb-6 inline-flex items-center justify-between rounded-full  p-1 pr-4 text-sm text-gray-700   dark:text-white bg-gradient-to-r dark:from-gray-900 dark:via-gray-800/50 dark:to-gray-900 from-gray-100 via-gray-50 to-gray-100 hover:opacity-90"
         >
-          <span className="mr-3 rounded-full dark:bg-slate-200 bg-gray-700 text-slate-200    px-3 py-1 text-xs  dark:text-gray-700 ">
+          <span className="mr-3 rounded-full dark:bg-slate-200 bg-slate-600 text-white    px-3 py-1 text-xs  dark:text-gray-800 ">
             New
           </span>
           &nbsp;
