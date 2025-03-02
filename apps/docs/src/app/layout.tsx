@@ -3,22 +3,28 @@
 // import { Navbar } from "@thirdbracket/core";
 
 import "./globals.css";
+import localFont from "next/font/local";
 
-import { Roboto_Flex } from "next/font/google";
+// import { Roboto_Flex } from "next/font/google";
 
-const myFont = Roboto_Flex({
-  subsets: ["latin"],
+// const myFont = Roboto({
+//   subsets: ["latin"],
 
+//   display: "swap",
+//   preload: true,
+// });
+
+const myFont = localFont({
+  src: "./Roboto-VariableFont.ttf",
   display: "swap",
-  preload: true,
 });
 
 // import Header from "..npm run dev
 // /../components/Header";
 import { ThemeScript } from "@thirdbracket/bracketui";
-import SiteFooter from "../../components/Footer";
+import SiteFooter from "../../components/Footer/Footer";
 
-import HeaderBal from "../../components/Nav";
+import Header from "../../components/Header/Header";
 
 // import { Navbar } from "@thirdbracket/core";
 
@@ -30,7 +36,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${myFont.className}    antialiased dark:bg-gray-950 dark:text-white`}
+      className={`${myFont.className} antialiased dark:bg-gray-950 dark:text-white`}
       suppressHydrationWarning
     >
       <head>
@@ -39,7 +45,7 @@ export default function RootLayout({
       <body suppressHydrationWarning>
         {/* <MegaHeader /> */}
 
-        <HeaderBal />
+        <Header />
 
         <main className="min-h-screen pt-16 lg:pt-24 dark:bg-gray-950 dark:text-white">
           {children}

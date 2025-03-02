@@ -5,6 +5,7 @@ import { createContext, useContext, ReactNode } from "react";
 interface NavbarContextType {
   setDesktopNav: (children: ReactNode) => void;
   setMobileNav: (children: ReactNode) => void;
+  closeMenu: () => void;
 }
 
 // Create the context

@@ -8,16 +8,20 @@ import {
   FooterText,
   ThemeToggle,
 } from "@thirdbracket/bracketui";
-import { BiPhone } from "react-icons/bi";
-import { MdEmail } from "react-icons/md";
-import { RiFacebookLine, RiLinkedinLine } from "react-icons/ri";
+
+import {
+  RiFacebookLine,
+  RiLinkedinLine,
+  RiMailLine,
+  RiPhoneLine,
+} from "react-icons/ri";
 
 const SiteFooter = () => {
   return (
     <Footer>
       <FooterSection className="col-span-2">
-        <FooterBrand logo="/path.svg">
-          Making the web a better place with beautiful UI components.
+        <FooterBrand logo="/logo.svg">
+          Making the web a better place with Third Bracket Solutions.
         </FooterBrand>
         <div className="flex  gap-x-4 justify-start items-center">
           <FooterSocial
@@ -32,12 +36,12 @@ const SiteFooter = () => {
           />
           <FooterSocial
             href="mailto:your@email.com"
-            icon={<MdEmail size={20} />}
+            icon={<RiMailLine size={20} />}
             label="Email"
           />
           <FooterSocial
             href="tel:+1234567890"
-            icon={<BiPhone size={18} />}
+            icon={<RiPhoneLine size={18} />}
             label="Phone"
           />
         </div>

@@ -19,15 +19,12 @@ export default function Page() {
   return (
     <main className="bg-white dark:bg-gray-950 text-gray-950 dark:text-white">
       <Bracket>
-        {/* <DefaultHero />
-        <Feature />
-        <MasonryLayout />
-        <Gallery />
-
-        <Subscription /> */}
         <section>
           <div className="py-8 lg:py-16 mx-auto space-y-8">
-            <h3 className="text-3xl text-gray-800 dark:text-gray-200 mb-8 ">
+            <h1 className="mb-4 text-[2.80rem] md:text-5xl font-extrabold leading-none  bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text lg:text-6xl ">
+              Enterprise Solutions Without the Overhead&nbsp;Cost
+            </h1>
+            <h3 className="text-4xl text-gray-800 dark:text-gray-200 mb-8 font-bold">
               Buttons
             </h3>
             <div className="flex flex-wrap gap-4 ">

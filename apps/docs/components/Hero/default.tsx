@@ -1,6 +1,6 @@
 import { Button } from "@thirdbracket/bracketui";
 
-import { Nextjs, Tailwind, Vercel } from "./icons";
+import { Nextjs, Tailwind, Vercel } from "../icons";
 
 export function DefaultHero() {
   return (
@@ -8,13 +8,9 @@ export function DefaultHero() {
       <div className="mx-auto max-w-screen-xl  py-8 text-center  lg:py-16">
         <a
           href="#"
-          // className="mb-7 inline-flex items-center justify-between  rounded-full  px-4 py-1 text-gray-700   dark:text-white bg-gradient-to-r text-sm dark:from-gray-900 dark:via-gray-800/50 dark:to-gray-900 from-gray-100 via-gray-50 to-gray-100 hover:opacity-90"
-          className="mb-7 inline-flex items-center justify-between rounded-full bg-gray-50 p-1 pr-4 text-xs md:text-sm text-gray-700 dark:bg-gray-900 dark:text-white transition-opacity duration-200 ease-in-out motion-reduce:transition-none motion-reduce:hover:transform-none hover:opacity-90"
+          className="mb-7 inline-flex items-center justify-between rounded-full bg-gray-50 p-0.5 pr-2 text-xs   text-gray-700 dark:bg-gray-900 dark:text-white transition-opacity duration-200 ease-in-out motion-reduce:transition-none motion-reduce:hover:transform-none hover:opacity-90"
         >
-          <span
-            // className="mr-3 rounded-full dark:bg-slate-200 bg-gray-700 text-white    px-4 py-1.5 text-xs  dark:text-gray-800 "
-            className="mr-3 rounded-full text-xs  px-4 py-1.5  text-white bg-gray-500"
-          >
+          <span className="mr-3 rounded-full text-xs  px-4 py-[0.31rem]  text-white bg-gray-500">
             New
           </span>
           &nbsp;
