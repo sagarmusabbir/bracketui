@@ -10,7 +10,7 @@ export function DefaultHero() {
           href="#"
           className="mb-7 inline-flex items-center justify-between rounded-full bg-gray-50 p-0.5 pr-2 text-xs   text-gray-700 dark:bg-gray-900 dark:text-white transition-opacity duration-200 ease-in-out motion-reduce:transition-none motion-reduce:hover:transform-none hover:opacity-90"
         >
-          <span className="mr-3 rounded-full text-xs  px-4 py-[0.31rem]  text-white bg-gray-500">
+          <span className="mr-3 rounded-full text-xs  px-4 py-[0.31rem]  text-white bg-gray-400">
             New
           </span>
           &nbsp;
@@ -30,7 +30,7 @@ export function DefaultHero() {
             />
           </svg>
         </a>
-        <h1 className="mb-4 text-[2.80rem] md:text-5xl font-black leading-none  bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text lg:text-6xl ">
+        <h1 className="mb-4 text-[2.80rem] md:text-5xl font-extrabold leading-none  bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text lg:text-6xl ">
           Enterprise Solutions Without the Overhead&nbsp;Cost
         </h1>
         <p className="mb-8  text-base md:text-lg font-normal text-gray-800/70 dark:text-gray-200/40 sm:px-16 lg:text-xl xl:px-48">
