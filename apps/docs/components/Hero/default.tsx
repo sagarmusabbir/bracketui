@@ -30,7 +30,7 @@ export function DefaultHero() {
             />
           </svg>
         </a>
-        <h1 className="mb-4 text-[2.80rem] md:text-5xl font-extrabold leading-normal  bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text lg:text-6xl ">
+        <h1 className="mb-4 text-[2.80rem]/[3rem] md:text-5xl font-extrabold   bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text lg:text-6xl ">
           Enterprise Solutions Without the Overhead&nbsp;Cost
         </h1>
         <p className="mb-8  text-base md:text-lg font-normal text-gray-800/70 dark:text-gray-200/40 sm:px-16 lg:text-xl xl:px-48">
