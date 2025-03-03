@@ -16,6 +16,7 @@ import localFont from "next/font/local";
 
 const myFont = localFont({
   src: "./Roboto-VariableFont.ttf",
+subsets: ["latin"],
   display: "swap",
 });
 
