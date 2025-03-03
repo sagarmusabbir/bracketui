@@ -5,18 +5,16 @@ import { Nextjs, Tailwind, Vercel } from "../icons";
 export function DefaultHero() {
   return (
     <section>
-      <div className="mx-auto max-w-screen-xl  py-8 text-center  lg:py-16">
+      <div className="mx-auto max-w-screen-xl  py-16 md:py-18 lg:py-20 text-center   space-y-8 md:space-y-10 lg:space-y-12">
         <a
           href="#"
-          className="mb-7 inline-flex items-center justify-between rounded-full bg-gray-50 p-0.5 pr-2 text-xs   text-gray-700 dark:bg-gray-900 dark:text-white transition-opacity duration-200 ease-in-out motion-reduce:transition-none motion-reduce:hover:transform-none hover:opacity-90"
+          className=" inline-flex items-center justify-between rounded-full bg-gray-200 p-0.5 pr-2    text-gray-800 dark:bg-gray-900 dark:text-gray-300 transition-opacity duration-200 ease-in-out motion-reduce:transition-none motion-reduce:hover:transform-none hover:opacity-90 text-xs"
         >
-          <span className="mr-3 rounded-full text-xs  px-4 py-[0.31rem]  text-white bg-gray-400">
+          <span className="mr-3 rounded-full text-xs  px-2 py-0.5   bg-white dark:bg-gray-700">
             New
           </span>
           &nbsp;
-          <span className="text-xs md:text-sm font-medium">
-            Bracket UI version 4 is out! See what's new
-          </span>
+          <span>Bracket UI version 4 is out! See what's new</span>
           <svg
             className="ml-2 size-4 md:size-5"
             fill="currentColor"
@@ -30,17 +28,19 @@ export function DefaultHero() {
             />
           </svg>
         </a>
-        <h1 className="mb-4 text-[2.80rem]/[3rem] md:text-5xl font-extrabold   bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text lg:text-6xl ">
-          Enterprise Solutions Without the Overhead&nbsp;Cost
-        </h1>
-        <p className="mb-8  text-base md:text-lg font-normal text-gray-800/70 dark:text-gray-200/40 sm:px-16 lg:text-xl xl:px-48">
-          Everything you'd expect from an agency—resources, expertise, and
-          strategy—at a price you'd normally pay a freelancer. Get custom web
-          development and digital marketing designed for startups and growing
-          businesses.
-        </p>
+        <div>
+          <h1 className=" text-[2.80rem]/[3rem] md:text-5xl font-extrabold   bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text lg:text-6xl mb-6">
+            Enterprise Solutions Without the Overhead&nbsp;Cost
+          </h1>
+          <p className="text-base md:text-lg font-normal text-gray-800/70 dark:text-gray-200/40 sm:px-16 lg:text-xl xl:px-48">
+            Everything you'd expect from an agency—resources, expertise, and
+            strategy—at a price you'd normally pay a freelancer. Get custom web
+            development and digital marketing designed for startups and growing
+            businesses.
+          </p>
+        </div>
 
-        <div className=" mb-16  flex justify-center space-x-4  ">
+        <div className="  flex justify-center space-x-4  ">
           <Button
             href="#"
             size="xl"
@@ -113,11 +113,11 @@ export function DefaultHero() {
             Get Consultation
           </Button>
         </div>
-        <div className="mx-auto px-4 text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
+        <div className="mx-auto py-4  px-4 text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
           <span className="font-semibold uppercase text-gray-400">
             FEATURED IN
           </span>
-          <div className="mt-8 flex flex-wrap items-center justify-center text-gray-500 sm:justify-between">
+          <div className="mt-6 flex flex-wrap items-center justify-center text-gray-500 sm:justify-between">
             <a
               href="#"
               className="mb-5 mr-5 hover:text-gray-800 dark:hover:text-gray-400 lg:mb-0"
