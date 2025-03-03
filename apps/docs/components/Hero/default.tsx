@@ -150,9 +150,9 @@ export function DefaultHero() {
         {/* Banner*/}
         <a
           href="#"
-          className="inline-flex items-center justify-between rounded-full bg-gray-200 p-0.5 pr-2 text-gray-800 dark:bg-gray-900 dark:text-gray-300 transition-opacity duration-200 ease-in-out motion-reduce:transition-none motion-reduce:hover:transform-none hover:opacity-90 text-xs"
+          className="inline-flex items-center justify-between rounded-full bg-gray-100 p-0.5 pr-2 text-gray-800 dark:bg-gray-900 dark:text-gray-300 transition-opacity duration-200 ease-in-out motion-reduce:transition-none motion-reduce:hover:transform-none hover:opacity-85 text-xs"
         >
-          <span className="mr-3 rounded-full text-xs px-2 py-0.5 bg-white dark:bg-gray-700">
+          <span className="mr-3 rounded-full text-xs px-2 py-0.5 text-white bg-gray-800 dark:text-gray-800 dark:bg-gray-200">
             New
           </span>
           &nbsp;
@@ -173,7 +173,7 @@ export function DefaultHero() {
 
         {/* Content section*/}
         <div>
-          <h1 className="text-[2.80rem]/[2.85rem] md:text-5xl font-extrabold bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text lg:text-6xl mb-6">
+          <h1 className="text-[2.75rem]/[2.75rem] md:text-5xl font-black bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text lg:text-6xl mb-6">
             Enterprise Solutions Without the Overhead&nbsp;Cost
           </h1>
           <p className="text-base md:text-lg font-normal text-gray-800/70 dark:text-gray-200/40 sm:px-16 lg:text-xl xl:px-48">
@@ -225,7 +225,7 @@ export function DefaultHero() {
           {/* Mobile buttons */}
           <Button
             href="#"
-            size="lg"
+            size="md"
             className="md:hidden flex items-center justify-center gap-2"
           >
             Let's Grow
@@ -244,7 +244,7 @@ export function DefaultHero() {
           </Button>
           <Button
             outline
-            size="lg"
+            size="md"
             className="md:hidden flex items-center justify-center gap-2"
           >
             <svg

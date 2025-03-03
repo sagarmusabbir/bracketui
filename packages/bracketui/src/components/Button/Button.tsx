@@ -107,7 +107,7 @@ const Button = forwardRef(function Button<T extends ElementType = "button">(
 ) {
   // Base styles
   const baseClasses =
-    "inline-flex items-center justify-center font-medium transition-opacity duration-200 ease-in-out motion-reduce:transition-none whitespace-nowrap motion-reduce:hover:transform-none focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600";
+    "inline-flex items-center justify-center font-semibold transition-opacity duration-200 ease-in-out motion-reduce:transition-none whitespace-nowrap motion-reduce:hover:transform-none focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600";
 
   // Variant classes with different hover opacities
   const variantButton = outline
