@@ -14,10 +14,60 @@ import localFont from "next/font/local";
 //   preload: true,
 // });
 
-const myFont = localFont({
-  src: "./Roboto-VariableFont.ttf",
+// const myFont = localFont({
+//   src: "./Roboto-VariableFont.ttf",
 
-  display: "swap",
+//   display: "swap",
+// });
+
+const roboto = localFont({
+  src: [
+    {
+      path: "./Roboto-Thin.ttf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "./Roboto-ExtraLight.ttf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "./Roboto-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./Roboto-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./Roboto-Medium.ttf",
+      weight: "500",
+      style: "italic",
+    },
+    {
+      path: "./Roboto-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "./Roboto-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./Roboto-ExtraBold.ttf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "./Roboto-Black.ttf",
+      weight: "900",
+      style: "normal",
+    },
+  ],
 });
 
 // import Header from "..npm run dev
@@ -37,7 +87,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${myFont.className} antialiased dark:bg-gray-950 dark:text-white`}
+      className={`${roboto.className} antialiased dark:bg-gray-950 dark:text-white`}
       suppressHydrationWarning
     >
       <head>
