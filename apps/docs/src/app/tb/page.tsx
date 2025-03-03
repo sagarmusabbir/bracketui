@@ -13,14 +13,19 @@ import { FeatureIconsAndCTASection } from "../../../components/Feature/icon-list
 import { FeatureListWithIconsSection } from "../../../components/Feature/icons-list";
 import { ImageWithFeatureListAndCTAsSection } from "../../../components/Feature/image-list";
 import { RoundedIconsFeatureSection } from "../../../components/Feature/rounded-icons";
+import { CardCTAsWithIconsSection } from "../../../components/CTO/cards-icons";
+import { TwoCardsAndImagesCTASection } from "../../../components/CTO/two-cards";
 
 export default function TBPage() {
   return (
     <main className="bg-white dark:bg-gray-950 text-gray-950 dark:text-white">
       <Bracket>
         <DefaultHero />
-        <AlternateImageWithFeatureListSection />
+        <CardCTAsWithIconsSection />
+        <TwoCardsAndImagesCTASection />
+
         <FeatureListCardsSection />
+        <AlternateImageWithFeatureListSection />
         <ComparisonCardsFeatureSection />
         <FeatureListWithCTAsSection />
         <DescriptionWithFeatureListIconsSection />

@@ -1,4 +1,5 @@
 import { Card } from "@thirdbracket/bracketui";
+import { GrActions, GrUserManager } from "react-icons/gr";
 
 export function FeatureListCardsSection() {
   return (
@@ -13,8 +14,8 @@ export function FeatureListCardsSection() {
             and capital can unlock long-term value and drive economic growth.
           </p>
         </div>
-        <div className="space-y-8 md:grid md:grid-cols-2 md:gap-8 md:space-y-0 lg:grid-cols-3 xl:grid-cols-4 xl:gap-8">
-          <Card className="dark:border-0">
+        <div className="space-y-8 md:grid md:grid-cols-2 md:gap-8 md:space-y-0 lg:grid-cols-3 ">
+          {/* <Card>
             <div className="flex h-10 w-10 items-center justify-center rounded bg-primary-100 dark:bg-primary-900 lg:h-12 lg:w-12">
               <svg
                 className="h-5 w-5 text-primary-600 dark:text-primary-300 lg:h-6 lg:w-6"
@@ -36,7 +37,7 @@ export function FeatureListCardsSection() {
               marketing plan.
             </p>
           </Card>
-          <Card className="dark:border-0">
+          <Card>
             <div className="flex h-10 w-10 items-center justify-center rounded bg-primary-100 dark:bg-primary-900 lg:h-12 lg:w-12">
               <svg
                 className="h-5 w-5 text-primary-600 dark:text-primary-300 lg:h-6 lg:w-6"
@@ -53,7 +54,7 @@ export function FeatureListCardsSection() {
               structured workflows and custom permissions made for you.
             </p>
           </Card>
-          <Card className="dark:border-0">
+          <Card>
             <div className="flex h-10 w-10 items-center justify-center rounded bg-primary-100 dark:bg-primary-900 lg:h-12 lg:w-12">
               <svg
                 className="h-5 w-5 text-primary-600 dark:text-primary-300 lg:h-6 lg:w-6"
@@ -77,7 +78,7 @@ export function FeatureListCardsSection() {
               up with hundreds of new templates to help you get started.
             </p>
           </Card>
-          <Card className="dark:border-0">
+          <Card>
             <div className="flex h-10 w-10 items-center justify-center rounded bg-primary-100 dark:bg-primary-900 lg:h-12 lg:w-12">
               <svg
                 className="h-5 w-5 text-primary-600 dark:text-primary-300 lg:h-6 lg:w-6"
@@ -99,7 +100,7 @@ export function FeatureListCardsSection() {
               month-end close and quarterly budgeting.
             </p>
           </Card>
-          <Card className="dark:border-0">
+          <Card>
             <div className="flex h-10 w-10 items-center justify-center rounded bg-primary-100 dark:bg-primary-900 lg:h-12 lg:w-12">
               <svg
                 className="h-5 w-5 text-primary-600 dark:text-primary-300 lg:h-6 lg:w-6"
@@ -118,7 +119,7 @@ export function FeatureListCardsSection() {
               product with real cross-company collaboration.
             </p>
           </Card>
-          <Card className="dark:border-0">
+          <Card>
             <div className="flex h-10 w-10 items-center justify-center rounded bg-primary-100 dark:bg-primary-900 lg:h-12 lg:w-12">
               <svg
                 className="h-5 w-5 text-primary-600 dark:text-primary-300 lg:h-6 lg:w-6"
@@ -139,7 +140,7 @@ export function FeatureListCardsSection() {
               structured workflows built for all efficient teams and individual.
             </p>
           </Card>
-          <Card className="dark:border-0">
+          <Card>
             <div className="flex h-10 w-10 items-center justify-center rounded bg-primary-100 dark:bg-primary-900 lg:h-12 lg:w-12">
               <svg
                 className="h-5 w-5 text-primary-600 dark:text-primary-300 lg:h-6 lg:w-6"
@@ -158,8 +159,8 @@ export function FeatureListCardsSection() {
               product with real cross-company collaboration.
             </p>
           </Card>
-          <Card className="dark:border-0">
-            <div className="flex h-10 w-10 items-center justify-center rounded bg-primary-100 dark:bg-primary-900 lg:h-12 lg:w-12">
+          <Card>
+            <div className="flex h-10 w-10 items-center justify-center rounded  lg:h-12 lg:w-12 ">
               <svg
                 className="h-5 w-5 text-primary-600 dark:text-primary-300 lg:h-6 lg:w-6"
                 fill="currentColor"
@@ -178,6 +179,59 @@ export function FeatureListCardsSection() {
               Keep your company’s lights on with customizable, iterative, and
               structured workflows built for all efficient teams and individual.
             </p>
+          </Card> */}
+          <Card
+            cover={
+              <GrActions className="h-7 w-7 text-gray-600 dark:text-gray-300 lg:h-8 lg:w-8 ml-4 mt-4 fill-current" />
+            }
+            header="Expertise & Flexibility"
+          >
+            Experience agency expertise with freelancer flexibility with an
+            unified team of top-rated professionals.
+          </Card>
+          <Card
+            cover={
+              <GrActions className="h-7 w-7 text-gray-600 dark:text-gray-300 lg:h-8 lg:w-8 ml-4 mt-4 fill-current" />
+            }
+            header="Modern Stack"
+          >
+            Delivering the best of both worlds: Next.js and WordPress.
+          </Card>
+          <Card
+            cover={
+              <GrActions className="h-7 w-7 text-gray-600 dark:text-gray-300 lg:h-8 lg:w-8 ml-4 mt-4 fill-current" />
+            }
+            header="Built for Growth"
+          >
+            We don’t just build websites; from the start, we ensure your site is
+            optimized for SEO.
+          </Card>
+          <Card
+            cover={
+              <GrActions className="h-7 w-7 text-gray-600 dark:text-gray-300 lg:h-8 lg:w-8 ml-4 mt-4 fill-current" />
+            }
+            header="Seamless Collaboration"
+          >
+            Unlike freelancers working in silos, our developers, marketers, and
+            designers collaborate seamlessly.
+          </Card>
+          <Card
+            cover={
+              <GrActions className="h-7 w-7 text-gray-600 dark:text-gray-300 lg:h-8 lg:w-8 ml-4 mt-4 fill-current" />
+            }
+            header="Operations"
+          >
+            Keep your company’s lights on with customizable, iterative, and
+            structured workflows built for all efficient teams and individual.
+          </Card>
+          <Card
+            cover={
+              <GrActions className="h-7 w-7 text-gray-600 dark:text-gray-300 lg:h-8 lg:w-8 ml-4 mt-4 fill-current" />
+            }
+            header="Operations"
+          >
+            Keep your company’s lights on with customizable, iterative, and
+            structured workflows built for all efficient teams and individual.
           </Card>
         </div>
       </div>
