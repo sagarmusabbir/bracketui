@@ -134,7 +134,7 @@ export function DefaultHero() {
           {/* Mobile buttons */}
           <Button
             href="#"
-            size="lg"
+            size="md"
             className="md:hidden flex items-center justify-center gap-2"
           >
             Let's Grow
@@ -153,7 +153,7 @@ export function DefaultHero() {
           </Button>
           <Button
             outline
-            size="lg"
+            size="md"
             className="md:hidden flex items-center justify-center gap-2"
           >
             <svg
