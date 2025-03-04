@@ -50,7 +50,7 @@ export function DefaultHero() {
           <h1 className="text-4xl  md:text-[3.25rem] font-black bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text lg:text-[3.90rem] leading-none mb-8     ">
             Enterprise Solutions Without the Overhead&nbsp;Cost
           </h1>
-          <p className="text-sm/7 md:text-base/8  text-gray-900/70 dark:text-gray-50/60 sm:px-16 xl:px-48 lg:text-lg/8 px-4">
+          <p className="text-sm/6 md:text-base/8  text-gray-900/70 dark:text-gray-50/60 sm:px-16 xl:px-48 lg:text-lg/8 px-4">
             Everything you'd expect from an agency; resources, expertise, and
             strategy; at a price you'd normally pay a freelancer. Get custom web
             development and digital marketing designed for startups and growing
