@@ -1,5 +1,5 @@
 import { Card } from "@thirdbracket/bracketui";
-import { GrActions, GrUserManager } from "react-icons/gr";
+import { GrActions } from "react-icons/gr";
 
 export function FeatureListCardsSection() {
   return (
