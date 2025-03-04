@@ -89,13 +89,13 @@ export function FeatureOne() {
   return (
     <section className="py-8 md:py-16 ">
       {/* Header Container */}
-      <div className="mx-auto max-w-screen-xl px-4">
+      <div className="mx-auto max-w-screen-xl ">
         {/* Title group with flex layout on large screens */}
-        <div className="mx-auto mb-8 lg:mb-16 max-w-4xl lg:max-w-6xl lg:flex lg:items-center lg:justify-between lg:gap-8">
-          <h2 className="mb-4 text-3xl lg:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white lg:mb-0 lg:max-w-2xl text-center lg:text-right">
+        <div className="mx-auto mb-8 lg:mb-16 max-w-md sm:max-w-4xl lg:max-w-6xl lg:flex lg:items-center lg:justify-between lg:gap-8">
+          <h2 className="mb-4 text-3xl leading-none lg:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white lg:mb-0 text-center lg:text-right">
             Think Your Business Can't Afford a Professional Start?
           </h2>
-          <p className="text-gray-500 dark:text-gray-400 lg:text-xl lg:max-w-xl lg:flex-shrink-0 text-center lg:text-left">
+          <p className="text-gray-500 dark:text-gray-400 lg:text-xl  lg:max-w-xl lg:flex-shrink-0 text-center lg:text-left">
             Backed by a team of top-rated freelancers, now you can get the
             professional start your business deserves.
           </p>

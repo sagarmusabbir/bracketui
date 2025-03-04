@@ -225,10 +225,10 @@ const Header: FC = () => {
           </Navlink>
           <ThemeToggle />
         </NavItem>
-        <div className="md:hidden">
+        {/* <div className="md:hidden">
           {" "}
           <ThemeToggle />
-        </div>
+        </div> */}
         <MobileNav>
           <div className="space-y-2 py-1.5">
             <Navlink as={Link} href="#">

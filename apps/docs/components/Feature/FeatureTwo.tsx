@@ -3,13 +3,13 @@ import { GrActions } from "react-icons/gr";
 
 export function FeatureTwo() {
   return (
-    <section>
-      <div className="mx-auto max-w-screen-xl  py-8 md:py-16 ">
-        <div className="mx-auto mb-8 max-w-screen-md text-center lg:mb-16">
+    <section className="py-8 md:py-16 ">
+      <div className="mx-auto max-w-screen-xl  ">
+        <div className="mx-auto mb-8 max-w-md sm:max-w-4xl lg:max-w-6xl text-center lg:mb-16">
           <h2 className="mb-4 text-3xl lg:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-            Secure platform, secure data
+            Best of Both Worlds, the Perfect&nbsp;Middle&nbsp;Ground
           </h2>
-          <p className="text-gray-500 dark:text-gray-400 lg:text-xl">
+          <p className="text-gray-500 dark:text-gray-400 lg:text-xl  ">
             Here at Flowbite we focus on markets where technology, innovation,
             and capital can unlock long-term value and drive economic growth.
           </p>
