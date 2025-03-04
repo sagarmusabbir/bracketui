@@ -46,7 +46,7 @@ export function DefaultHero() {
         </a>
 
         {/* Content section*/}
-        <div className="max-w-md sm:max-w-4xl  lg:max-w-screen-xl mx-auto text-center">
+        <div className="max-w-md sm:max-w-4xl  lg:max-w-screen-xl mx-auto  md:text-center">
           <h1 className="text-[2.60rem]/[2.70rem]  md:text-[3.25rem]/[3.25rem] font-black bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text lg:text-[3.90rem]/[3.90rem]  mb-8     ">
             Enterprise Solutions Without the Overhead&nbsp;Cost
           </h1>
