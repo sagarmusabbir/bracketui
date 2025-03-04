@@ -10,9 +10,11 @@ export function DefaultHero() {
 
         <a
           href="#"
-          className="inline-flex items-center justify-between rounded-full bg-gray-50 
+          className="inline-flex items-center justify-between rounded-full  
     p-1 pr-3 
-    text-gray-700 dark:bg-gray-900 dark:text-white 
+     bg-gradient-to-r from-slate-500/10 to-gray-500/10
+    backdrop-filter backdrop-blur-md
+    text-gray-700 dark:text-gray-300 
     transition-opacity duration-200 ease-in-out text-nowrap
     motion-reduce:transition-none motion-reduce:hover:transform-none 
     hover:opacity-90"
@@ -48,7 +50,7 @@ export function DefaultHero() {
           <h1 className="text-[2.70rem]/[2.75rem]  md:text-[3.25rem]/[3.35rem] font-black bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text lg:text-[3.90rem]/[4rem] mb-8      ">
             Enterprise Solutions Without the Overhead&nbsp;Cost
           </h1>
-          <p className="text-sm/[26px] md:text-base/7  text-gray-800/70 dark:text-gray-200/60 sm:px-16 px-4 xl:px-48 lg:text-lg/8 ">
+          <p className="text-sm/[26px] md:text-base/7  text-gray-900/70 dark:text-gray-50/60 sm:px-16 px-4 xl:px-48 lg:text-lg/8 ">
             Everything you'd expect from an agency; resources, expertise, and
             strategy; at a price you'd normally pay a freelancer. Get custom web
             development and digital marketing designed for startups and growing
