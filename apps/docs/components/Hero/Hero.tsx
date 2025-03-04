@@ -5,7 +5,7 @@ import { Nextjs, Tailwind, Vercel } from "../icons";
 export function DefaultHero() {
   return (
     <section className="pt-12 lg:pt-12 pb-8 lg:pb-16">
-      <div className="mx-auto max-w-screen-2xl   text-center space-y-8 ">
+      <div className="mx-auto max-w-screen-2xl   md:text-center space-y-8 ">
         {/* Banner*/}
 
         <a
