@@ -48,7 +48,7 @@ const HeroSection: React.FC = () => {
       </h1>
 
       {/* Paragraph */}
-      <p className="text-gray-950/50 text-base/7 md:text-lg lg:text-xl/9 dark:text-gray-200/50 text-center px-4 font-light">
+      <p className="text-gray-950/50 text-base md:text-lg lg:text-xl dark:text-gray-200/50 text-center px-4 font-light">
         Everything you'd expect from an agency; resources, expertise, and
         strategy; at a price you'd normally pay a freelancer. Get{" "}
         <span className="font-bold">custom web development</span> and digital
