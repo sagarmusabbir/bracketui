@@ -107,20 +107,20 @@ const Button = forwardRef(function Button<T extends ElementType = "button">(
 ) {
   // Base styles
   const baseClasses =
-    "inline-flex items-center justify-center font-semibold transition-opacity duration-200 ease-in-out motion-reduce:transition-none whitespace-nowrap motion-reduce:hover:transform-none focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600";
+    "inline-flex items-center justify-center font-medium transition-opacity duration-200 ease-in-out motion-reduce:transition-none whitespace-nowrap motion-reduce:hover:transform-none focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600 rounded-lg";
 
   // Variant classes with different hover opacities
   const variantButton = outline
-    ? "border border-gray-200/80 dark:border-gray-800/70 text-gray-800 dark:text-gray-200  [@media(hover:hover)]:hover:bg-gray-100/80 [@media(hover:hover)]:dark:hover:bg-gray-900/80 active:bg-gray-100/70 dark:active:bg-gray-900/70"
-    : "border-none bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 dark:from-gray-100 dark:via-gray-200 dark:to-gray-100 text-gray-50 dark:text-gray-900 [@media(hover:hover)]:hover:opacity-90 active:opacity-80";
+    ? "border border-gray-500/40  text-gray-900 dark:text-gray-100  [@media(hover:hover)]:hover:bg-gray-200/40 [@media(hover:hover)]:dark:hover:bg-gray-800/40 active:bg-gray-100/70 dark:active:bg-gray-900/70"
+    : "border-none bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-100 dark:via-gray-200 dark:to-gray-100 text-white dark:text-black [@media(hover:hover)]:hover:opacity-90 active:opacity-80";
 
   // Size classes with fixed heights
   const sizeClasses = clsx({
-    "px-3 py-1 h-8 text-xs rounded-md": size === "xs",
-    "px-3.5 py-1.5 h-9 text-sm rounded-md": size === "sm",
-    "px-4 py-2 h-10 text-sm rounded-lg": size === "md",
-    "px-5 py-2.5 h-11 text-base rounded-lg": size === "lg",
-    "px-6 py-3 h-12  text-base rounded-lg": size === "xl",
+    "px-3 py-1.5  min-h-[1.75rem] text-xs ": size === "xs",
+    "px-4 py-2  min-h-[2.25rem] text-sm ": size === "sm",
+    "px-5 py-2.5  min-h-[2.75rem] text-base ": size === "md",
+    "px-6 py-3  min-h-[3.25rem] text-lg ": size === "lg",
+    "px-7 py-3.5  min-h-[3.75rem]  text-xl ": size === "xl",
   });
 
   // Disabled and Loading classes

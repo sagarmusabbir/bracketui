@@ -7,7 +7,7 @@ export const Logo = () => (
     width="205"
     height="25"
     viewBox="0 0 54.24 6.615"
-    className="h-4 md:h-5 w-auto dark:invert"
+    className="h-5 md:h-6 w-auto dark:invert"
   >
     <defs>
       <linearGradient id="logo-gradient" x1="0" x2="1" y1="0" y2="0">

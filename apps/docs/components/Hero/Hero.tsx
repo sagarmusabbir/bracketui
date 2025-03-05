@@ -5,7 +5,7 @@ import { Nextjs, Tailwind, Vercel } from "../icons";
 export function DefaultHero() {
   return (
     <section className="pt-12 lg:pt-12 pb-8 lg:pb-16">
-      <div className="mx-auto max-w-screen-2xl   md:text-center space-y-8 ">
+      <div className="mx-auto max-w-screen-2xl   text-center space-y-8 ">
         {/* Banner*/}
 
         <a
@@ -46,11 +46,11 @@ export function DefaultHero() {
         </a>
 
         {/* Content section*/}
-        <div className="max-w-md sm:max-w-4xl  lg:max-w-screen-xl mx-auto  md:text-center">
-          <h1 className="text-[2.60rem]/[2.70rem]  md:text-[3.25rem]/[3.25rem] font-black bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text lg:text-[3.90rem]/[3.90rem]  mb-8     ">
+        <div className="max-w-md sm:max-w-4xl  lg:max-w-screen-xl mx-auto text-center">
+          <h1 className="text-[2.80rem]  md:text-[3.25rem] font-black bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text lg:text-[3.90rem] leading-none mb-8     ">
             Enterprise Solutions Without the Overhead&nbsp;Cost
           </h1>
-          <p className="text-sm/6 md:text-base/7  text-gray-900/70 dark:text-gray-50/60 sm:px-16 xl:px-48 lg:text-lg/8 px-4">
+          <p className="text-sm/7 md:text-base/8  text-gray-900/70 dark:text-gray-50/60 sm:px-16 xl:px-48 lg:text-lg/8 px-4">
             Everything you'd expect from an agency; resources, expertise, and
             strategy; at a price you'd normally pay a freelancer. Get custom web
             development and digital marketing designed for startups and growing
@@ -134,7 +134,7 @@ export function DefaultHero() {
           {/* Mobile buttons */}
           <Button
             href="#"
-            size="md"
+            size="lg"
             className="md:hidden flex items-center justify-center gap-2"
           >
             Let's Grow
@@ -153,7 +153,7 @@ export function DefaultHero() {
           </Button>
           <Button
             outline
-            size="md"
+            size="lg"
             className="md:hidden flex items-center justify-center gap-2"
           >
             <svg

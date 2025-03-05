@@ -42,7 +42,7 @@ const Subscription = () => {
 
   return (
     <section className=" max-w-screen-xl  py-8   lg:py-16">
-      <div className="bg-gray-50 dark:bg-gray-900/30 border border-gray-100 dark:border-gray-800 rounded-lg p-6 md:p-8">
+      <div className="bg-gray-50 dark:bg-gray-900/30 border border-gray-100 dark:border-gray-800 rounded-lg p-6 md:p-8 lg:p-12">
         {state.isSuccess ? (
           <div className="text-center space-y-4">
             <div className="text-5xl mb-4">🎉</div>
@@ -54,8 +54,10 @@ const Subscription = () => {
         ) : (
           <div className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
-              <p className="text-gray-600 dark:text-gray-400 text-sm max-w-md">
+              <h2 className="text-3xl lg:text-4xl font-bold  text-gray-800 dark:text-gray-200 tracking-tight mb-4">
+                Stay Updated
+              </h2>
+              <p className="text-gray-950/50 text-base md:text-lg lg:text-xl dark:text-gray-200/50 max-w-md font-light">
                 Subscribe to our newsletter for updates and exclusive content
                 delivered straight to your inbox.
               </p>
@@ -75,7 +77,7 @@ const Subscription = () => {
                         email: e.target.value,
                       }))
                     }
-                    className="w-full pl-4 pr-32 h-[3.25rem] text-base rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900"
+                    className="w-full pl-4 pr-52 h-14 text-base rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900"
                   />
                   <div className="absolute right-2 top-1/2 -translate-y-1/2">
                     <Button

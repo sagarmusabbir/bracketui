@@ -1,17 +1,17 @@
 import { Card } from "@thirdbracket/bracketui";
-import { FcCollaboration } from "react-icons/fc";
+
 import { GiGrowth, GiStack, GiTeamIdea, GiUnlocking } from "react-icons/gi";
 import { GrActions, GrUserExpert } from "react-icons/gr";
 
 export function FeatureTwo() {
   return (
-    <section className="py-8 md:py-16 ">
+    <section className="py-8 sm:py-12 md:py-16">
       <div className="mx-auto max-w-screen-xl  ">
-        <div className="mx-auto mb-8 max-w-md sm:max-w-4xl lg:max-w-6xl text-center lg:mb-16">
-          <h2 className="mb-4 text-3xl lg:text-4xl font-bold  text-gray-800 dark:text-gray-200">
+        <div className="mx-auto mb-8 md:mb-12 lg:mb-16 xl:max-w-6xl lg:max-w-6xl  md:max-w-3xl max-w-lg sm:max-w-xl">
+          <h2 className="mb-4 md:mb-6  text-3xl lg:text-4xl font-bold  text-gray-800 dark:text-gray-200 tracking-tight px-4 lg:px-0 text-center leading-none">
             Best of Both Worlds-The Perfect&nbsp;Middle&nbsp;Ground
           </h2>
-          <p className="text-gray-900/70 dark:text-gray-50/60  lg:text-xl  ">
+          <p className="text-gray-950/50 text-base md:text-lg lg:text-xl dark:text-gray-200/50 text-center lg:text-left px-4 lg:px-0 font-light  ">
             Freelancers can be unreliable. Agencies charge a premium. We offer
             the expertise, structure, and execution of an agency—without the
             overhead cost.
@@ -19,6 +19,7 @@ export function FeatureTwo() {
         </div>
         <div className="space-y-8 md:grid md:grid-cols-2 md:gap-8 md:space-y-0 lg:grid-cols-3 ">
           <Card
+            size="md"
             cover={
               <GrUserExpert className="h-7 w-7 text-gray-600 dark:text-gray-300 lg:h-8 lg:w-8 ml-4 mt-4 fill-current" />
             }
@@ -29,6 +30,7 @@ export function FeatureTwo() {
             freelancers.
           </Card>
           <Card
+            size="md"
             cover={
               <GiStack className="h-7 w-7 text-gray-600 dark:text-gray-300 lg:h-8 lg:w-8 ml-4 mt-4 fill-current" />
             }
@@ -38,6 +40,7 @@ export function FeatureTwo() {
             customization tailored to your needs.
           </Card>
           <Card
+            size="md"
             cover={
               <GiGrowth className="h-7 w-7 text-gray-600 dark:text-gray-300 lg:h-8 lg:w-8 ml-4 mt-4 fill-current" />
             }
@@ -48,6 +51,7 @@ export function FeatureTwo() {
             marketing strategies to save you time in the long run.
           </Card>
           <Card
+            size="md"
             cover={
               <GiTeamIdea className="h-7 w-7 text-gray-600 dark:text-gray-300 lg:h-8 lg:w-8 ml-4 mt-4 fill-current" />
             }
@@ -58,6 +62,7 @@ export function FeatureTwo() {
             results-driven strategies tailored to your vision.
           </Card>
           <Card
+            size="md"
             cover={
               <GiUnlocking className="h-7 w-7 text-gray-600 dark:text-gray-300 lg:h-8 lg:w-8 ml-4 mt-4 fill-current" />
             }
@@ -67,6 +72,7 @@ export function FeatureTwo() {
             transparent, scalable solutions without unnecessary overhead.
           </Card>
           <Card
+            size="md"
             isExternal
             href="#"
             cover={

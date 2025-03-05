@@ -452,13 +452,13 @@ const Megamenu: FC<MegamenuProps> = ({
         <div
           className="
     md:hidden flex items-center sticky top-16 z-20 
-    px-6 py-4  
-    bg-gradient-to-r from-slate-500/10 to-gray-500/10 
-    backdrop-filter backdrop-blur-md 
-    text-gray-600 dark:text-gray-300
-    justify-between
-    transition-all duration-300 ease-in-out 
-    hover:bg-gradient-to-r hover:from-gray-500/10 hover:to-slate-500/10 text-sm
+    px-4 py-4  text-sm  font-medium
+     bg-gradient-to-r from-slate-500/10 to-gray-500/10 
+    backdrop-filter backdrop-blur-md
+    text-gray-700 dark:text-gray-300 
+    transition-opacity duration-200 ease-in-out text-nowrap
+    motion-reduce:transition-none motion-reduce:hover:transform-none 
+    hover:opacity-90 max-w-full h-14
     
   "
         >
@@ -466,12 +466,12 @@ const Megamenu: FC<MegamenuProps> = ({
             onClick={handleBack}
             className="
       group
-      flex items-center gap-3  
+      flex items-center gap-2  
       
     "
           >
             <svg
-              className="h-4 w-4 fill-none stroke-current stroke-2 " // Added opacity to match logo style
+              className="h-5 w-5 fill-none stroke-current stroke-2 " // Added opacity to match logo style
               viewBox="0 0 24 24"
             >
               <path d="M15 19l-7-7 7-7" />
