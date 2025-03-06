@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
       <a
         href="#"
         className="flex items-center justify-between rounded-full  
-    p-1 pr-3 text-[10px] md:text-xs font-medium
+    p-1 pr-3 text-xs md:text-sm font-medium
      bg-gradient-to-r from-slate-500/10 to-gray-500/10
     backdrop-filter backdrop-blur-md
     text-gray-700 dark:text-gray-300 
@@ -18,7 +18,7 @@ const HeroSection: React.FC = () => {
       >
         <span
           className="mr-2 lg:mr-3 rounded-full 
-   text-[9px] md:text-[10px] font-bold
+   text-[10px] md:text-xs 
     px-2 py-0.5 
     text-white bg-gray-600 dark:bg-gray-700"
         >

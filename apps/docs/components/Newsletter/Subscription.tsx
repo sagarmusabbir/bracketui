@@ -42,7 +42,7 @@ const Subscription = () => {
 
   return (
     <section className=" max-w-screen-xl  py-8   lg:py-16">
-      <div className="bg-gray-50 dark:bg-gray-900/30 border border-gray-100 dark:border-gray-800 rounded-lg p-6 md:p-8 lg:p-12">
+      <div className="bg-gray-50 dark:bg-gray-900/30 border border-gray-100 dark:border-gray-800 rounded-lg p-4 md:p-8 lg:p-10">
         {state.isSuccess ? (
           <div className="text-center space-y-4">
             <div className="text-5xl mb-4">🎉</div>
@@ -92,7 +92,7 @@ const Subscription = () => {
                 </div>
 
                 <div className="mt-3">
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                  <p className="text-sm text-gray-400 dark:text-gray-600">
                     We respect your privacy. Unsubscribe at any time.
                   </p>
                   {state.error && (

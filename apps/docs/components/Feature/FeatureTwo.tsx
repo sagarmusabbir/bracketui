@@ -1,6 +1,12 @@
 import { Card } from "@thirdbracket/bracketui";
 
-import { GiGrowth, GiStack, GiTeamIdea, GiUnlocking } from "react-icons/gi";
+import {
+  GiGrowth,
+  GiSkills,
+  GiStack,
+  GiTeamIdea,
+  GiUnlocking,
+} from "react-icons/gi";
 import { GrActions, GrUserExpert } from "react-icons/gr";
 
 export function FeatureTwo() {
@@ -9,9 +15,9 @@ export function FeatureTwo() {
       <div className="mx-auto max-w-screen-xl  ">
         <div className="mx-auto mb-8 md:mb-12 lg:mb-16 xl:max-w-6xl lg:max-w-6xl  md:max-w-3xl max-w-lg sm:max-w-xl">
           <h2 className="mb-4 md:mb-6  text-3xl lg:text-4xl font-bold  text-gray-800 dark:text-gray-200 tracking-tight px-4 lg:px-0 text-center leading-none">
-            Best of Both Worlds-The Perfect&nbsp;Middle&nbsp;Ground
+            Best of Both Worlds- The Perfect Middle&nbsp;Ground
           </h2>
-          <p className="text-gray-950/50 text-base md:text-lg lg:text-xl dark:text-gray-200/50 text-center lg:text-left px-4 lg:px-0 font-light  ">
+          <p className="text-gray-950/50 text-base md:text-lg lg:text-xl dark:text-gray-200/50 text-center px-4 lg:px-0 font-light  ">
             Freelancers can be unreliable. Agencies charge a premium. We offer
             the expertise, structure, and execution of an agency—without the
             overhead cost.
@@ -21,67 +27,80 @@ export function FeatureTwo() {
           <Card
             size="md"
             cover={
-              <GrUserExpert className="h-7 w-7 text-gray-600 dark:text-gray-300 lg:h-8 lg:w-8 ml-4 mt-4 fill-current" />
+              <GiSkills className="h-12 w-12 text-gray-600 dark:text-gray-300  ml-6 mt-6 fill-current" />
             }
             header="Expertise & Flexibility"
           >
-            Experience agency expertise with freelancer flexibility. Access a
-            unified team of top-rated professionals, not just scattered
-            freelancers.
+            <span className="text-gray-950/50 dark:text-gray-200/50 font-light">
+              Experience agency expertise with freelancer flexibility. Access a
+              unified team of top-rated professionals, not just scattered
+              freelancers.
+            </span>
           </Card>
           <Card
             size="md"
             cover={
-              <GiStack className="h-7 w-7 text-gray-600 dark:text-gray-300 lg:h-8 lg:w-8 ml-4 mt-4 fill-current" />
+              <GiStack className="h-12 w-12 text-gray-600 dark:text-gray-300  ml-6 mt-6 fill-current" />
             }
             header="Modern Stack"
           >
-            Delivering the best of both worlds: Next.js and WordPress, with deep
-            customization tailored to your needs.
+            <span className="text-gray-950/50 dark:text-gray-200/50 font-light">
+              Delivering the best of both worlds: Next.js and WordPress, with
+              deep customization tailored to your needs.
+            </span>
           </Card>
           <Card
             size="md"
             cover={
-              <GiGrowth className="h-7 w-7 text-gray-600 dark:text-gray-300 lg:h-8 lg:w-8 ml-4 mt-4 fill-current" />
+              <GiGrowth className="h-12 w-12 text-gray-600 dark:text-gray-300  ml-6 mt-6 fill-current" />
             }
             header="Built for Growth"
           >
-            We don’t just build websites; from the start, we ensure your site is
-            optimized for SEO, showcases your branding, and integrates digital
-            marketing strategies to save you time in the long run.
+            <span className="text-gray-950/50 dark:text-gray-200/50 font-light">
+              We don’t just build websites; from the start, we ensure your site
+              is optimized for SEO, showcases your branding, and integrates
+              digital marketing strategies to save you time in the long run.
+            </span>
           </Card>
           <Card
             size="md"
             cover={
-              <GiTeamIdea className="h-7 w-7 text-gray-600 dark:text-gray-300 lg:h-8 lg:w-8 ml-4 mt-4 fill-current" />
+              <GiTeamIdea className="h-12 w-12 text-gray-600 dark:text-gray-300  ml-6 mt-6 fill-current" />
             }
             header="Seamless Collaboration"
           >
-            Unlike freelancers working in silos, our developers, marketers, and
-            designers collaborate seamlessly, ensuring consistent,
-            results-driven strategies tailored to your vision.
+            <span className="text-gray-950/50 dark:text-gray-200/50 font-light">
+              Unlike freelancers working in silos, our developers, marketers,
+              and designers collaborate seamlessly, ensuring consistent,
+              results-driven strategies tailored to your vision.
+            </span>
           </Card>
           <Card
             size="md"
             cover={
-              <GiUnlocking className="h-7 w-7 text-gray-600 dark:text-gray-300 lg:h-8 lg:w-8 ml-4 mt-4 fill-current" />
+              <GiUnlocking className="h-12 w-12 text-gray-600 dark:text-gray-300  ml-6 mt-6 fill-current" />
             }
             header="No Lock-in, No Bloat"
           >
-            Agencies sell retainers, and freelancers leave gaps. We provide
-            transparent, scalable solutions without unnecessary overhead.
+            <span className="text-gray-950/50 dark:text-gray-200/50 font-light">
+              Agencies sell retainers, and freelancers leave gaps. We provide
+              transparent, scalable solutions without unnecessary overhead.
+            </span>
           </Card>
           <Card
+            className="bg-slate-200 dark:bg-slate-800 "
             size="md"
             isExternal
             href="#"
             cover={
-              <GrActions className="h-7 w-7 text-gray-600 dark:text-gray-300 lg:h-8 lg:w-8 ml-4 mt-4 fill-current" />
+              <GrActions className="h-12 w-12 text-gray-600 dark:text-gray-300  ml-6 mt-6  fill-current" />
             }
             header="Get Started Today"
           >
-            Keep your company’s lights on with customizable, iterative, and
-            structured workflows built for all efficient teams and individual.
+            <span className="text-gray-950/50 dark:text-gray-200/50 font-light">
+              Keep your company’s lights on with customizable, iterative, and
+              structured workflows built for all efficient teams and individual.
+            </span>
           </Card>
         </div>
       </div>
