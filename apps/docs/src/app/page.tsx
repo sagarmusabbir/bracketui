@@ -29,7 +29,7 @@ export default function Page() {
             </h3>
             <div className="flex flex-wrap gap-4 ">
               <Button size="xs" as={Link} href="#">
-                Default xSmall
+                Extra Small
               </Button>
               <Button size="sm" as={Link} href="#">
                 Default Small

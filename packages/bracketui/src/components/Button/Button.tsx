@@ -107,20 +107,20 @@ const Button = forwardRef(function Button<T extends ElementType = "button">(
 ) {
   // Base styles
   const baseClasses =
-    "inline-flex items-center justify-center font-medium transition-opacity duration-200 ease-in-out motion-reduce:transition-none whitespace-nowrap motion-reduce:hover:transform-none focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600 rounded-lg tracking-tighter leading-none";
+    "inline-flex self-start items-center justify-center font-medium transition-opacity duration-200 ease-in-out motion-reduce:transition-none whitespace-nowrap motion-reduce:hover:transform-none focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600 tracking-tight  border";
 
   // Variant classes with different hover opacities
   const variantButton = outline
-    ? "border border-gray-500/20   text-gray-900 dark:text-gray-50  [@media(hover:hover)]:hover:bg-gray-200/40 [@media(hover:hover)]:dark:hover:bg-zinc-800/30 active:bg-gray-200 dark:active:bg-gray-800"
-    : "border-none bg-gray-900 dark:bg-gray-50 text-white dark:text-black [@media(hover:hover)]:hover:opacity-90 active:opacity-80";
+    ? "border-gray-500/40   text-gray-950 dark:text-white  [@media(hover:hover)]:hover:bg-gray-200/40 [@media(hover:hover)]:dark:hover:bg-zinc-800/30 active:bg-gray-200 dark:active:bg-gray-800"
+    : "border-transparent bg-gray-950 dark:bg-white text-white dark:text-gray-950 [@media(hover:hover)]:hover:opacity-90 active:opacity-80 ";
 
   // Size classes with fixed heights
   const sizeClasses = clsx({
-    "px-3 py-1.5  min-h-[1.75rem] text-xs ": size === "xs",
-    "px-4 py-2  min-h-[2.25rem] text-sm ": size === "sm",
-    "px-5 py-2.5  min-h-[2.75rem] text-base ": size === "md",
-    "px-6 py-3  min-h-[3.25rem] text-lg ": size === "lg",
-    "px-7 py-3.5  min-h-[3.75rem]  text-xl ": size === "xl",
+    "px-3 py-1.5 min-h-6 rounded-md   text-xs ": size === "xs",
+    "px-4 py-2  min-h-8  text-sm rounded-lg": size === "sm",
+    "px-5 py-2.5 rounded-lg  min-h-10 text-base ": size === "md",
+    "px-6 py-3  min-h-12 text-lg rounded-lg": size === "lg",
+    "px-7 py-3.5  min-h-14  text-xl rounded-lg": size === "xl",
   });
 
   // Disabled and Loading classes
