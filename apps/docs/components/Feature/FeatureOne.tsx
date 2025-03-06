@@ -35,12 +35,11 @@ export function FeatureOne() {
                   />
                 </div>
               }
-              header="Your Website Reflects your budget"
+              header="Website is you Businesses First Impression!"
             >
               <span className="text-gray-950/50 dark:text-gray-200/50 font-light">
-                Your Website Is Your Business's First Impression. Make your
-                first impression count with a custom website—something your
-                business couldn't afford until now.
+                Make your first impression count with a custom website—something
+                your business couldn't afford until now.
               </span>
             </Card>
 

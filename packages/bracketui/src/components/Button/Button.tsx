@@ -107,12 +107,12 @@ const Button = forwardRef(function Button<T extends ElementType = "button">(
 ) {
   // Base styles
   const baseClasses =
-    "inline-flex self-start items-center justify-center font-medium transition-opacity duration-200 ease-in-out motion-reduce:transition-none whitespace-nowrap motion-reduce:hover:transform-none focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600 tracking-tight  border";
+    "inline-flex self-start items-center justify-center font-semibold transition-opacity duration-200 ease-in-out motion-reduce:transition-none whitespace-nowrap motion-reduce:hover:transform-none focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600   border";
 
   // Variant classes with different hover opacities
   const variantButton = outline
-    ? "border-gray-500/40   text-gray-950 dark:text-white  [@media(hover:hover)]:hover:bg-gray-200/40 [@media(hover:hover)]:dark:hover:bg-zinc-800/30 active:bg-gray-200 dark:active:bg-gray-800"
-    : "border-transparent bg-gray-950 dark:bg-white text-white dark:text-gray-950 [@media(hover:hover)]:hover:opacity-90 active:opacity-80 ";
+    ? "border-gray-500/40   text-gray-800 dark:text-gray-200  [@media(hover:hover)]:hover:bg-gray-200/40 [@media(hover:hover)]:dark:hover:bg-zinc-800/30 active:bg-gray-200 dark:active:bg-gray-800"
+    : "border-transparent bg-gray-800 dark:bg-gray-200 text-gray-200 dark:text-gray-800 [@media(hover:hover)]:hover:opacity-90 active:opacity-80 ";
 
   // Size classes with fixed heights
   const sizeClasses = clsx({
