@@ -6,14 +6,7 @@ import Image from "next/image";
 
 import Link from "next/link";
 import { BiArrowToRight } from "react-icons/bi";
-import {
-  RiCopyleftFill,
-  RiImageLine,
-  RiLoginBoxLine,
-  RiLogoutBoxRLine,
-  RiPhoneLine,
-  RiShieldLine,
-} from "react-icons/ri";
+import { RiImageLine, RiShieldLine } from "react-icons/ri";
 
 export default function Page() {
   return (
@@ -41,12 +34,12 @@ export default function Page() {
                 Default Large
               </Button>
               <Button size="xl" as={Link} href="#">
-                Default xLarge
+                Extra Large
               </Button>
             </div>
             <div className="flex flex-wrap gap-4 ">
               <Button outline size="xs" as={Link} href="#">
-                Default xSmall
+                Extra Small
               </Button>
               <Button outline size="sm" as={Link} href="#">
                 Default Small
@@ -58,39 +51,27 @@ export default function Page() {
                 Default Large
               </Button>
               <Button outline size="xl" as={Link} href="#">
-                Default xLarge
+                Extra Large
               </Button>
             </div>
             <div className="flex flex-wrap gap-4 ">
-              <Button size="xs" as={Link} href="#">
-                Default Icon
-                <span>
-                  <RiLoginBoxLine className="ml-2" />
-                </span>
+              <Button size="xs" disabled as={Link} href="#">
+                Disabled Extra Small
               </Button>
-              <Button outline size="sm" as={Link} href="#">
-                <span>
-                  <RiPhoneLine className="mr-2" />
-                </span>{" "}
-                Outline Icon
+              <Button outline isLoading size="sm" as={Link} href="#">
+                IsLoading Small
               </Button>
               <Button disabled size="md" as={Link} href="#">
-                Diasabled Icon
-                <span>
-                  <RiCopyleftFill className="ml-2" />
-                </span>
+                Diasabled Medium
               </Button>
-              <Button outline isLoading size="lg" as={Link} href="#">
-                Default Large Icon
+              <Button outline isLoading size="md" as={Link} href="#">
+                IsLoading Large
                 <span>
                   <BiArrowToRight className="ml-2" />
                 </span>
               </Button>
-              <Button size="xl" as={Link} href="#">
-                Default xLarge
-                <span>
-                  <RiLogoutBoxRLine className="ml-2" />
-                </span>
+              <Button size="xl" disabled as={Link} href="#">
+                Disabled Extra Large
               </Button>
             </div>
           </div>
