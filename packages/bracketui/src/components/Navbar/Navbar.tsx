@@ -173,14 +173,14 @@ const Navbar: FC<NavbarProps> = ({
             <span
               className=" 
    text-[9px]  font-bold
-    px-2 mr-2  rounded-md
+    px-2 mr-2  rounded-lg
     text-white bg-gray-600 dark:bg-gray-700"
             >
               New
             </span>
             <span className=" whitespace-nowrap truncate tracking-wider inline-flex items-center">
               Bracket UI version 4 is out!&nbsp;
-              <u className="tracking-normal">See What’s New!</u>
+              <u>See What’s New!</u>
               {/* <svg
                 className="ml-2  
       size-5"
