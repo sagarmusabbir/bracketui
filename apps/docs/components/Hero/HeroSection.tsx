@@ -43,7 +43,7 @@ const HeroSection: React.FC = () => {
       </a>
 
       {/* Heading */}
-      <h1 className="text-5xl font-extrabold md:text-6xl lg:text-7xl  text-center tracking-tight px-4">
+      <h1 className="text-5xl font-extrabold md:text-6xl lg:text-7xl  text-center px-4">
         Enterprise Solutions Without&nbsp;the Overhead&nbsp;Cost
       </h1>
 
