@@ -14,7 +14,7 @@ export function FeatureTwo() {
     <section className="py-8 sm:py-12 md:py-16">
       <div className="mx-auto max-w-screen-xl  ">
         <div className="mx-auto mb-8 md:mb-12 lg:mb-16 xl:max-w-6xl lg:max-w-6xl  md:max-w-3xl max-w-lg sm:max-w-xl">
-          <h2 className="mb-4 md:mb-6  text-3xl lg:text-4xl font-bold  text-gray-800 dark:text-gray-200 tracking-tight px-4 lg:px-0 text-center leading-none">
+          <h2 className="mb-4 md:mb-6  text-3xl lg:text-4xl font-extrabold  text-gray-800 dark:text-gray-200  px-4 lg:px-0 text-center ">
             Best of Both Worlds- The Perfect Middle&nbsp;Ground
           </h2>
           <p className="text-gray-950/50 text-base md:text-lg lg:text-xl dark:text-gray-200/50 text-center px-4 lg:px-0 font-light  ">
