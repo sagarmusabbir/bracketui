@@ -20,7 +20,7 @@ const SiteFooter = () => {
   return (
     <Footer>
       <FooterSection className="col-span-2">
-        <FooterBrand logo="/tbracket.svg">
+        <FooterBrand logo="/5.svg">
           Making the web a better place with Third Bracket Solutions.
         </FooterBrand>
         <div className="flex  gap-x-4 justify-start items-center">

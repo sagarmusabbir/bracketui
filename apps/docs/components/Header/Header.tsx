@@ -231,79 +231,144 @@ const Header: FC = () => {
         </div> */}
         <MobileNav>
           <div className="space-y-2 py-1.5">
-            <Navlink as={Link} href="#">
-              Features
-            </Navlink>
-            <Navlink as={Link} href="#">
-              About
-            </Navlink>
-            <Megamenu label="Components">
+            <Megamenu label="Services">
               <div className="space-y-2 py-1.5">
+                <Megamenu label="Web Development">
+                  <div className="space-y-2 py-1.5">
+                    <Navlink as={Link} href="#" isDropdownItem>
+                      Next.js Development
+                    </Navlink>
+                    <Navlink as={Link} href="#" isDropdownItem>
+                      WordPress Development
+                    </Navlink>
+                    <Navlink as={Link} href="#" isDropdownItem>
+                      Headless & Serverles
+                    </Navlink>
+                    <Navlink as={Link} href="#" isDropdownItem>
+                      Custom Backend & API Development
+                    </Navlink>
+                    <Navlink as={Link} href="#" isDropdownItem>
+                      Other Development Services
+                    </Navlink>
+                  </div>
+                </Megamenu>
+                <Megamenu label="Digital Marketing">
+                  <div className="space-y-2 py-1.5">
+                    <Navlink as={Link} href="#" isDropdownItem>
+                      SEO & Web Visibility
+                    </Navlink>
+                    <Navlink as={Link} href="#" isDropdownItem>
+                      Branding & Design
+                    </Navlink>
+                    <Navlink as={Link} href="#" isDropdownItem>
+                      Social Media Marketing
+                    </Navlink>
+                    <Navlink as={Link} href="#" isDropdownItem>
+                      PPC & Social Ad
+                    </Navlink>
+                    <Navlink as={Link} href="#" isDropdownItem>
+                      Content strategy & Copywriting
+                    </Navlink>
+                    <Navlink as={Link} href="#" isDropdownItem>
+                      Other Digital Marketing Services
+                    </Navlink>
+                  </div>
+                </Megamenu>
                 <Navlink as={Link} href="#" isDropdownItem>
-                  Buttons
+                  UI/UX Design & Prototyping
                 </Navlink>
                 <Navlink as={Link} href="#" isDropdownItem>
-                  Cards
+                  Performance Optimization
                 </Navlink>
                 <Navlink as={Link} href="#" isDropdownItem>
-                  Footers
-                </Navlink>
-                <Navlink as={Link} href="#" isDropdownItem>
-                  Navbar
-                </Navlink>
-                <Navlink as={Link} href="#" isDropdownItem>
-                  Form
-                </Navlink>
-                <Navlink as={Link} href="#" isDropdownItem>
-                  Layout
-                </Navlink>
-                <Navlink as={Link} href="#" isDropdownItem>
-                  ThemeToggle
+                  Other Services
                 </Navlink>
               </div>
             </Megamenu>
 
-            <Megamenu label="Sections">
+            <Megamenu label="Solutions">
               <div className="space-y-2 py-1.5">
                 <Navlink as={Link} href="#" isDropdownItem>
-                  Hero Sections
+                  Wordpress 360
                 </Navlink>
                 <Navlink as={Link} href="#" isDropdownItem>
-                  Header Sections
+                  Notion Blog
                 </Navlink>
                 <Navlink as={Link} href="#" isDropdownItem>
-                  Newsletter Sections
+                  Business 360
                 </Navlink>
-                <Navlink as={Link} href="#" isDropdownItem>
-                  Footer Sections
-                </Navlink>
-                <Navlink as={Link} href="#" isDropdownItem>
-                  Feature Sections
-                </Navlink>
-              </div>
-            </Megamenu>
-            <Megamenu label="Hooks & Libraries">
-              <div className="space-y-2 py-1.5">
-                <Navlink as={Link} href="#" isDropdownItem>
-                  Theme
-                </Navlink>
-                <Navlink as={Link} href="#" isDropdownItem>
-                  Layout
-                </Navlink>
-                <Navlink as={Link} href="#" isDropdownItem>
-                  Megamenu
-                </Navlink>
-                <Navlink as={Link} href="#" isDropdownItem>
-                  ThemeToggle
-                </Navlink>
+                <Megamenu label="Automation & Integration">
+                  <div className="space-y-2 py-1.5">
+                    <Navlink as={Link} href="#" isDropdownItem>
+                      Form Integration
+                    </Navlink>
+                    <Navlink as={Link} href="#" isDropdownItem>
+                      Marketing Automation
+                    </Navlink>
+                    <Navlink as={Link} href="#" isDropdownItem>
+                      Search Integration
+                    </Navlink>
+                    <Navlink as={Link} href="#" isDropdownItem>
+                      Interntionalization
+                    </Navlink>
+                    <Navlink as={Link} href="#" isDropdownItem>
+                      CI/CD
+                    </Navlink>
+                    <Navlink as={Link} href="#" isDropdownItem>
+                      Release Automation
+                    </Navlink>
+                  </div>
+                </Megamenu>
+                <Megamenu label="UI/UX">
+                  <div className="space-y-2 py-1.5">
+                    <Navlink as={Link} href="#" isDropdownItem>
+                      Bracket UI
+                    </Navlink>
+                    <Megamenu label="Templates">
+                      <div className="space-y-2 py-1.5">
+                        <Navlink as={Link} href="#" isDropdownItem>
+                          Elementor Template
+                        </Navlink>
+                        <Navlink as={Link} href="#" isDropdownItem>
+                          Tailwind Template
+                        </Navlink>
+                        <Navlink as={Link} href="#" isDropdownItem>
+                          Html5 Template
+                        </Navlink>
+                      </div>
+                    </Megamenu>
+                    <Megamenu label="Themes">
+                      <div className="space-y-2 py-1.5">
+                        <Navlink as={Link} href="#" isDropdownItem>
+                          Nextjs Themes
+                        </Navlink>
+                        <Navlink as={Link} href="#" isDropdownItem>
+                          Hugo Themes
+                        </Navlink>
+                        <Navlink as={Link} href="#" isDropdownItem>
+                          Wordpress Theme
+                        </Navlink>
+                      </div>
+                    </Megamenu>
+                    <Navlink as={Link} href="#" isDropdownItem>
+                      Reusable Blocks
+                    </Navlink>
+                    <Navlink as={Link} href="#" isDropdownItem>
+                      Landing Pages
+                    </Navlink>
+                  </div>
+                </Megamenu>
               </div>
             </Megamenu>
 
             <Navlink as={Link} href="#">
-              Blog
+              Case Studies
             </Navlink>
             <Navlink as={Link} href="/tb">
-              Third Bracket
+              About
+            </Navlink>
+            <Navlink as={Link} href="/tb">
+              Blog
             </Navlink>
             <Navlink as={Link} href="#">
               Contact

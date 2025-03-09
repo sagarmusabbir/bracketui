@@ -31,7 +31,7 @@ export function FeatureOne() {
                     src="/website.svg"
                     alt="Enterprise Solutions"
                     fill
-                    className="object-cover dark:invert hue-rotate-90"
+                    className="object-cover "
                   />
                 </div>
               }
@@ -53,7 +53,7 @@ export function FeatureOne() {
                     src="/ui.svg"
                     alt="Professional Teams"
                     fill
-                    className="object-cover dark:invert"
+                    className="object-cover "
                   />
                 </div>
               }
