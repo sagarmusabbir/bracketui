@@ -41,7 +41,7 @@ export const Logo = () => (
     />
     <path
       fill="url(#a)"
-      className="dark:invert"
+      
       d="m-189.62.89-11.02 3.72.04 10.38 10.62 3.28a2.34 2.34 0 0 0 1.37-1.88l-9.56-3.09.08-7.35 9.5-3.2a2.34 2.34 0 0 0-1.03-1.86z"
       style={{
         fontVariationSettings: "&quot",
