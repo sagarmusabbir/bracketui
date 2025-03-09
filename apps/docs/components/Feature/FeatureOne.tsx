@@ -8,7 +8,7 @@ export function FeatureOne() {
       <div className="mx-auto max-w-screen-xl">
         {/* Title group with flex layout on large screens */}
         <div className="mx-auto mb-8 md:mb-12 lg:mb-16 xl:max-w-6xl lg:max-w-6xl md:max-w-3xl max-w-lg sm:max-w-xl lg:flex lg:items-center lg:justify-between lg:gap-6">
-          <h2 className="mb-4 md:mb-6 text-3xl leading-none lg:text-4xl font-bold text-gray-800 dark:text-gray-200 lg:mb-0 text-center lg:text-right tracking-tight px-4 lg:px-0">
+          <h2 className="mb-4 md:mb-6 text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-200 lg:mb-0 text-center lg:text-right  px-4 lg:px-0">
             Think Your Business Can't Afford a Professional Start?
           </h2>
           <p className="text-gray-950/50 dark:text-gray-200/50 font-light text-base md:text-lg lg:text-xl text-center lg:text-left px-4 lg:px-0">
