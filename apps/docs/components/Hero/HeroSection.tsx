@@ -57,7 +57,7 @@ const HeroSection: React.FC = () => {
 
       {/* Button Group */}
       <div className="flex justify-center gap-3 md:gap-4">
-        <Button size="xl" className="hidden lg:flex">
+        <Button size="lg" className="hidden  md:flex">
           Let's Grow
           <svg
             className="size-4 ml-2"
@@ -72,33 +72,7 @@ const HeroSection: React.FC = () => {
             />
           </svg>
         </Button>
-        <Button outline size="xl" className="hidden lg:flex">
-          <svg
-            className="size-4 mr-2"
-            fill="currentColor"
-            viewBox="0 0 1000 1000"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M860 265h-61q-8 0-13.5 5.5T780 284v246q0 39-28 67t-68 28H279q-8 0-13.5 5.5T260 644v61q0 17 11.5 28.5T300 745h415q25 0 43 18l110 110q4 4 9.5 5t11-1 8.5-7 3-11V305q0-17-11.5-28.5T860 265zM700 505V145q0-17-11.5-28.5T660 105H140q-17 0-28.5 11.5T100 145v514q0 6 3 11t8.5 7 11 1 9.5-5l110-110q18-18 43-18h375q17 0 28.5-12t11.5-28z"></path>
-          </svg>
-          Get Consultation
-        </Button>
-        <Button size="lg" className="hidden lg:hidden md:flex">
-          Let's Grow
-          <svg
-            className="size-4 ml-2"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </Button>
-        <Button outline size="lg" className="hidden lg:hidden md:flex ">
+        <Button outline size="lg" className="hidden  md:flex ">
           <svg
             className="size-4 mr-2"
             fill="currentColor"

@@ -22,11 +22,11 @@ export function FeatureOne() {
           {/* Top row - Two cards with images */}
           <div className="grid gap-8 md:grid-cols-2">
             <Card
-              size="md"
+              size="lg"
               href="#"
               className="w-full h-full" // Added full width and height
               cover={
-                <div className="relative h-48 w-full lg:h-64">
+                <div className="relative  h-60 w-full lg:h-80">
                   <Image
                     src="/website.svg"
                     alt="Enterprise Solutions"
@@ -35,20 +35,21 @@ export function FeatureOne() {
                   />
                 </div>
               }
-              header="Website is you Businesses First Impression!"
+              header="First Impressions Matter"
             >
               <span className="text-gray-950/50 dark:text-gray-200/50 font-light">
-                Make your first impression count with a custom website—something
-                your business couldn't afford until now.
+                Your Website Is Your Business’s First Impression. Make your
+                first impression count with a custom website—without the
+                “custom” price.
               </span>
             </Card>
 
             <Card
-              size="md"
+              size="lg"
               href="#"
               className="w-full h-full" // Added full width and height
               cover={
-                <div className="relative h-48 w-full lg:h-64">
+                <div className="relative  h-60 w-full lg:h-80">
                   <Image
                     src="/ui.svg"
                     alt="Professional Teams"
@@ -57,12 +58,12 @@ export function FeatureOne() {
                   />
                 </div>
               }
-              header="Finding the Right UI is Frustrating!"
+              header="The Perfect UI was Never Free!"
             >
               <span className="text-gray-950/50 dark:text-gray-200/50 font-light">
-                We've simplified UI design. Introducing Bracket UI—a minimal,
-                geometric, pixel-perfect component library which is Open-source
-                and ready for React & Next.js.
+                Presenting Bracket UI: A minimal, geometric, pixel-perfect
+                component library. Open-source and ready for React & Next.js
+                projects.
               </span>
             </Card>
           </div>
@@ -70,7 +71,7 @@ export function FeatureOne() {
           {/* Bottom row - Three cards without images */}
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <Card
-              size="md"
+              size="lg"
               className="w-full h-full" // Added full width and height
               header="Missing Modern Features?"
             >
@@ -82,18 +83,19 @@ export function FeatureOne() {
             </Card>
 
             <Card
-              size="md"
+              size="lg"
               className="w-full h-full" // Added full width and height
-              header="Struggling to Find the Right Marketer?"
+              header="Tired of Searching for Marketers?"
             >
               <span className="text-gray-950/50 dark:text-gray-200/50 font-light">
-                Our integrated team of marketers, developers, and designers
-                delivers real results that drive your business forward.
+                Get the Whole Team. Our integrated team of marketers,developers,
+                and designers delivers real results that drive your business
+                forward.
               </span>
             </Card>
 
             <Card
-              size="md"
+              size="lg"
               className="w-full h-full" // Added full width and height
               header="SEO Takes Too Long!"
             >

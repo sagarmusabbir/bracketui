@@ -365,6 +365,9 @@ const Header: FC = () => {
               Case Studies
             </Navlink>
             <Navlink as={Link} href="/tb">
+              Third Bracket
+            </Navlink>
+            <Navlink as={Link} href="/tb">
               About
             </Navlink>
             <Navlink as={Link} href="/tb">

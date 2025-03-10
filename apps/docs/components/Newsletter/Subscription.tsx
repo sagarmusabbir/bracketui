@@ -52,7 +52,7 @@ const Subscription = () => {
             </p>
           </div>
         ) : (
-          <div className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-12">
+          <div className="flex flex-col lg:flex-row items-start justify-between gap-4 lg:gap-12 p-2">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold  text-gray-800 dark:text-gray-200 tracking-tight mb-4">
                 Stay Updated
@@ -63,7 +63,7 @@ const Subscription = () => {
               </p>
             </div>
 
-            <div className="flex-1 max-w-lg">
+            <div className="flex-1 max-w-xl">
               <Form onSubmit={handleSubmit}>
                 <div className="relative">
                   <label className="sr-only">Email address</label>
@@ -77,7 +77,7 @@ const Subscription = () => {
                         email: e.target.value,
                       }))
                     }
-                    className="w-full pl-4 pr-52 h-14 text-base rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900"
+                    className="w-full pl-4 pr-32 h-14 text-base rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900"
                   />
                   <div className="absolute right-2 top-1/2 -translate-y-1/2">
                     <Button

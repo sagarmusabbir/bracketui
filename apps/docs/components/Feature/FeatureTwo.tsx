@@ -8,6 +8,10 @@ import {
   GiUnlocking,
 } from "react-icons/gi";
 import { GrActions, GrUserExpert } from "react-icons/gr";
+import { ImUnlocked } from "react-icons/im";
+import { IoMedalSharp } from "react-icons/io5";
+import { MdOutlineAutoGraph } from "react-icons/md";
+import { RiTeamFill, RiTeamLine } from "react-icons/ri";
 
 export function FeatureTwo() {
   return (
@@ -25,9 +29,10 @@ export function FeatureTwo() {
         </div>
         <div className="space-y-8 md:grid md:grid-cols-2 md:gap-8 md:space-y-0 lg:grid-cols-3 ">
           <Card
-            size="md"
+            size="lg"
+            isIcon
             cover={
-              <GiSkills className="h-12 w-12 text-gray-600 dark:text-gray-300  ml-6 mt-6 fill-current" />
+              <IoMedalSharp className="h-12 w-12 text-gray-600 dark:text-gray-300   fill-current" />
             }
             header="Expertise & Flexibility"
           >
@@ -38,9 +43,10 @@ export function FeatureTwo() {
             </span>
           </Card>
           <Card
-            size="md"
+            size="lg"
+            isIcon
             cover={
-              <GiStack className="h-12 w-12 text-gray-600 dark:text-gray-300  ml-6 mt-6 fill-current" />
+              <GiStack className="h-12 w-12 text-gray-600 dark:text-gray-300  fill-current" />
             }
             header="Modern Stack"
           >
@@ -50,9 +56,10 @@ export function FeatureTwo() {
             </span>
           </Card>
           <Card
-            size="md"
+            size="lg"
+            isIcon
             cover={
-              <GiGrowth className="h-12 w-12 text-gray-600 dark:text-gray-300  ml-6 mt-6 fill-current" />
+              <MdOutlineAutoGraph className="h-12 w-12 text-gray-600 dark:text-gray-300   fill-current" />
             }
             header="Built for Growth"
           >
@@ -63,9 +70,10 @@ export function FeatureTwo() {
             </span>
           </Card>
           <Card
-            size="md"
+            size="lg"
+            isIcon
             cover={
-              <GiTeamIdea className="h-12 w-12 text-gray-600 dark:text-gray-300  ml-6 mt-6 fill-current" />
+              <RiTeamFill className="h-12 w-12 text-gray-600 dark:text-gray-300  fill-current" />
             }
             header="Seamless Collaboration"
           >
@@ -76,9 +84,10 @@ export function FeatureTwo() {
             </span>
           </Card>
           <Card
-            size="md"
+            size="lg"
+            isIcon
             cover={
-              <GiUnlocking className="h-12 w-12 text-gray-600 dark:text-gray-300  ml-6 mt-6 fill-current" />
+              <ImUnlocked className="h-12 w-12 text-gray-600 dark:text-gray-300  fill-current" />
             }
             header="No Lock-in, No Bloat"
           >
@@ -88,12 +97,13 @@ export function FeatureTwo() {
             </span>
           </Card>
           <Card
-            className="bg-slate-200 dark:bg-slate-800 "
-            size="md"
+            className=" bg-gray-100 dark:bg-gray-800 bg-[url(/pattern.svg)]"
+            size="lg"
             isExternal
+            isIcon
             href="#"
             cover={
-              <GrActions className="h-12 w-12 text-gray-600 dark:text-gray-300  ml-6 mt-6  fill-current" />
+              <GrActions className="h-12 w-12 text-gray-600 dark:text-gray-300   fill-current" />
             }
             header="Get Started Today"
           >
