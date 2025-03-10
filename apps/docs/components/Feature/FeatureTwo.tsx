@@ -1,17 +1,14 @@
 import { Card } from "@thirdbracket/bracketui";
 
-import {
-  GiGrowth,
-  GiSkills,
-  GiStack,
-  GiTeamIdea,
-  GiUnlocking,
-} from "react-icons/gi";
-import { GrActions, GrUserExpert } from "react-icons/gr";
+import { GiStack } from "react-icons/gi";
+import { GoStack } from "react-icons/go";
+import { GrActions } from "react-icons/gr";
 import { ImUnlocked } from "react-icons/im";
-import { IoMedalSharp } from "react-icons/io5";
+import { IoIosMedal } from "react-icons/io";
+import { IoMedalOutline, IoMedalSharp } from "react-icons/io5";
 import { MdOutlineAutoGraph } from "react-icons/md";
-import { RiTeamFill, RiTeamLine } from "react-icons/ri";
+import { RiLockUnlockLine, RiTeamFill } from "react-icons/ri";
+import { TiGroupOutline } from "react-icons/ti";
 
 export function FeatureTwo() {
   return (
@@ -32,7 +29,7 @@ export function FeatureTwo() {
             size="lg"
             isIcon
             cover={
-              <IoMedalSharp className="h-12 w-12 text-gray-600 dark:text-gray-300   fill-current" />
+              <IoMedalOutline className="h-12 w-12 text-gray-600 dark:text-gray-300   fill-current" />
             }
             header="Expertise & Flexibility"
           >
@@ -46,7 +43,7 @@ export function FeatureTwo() {
             size="lg"
             isIcon
             cover={
-              <GiStack className="h-12 w-12 text-gray-600 dark:text-gray-300  fill-current" />
+              <GoStack className="h-12 w-12 text-gray-600 dark:text-gray-300  fill-current" />
             }
             header="Modern Stack"
           >
@@ -73,7 +70,7 @@ export function FeatureTwo() {
             size="lg"
             isIcon
             cover={
-              <RiTeamFill className="h-12 w-12 text-gray-600 dark:text-gray-300  fill-current" />
+              <TiGroupOutline className="h-12 w-12 text-gray-600 dark:text-gray-300  fill-current" />
             }
             header="Seamless Collaboration"
           >
@@ -87,7 +84,7 @@ export function FeatureTwo() {
             size="lg"
             isIcon
             cover={
-              <ImUnlocked className="h-12 w-12 text-gray-600 dark:text-gray-300  fill-current" />
+              <RiLockUnlockLine className="h-12 w-12 text-gray-600 dark:text-gray-300  fill-current" />
             }
             header="No Lock-in, No Bloat"
           >

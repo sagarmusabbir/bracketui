@@ -52,7 +52,7 @@ const Subscription = () => {
             </p>
           </div>
         ) : (
-          <div className="flex flex-col lg:flex-row items-start justify-between gap-4 lg:gap-12 p-2">
+          <div className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-12 ">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold  text-gray-800 dark:text-gray-200 tracking-tight mb-4">
                 Stay Updated

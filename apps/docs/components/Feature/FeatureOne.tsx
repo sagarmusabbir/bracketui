@@ -26,7 +26,7 @@ export function FeatureOne() {
               href="#"
               className="w-full h-full" // Added full width and height
               cover={
-                <div className="relative  h-60 w-full lg:h-80">
+                <div className="relative  h-52 w-full lg:h-80">
                   <Image
                     src="/website.svg"
                     alt="Enterprise Solutions"
@@ -49,7 +49,7 @@ export function FeatureOne() {
               href="#"
               className="w-full h-full" // Added full width and height
               cover={
-                <div className="relative  h-60 w-full lg:h-80">
+                <div className="relative  h-52 w-full lg:h-80">
                   <Image
                     src="/ui.svg"
                     alt="Professional Teams"
