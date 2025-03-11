@@ -1,5 +1,11 @@
 # @thirdbracket/bracketui
 
+## 3.1.5
+
+### Patch Changes
+
+- [`930046a`](https://github.com/sagarmusabbir/bracketui/commit/930046a99c46d31e04f4718b4a0a972732ed0b92) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Stable-Color&Spacing-Consistent-Design-System
+
 ## 3.1.4
 
 ### Patch Changes
