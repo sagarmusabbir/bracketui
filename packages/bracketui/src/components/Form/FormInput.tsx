@@ -21,7 +21,7 @@ const FormInput: FC<FormInputProps> = ({
         py-2 
         text-sm
         border 
-        rounded-md
+        rounded-lg
         bg-white dark:bg-gray-800
         text-gray-900 dark:text-gray-100
         border-gray-300 dark:border-gray-700

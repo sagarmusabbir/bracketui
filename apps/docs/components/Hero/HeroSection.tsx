@@ -14,7 +14,7 @@ const HeroSection: React.FC = () => {
     text-gray-700 dark:text-gray-300 
     transition-opacity duration-200 ease-in-out text-nowrap
     motion-reduce:transition-none motion-reduce:hover:transform-none 
-    hover:opacity-90 max-w-full"
+    hover:opacity-90 max-w-full tracking-wide"
       >
         <span
           className="mr-2 lg:mr-3 rounded-full 
@@ -43,12 +43,12 @@ const HeroSection: React.FC = () => {
       </a>
 
       {/* Heading */}
-      <h1 className="text-5xl font-extrabold md:text-6xl lg:text-7xl  text-center px-4">
+      <h1 className="text-5xl font-extrabold md:text-6xl lg:text-7xl bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 dark:from-gray-200 dark:via-gray-100 dark:to-gray-200 text-transparent bg-clip-text  text-center px-4 tracking-wide">
         Enterprise Solutions Without&nbsp;the Overhead&nbsp;Cost
       </h1>
 
       {/* Paragraph */}
-      <p className="text-gray-950/50 text-base md:text-lg lg:text-xl dark:text-gray-200/50 text-center px-4 font-light">
+      <p className="text-gray-950/60 text-base md:text-lg lg:text-xl dark:text-gray-200/60 text-center px-4 font-light">
         Everything you'd expect from an agency; resources, expertise, and
         strategy; at a price you'd normally pay a freelancer. Get{" "}
         <span className="font-bold">custom web development</span> and digital
