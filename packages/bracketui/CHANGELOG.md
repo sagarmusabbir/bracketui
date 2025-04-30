@@ -1,5 +1,11 @@
 # @thirdbracket/bracketui
 
+## 3.1.6
+
+### Patch Changes
+
+- [`af535e1`](https://github.com/sagarmusabbir/bracketui/commit/af535e1fc1c25e0d60dec2176bfa6bf3cf395820) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Added theme props to Button, Cards, Footer
+
 ## 3.1.5
 
 ### Patch Changes
