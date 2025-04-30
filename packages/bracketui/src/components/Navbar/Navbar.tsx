@@ -3,7 +3,12 @@
 import { FC, useEffect, useState, useMemo, useCallback } from "react";
 import clsx from "clsx";
 import NavbarContext from "./NavbarContext";
-import { Button } from "../Button";
+
+type Theme = {
+  background?: string;
+  border?: string;
+  mobileMenu?: string;
+};
 
 export interface NavbarProps {
   children?: React.ReactNode;
@@ -12,11 +17,7 @@ export interface NavbarProps {
   mobileBreakpoint?: number;
   enableScrollLock?: boolean;
   position?: "fixed" | "sticky" | "relative" | "absolute";
-  theme?: {
-    background?: string;
-    border?: string;
-    mobileMenu?: string;
-  };
+  theme?: Theme;
 }
 
 const Navbar: FC<NavbarProps> = ({
@@ -26,11 +27,7 @@ const Navbar: FC<NavbarProps> = ({
   mobileBreakpoint = 768,
   enableScrollLock = true,
   position = "fixed",
-  theme = {
-    background: "bg-white dark:bg-gray-950 bg-opacity-80",
-    border: "border-gray-200 dark:border-gray-800",
-    mobileMenu: "bg-white dark:bg-gray-950",
-  },
+  theme,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [desktopNav, setDesktopNav] = useState<React.ReactNode>(null);
@@ -68,18 +65,28 @@ const Navbar: FC<NavbarProps> = ({
     };
   }, [isOpen, mobileBreakpoint, enableScrollLock]);
 
+  const themeClasses = {
+    background: theme?.background || "bg-white dark:bg-gray-950",
+    border: theme?.border || "border-gray-500 border-opacity-20",
+    mobileMenu: theme?.mobileMenu || "bg-white dark:bg-gray-950",
+  };
+
   return (
     <NavbarContext.Provider value={contextValue}>
       <nav
         className={clsx(
           position,
           "top-0 left-0 right-0 z-50 backdrop-blur-md",
-          theme.background,
+          themeClasses.background,
           className
         )}
       >
         <div
-          className={clsx("border-b-[0.5px]", theme.border, containerClassName)}
+          className={clsx(
+            "border-b-[0.5px]",
+            themeClasses.border,
+            containerClassName
+          )}
         >
           <div className="px-6 lg:px-8">
             <div className="flex justify-between h-16 items-center">
@@ -127,7 +134,7 @@ const Navbar: FC<NavbarProps> = ({
       <div
         className={clsx(
           "md:hidden fixed inset-0 z-40",
-          theme.mobileMenu,
+          themeClasses.mobileMenu,
           "transition-transform duration-300 ease-in-out overflow-y-auto",
           { "translate-y-0": isOpen, "-translate-y-full": !isOpen }
         )}

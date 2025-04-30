@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BiArrowToRight } from "react-icons/bi";
 import { RiImageLine, RiShieldLine } from "react-icons/ri";
+import CardGrid from "../../components/Cards";
 
 export default function Page() {
   return (
@@ -30,10 +31,17 @@ export default function Page() {
               <Button size="md" as={Link} href="#">
                 Default Medium
               </Button>
-              <Button size="lg" as={Link} href="#">
+              <Button theme size="lg" as={Link} href="#">
                 Default Large
               </Button>
-              <Button size="xl" as={Link} href="#">
+              <Button
+                theme={{
+                  background: "bg-gradient-to-r from-red-500 to-blue-500",
+                }}
+                size="xl"
+                as={Link}
+                href="#"
+              >
                 Extra Large
               </Button>
             </div>
@@ -75,6 +83,9 @@ export default function Page() {
               </Button>
             </div>
           </div>
+        </section>
+        <section>
+          <CardGrid />
         </section>
         <section>
           <div className="py-8 lg:py-16 mx-auto space-y-8">

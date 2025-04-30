@@ -1,24 +1,5 @@
-// import { Card, Test } from "@thirdbracket/bracketui";
-
-// import { Navbar } from "@thirdbracket/core";
-
 import "./globals.css";
 import localFont from "next/font/local";
-
-// import { Roboto_Flex } from "next/font/google";
-
-// const myFont = Roboto({
-//   subsets: ["latin"],
-
-//   display: "swap",
-//   preload: true,
-// });
-
-// const myFont = localFont({
-//   src: "./Roboto-VariableFont.ttf",
-
-//   display: "swap",
-// });
 
 const roboto = localFont({
   src: [
@@ -87,7 +68,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${roboto.className} antialiased dark:bg-gray-950 dark:text-white`}
+      className={`${roboto.className} antialiased bg-white dark:bg-black dark:text-white text-black`}
       suppressHydrationWarning
     >
       <head>

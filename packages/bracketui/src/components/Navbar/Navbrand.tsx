@@ -23,7 +23,7 @@ const Navbrand: FC<NavbrandProps> = ({
     <a
       href={href}
       className={clsx(
-        "flex items-center gap-2 transition-opacity duration-300 hover:opacity-80",
+        "flex items-center gap-2  hover:opacity-85 transition-opacity motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out",
         className
       )}
     >
@@ -32,7 +32,7 @@ const Navbrand: FC<NavbrandProps> = ({
           <img
             src={logo}
             alt="Brand Logo"
-            className={clsx("h-5 md:h-6  w-auto object-contain")}
+            className={clsx("h-4 md:h-5  w-auto object-contain")}
           />
         ) : (
           logo

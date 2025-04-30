@@ -1,8 +1,9 @@
 // packages/bracketui/src/components/Footer/FooterBrand.tsx
-import { FC } from "react";
+import clsx from "clsx";
+import { FC, ReactElement } from "react";
 
 export interface FooterBrandProps {
-  logo?: string;
+  logo?: string | ReactElement;
   children?: React.ReactNode;
   className?: string;
   socialLinks?: {
@@ -16,19 +17,33 @@ const FooterBrand: FC<FooterBrandProps> = ({
   logo,
   children,
   className = "",
-  socialLinks,
-  copyright,
 }) => {
   return (
-    <div className={`space-y-4 mb-4  ${className}`}>
-      {logo && (
-        <img src={logo} alt="Brand Logo" className="h-6 w-auto dark:invert" />
-      )}
-      {children && (
-        <div className="text-sm text-gray-600 dark:text-gray-500">
-          {children}
-        </div>
-      )}
+    <div className={clsx("space-y-4 mb-4", className)}>
+      <a
+        href="/"
+        className="hover:opacity-85 transition-opacity motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out"
+      >
+        {logo &&
+          (typeof logo === "string" ? (
+            <img
+              src={logo}
+              alt="Brand Logo"
+              className={clsx("h-4 w-auto dark:invert")}
+            />
+          ) : (
+            logo
+          ))}
+      </a>
+
+      <div className="max-w-xs">
+        {children &&
+          (typeof children === "string" ? (
+            <span className={clsx("text-sm text-gray-500 ")}>{children}</span>
+          ) : (
+            children
+          ))}
+      </div>
     </div>
   );
 };

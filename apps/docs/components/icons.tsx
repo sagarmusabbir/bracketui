@@ -1,42 +1,41 @@
 // icons.tsx
 
 export const Logo = () => (
- 
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
     viewBox="0 0 180.74 18"
-    className="h-5 md:h-6  w-auto  "
+    className="h-[18px] md:h-[22px]  w-auto  "
   >
     <defs>
-    {/* Light mode gradient (White) */}
-    <linearGradient
-      id="gradient-light"
-      x1={1.57}
-      x2={4.76}
-      y1={2.41}
-      y2={2.41}
-      gradientTransform="matrix(3.8 0 0 3.8 -206.57 .49)"
-      gradientUnits="userSpaceOnUse"
-    >
-      <stop offset={0.77} stopColor="#fff" />
-      <stop offset={1} stopColor="#fff" stopOpacity={0} />
-    </linearGradient>
+      {/* Light mode gradient (White) */}
+      <linearGradient
+        id="gradient-light"
+        x1={1.57}
+        x2={4.76}
+        y1={2.41}
+        y2={2.41}
+        gradientTransform="matrix(3.8 0 0 3.8 -206.57 .49)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset={0.77} stopColor="#fff" />
+        <stop offset={1} stopColor="#fff" stopOpacity={0} />
+      </linearGradient>
 
-    {/* Dark mode gradient (Gray-950 / Black) */}
-    <linearGradient
-      id="gradient-dark"
-      x1={1.57}
-      x2={4.76}
-      y1={2.41}
-      y2={2.41}
-      gradientTransform="matrix(3.8 0 0 3.8 -206.57 .49)"
-      gradientUnits="userSpaceOnUse"
-    >
-      <stop offset={0.77} stopColor="#0a0a0a" /> {/* Tailwind gray-950 */}
-      <stop offset={1} stopColor="#0a0a0a" stopOpacity={0} />
-    </linearGradient>
-  </defs>
+      {/* Dark mode gradient (Gray-950 / Black) */}
+      <linearGradient
+        id="gradient-dark"
+        x1={1.57}
+        x2={4.76}
+        y1={2.41}
+        y2={2.41}
+        gradientTransform="matrix(3.8 0 0 3.8 -206.57 .49)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset={0.77} stopColor="#0a0a0a" /> {/* Tailwind gray-950 */}
+        <stop offset={1} stopColor="#0a0a0a" stopOpacity={0} />
+      </linearGradient>
+    </defs>
     <path
       // fill="#1f2937"
       className="fill-gray-800 dark:fill-gray-200 "
@@ -56,20 +55,20 @@ export const Logo = () => (
       transform="translate(206.57 -.49)"
     />
 
-  <path
-    fill="url(#gradient-light)"
-    className="dark:hidden"
-    d="m-189.62.89-11.02 3.72.04 10.38 10.62 3.28a2.34 2.34 0 0 0 1.37-1.88l-9.56-3.09.08-7.35 9.5-3.2a2.34 2.34 0 0 0-1.03-1.86z"
-    transform="translate(206.57 -.49)"
-  />
+    <path
+      fill="url(#gradient-light)"
+      className="dark:hidden"
+      d="m-189.62.89-11.02 3.72.04 10.38 10.62 3.28a2.34 2.34 0 0 0 1.37-1.88l-9.56-3.09.08-7.35 9.5-3.2a2.34 2.34 0 0 0-1.03-1.86z"
+      transform="translate(206.57 -.49)"
+    />
 
-  {/* Dark mode gradient fill */}
-  <path
-    fill="url(#gradient-dark)"
-    className="hidden dark:block"
-    d="m-189.62.89-11.02 3.72.04 10.38 10.62 3.28a2.34 2.34 0 0 0 1.37-1.88l-9.56-3.09.08-7.35 9.5-3.2a2.34 2.34 0 0 0-1.03-1.86z"
-    transform="translate(206.57 -.49)"
-  />
+    {/* Dark mode gradient fill */}
+    <path
+      fill="url(#gradient-dark)"
+      className="hidden dark:block"
+      d="m-189.62.89-11.02 3.72.04 10.38 10.62 3.28a2.34 2.34 0 0 0 1.37-1.88l-9.56-3.09.08-7.35 9.5-3.2a2.34 2.34 0 0 0-1.03-1.86z"
+      transform="translate(206.57 -.49)"
+    />
 
     <path
       // fill="#1f2937"

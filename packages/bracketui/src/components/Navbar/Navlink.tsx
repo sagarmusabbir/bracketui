@@ -105,7 +105,7 @@ const Navlink = forwardRef(function Navlink<T extends ElementType = "a">(
     cto,
     onClick, // Extract onClick from props
     theme = {
-      text: "text-gray-800 dark:text-gray-100",
+      text: "text-gray-800 dark:text-gray-200",
       states:
         "focus-within:opacity-100 active:opacity-100 md:hover:opacity-100",
     },
@@ -122,7 +122,7 @@ const Navlink = forwardRef(function Navlink<T extends ElementType = "a">(
     ? "text-xl font-bold py-3 "
     : "text-base md:text-sm font-normal";
 
-  const variantStyles = isDropdownItem ? "opacity-60" : "opacity-70";
+  const variantStyles = isDropdownItem ? "opacity-65" : "opacity-75";
   const themeStyles = clsx(theme.text, theme.states);
 
   const linkClass = clsx(

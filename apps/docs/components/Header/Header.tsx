@@ -220,7 +220,7 @@ const Header: FC = () => {
           <Navlink as={Link} href="/tb">
             Third Bracket
           </Navlink>
-          <Navlink as={Link} href="#">
+          <Navlink as={Link} href="/contact">
             Contact
           </Navlink>
           <ThemeToggle />
@@ -373,7 +373,7 @@ const Header: FC = () => {
             <Navlink as={Link} href="/tb">
               Blog
             </Navlink>
-            <Navlink as={Link} href="#">
+            <Navlink as={Link} href="/contact">
               Contact
             </Navlink>
           </div>

@@ -1,3 +1,4 @@
+// packages/bracketui/src/components/Footer/FooterContext.tsx
 "use client";
 import { createContext, useContext, ReactNode } from "react";
 

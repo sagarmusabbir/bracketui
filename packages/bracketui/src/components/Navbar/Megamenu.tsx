@@ -235,7 +235,7 @@ const Megamenu: FC<MegamenuProps> = ({
   onBack,
   theme = {
     // Match exactly with Navlink's default theme
-    text: "text-gray-800 dark:text-gray-100 text-base md:text-sm",
+    text: "text-gray-800 dark:text-gray-200 text-base md:text-sm",
     states: "focus-within:opacity-100 active:opacity-100 md:hover:opacity-100",
     menu: "bg-white dark:bg-gray-950",
   },
@@ -335,7 +335,7 @@ const Megamenu: FC<MegamenuProps> = ({
     "w-full md:w-auto"
   );
 
-  const variantStyles = isDropdownItem ? "opacity-60 " : "opacity-70 ";
+  const variantStyles = isDropdownItem ? "opacity-65 " : "opacity-75 ";
 
   const buttonClasses = clsx(
     // Base styles
@@ -386,26 +386,10 @@ const Megamenu: FC<MegamenuProps> = ({
         aria-controls="megamenu-content"
       >
         <span>{label}</span>
-        {/* <span className="rotate-180">
-          <svg
-            className="w-4 h-4 mr-2     "
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            <path d="M15 19l-7-7 7-7" />
-          </svg>
-        </span> */}
+
         <svg
           className={clsx(
             "md:hidden transition-transform duration-200 w-4 h-4 fill-none stroke-current stroke-2 -rotate-90"
-            // {
-            //   "fill-current stroke-none": !isDropdownItem,
-            //   "fill-none stroke-current stroke-2": isDropdownItem,
-            //   "rotate-0": isOpen,
-            //   "-rotate-90": !isOpen,
-            // }
           )}
           viewBox="0 0 24 24"
           aria-hidden="true"
@@ -421,34 +405,6 @@ const Megamenu: FC<MegamenuProps> = ({
         role="region"
         aria-label={`${label} megamenu`}
       >
-        {/* Back button header - only show on mobile */}
-        {/* <div
-          className="md:hidden flex  items-center   sticky  top-16  z-20 px-5 py-4  bg-gradient-to-r from-gray-400/10 to-gray-300/10 
-    backdrop-filter backdrop-blur-md tracking-wide leading-none
-      
-    text-gray-600 dark:text-gray-300
-    justify-between
-    transition-all duration-300 ease-in-out text-sm
-    hover:bg-gradient-to-r hover:from-gray-400/15 hover:to-gray-300/15
-    hover:border-gray-300/30"
-        >
-          <button
-            onClick={handleBack}
-            className="flex items-center text-gray-600 dark:text-gray-300"
-          >
-            <svg
-              className="w-4 h-4 mr-3     "
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M15 19l-7-7 7-7" />
-            </svg>
-            <span>Back</span>
-          </button>
-        </div> */}
-
         <div
           className="
     md:hidden flex items-center sticky top-16 z-20 
