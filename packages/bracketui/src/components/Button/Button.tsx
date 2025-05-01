@@ -132,6 +132,7 @@ type ButtonTheme = {
   hoverBackground?: string;
   activeBackground?: string;
   focusRing?: string;
+  text?: string;
 };
 
 export type ButtonProps<T extends ElementType> = {
@@ -174,22 +175,22 @@ const Button = forwardRef(function Button<T extends ElementType = "button">(
 ) {
   // Base styles
   const baseClasses =
-    "inline-flex self-start items-center justify-center font-semibold transition-opacity duration-200 ease-in-out motion-reduce:transition-none whitespace-nowrap motion-reduce:hover:transform-none focus:outline-none border relative rounded-md";
+    "inline-flex self-start items-center justify-center font-medium transition-all duration-300 delay-50 ease-in-out motion-reduce:transition-none whitespace-nowrap motion-reduce:hover:transform-none focus:outline-none border relative rounded-md";
 
   // Variant styles with theme overrides
   const variantButton = outline
     ? clsx(
-        theme?.border || "border-gray-500/40",
-        "text-gray-800 dark:text-gray-200",
+        theme?.border || "border-gray-500/20",
+        theme?.text || "text-gray-800 dark:text-gray-200",
         theme?.hoverBackground ||
-          "[@media(hover:hover)]:hover:bg-gray-200/40 [@media(hover:hover)]:dark:hover:bg-gray-800/30",
+          "[@media(hover:hover)]:hover:bg-gray-500/5 [@media(hover:hover)]:dark:hover:bg-gray-500/10",
         theme?.activeBackground || "active:bg-gray-200 dark:active:bg-gray-800",
         theme?.focusRing || "focus:ring-gray-500"
       )
     : clsx(
         theme?.background || "bg-gray-800 dark:bg-gray-200",
         theme?.border || "border-transparent",
-        "text-gray-200 dark:text-gray-800",
+        theme?.text || "text-gray-50 dark:text-gray-950",
         theme?.hoverBackground || "[@media(hover:hover)]:hover:opacity-90",
         theme?.activeBackground || "active:opacity-80",
         theme?.focusRing || "focus:ring-gray-700 dark:focus:ring-gray-300"
@@ -197,7 +198,7 @@ const Button = forwardRef(function Button<T extends ElementType = "button">(
 
   // Size classes
   const sizeClasses = clsx({
-    "px-3 py-2 h-8 text-xs": size === "xs",
+    "px-3 py-2 h-8 text-xs ": size === "xs",
     "px-4 py-2.5 h-10 text-sm": size === "sm",
     "px-5 py-3 h-12 text-base": size === "md",
     "px-6 py-4 h-14 text-lg": size === "lg",

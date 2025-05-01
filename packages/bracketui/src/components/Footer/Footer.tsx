@@ -7,32 +7,32 @@ import React from "react";
 import FooterContext from "./FooterContext";
 import clsx from "clsx";
 
+type Theme = {
+  background?: string;
+  border?: string;
+};
+
 export interface FooterProps {
   children?: React.ReactNode;
   className?: string;
-  theme?: {
-    background?: string;
-    border?: string;
-  };
+  theme?: Theme;
 }
 
-const Footer: FC<FooterProps> = ({
-  children,
-  className = "",
-  theme = {
-    background: "bg-white dark:bg-gray-950 ",
-    border: "border-gray-200 dark:border-gray-800",
-  },
-}) => {
+const Footer: FC<FooterProps> = ({ children, className = "", theme }) => {
   const [footerBottom, setFooterBottom] = useState<React.ReactNode>(null);
+
+  const themeClasses = {
+    background: theme?.background || "bg-white dark:bg-gray-950",
+    border: theme?.border || "border-gray-500 border-opacity-30",
+  };
   return (
     <FooterContext.Provider value={{ setFooterBottom }}>
       <footer
         className={clsx(
-          "border-t-[0.5px]",
+          "border-t",
           className,
-          theme.background,
-          theme.border
+          themeClasses.background,
+          themeClasses.border
         )}
       >
         <div className="mx-auto px-6 lg:px-8">
@@ -42,7 +42,13 @@ const Footer: FC<FooterProps> = ({
             </div>
           </div>
 
-          <div className="py-4 md:py-8 border-t-[0.5px] border-gray-200 dark:border-gray-800 flex items-center justify-between  mx-auto">
+          <div
+            className={clsx(
+              "py-4 md:py-8 border-t-[0.5px]",
+              themeClasses.border,
+              "flex items-center justify-between  mx-auto"
+            )}
+          >
             {footerBottom}
           </div>
         </div>

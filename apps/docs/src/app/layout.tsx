@@ -1,62 +1,18 @@
 import "./globals.css";
-import localFont from "next/font/local";
+import { Roboto } from "next/font/google";
 
-const roboto = localFont({
-  src: [
-    {
-      path: "./Roboto-Thin.ttf",
-      weight: "100",
-      style: "normal",
-    },
-    {
-      path: "./Roboto-ExtraLight.ttf",
-      weight: "200",
-      style: "normal",
-    },
-    {
-      path: "./Roboto-Light.ttf",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "./Roboto-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "./Roboto-Medium.ttf",
-      weight: "500",
-      style: "italic",
-    },
-    {
-      path: "./Roboto-SemiBold.ttf",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "./Roboto-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "./Roboto-ExtraBold.ttf",
-      weight: "800",
-      style: "normal",
-    },
-    {
-      path: "./Roboto-Black.ttf",
-      weight: "900",
-      style: "normal",
-    },
-  ],
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+  display: "swap",
 });
 
 // import Header from "..npm run dev
 // /../components/Header";
 import { ThemeScript } from "@thirdbracket/bracketui";
-import SiteFooter from "../../components/Footer/Footer";
 
-import Header from "../../components/Header/Header";
+import Header from "../../components/Header";
+import SiteFooter from "../../components/Footer";
 
 // import { Navbar } from "@thirdbracket/core";
 
@@ -68,7 +24,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${roboto.className} antialiased bg-white dark:bg-black dark:text-white text-black`}
+      className={`${roboto.className} antialiased dark:bg-black dark:text-white`}
       suppressHydrationWarning
     >
       <head>
@@ -78,10 +34,10 @@ export default function RootLayout({
         {/* <MegaHeader /> */}
 
         <Header />
-
-        <main className="min-h-screen pt-16 lg:pt-24 dark:bg-gray-950 dark:text-white">
+        <main className="min-h-screen py-8 sm:py-12 md:py-16  bg-white dark:bg-black">
           {children}
         </main>
+
         <SiteFooter />
       </body>
     </html>
