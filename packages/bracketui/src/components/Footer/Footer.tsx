@@ -23,13 +23,13 @@ const Footer: FC<FooterProps> = ({ children, className = "", theme }) => {
 
   const themeClasses = {
     background: theme?.background || "bg-white dark:bg-gray-950",
-    border: theme?.border || "border-gray-500 border-opacity-30",
+    border: theme?.border || "border-gray-200 dark:border-gray-800",
   };
   return (
     <FooterContext.Provider value={{ setFooterBottom }}>
       <footer
         className={clsx(
-          "border-t",
+          "border-t-[0.5px]",
           className,
           themeClasses.background,
           themeClasses.border

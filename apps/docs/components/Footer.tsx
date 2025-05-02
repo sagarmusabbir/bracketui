@@ -21,9 +21,12 @@ const SiteFooter = () => {
       }}
     >
       <FooterSection className="col-span-2 ">
-        <FooterBrand logo={<Logo className="w-auto h-4 dark:invert" />}>
-          Making the web a better place with Third Bracket Solutions.
-        </FooterBrand>
+        <FooterBrand
+          logo={<Logo className="w-auto h-4 dark:invert" />}
+          address="Nowab Manjil, Town Hall Road, Habiganj 3300, Bangladesh"
+          email="hello@thirdbracket.co.uk"
+          phone="+880 1325859992"
+        />
 
         <div className="flex  gap-x-4 justify-start items-center">
           <FooterSocial

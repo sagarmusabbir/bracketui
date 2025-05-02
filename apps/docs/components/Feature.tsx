@@ -136,9 +136,9 @@ export default function CardGrid() {
                     size="lg"
                     theme={{
                       background:
-                        "bg-gradient-primary-dark dark:bg-gradient-primary",
+                        "bg-gradient-primary-dark dark:bg-gradient-primary ",
                       text: "font-light text-primary-500",
-                      border: "border border-opacity-30 border-primary-500",
+                      border: " border-opacity-20 border-primary-500",
                     }}
                     {...props}
                   />

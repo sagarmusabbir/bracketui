@@ -445,7 +445,7 @@ const Card = forwardRef(
 
     const themeClasses = {
       background: theme?.background || "",
-      border: theme?.border || "border border-opacity-30 border-gray-500",
+      border: theme?.border || " border-opacity-30 border-gray-500",
       hover:
         theme?.hover ||
         "[@media(hover:hover)]:hover:border-opacity-70  focus-within:border-opacity-70 active:border-opacity-100",
@@ -460,7 +460,7 @@ const Card = forwardRef(
         {...externalProps}
         {...props}
         className={clsx(
-          "rounded-lg",
+          "rounded-lg border-[0.5px]",
           themeClasses.background,
           themeClasses.border,
           themeClasses.hover,
