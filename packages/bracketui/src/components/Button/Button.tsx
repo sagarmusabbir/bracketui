@@ -180,17 +180,17 @@ const Button = forwardRef(function Button<T extends ElementType = "button">(
   // Variant styles with theme overrides
   const variantButton = outline
     ? clsx(
-        theme?.border || "border-gray-500/20",
+        theme?.border || "border-gray-200 dark:border-gray-800",
         theme?.text || "text-gray-800 dark:text-gray-200",
         theme?.hoverBackground ||
-          "[@media(hover:hover)]:hover:bg-gray-500/5 [@media(hover:hover)]:dark:hover:bg-gray-500/10",
+          "[@media(hover:hover)]:hover:bg-gray-200/30 [@media(hover:hover)]:dark:hover:bg-gray-800/30",
         theme?.activeBackground || "active:bg-gray-200 dark:active:bg-gray-800",
         theme?.focusRing || "focus:ring-gray-500"
       )
     : clsx(
-        theme?.background || "bg-gray-800 dark:bg-gray-200",
+        theme?.background || "bg-gray-950 dark:bg-white",
         theme?.border || "border-transparent",
-        theme?.text || "text-gray-50 dark:text-gray-950",
+        theme?.text || "text-gray-950 dark:text-white",
         theme?.hoverBackground || "[@media(hover:hover)]:hover:opacity-90",
         theme?.activeBackground || "active:opacity-80",
         theme?.focusRing || "focus:ring-gray-700 dark:focus:ring-gray-300"

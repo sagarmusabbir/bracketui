@@ -19,7 +19,7 @@ const FooterSection: FC<FooterSectionProps> = ({
           {title}
         </h3>
       )}
-      <div className="space-y-4">{children}</div>
+      <div className="space-y-3">{children}</div>
     </div>
   );
 };

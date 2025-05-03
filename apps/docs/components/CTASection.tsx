@@ -38,30 +38,12 @@ const CTASection = ({
 
             <div className="flex flex-row gap-4">
               {primary && (
-                <Button
-                  href={primary.href}
-                  size="md"
-                  theme={{
-                    background:
-                      "bg-gradient-primary dark:bg-gradient-primary-dark",
-                    text: "text-accent-50 dark:text-accent-950",
-                  }}
-                >
+                <Button href={primary.href} size="md">
                   {primary.label}
                 </Button>
               )}
               {secondary && (
-                <Button
-                  theme={{
-                    border: "border-primary-500/20 dark:border-primary-500/30",
-                    text: "text-accent-950 dark:text-accent-50",
-                    hoverBackground:
-                      "[@media(hover:hover)]:hover:bg-primary-500/5 [@media(hover:hover)]:dark:hover:bg-primary-500/10",
-                  }}
-                  href={secondary.href}
-                  outline
-                  size="md"
-                >
+                <Button href={secondary.href} outline size="md">
                   {secondary.label}
                 </Button>
               )}

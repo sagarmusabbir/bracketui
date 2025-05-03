@@ -108,28 +108,32 @@ const FooterBrand: FC<FooterBrandProps> = ({
         ))}
 
       {(address || email || phone) && (
-        <div className="text-sm  text-gray-900/60 dark:text-gray-200/40 space-y-1">
-          {address && <p>{address}</p>}
-          {email && (
-            <p>
-              <a
-                href={`mailto:${email}`}
-                className="hover:underline transition-opacity"
-              >
-                {email}
-              </a>
-            </p>
-          )}
-          {phone && (
-            <p>
-              <a
-                href={`tel:${phone}`}
-                className="hover:underline transition-opacity"
-              >
-                {phone}
-              </a>
-            </p>
-          )}
+        <div className="text-sm  text-gray-900/60 dark:text-gray-200/40 ">
+          <>{address && <p>{address}</p>}</>
+          <>
+            {email && (
+              <p>
+                <a
+                  href={`mailto:${email}`}
+                  className="hover:underline transition-opacity"
+                >
+                  {email}
+                </a>
+              </p>
+            )}
+          </>
+          <>
+            {phone && (
+              <p>
+                <a
+                  href={`tel:${phone}`}
+                  className="hover:underline transition-opacity"
+                >
+                  {phone}
+                </a>
+              </p>
+            )}
+          </>
         </div>
       )}
     </div>
