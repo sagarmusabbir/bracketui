@@ -1,5 +1,11 @@
 # @thirdbracket/bracketui
 
+## 3.1.7
+
+### Patch Changes
+
+- [`e23b98c`](https://github.com/sagarmusabbir/bracketui/commit/e23b98ce5379323a5a47171f34a83ec0465eb8f8) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Patch:published-remaining-changes-from-last-changes"
+
 ## 3.1.6
 
 ### Patch Changes
