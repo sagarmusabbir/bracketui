@@ -22,7 +22,7 @@ export default function Home() {
             </code>
           </li>
           <li className="tracking-[-.01em]">
-            Import directly from Save and see your changes instantly.
+            Save and see your changes instantly.
           </li>
           <li className="tracking-[-.01em]">
             The buttons below are built with Bracketui
