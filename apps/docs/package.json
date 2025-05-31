@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
-    "@thirdbracket/bracketui": "*",
+    "bracketui": "*",
     "@thirdbracket/core": "*",
     "@thirdbracket/utils": "*",
     "geist": "^1.3.1",
