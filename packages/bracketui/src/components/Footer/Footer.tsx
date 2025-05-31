@@ -29,7 +29,7 @@ const Footer: FC<FooterProps> = ({ children, className = "", theme }) => {
     <FooterContext.Provider value={{ setFooterBottom }}>
       <footer
         className={clsx(
-          "border-t-[0.5px]",
+          "border-t",
           className,
           themeClasses.background,
           themeClasses.border
@@ -44,7 +44,7 @@ const Footer: FC<FooterProps> = ({ children, className = "", theme }) => {
 
           <div
             className={clsx(
-              "py-4 md:py-8 border-t-[0.5px]",
+              "py-4 md:py-8 border-t",
               themeClasses.border,
               "flex items-center justify-between  mx-auto"
             )}

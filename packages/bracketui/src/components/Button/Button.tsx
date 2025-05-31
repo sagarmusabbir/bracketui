@@ -175,7 +175,7 @@ const Button = forwardRef(function Button<T extends ElementType = "button">(
 ) {
   // Base styles
   const baseClasses =
-    "inline-flex self-start items-center justify-center font-medium transition-all duration-300 delay-50 ease-in-out motion-reduce:transition-none whitespace-nowrap motion-reduce:hover:transform-none focus:outline-none border relative rounded-md";
+    "inline-flex self-start items-center justify-center font-medium transition-all duration-300 delay-50 ease-in-out motion-reduce:transition-none motion-reduce:hover:transform-none whitespace-nowrap  focus:outline-none border relative rounded-md";
 
   // Variant styles with theme overrides
   const variantButton = outline

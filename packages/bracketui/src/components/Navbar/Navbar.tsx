@@ -82,13 +82,9 @@ const Navbar: FC<NavbarProps> = ({
         )}
       >
         <div
-          className={clsx(
-            "border-b-[0.5px]",
-            themeClasses.border,
-            containerClassName
-          )}
+          className={clsx("border-b", themeClasses.border, containerClassName)}
         >
-          <div className="px-6 lg:px-8">
+          <div className="px-4 lg:px-6">
             <div className="flex justify-between h-16 items-center">
               {children}
               <div className="hidden md:flex items-center justify-between space-x-6">

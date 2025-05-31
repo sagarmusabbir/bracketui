@@ -18,7 +18,7 @@ const Container: FC<ContainerProps> = ({
   as: Component = "div",
   fluid = false,
   centered = true,
-  padding = "medium",
+  padding = "small",
 }) => {
   const containerClasses = clsx(
     // Base styles

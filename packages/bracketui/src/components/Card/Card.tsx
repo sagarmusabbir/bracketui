@@ -460,12 +460,12 @@ const Card = forwardRef(
         {...externalProps}
         {...props}
         className={clsx(
-          "rounded-lg border-[0.5px]",
+          "rounded-lg border",
           themeClasses.background,
           themeClasses.border,
           themeClasses.hover,
           "overflow-hidden flex flex-col",
-          "transition-all duration-300 ease-in-out",
+          "transition-all duration-300 ease-in-out   delay-50  motion-reduce:transition-none motion-reduce:hover:transform-none",
           className
         )}
       >
