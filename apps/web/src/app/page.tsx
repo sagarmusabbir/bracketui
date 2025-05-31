@@ -16,20 +16,17 @@ export default function Home() {
         />
         <ol className="list-inside list-decimal text-sm/6  font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
             Import directly from{" "}
             <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
               "@thirdbracket/bracketui"
             </code>
           </li>
-          <li>Save and see your changes instantly.</li>
-          <li>The buttons below are built with BracketUi</li>
+          <li className="tracking-[-.01em]">
+            Import directly from Save and see your changes instantly.
+          </li>
+          <li className="tracking-[-.01em]">
+            The buttons below are built with Bracketui
+          </li>
         </ol>
 
         <div className="flex gap-4 items-center flex-row">
