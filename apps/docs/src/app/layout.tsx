@@ -1,15 +1,18 @@
-// import { Card, Test } from "@thirdbracket/bracketui";
-
-// import { Navbar } from "@thirdbracket/core";
-
 import "./globals.css";
-import { GeistSans } from "geist/font/sans";
+import { Roboto } from "next/font/google";
 
-// import Header from "../../components/Header";
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+  display: "swap",
+});
+
+// import Header from "..npm run dev
+// /../components/Header";
 import { ThemeScript } from "@thirdbracket/bracketui";
-import SiteFooter from "../../components/Footer";
 
-import HeaderWithMegamenu from "../../components/MegaHeader";
+import Header from "../../components/Header";
+import SiteFooter from "../../components/Footer";
 
 // import { Navbar } from "@thirdbracket/core";
 
@@ -21,15 +24,20 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${GeistSans.className}  antialiased dark:bg-gray-950 dark:text-white`}
+      className={`${roboto.className} antialiased dark:bg-black dark:text-white`}
+      suppressHydrationWarning
     >
       <head>
         <ThemeScript />
       </head>
-      <body>
-        <HeaderWithMegamenu />
+      <body suppressHydrationWarning>
+        {/* <MegaHeader /> */}
 
-        <main>{children}</main>
+        <Header />
+        <main className="min-h-screen py-8 sm:py-12 md:py-16  bg-white dark:bg-black">
+          {children}
+        </main>
+
         <SiteFooter />
       </body>
     </html>

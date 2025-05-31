@@ -1,5 +1,65 @@
 # @thirdbracket/bracketui
 
+## 3.1.7
+
+### Patch Changes
+
+- [`e23b98c`](https://github.com/sagarmusabbir/bracketui/commit/e23b98ce5379323a5a47171f34a83ec0465eb8f8) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Patch:published-remaining-changes-from-last-changes"
+
+## 3.1.6
+
+### Patch Changes
+
+- [`af535e1`](https://github.com/sagarmusabbir/bracketui/commit/af535e1fc1c25e0d60dec2176bfa6bf3cf395820) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Added theme props to Button, Cards, Footer
+
+## 3.1.5
+
+### Patch Changes
+
+- [`930046a`](https://github.com/sagarmusabbir/bracketui/commit/930046a99c46d31e04f4718b4a0a972732ed0b92) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Stable-Color&Spacing-Consistent-Design-System
+
+## 3.1.4
+
+### Patch Changes
+
+- [`59063c4`](https://github.com/sagarmusabbir/bracketui/commit/59063c4907b6e50d6bc5ff19ac3586739e07b9ef) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Fix: Spacing for Bracket Container
+
+## 3.1.3
+
+### Patch Changes
+
+- [`abc8c43`](https://github.com/sagarmusabbir/bracketui/commit/abc8c437490a0f0c72fcd83501602b35a0575141) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Fix:Fixed Navbar Spacing
+
+## 3.1.2
+
+### Patch Changes
+
+- [`a269195`](https://github.com/sagarmusabbir/bracketui/commit/a2691958b5f1b722d723d562af8af12183a7a02f) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - patch:Fix mobile menu badge - final
+
+## 3.1.1
+
+### Patch Changes
+
+- [`1c46ba6`](https://github.com/sagarmusabbir/bracketui/commit/1c46ba61b5d56625b430a9660b233ebb7998d012) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - New Components: Tab, Form included.
+
+## 3.1.0
+
+### Minor Changes
+
+- [`e762acf`](https://github.com/sagarmusabbir/bracketui/commit/e762acffaf43545f95a23d1dadb53d7702f52bc4) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - New feature:Next.js Link feature on Navlink
+
+- [`cf04034`](https://github.com/sagarmusabbir/bracketui/commit/cf040344df4e0a0a1b85a78dfdf28da03a40f4b0) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - New features: Next.js Link and its features are available in Navlink. The bracktui package will automatically detect if they are in a Next.js project. Both App and Pages router is supported. This also automatically detects if the href is an external value.
+
+### Patch Changes
+
+- [`d74dfc9`](https://github.com/sagarmusabbir/bracketui/commit/d74dfc9b9adfd08bd40cb3310125c2baf3f06cb9) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - chore:release workflow fixed and make Next.js feature Link available
+
+## 3.0.1
+
+### Patch Changes
+
+- [`cf2df90`](https://github.com/sagarmusabbir/bracketui/commit/cf2df9052b6b240d0cc2999946e6a4c2afeec110) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Navbar layout fix minor
+
 ## 3.0.0
 
 ### Major Changes

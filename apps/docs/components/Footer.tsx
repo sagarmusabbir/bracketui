@@ -1,64 +1,88 @@
 import {
   Footer,
+  FooterBottom,
   FooterBrand,
   FooterLink,
   FooterSection,
   FooterSocial,
+  FooterText,
+  ThemeToggle,
 } from "@thirdbracket/bracketui";
-import { EmailIcon, FacebookIcon, LinkedInIcon, PhoneIcon } from "./icons";
+
+import { RiFacebookLine, RiGithubLine, RiLinkedinLine } from "react-icons/ri";
+import { Logo } from "./Logo";
 
 const SiteFooter = () => {
   return (
-    <Footer>
-      <FooterSection className="col-span-2">
-        <FooterBrand logo="/path.svg">
-          Making the web a better place with beautiful UI components.
-        </FooterBrand>
-        <div className="flex -ml-1.5 gap-x-4 justify-start items-center">
+    <Footer
+      theme={{
+        background: "bg-white dark:bg-black",
+        border: "border-primary-500/30",
+      }}
+    >
+      <FooterSection className="col-span-2 ">
+        <FooterBrand
+          logo={<Logo className="w-auto h-4 dark:invert" />}
+          address="Nowab Manjil, Town Hall Road, Habiganj 3300, Bangladesh"
+          email="hello@thirdbracket.co.uk"
+          phone="+880 1325859992"
+        />
+
+        <div className="flex  gap-x-4 justify-start items-center">
           <FooterSocial
-            href="https://facebook.com/yourpage"
-            icon={<FacebookIcon size={16} />}
+            href="https://www.facebook.com/thirdbracket.co.uk"
+            icon={<RiFacebookLine size={20} />}
             label="Facebook"
           />
           <FooterSocial
-            href="https://linkedin.com/in/yourprofile"
-            icon={<LinkedInIcon size={18} />}
+            href="https://www.linkedin.com/company/thirdbracket"
+            icon={<RiLinkedinLine size={20} />}
             label="LinkedIn"
           />
           <FooterSocial
-            href="mailto:your@email.com"
-            icon={<EmailIcon size={20} />}
-            label="Email"
-          />
-          <FooterSocial
-            href="tel:+1234567890"
-            icon={<PhoneIcon size={18} />}
-            label="Phone"
+            href="https://github.com/thirdbracket-solutions"
+            icon={<RiGithubLine size={20} />}
+            label="Facebook"
           />
         </div>
       </FooterSection>
 
       <FooterSection title="About">
-        <FooterLink href="/components">Components</FooterLink>
-        <FooterLink href="/templates">Templates</FooterLink>
-        <FooterLink href="/pricing">Pricing</FooterLink>
+        <FooterLink href="#">Components</FooterLink>
+        <FooterLink href="#">Templates</FooterLink>
+        <FooterLink href="#">Pricing</FooterLink>
       </FooterSection>
 
       <FooterSection title="Resources">
-        <FooterLink href="/docs">Documentation</FooterLink>
-        <FooterLink href="/guides">Guides</FooterLink>
-        <FooterLink href="/support">Support</FooterLink>
+        <FooterLink href="#">Documentation</FooterLink>
+        <FooterLink href="#">Guides</FooterLink>
+        <FooterLink href="#">Support</FooterLink>
       </FooterSection>
 
       <FooterSection title="Legal">
-        <FooterLink href="/privacy">Privacy Policy</FooterLink>
-        <FooterLink href="/terms">Terms of Service</FooterLink>
+        <FooterLink href="#">Privacy Policy</FooterLink>
+        <FooterLink href="#">Terms of Service</FooterLink>
       </FooterSection>
       <FooterSection title="More">
-        <FooterLink href="/components">Components</FooterLink>
-        <FooterLink href="/templates">Templates</FooterLink>
-        <FooterLink href="/pricing">Pricing</FooterLink>
+        <FooterLink href="#">Components</FooterLink>
+        <FooterLink href="#">Templates</FooterLink>
+        <FooterLink href="#">Pricing</FooterLink>
       </FooterSection>
+      <FooterSection title="Useful Links">
+        <FooterLink
+          href="https://www.business-directory-uk.co.uk/web-design.htm"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          UK Web Designers - Directory of Web Design Companies in the UK
+        </FooterLink>
+      </FooterSection>
+
+      <FooterBottom>
+        <FooterText>© 2025 Third Bracket Solution.</FooterText>
+
+        <ThemeToggle />
+      </FooterBottom>
     </Footer>
   );
 };

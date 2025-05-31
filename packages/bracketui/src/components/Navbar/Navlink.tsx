@@ -1,36 +1,83 @@
+"use client";
+import { forwardRef, ElementType, ComponentPropsWithRef } from "react";
 import clsx from "clsx";
-import { FC, MouseEventHandler } from "react";
+import { useNavbarContext } from "./NavbarContext";
 
-export interface NavlinkProps {
+export type NavlinkProps<T extends ElementType> = {
+  as?: T;
   href?: string;
+  className?: string;
   children?: React.ReactNode;
   isDropdownItem?: boolean;
+  isExternal?: boolean;
+  cto?: boolean;
+  theme?: {
+    text?: string;
+    states?: string;
+  };
+} & ComponentPropsWithRef<T>;
 
-  className?: string;
-}
+const Navlink = forwardRef(function Navlink<T extends ElementType = "a">(
+  {
+    as,
+    className = "",
+    isExternal,
+    isDropdownItem,
+    children,
+    cto,
+    onClick, // Extract onClick from props
+    theme = {
+      text: "text-gray-800 dark:text-gray-200",
+      states:
+        "focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100",
+    },
+    ...props
+  }: NavlinkProps<T>,
+  ref: React.Ref<any>
+) {
+  const { closeMenu } = useNavbarContext();
 
-const Navlink: FC<NavlinkProps> = ({
-  href = "#",
-  children,
-  isDropdownItem,
+  const baseStyles =
+    "transition-all motion-reduce:transition-none motion-reduce:hover:transform-none duration-300 ease-in-out md:flex md:items-center block leading-none py-2 md:py-1";
 
-  className = "",
-}) => {
+  const varientSize = cto
+    ? "text-xl font-bold py-3 "
+    : "text-base md:text-sm font-normal";
+
+  const variantStyles = isDropdownItem
+    ? "opacity-65 dark:opacity-50"
+    : "opacity-75 dark:opacity-60";
+  const themeStyles = clsx(theme.text, theme.states);
+
+  const linkClass = clsx(
+    baseStyles,
+    variantStyles,
+    themeStyles,
+    varientSize,
+    className
+  );
+
+  const Component = as || "a";
+
+  // Handle click with close menu
+  const handleClick = (e: React.MouseEvent) => {
+    closeMenu();
+    if (onClick) {
+      onClick(e);
+    }
+  };
+
   return (
-    <a
-      href={href}
-      className={clsx(
-        "block px-4 py-2 transition-opacity ease-in-out duration-200",
-        "text-gray-950 dark:text-white text-base md:text-sm",
-        isDropdownItem
-          ? "opacity-60 hover:opacity-100"
-          : "opacity-80 hover:opacity-100",
-        className
-      )}
+    <Component
+      ref={ref}
+      className={linkClass}
+      onClick={handleClick} // Add the click handler here
+      {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      {...props}
     >
       {children}
-    </a>
+    </Component>
   );
-};
+});
 
 export default Navlink;

@@ -1,32 +1,24 @@
 // packages/bracketui/src/lib/tailwind/index.ts
 import plugin from "tailwindcss/plugin";
 
-export const bracketui = plugin(function ({ addComponents, theme }) {
-  addComponents({
-    ".bracketui-container": {
-      width: "100%",
-      marginLeft: "auto",
-      marginRight: "auto",
-      paddingLeft: theme("spacing.4"),
-      paddingRight: theme("spacing.4"),
-      "@screen sm": {
-        paddingLeft: theme("spacing.6"),
-        paddingRight: theme("spacing.6"),
-        maxWidth: theme("screens.sm"),
+export const bracketui = plugin(function ({ addUtilities }) {
+  addUtilities({
+    ".hover-opacity": {
+      "@media (hover: hover)": {
+        "&:hover": {
+          opacity: "0.9",
+        },
       },
-      "@screen md": {
-        maxWidth: theme("screens.md"),
-      },
-      "@screen lg": {
-        paddingLeft: theme("spacing.8"),
-        paddingRight: theme("spacing.8"),
-        maxWidth: theme("screens.lg"),
-      },
-      "@screen xl": {
-        maxWidth: theme("screens.xl"),
-      },
-      "@screen 2xl": {
-        maxWidth: theme("screens.2xl"),
+    },
+    ".hover-bg": {
+      "@media (hover: hover)": {
+        "&:hover": {
+          "--tw-bg-opacity": "0.7",
+          backgroundColor: "rgb(243 244 246 / var(--tw-bg-opacity))",
+        },
+        "&.dark &:hover": {
+          backgroundColor: "rgb(17 24 39 / var(--tw-bg-opacity))",
+        },
       },
     },
   });

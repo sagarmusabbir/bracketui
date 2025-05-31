@@ -5,7 +5,7 @@
     "url": "https://github.com/sagarmusabbir/bracketui.git",
     "directory": "packages/bracketui"
   },
-  "version": "3.0.0",
+  "version": "3.1.7",
   "private": false,
   "./components/*": {
     "types": "./dist/components/*/index.d.ts",
@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "clsx": "^2.0.0",
+    "tailwind-merge": "^2.6.0",
     "react": "^18.2.0",
     "react-router": "^7.1.1"
   },

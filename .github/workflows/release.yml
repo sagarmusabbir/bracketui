@@ -5,8 +5,9 @@ on:
     branches:
       - dev
     paths:
-      # - "packages/bracketui/**"
+      - "packages/bracketui/**"
       - ".changeset/**"
+      - ".github/workflows/**"
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
