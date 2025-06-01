@@ -1,5 +1,11 @@
 # @thirdbracket/create-bracketui-app
 
+## 1.0.2
+
+### Patch Changes
+
+- [`abc0db3`](https://github.com/thirdbracket-solutions/bracketui/commit/abc0db3b5ab943e0cf6741b838e91ece139a27fd) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Fix Publish verification workflow
+
 ## 1.0.1
 
 ### Patch Changes
