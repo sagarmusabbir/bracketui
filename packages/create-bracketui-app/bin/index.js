@@ -7,7 +7,7 @@ const fs = require("fs");
 const path = require("path");
 
 const REPO_URL = "https://github.com/thirdbracket-solutions/bracketui.git";
-const BRANCH = "dev"; // change if needed
+const BRANCH = "dev"; // change if needed later
 const TEMPLATE_PATH = "apps/web";
 
 const execCommand = (command, options = {}) => {
