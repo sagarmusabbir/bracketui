@@ -174,10 +174,22 @@ jobs:
           npm view @thirdbracket/bracketui@$PACKAGE_VERSION
 
       - name: Verify CLI Publication
-        if: env.CLI_CHANGED == 'true'
+        if: env.CLI_CHANGED == 'true' && steps.changesets.outputs.published == 'true'
         working-directory: packages/create-bracketui-app
         run: |
           PACKAGE_VERSION=$(node -p "require('./package.json').version")
           echo "Published CLI version: $PACKAGE_VERSION"
-          sleep 15
+
+          for i in {1..5}; do
+            echo "Checking registry... (attempt $i)"
+            if npm view @thirdbracket/create-bracketui-app@$PACKAGE_VERSION > /dev/null 2>&1; then
+              echo "✅ Published package found in registry!"
+              break
+            else
+              echo "⚠️ Not yet available, retrying in 15s..."
+              sleep 15
+            fi
+          done
+
+          # Final check to fail the job if not published after retries
           npm view @thirdbracket/create-bracketui-app@$PACKAGE_VERSION
