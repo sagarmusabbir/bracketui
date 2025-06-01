@@ -2,7 +2,7 @@
   "name": "@thirdbracket/bracketui",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sagarmusabbir/bracketui.git",
+    "url": "git@github.com:thirdbracket-solutions/bracketui.git",
     "directory": "packages/bracketui"
   },
   "version": "3.1.7",

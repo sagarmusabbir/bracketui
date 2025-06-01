@@ -16,16 +16,16 @@ export default function Home() {
         />
         <ol className="list-inside list-decimal text-sm/6  font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2 tracking-[-.01em]">
-            Import directly from{" "}
+            Import components directly from{" "}
             <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
               "@thirdbracket/bracketui"
             </code>
           </li>
-          <li className="tracking-[-.01em]">
+          <li className="tracking-[-.01em] mb-2">
             Save and see your changes instantly.
           </li>
           <li className="tracking-[-.01em]">
-            The buttons below are built with Bracketui
+            These buttons use BracketUI Button components.
           </li>
         </ol>
 

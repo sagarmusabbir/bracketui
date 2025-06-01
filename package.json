@@ -1,5 +1,9 @@
 {
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:thirdbracket-solutions/bracketui.git"
+  },
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
@@ -8,7 +12,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset": "changeset",
     "version": "changeset version",
-    "release": "turbo build --filter=@thirdbracket/bracketui... && changeset publish"
+    "release": "changeset publish"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.0",
