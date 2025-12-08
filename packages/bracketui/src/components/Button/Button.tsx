@@ -164,7 +164,7 @@ const Button = forwardRef(function Button<T extends ElementType = "button">(
     children,
     outline,
     onClick,
-    variant = "default",
+
     size = "md",
     isLoading = false,
     disabled = false,
