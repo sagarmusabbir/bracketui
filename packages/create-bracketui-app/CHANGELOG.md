@@ -1,5 +1,11 @@
 # @thirdbracket/create-bracketui-app
 
+## 1.0.4
+
+### Patch Changes
+
+- [`061a21c`](https://github.com/thirdbracketuk/bracketui/commit/061a21c20f58b9f028d3e26b5b4942bd5b736b99) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Add trusted publisher configuration
+
 ## 1.0.3
 
 ### Patch Changes
