@@ -1,5 +1,11 @@
 # @thirdbracket/bracketui
 
+## 3.1.8
+
+### Patch Changes
+
+- [`5e4e89f`](https://github.com/thirdbracketuk/bracketui/commit/5e4e89f973e4868f962e0fc022828606f4b1b1bc) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Fix npm publishing workflow to comply with December 2025 Trusted Publishing security changes
+
 ## 3.1.7
 
 ### Patch Changes
