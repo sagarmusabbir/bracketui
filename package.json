@@ -2,7 +2,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git@github.com:thirdbracket-solutions/bracketui.git"
+    "url": "https://github.com/sagarmusabbir/bracketui.git"
   },
   "scripts": {
     "build": "turbo build",
