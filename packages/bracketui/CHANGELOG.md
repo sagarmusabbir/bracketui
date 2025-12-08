@@ -1,5 +1,11 @@
 # @thirdbracket/bracketui
 
+## 3.1.9
+
+### Patch Changes
+
+- [`d1a2a23`](https://github.com/thirdbracketuk/bracketui/commit/d1a2a234877016f485d3fd013ac29865dca6b8bb) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Update workflow for npm Trusted Publishing compliance and fix repository URL
+
 ## 3.1.8
 
 ### Patch Changes
