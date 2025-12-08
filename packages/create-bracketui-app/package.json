@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "repository": {
     "type": "git",
-    "url": "git@github.com:thirdbracket-solutions/bracketui.git",
+    "url": "https://github.com/sagarmusabbir/bracketui.git",
     "directory": "packages/create-bracketui-app"
   },
   "main": "index.js",
