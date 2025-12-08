@@ -1,50 +1,53 @@
-# @thirdbracket/bracketui
+# Bracket UI
 
-BracketUI is a flexible and reusable React UI component library built with TailwindCSS. Designed for developers who value simplicity and a utility-first approach, BracketUI provides ready-to-use components like Megamenu, Mobile Nav, ThemeToggle, and more, all optimized for TailwindCSS projects.
+[BracketUI](https://www.npmjs.com/package/@thirdbracket/bracketui) is an open source TailwindCSS based UI component library from [Third Bracket](https://www.thirdbracket.co.uk) designed for React/Next.js projects. This monorepo contains the core component library, CLI tools for bootstrapping new projects, and example applications.
 
----
+## Roadmap
+
+- [x] The main package: *[/bracketui](./packages/bracketui)* which is published as an [Npm Package](https://www.npmjs.com/package/@thirdbracket/bracketui)  
+- [x] Custom CLI tool: *[/create-bracketui-app](./packages/create-bracketui-app)* to quickly bootstrap with [Bracket UI Next.js Template](https://bracketui-web.vercel.app/)  
+- [ ] Official website: *[/website](./apps/web)* showcasing BracketUI components. *Coming Soon*  
+- [ ] Our *[/documentation](./apps/docs)*  *is in progress*.  
+
+
+
 
 ## Features
 
-- *Ready-to-Use Components*: Includes commonly used components for modern web development.
-- *TailwindCSS Integration*: Built primarily for TailwindCSS v3 projects.
-- *Theme Support*: Offers a theme toggle feature that syncs with system preferences and allows manual switching.
-- *Highly Customizable*: Minimalistic design that is easily extendable.
-- *React-Friendly*: All components are optimized for ReactJS and Next.js projects.
+- **Ready-to-Use Components**: Includes commonly used components for modern web development.
+- **TailwindCSS Integration**: Built primarily for TailwindCSS v3 projects.
+- **Theme Support**: Offers a theme toggle feature that syncs with system preferences and allows manual switching.
+- **Highly Customizable**: Easily customize the components in your own way with our component specific *theme* props.
+- **React/Next.js Friendly**: All components are optimized for React and Next.js projects.
 
----
 
-## Table of Contents
+## Getting Started
 
-1. [Installation](#installation)
-2. [Configuration](#configuration)
-3. [Available Components](#available-components)
-4. [Theming](#theming)
-5. [Development and Contribution](#development-and-contribution)
-6. [FAQs](#faqs)
-7. [License](#license)
+Learn how to get started with Bracket UI to use premium react components for free.
 
----
+### Quick Start
 
-## Installation
+The fastest way to get started with BracketUI is to use the CLI:
 
-To use BracketUI in your project, install the package via npm:
+```bash
+npx create-bracketui-app my-app
+```
 
-bash
+### Add to an exisitng React/Next.js project
+
+If you prefer to add BracketUI to an existing project:
+
+#### Install the package
+
+```bash
 npm install @thirdbracket/bracketui
+```
 
+#### Then update your Tailwind CSS configuration with this:
 
----
-
-## Configuration
-
-BracketUI is designed to work seamlessly with TailwindCSS. To configure it, follow these steps:
-
-*Add the Plugin and content path and utilize TailwindCSS dark mode to Your Tailwind Config*  
-   Update your tailwind.config.js as follows:
-   
-   ```
-   const { bracketuiPlugin } = require("@thirdbracket/bracketui");
+```js
+// tailwind.config.js
+const { bracketuiPlugin } = require("@thirdbracket/bracketui");
    
    module.exports = {
      darkMode: "class", // Required for BracketUI's dark/light theming
@@ -57,20 +60,18 @@ BracketUI is designed to work seamlessly with TailwindCSS. To configure it, foll
        // Add other plugins here
      ],
    };
-   ```
-
-
+```
 
 ## Available Components
 
 Here is a list of components currently available in BracketUI:
 
-- *Button*: A customizable button component (<Button />).
-- *Navbar*: A responsive and extendable navigation bar (<Navbar />).
-- *Megamenu*: Multi-level dropdown menu for navigation.
-- *ThemeToggle*: Syncs with the system theme or toggles manually.
-- *Tab*: Tab navigation for organizing content.
-- *Card*: A container component with support for titles, images, and more.
+- *Button*
+- *Navbar*
+- *Megamenu*
+- *ThemeToggle*
+- *Tab*
+- *Card*
 
 ### Example Usage
 
@@ -89,19 +90,22 @@ export default function App() {
 For detailed usage, consult the component documentation (coming soon).
 
 
-## Theming
+## Customization & Theming
 
-BracketUI provides built-in support for a dark/light theme toggle. Documenation is coming soon.
+From day one, BracketUI is built for root level customization with component specific *theme* props. Detailed documenation is coming soon.
 
-### Enabling Theme Toggle
+## Dark Mode
+Bracket UI utilizes TailwindCSS dark mode functionality. You just need to add ```darkMode: "class",``` inside your TailwinCSS config.
 
-The ThemeToggle component can be used to switch between light and dark modes. It supports:
+### Theme Toggle
+
+Bracket UI extends dark mode functionality into an improved feature we call *ThemeToggle*. This component uses *ThemeScript* and custom hook to determine the system/device theme state. After that the component can be used to switch between theme states. It supports:
 - *System Preferences*: Syncs your app theme with the device's default (dark or light).
 - *Manual Toggling*: Allows users to switch themes via the toggle button.
 
 Example:
 
-*1. If you are using Next.js app router first import ThemeScript into your layout.tsx file and then use it inside the head element of the component to enable site wide Theming functionality*  
+*If you are using Next.js app router first import ThemeScript into your layout.tsx file and then use it inside the head element of the component to enable site wide Theming functionality*  
 
 ```
 import { ThemeScript } from "@thirdbracket/bracketui";
@@ -126,7 +130,7 @@ export default function RootLayout({
 }
 ```
 
-*2. After that you can use the ThemeToggle in any part of your website. Here the ThemeToggle is used on a Navbar component.* 
+*After that you can use the ThemeToggle in any part of your website. Here the ThemeToggle is used on a Navbar component.* 
 
 ```
 import { ThemeToggle } from "@thirdbracket/bracketui";
@@ -142,28 +146,36 @@ export default function Navbar() {
 }
 ```
 
-## Development and Contribution
+## Development
 
-### Getting Started
+This project uses [Turborepo](https://turbo.build/repo) for monorepo management and [Changesets](https://github.com/changesets/changesets) for versioning and publishing.
 
-Clone the repository and install dependencies:
-
-```
+- To get started first clone the repository and go to project directory:
+```bash
 git clone https://github.com/sagarmusabbir/bracketui.git
 cd bracketui
-npm install
 ```
+
+- Install dependencies
+```npm install```
+
+- Start development server for all packages
+```npm run dev```
+
+
+## Contribution
+
+We welcome contributions! Open an issue or submit a pull request for fixes, new components, or features.
 
 ### Scripts
 
 - *Development Mode*: ```npm run dev```
 - *Build Package*: ```npm run build```
+- *Create a new changeset*: ```npm run changeset```
 - *Lint Code*: ```npm run lint```
+- *Version packages based on changesets*: ```npm run version```
 - *Release a New Version*: ```npm run release```
 
-### Contribution Guidelines
-
-We welcome contributions! Open an issue or submit a pull request for fixes, new components, or features.
 
 ---
 
