@@ -40,10 +40,10 @@ npm install @thirdbracket/bracketui
 
 BracketUI is designed to work seamlessly with TailwindCSS. To configure it, follow these steps:
 
-1. *Add the Plugin to Your Tailwind Config*  
+*Add the Plugin and content path and utilize TailwindCSS dark mode to Your Tailwind Config*  
    Update your tailwind.config.js as follows:
    
-   js
+   ```
    const { bracketuiPlugin } = require("@thirdbracket/bracketui");
    
    module.exports = {
@@ -57,12 +57,9 @@ BracketUI is designed to work seamlessly with TailwindCSS. To configure it, foll
        // Add other plugins here
      ],
    };
-   
+   ```
 
-2. *Enable Dark Mode*  
-   BracketUI requires darkMode: "class" for theming.
 
----
 
 ## Available Components
 
@@ -79,21 +76,22 @@ Here is a list of components currently available in BracketUI:
 
 To use a BracketUI component like the Button:
 
-jsx
+*Simply Import the Button and then use it anywhere you want*
+
+```
 import { Button } from "@thirdbracket/bracketui";
 
 export default function App() {
-  return <Button className="bg-blue-500 text-white">Click Me</Button>;
+  return <Button href="/path" outline size="md">Click Me</Button>;
 }
-
+```
 
 For detailed usage, consult the component documentation (coming soon).
 
----
 
 ## Theming
 
-BracketUI provides built-in support for a dark/light theme toggle.
+BracketUI provides built-in support for a dark/light theme toggle. Documenation is coming soon.
 
 ### Enabling Theme Toggle
 
@@ -103,21 +101,46 @@ The ThemeToggle component can be used to switch between light and dark modes. It
 
 Example:
 
-jsx
+*1. If you are using Next.js app router first import ThemeScript into your layout.tsx file and then use it inside the head element of the component to enable site wide Theming functionality*  
+
+```
+import { ThemeScript } from "@thirdbracket/bracketui";
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <head>
+        <ThemeScript /> 
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
+      </body>
+    </html>
+  );
+}
+```
+
+*2. After that you can use the ThemeToggle in any part of your website. Here the ThemeToggle is used on a Navbar component.* 
+
+```
 import { ThemeToggle } from "@thirdbracket/bracketui";
 
 export default function Navbar() {
   return (
     <header>
       ...
-      <ThemeToggle />
+      <ThemeToggle /> //The exact ThemeToggle
     </header>
   );
 }
 }
-
-
----
+```
 
 ## Development and Contribution
 
@@ -125,18 +148,18 @@ export default function Navbar() {
 
 Clone the repository and install dependencies:
 
-bash
+```
 git clone https://github.com/sagarmusabbir/bracketui.git
 cd bracketui
 npm install
-
+```
 
 ### Scripts
 
-- *Development Mode*: npm run dev
-- *Build Package*: npm run build
-- *Lint Code*: npm run lint
-- *Release a New Version*: npm run release
+- *Development Mode*: ```npm run dev```
+- *Build Package*: ```npm run build```
+- *Lint Code*: ```npm run lint```
+- *Release a New Version*: ```npm run release```
 
 ### Contribution Guidelines
 
