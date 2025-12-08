@@ -1,4 +1,4 @@
-# name: Release @thirdbracket/bracketui
+# name: Release @thirdbracket packages
 
 # on:
 #   push:
@@ -6,6 +6,7 @@
 #       - dev
 #     paths:
 #       - "packages/bracketui/**"
+#       - "packages/create-bracketui-app/**"
 #       - ".changeset/**"
 #       - ".github/workflows/**"
 
@@ -13,7 +14,7 @@
 
 # jobs:
 #   release:
-#     name: Release
+#     name: Conditional Release
 #     runs-on: ubuntu-latest
 #     permissions:
 #       contents: write
@@ -22,7 +23,7 @@
 #       packages: write
 
 #     steps:
-#       - name: Checkout Repository
+#       - name: Checkout repository
 #         uses: actions/checkout@v4
 #         with:
 #           fetch-depth: 0
@@ -34,49 +35,87 @@
 #           cache: "npm"
 #           registry-url: "https://registry.npmjs.org"
 
-#       - name: Install Dependencies
+#       - name: Update npm
+#         run: npm install -g npm@latest
 
+#       - name: Install dependencies
 #         run: npm ci
 
-#       - name: Build Package
+#       - name: Detect Changes
+#         id: detect
+#         run: |
+#           echo "BRACKETUI_CHANGED=false" >> $GITHUB_ENV
+#           echo "CLI_CHANGED=false" >> $GITHUB_ENV
 
-#         run: npm run build --filter=@thirdbracket/bracketui
+#           git fetch origin dev --depth=2
+#           CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD)
+
+#           if echo "$CHANGED_FILES" | grep -q "^packages/bracketui/"; then
+#             echo "BRACKETUI_CHANGED=true" >> $GITHUB_ENV
+#           fi
+
+#           if echo "$CHANGED_FILES" | grep -q "^packages/create-bracketui-app/"; then
+#             echo "CLI_CHANGED=true" >> $GITHUB_ENV
+#           fi
+
+#       - name: Build bracketui
+#         if: env.BRACKETUI_CHANGED == 'true'
+#         run: npm run build --filter=@thirdbracket/bracketui...
+
+#       - name: Build CLI
+#         if: env.CLI_CHANGED == 'true'
+#         run: npm run build --filter=@thirdbracket/create-bracketui-app...
 
 #       - name: Setup npm authentication
 #         run: |
 #           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
 
-#       - name: Verify Build
-
-#         working-directory: packages/bracketui
-#         run: |
-#           if [ ! -d "dist" ]; then
-#             echo "Build failed - dist directory is missing"
-#             exit 1
-#           fi
-
-#       - name: Create GitHub Release
-#         id: changesets
-#         uses: changesets/action@v1
-#         with:
-#           version: npm run version
-#           publish: npm run release
-#           commit: "chore(release): version @thirdbracket/bracketui"
-#           title: "chore(release): version @thirdbracket/bracketui"
-#           createGithubReleases: true
+#       - name: Version packages
+#         run: npm run version
 #         env:
 #           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+#       - name: Commit version & changelog changes
+#         uses: stefanzweifel/git-auto-commit-action@v4
+#         with:
+#           commit_message: "chore(release): version packages and update changelogs"
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+#       - name: Publish packages
+#         run: npm run release
+#         env:
 #           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-#       - name: Verify Package Publication
-#         if: steps.changesets.outputs.published == 'true'
-
+#       - name: Verify bracketui Publication
+#         if: env.BRACKETUI_CHANGED == 'true'
 #         working-directory: packages/bracketui
 #         run: |
 #           PACKAGE_VERSION=$(node -p "require('./package.json').version")
-#           echo "Verifying publication of version $PACKAGE_VERSION"
-#           sleep 30
+#           echo "Published bracketui version: $PACKAGE_VERSION"
+#           sleep 15
 #           npm view @thirdbracket/bracketui@$PACKAGE_VERSION
+
+#       - name: Verify CLI Publication
+#         if: env.CLI_CHANGED == 'true' && steps.changesets.outputs.published == 'true'
+#         working-directory: packages/create-bracketui-app
+#         run: |
+#           PACKAGE_VERSION=$(node -p "require('./package.json').version")
+#           echo "Published CLI version: $PACKAGE_VERSION"
+
+#           for i in {1..5}; do
+#             echo "Checking registry... (attempt $i)"
+#             if npm view @thirdbracket/create-bracketui-app@$PACKAGE_VERSION > /dev/null 2>&1; then
+#               echo "✅ Published package found in registry!"
+#               break
+#             else
+#               echo "⚠️ Not yet available, retrying in 15s..."
+#               sleep 15
+#             fi
+#           done
+
+#           # Final check to fail the job if not published after retries
+#           npm view @thirdbracket/create-bracketui-app@$PACKAGE_VERSION
 
 name: Release @thirdbracket packages
 
@@ -99,7 +138,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-      id-token: write
+      id-token: write #Required for NPM trsuted publishing security change December 2025
       packages: write
 
     steps:
@@ -114,6 +153,10 @@ jobs:
           node-version: 20
           cache: "npm"
           registry-url: "https://registry.npmjs.org"
+          always-auth: true #Required for NPM trsuted publishing security change December 2025
+
+      - name: Update npm
+        run: npm install -g npm@latest
 
       - name: Install dependencies
         run: npm ci
@@ -143,10 +186,6 @@ jobs:
         if: env.CLI_CHANGED == 'true'
         run: npm run build --filter=@thirdbracket/create-bracketui-app...
 
-      - name: Setup npm authentication
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
-
       - name: Version packages
         run: npm run version
         env:
@@ -160,9 +199,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish packages
-        run: npm run release
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm run release -- --provenance
 
       - name: Verify bracketui Publication
         if: env.BRACKETUI_CHANGED == 'true'
@@ -186,8 +223,8 @@ jobs:
               echo "✅ Published package found in registry!"
               break
             else
-              echo "⚠️ Not yet available, retrying in 15s..."
-              sleep 15
+              echo "⚠️ Not yet available, retrying in 10s..."
+              sleep 10
             fi
           done
 
