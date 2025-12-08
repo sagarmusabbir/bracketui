@@ -1,5 +1,11 @@
 # @thirdbracket/create-bracketui-app
 
+## 1.0.3
+
+### Patch Changes
+
+- [`c638325`](https://github.com/thirdbracketuk/bracketui/commit/c6383258ae7da6fb4edb7ddf2fa39bb9140458f1) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Fix: Update workflow for npm Trusted Publishing compliance and fix repository URL
+
 ## 1.0.2
 
 ### Patch Changes
