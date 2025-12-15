@@ -1,6 +1,6 @@
 {
   "name": "@thirdbracket/bracketui-app",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@thirdbracket/bracketui": "^3.1.10",
+    "@thirdbracket/bracketui": "^3.1.12",
     "next": "15.3.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

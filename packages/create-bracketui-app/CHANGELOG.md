@@ -1,5 +1,11 @@
 # @thirdbracket/create-bracketui-app
 
+## 1.0.8
+
+### Patch Changes
+
+- [`b19fa6c`](https://github.com/thirdbracketuk/bracketui/commit/b19fa6c6ae4804f98682849aa0d161db42398f83) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Add ES6 module support and improve ThemeScript reliability
+
 ## 1.0.7
 
 ### Patch Changes
