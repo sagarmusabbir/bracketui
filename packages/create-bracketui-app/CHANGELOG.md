@@ -1,5 +1,11 @@
 # @thirdbracket/create-bracketui-app
 
+## 1.0.5
+
+### Patch Changes
+
+- [`1e27017`](https://github.com/thirdbracketuk/bracketui/commit/1e270171db6aff79d4f62112f79ab1186a756911) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Fix template to use correct bracketui-app template
+
 ## 1.0.4
 
 ### Patch Changes
