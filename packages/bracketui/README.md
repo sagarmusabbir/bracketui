@@ -1,196 +1,155 @@
-# Bracket UI
+# BracketUI
 
-[BracketUI](https://www.npmjs.com/package/@thirdbracket/bracketui) is an open source TailwindCSS based UI component library from [Third Bracket](https://www.thirdbracket.co.uk) designed for React/Next.js projects. This monorepo contains the core component library, CLI tools for bootstrapping new projects, and example applications.
+[![npm version](https://badge.fury.io/js/@thirdbracket%2Fbracketui.svg)](https://badge.fury.io/js/@thirdbracket%2Fbracketui)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Roadmap
+A modern, accessible React component library built with TailwindCSS. Perfect for Next.js applications with built-in dark mode support and theme management.
 
-- [x] The main package: _[/bracketui](./packages/bracketui)_ which is published as an [Npm Package](https://www.npmjs.com/package/@thirdbracket/bracketui)
-- [x] Custom CLI tool: _[/create-bracketui-app](./packages/create-bracketui-app)_ to quickly bootstrap with [Bracket UI Next.js Template](https://bracketui-web.vercel.app/)
-- [ ] Official website: _[/website](./apps/web)_ showcasing BracketUI components. _Coming Soon_
-- [ ] Our _[/documentation](./apps/docs)_ _is in progress_.
+## ✨ Features
 
-## Features
+- 🎨 **TailwindCSS Integration** - Built-in styling with full customization
+- 🌙 **Dark Mode Support** - Automatic system preference detection + manual toggle
+- ⚡ **Next.js Optimized** - Perfect for App Router and Pages Router
+- 🎯 **TypeScript First** - Full type safety out of the box
+- 📱 **Responsive Design** - Mobile-first approach
+- ♿ **Accessibility** - WCAG compliant components
+- 🎛️ **Highly Customizable** - Theme props for easy customization
 
-- **Ready-to-Use Components**: Includes commonly used components for modern web development.
-- **TailwindCSS Integration**: Built primarily for TailwindCSS v3 projects.
-- **Theme Support**: Offers a theme toggle feature that syncs with system preferences and allows manual switching.
-- **Highly Customizable**: Easily customize the components in your own way with our component specific _theme_ props.
-- **React/Next.js Friendly**: All components are optimized for React and Next.js projects.
+## 🚀 Quick Start
 
-## Getting Started
-
-Learn how to get started with Bracket UI to use premium react components for free.
-
-### Quick Start
-
-The fastest way to get started with BracketUI is to use the CLI:
-
-```bash
-npx create-bracketui-app my-app
-```
-
-### Add to an exisitng React/Next.js project
-
-If you prefer to add BracketUI to an existing project:
-
-#### Install the package
+### Installation
 
 ```bash
 npm install @thirdbracket/bracketui
 ```
 
-#### Then update your Tailwind CSS configuration with this:
+### Setup TailwindCSS
+
+Add BracketUI to your `tailwind.config.js`:
 
 ```js
-// tailwind.config.js
 const { bracketuiPlugin } = require("@thirdbracket/bracketui");
 
 module.exports = {
-  darkMode: "class", // Required for BracketUI's dark/light theming
+  darkMode: "class", // Required for dark mode
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@thirdbracket/bracketui/**/*.{js,ts,jsx,tsx}",
   ],
   plugins: [
     bracketuiPlugin,
-    // Add other plugins here
+    // Your other plugins
   ],
 };
 ```
 
-## Available Components
+### Basic Usage
 
-Here is a list of components currently available in BracketUI:
+```jsx
+import { Button, ThemeToggle, ThemeScript } from "@thirdbracket/bracketui";
 
-- _Button_
-- _Navbar_
-- _Megamenu_
-- _ThemeToggle_
-- _Tab_
-- _Card_
-
-### Example Usage
-
-To use a BracketUI component like the Button:
-
-_Simply Import the Button and then use it anywhere you want_
-
-```
-import { Button } from "@thirdbracket/bracketui";
-
-export default function App() {
-  return <Button href="/path" outline size="md">Click Me</Button>;
-}
-```
-
-For detailed usage, consult the component documentation (coming soon).
-
-## Customization & Theming
-
-From day one, BracketUI is built for root level customization with component specific _theme_ props. Detailed documenation is coming soon.
-
-## Dark Mode
-
-Bracket UI utilizes TailwindCSS dark mode functionality. You just need to add `darkMode: "class",` inside your TailwinCSS config.
-
-### Theme Toggle
-
-Bracket UI extends dark mode functionality into an improved feature we call _ThemeToggle_. This component uses _ThemeScript_ and custom hook to determine the system/device theme state. After that the component can be used to switch between theme states. It supports:
-
-- _System Preferences_: Syncs your app theme with the device's default (dark or light).
-- _Manual Toggling_: Allows users to switch themes via the toggle button.
-
-Example:
-
-_If you are using Next.js app router first import ThemeScript into your layout.tsx file and then use it inside the head element of the component to enable site wide Theming functionality_
-
-```
-import { ThemeScript } from "@thirdbracket/bracketui";
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+// Add ThemeScript to your layout (Next.js App Router)
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
         <ThemeScript />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
         {children}
       </body>
     </html>
   );
 }
-```
 
-_After that you can use the ThemeToggle in any part of your website. Here the ThemeToggle is used on a Navbar component._
-
-```
-import { ThemeToggle } from "@thirdbracket/bracketui";
-
-export default function Navbar() {
+// Use components anywhere
+export default function App() {
   return (
-    <header>
-      ...
-      <ThemeToggle /> //The exact ThemeToggle
-    </header>
+    <div>
+      <Button href="/dashboard" size="lg">
+        Get Started
+      </Button>
+      <ThemeToggle />
+    </div>
   );
 }
-}
 ```
 
-## Development
+## 📦 Available Components
 
-This project uses [Turborepo](https://turbo.build/repo) for monorepo management and [Changesets](https://github.com/changesets/changesets) for versioning and publishing.
+| Component | Description |
+|-----------|-------------|
+| `Button` | Versatile button with multiple variants and sizes |
+| `Card` | Flexible container for content |
+| `Navbar` | Navigation bar with responsive design |
+| `Megamenu` | Advanced dropdown navigation |
+| `Tab` | Tabbed interface component |
+| `ThemeToggle` | Dark/light mode toggle button |
+| `ThemeScript` | Theme initialization script |
 
-- To get started first clone the repository and go to project directory:
+## 🎨 Customization
+
+BracketUI components accept theme props for easy customization:
+
+```jsx
+<Button 
+  theme={{
+    background: "bg-purple-600 hover:bg-purple-700",
+    text: "text-white",
+    border: "border-purple-600"
+  }}
+>
+  Custom Button
+</Button>
+```
+
+## 🌙 Dark Mode
+
+BracketUI includes a complete dark mode solution:
+
+1. **Add ThemeScript** to your layout
+2. **Use ThemeToggle** component anywhere
+3. **Automatic system detection** with manual override
+
+```jsx
+import { ThemeScript, ThemeToggle } from "@thirdbracket/bracketui";
+
+// In your layout
+<head>
+  <ThemeScript />
+</head>
+
+// Anywhere in your app
+<ThemeToggle />
+```
+
+## 🛠️ CLI Tool
+
+Quickly scaffold new projects with BracketUI:
 
 ```bash
-git clone https://github.com/sagarmusabbir/bracketui.git
-cd bracketui
+npx @thirdbracket/create-bracketui-app my-app
+cd my-app
+npm run dev
 ```
 
-- Install dependencies
-  `npm install`
+## 📚 Documentation
 
-- Start development server for all packages
-  `npm run dev`
+- [Component Documentation](https://github.com/sagarmusabbir/bracketui) (Coming Soon)
+- [Examples](https://github.com/sagarmusabbir/bracketui/tree/dev/apps)
+- [Changelog](https://github.com/sagarmusabbir/bracketui/blob/dev/packages/bracketui/CHANGELOG.md)
 
-## Contribution
+## 🤝 Contributing
 
-We welcome contributions! Open an issue or submit a pull request for fixes, new components, or features.
+We welcome contributions! Please see our [Contributing Guide](https://github.com/sagarmusabbir/bracketui/blob/dev/CONTRIBUTING.md).
 
-### Scripts
+## 📄 License
 
-- _Development Mode_: `npm run dev`
-- _Build Package_: `npm run build`
-- _Create a new changeset_: `npm run changeset`
-- _Lint Code_: `npm run lint`
-- _Version packages based on changesets_: `npm run version`
-- _Release a New Version_: `npm run release`
+MIT © [Third Bracket](https://www.thirdbracket.co.uk)
 
----
+## 🔗 Links
 
-## FAQs
-
-### 1. Which versions of TailwindCSS are supported?
-
-BracketUI is developed for TailwindCSS v3. TailwindCSS v4 or higher is currently _not supported_.
-
-### 2. Can I extend or customize the components provided?
-
-Yes! The library is designed to be utility-first. You can easily override the styles of any component using Tailwind classes.
-
-### 3. How can I report a bug or request a feature?
-
-Please create an issue in the [GitHub Repository](https://github.com/sagarmusabbir/bracketui/issues).
-
----
-
-## License
-
-BracketUI is distributed under the MIT License. See the [LICENSE](https://github.com/sagarmusabbir/bracketui/blob/dev/LICENSE) file for more information.
+- [GitHub Repository](https://github.com/sagarmusabbir/bracketui)
+- [npm Package](https://www.npmjs.com/package/@thirdbracket/bracketui)
+- [Third Bracket](https://www.thirdbracket.co.uk)
+- [Report Issues](https://github.com/sagarmusabbir/bracketui/issues)

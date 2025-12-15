@@ -14,10 +14,28 @@
   "bin": {
     "create-bracketui-app": "bin/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "CLI to scafoold Bracket UI apps",
+  "keywords": [
+    "cli",
+    "create-app",
+    "bracketui",
+    "react",
+    "nextjs",
+    "tailwindcss",
+    "scaffold",
+    "boilerplate",
+    "template"
+  ],
+  "author": {
+    "name": "Third Bracket",
+    "email": "hello@thirdbracket.co.uk",
+    "url": "https://www.thirdbracket.co.uk"
+  },
+  "license": "MIT",
+  "description": "CLI tool to scaffold new projects with BracketUI component library",
+  "homepage": "https://github.com/sagarmusabbir/bracketui#readme",
+  "bugs": {
+    "url": "https://github.com/sagarmusabbir/bracketui/issues"
+  },
   "dependencies": {
     "yargs": "^17.7.2"
   },

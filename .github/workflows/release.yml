@@ -110,3 +110,25 @@ jobs:
           done
 
           npm view @thirdbracket/create-bracketui-app@$PACKAGE_VERSION
+
+      - name: Create GitHub Releases
+        run: |
+          # Create GitHub releases for published packages
+          if [ "${{ steps.detect.outputs.bracketui_changed }}" == "true" ]; then
+            BRACKETUI_VERSION=$(node -p "require('./packages/bracketui/package.json').version")
+            echo "Creating GitHub release for BracketUI v$BRACKETUI_VERSION"
+            gh release create "@thirdbracket/bracketui@$BRACKETUI_VERSION" \
+              --title "BracketUI v$BRACKETUI_VERSION" \
+              --notes-file packages/bracketui/CHANGELOG.md \
+              --latest || echo "Release may already exist"
+          fi
+          
+          if [ "${{ steps.detect.outputs.cli_changed }}" == "true" ]; then
+            CLI_VERSION=$(node -p "require('./packages/create-bracketui-app/package.json').version")
+            echo "Creating GitHub release for CLI v$CLI_VERSION"
+            gh release create "@thirdbracket/create-bracketui-app@$CLI_VERSION" \
+              --title "Create BracketUI App v$CLI_VERSION" \
+              --notes-file packages/create-bracketui-app/CHANGELOG.md || echo "Release may already exist"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

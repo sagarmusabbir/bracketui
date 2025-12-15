@@ -27,6 +27,27 @@
   "types": "./dist/index.d.ts",
   "sideEffects": false,
   "license": "MIT",
+  "keywords": [
+    "react",
+    "nextjs",
+    "tailwindcss",
+    "ui-components",
+    "component-library",
+    "typescript",
+    "dark-mode",
+    "theme-toggle",
+    "responsive",
+    "accessibility"
+  ],
+  "author": {
+    "name": "Third Bracket",
+    "email": "hello@thirdbracket.co.uk",
+    "url": "https://www.thirdbracket.co.uk"
+  },
+  "homepage": "https://github.com/sagarmusabbir/bracketui#readme",
+  "bugs": {
+    "url": "https://github.com/sagarmusabbir/bracketui/issues"
+  },
   "files": [
     "dist/**"
   ],
