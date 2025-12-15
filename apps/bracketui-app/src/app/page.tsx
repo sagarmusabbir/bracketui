@@ -1,15 +1,18 @@
 import { Button, ThemeToggle } from "@thirdbracket/bracketui";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center  justify-items-center   min-h-screen p-8 pb-20 gap-16 sm:p-20 bg-white dark:bg-black text-black dark:text-white">
       <main className="flex flex-col gap-[32px] row-start-2 items-center ">
+        {/* Theme Toggle for testing */}
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+        </div>
         <Image
           className="dark:invert"
           src="/logo.svg"
-          alt="Next.js logo"
+          alt="Bracket-UI logo"
           width={375}
           height={103}
           priority
@@ -18,7 +21,7 @@ export default function Home() {
           <li className="mb-2 tracking-[-.01em]">
             Import components directly from{" "}
             <code className="bg-gray-100 text-sm dark:bg-gray-900 px-2 py-1 rounded  font-semibold">
-              "@thirdbracket/bracketui"
+              &quot;@thirdbracket/bracketui&quot;
             </code>
           </li>
           <li className="tracking-[-.01em] mb-2">
@@ -35,10 +38,8 @@ export default function Home() {
             size="md"
             theme={{
               hoverBackground: "[@media(hover:hover)]:hover:opacity-90",
-
               text: "text-white dark:text-black",
             }}
-            // className="!font-medium !text-primary-50 dark:!text-primary-950"
           >
             Get Started
           </Button>
@@ -51,48 +52,48 @@ export default function Home() {
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://www.npmjs.com/package/@thirdbracket/bracketui"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image
             aria-hidden
-            src="/file.svg"
-            alt="File icon"
+            src="/npm.svg"
+            alt="npm icon"
             width={16}
             height={16}
           />
-          Learn
+          npm Package
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://github.com/sagarmusabbir/bracketui"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image
             aria-hidden
-            src="/window.svg"
-            alt="Window icon"
+            src="/github.svg"
+            alt="GitHub icon"
             width={16}
             height={16}
           />
-          Examples
+          GitHub Repo
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://www.thirdbracket.co.uk"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image
             aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
+            src="/tbicon.svg"
+            alt="Third Bracket icon"
             width={16}
             height={16}
           />
-          Go to nextjs.org →
+          Digital Solutions & Beyond →
         </a>
       </footer>
     </div>

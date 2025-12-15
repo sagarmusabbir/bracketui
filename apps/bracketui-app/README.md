@@ -16,7 +16,7 @@ This is a [Next.js](https://nextjs.org) project template showcasing [BracketUI](
 You can use this template directly with our CLI:
 
 ```bash
-npx create-bracketui-app my-app
+npx @thirdbracket/create-bracketui-app my-app
 cd my-app
 npm run dev
 ```
@@ -26,7 +26,7 @@ Or clone this repository and install dependencies:
 ```bash
 # Clone the repository
 git clone https://github.com/thirdbracket-solutions/bracketui.git
-cd bracketui/apps/web
+cd bracketui/apps/bracketui-app
 
 # Install dependencies
 npm install
@@ -59,6 +59,8 @@ The template includes a Tailwind CSS configuration that's already set up for Bra
 
 ```js
 // tailwind.config.js
+const { bracketuiPlugin } = require("@thirdbracket/bracketui");
+
 module.exports = {
   darkMode: "class",
   content: [
@@ -68,7 +70,7 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [bracketuiPlugin],
 };
 ```
 

@@ -6,8 +6,8 @@
 
 - [x] The main package: *[/bracketui](./packages/bracketui)* which is published as an [Npm Package](https://www.npmjs.com/package/@thirdbracket/bracketui)  
 - [x] Custom CLI tool: *[/create-bracketui-app](./packages/create-bracketui-app)* to quickly bootstrap with [Bracket UI Next.js Template](https://bracketui-web.vercel.app/)  
-- [ ] Official website: *[/website](./apps/web)* showcasing BracketUI components. *Coming Soon*  
-- [ ] Our *[/documentation](./apps/docs)*  *is in progress*.  
+- [ ] Official website showcasing BracketUI components. *Coming Soon*  
+- [ ] Documentation website. *Coming Soon*  
 
 
 
@@ -16,6 +16,8 @@
 
 - **Ready-to-Use Components**: Includes commonly used components for modern web development.
 - **TailwindCSS Integration**: Built primarily for TailwindCSS v3 projects.
+- **ES6 Module Support**: Full ES6 import/export support for modern development workflows.
+- **Security First**: Uses latest Next.js versions with security patches (CVE-2025-66478 fixed).
 - **Theme Support**: Offers a theme toggle feature that syncs with system preferences and allows manual switching.
 - **Highly Customizable**: Easily customize the components in your own way with our component specific *theme* props.
 - **React/Next.js Friendly**: All components are optimized for React and Next.js projects.
@@ -30,10 +32,10 @@ Learn how to get started with Bracket UI to use premium react components for fre
 The fastest way to get started with BracketUI is to use the CLI:
 
 ```bash
-npx create-bracketui-app my-app
+npx @thirdbracket/create-bracketui-app my-app
 ```
 
-### Add to an exisitng React/Next.js project
+### Add to an existing React/Next.js project
 
 If you prefer to add BracketUI to an existing project:
 
@@ -43,23 +45,36 @@ If you prefer to add BracketUI to an existing project:
 npm install @thirdbracket/bracketui
 ```
 
-#### Then update your Tailwind CSS configuration with this:
+#### Then update your Tailwind CSS configuration:
 
+**ES6 Modules (Recommended):**
+```js
+// tailwind.config.mjs
+import { bracketuiPlugin } from "@thirdbracket/bracketui";
+
+export default {
+  darkMode: "class", // Required for BracketUI's dark/light theming
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@thirdbracket/bracketui/**/*.{js,ts,jsx,tsx}",
+  ],
+  plugins: [bracketuiPlugin],
+};
+```
+
+**CommonJS (Legacy):**
 ```js
 // tailwind.config.js
 const { bracketuiPlugin } = require("@thirdbracket/bracketui");
-   
-   module.exports = {
-     darkMode: "class", // Required for BracketUI's dark/light theming
-     content: [
-       "./src/**/*.{js,ts,jsx,tsx}",
-       "./node_modules/@thirdbracket/bracketui/**/*.{js,ts,jsx,tsx}",
-     ],
-     plugins: [
-       bracketuiPlugin,
-       // Add other plugins here
-     ],
-   };
+
+module.exports = {
+  darkMode: "class",
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@thirdbracket/bracketui/**/*.{js,ts,jsx,tsx}",
+  ],
+  plugins: [bracketuiPlugin],
+};
 ```
 
 ## Available Components
@@ -79,7 +94,7 @@ To use a BracketUI component like the Button:
 
 *Simply Import the Button and then use it anywhere you want*
 
-```
+```jsx
 import { Button } from "@thirdbracket/bracketui";
 
 export default function App() {
@@ -107,7 +122,7 @@ Example:
 
 *If you are using Next.js app router first import ThemeScript into your layout.tsx file and then use it inside the head element of the component to enable site wide Theming functionality*  
 
-```
+```jsx
 import { ThemeScript } from "@thirdbracket/bracketui";
 
 export default function RootLayout({
@@ -132,7 +147,7 @@ export default function RootLayout({
 
 *After that you can use the ThemeToggle in any part of your website. Here the ThemeToggle is used on a Navbar component.* 
 
-```
+```jsx
 import { ThemeToggle } from "@thirdbracket/bracketui";
 
 export default function Navbar() {

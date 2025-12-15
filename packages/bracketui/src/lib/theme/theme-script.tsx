@@ -69,48 +69,38 @@ import { FC } from "react";
 const ThemeScript: FC = () => {
   const scriptContent = `
     (function() {
-      // Add this block at the very beginning to prevent flash
-      try {
-        const initialTheme = localStorage.getItem('theme') || 'system';
-        const resolvedTheme = initialTheme === 'system' 
-          ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-          : initialTheme;
-        document.documentElement.classList.add(resolvedTheme);
-      } catch {}
+      function getSystemTheme() {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+
+      function setThemeClass(theme) {
+        document.documentElement.classList.remove('light', 'dark');
+        const effectiveTheme = theme === 'system' ? getSystemTheme() : theme;
+        document.documentElement.classList.add(effectiveTheme);
+        console.log('Theme applied:', effectiveTheme, 'from:', theme);
+      }
 
       try {
-        // Check if user has a stored preference
-        let theme = localStorage.getItem('theme');
+        // Get stored theme or default to system
+        let theme = localStorage.getItem('theme') || 'system';
         
-        function getSystemTheme() {
-          return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        }
-
-        function setThemeClass(theme) {
-          document.documentElement.classList.remove('light', 'dark');
-          const effectiveTheme = theme === 'system' ? getSystemTheme() : theme;
-          document.documentElement.classList.add(effectiveTheme);
-        }
-
-        // Set initial theme
-        if (!theme) {
-          theme = 'system';
+        // Apply initial theme immediately
+        setThemeClass(theme);
+        
+        // Store theme if it wasn't stored before
+        if (!localStorage.getItem('theme')) {
           localStorage.setItem('theme', 'system');
         }
-        setThemeClass(theme);
 
-        // Clean up old listener before adding new one
+        // Watch for system theme changes
         const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        const handleChange = (e) => {
+        const handleChange = () => {
           const currentTheme = localStorage.getItem('theme');
           if (currentTheme === 'system') {
             setThemeClass('system');
           }
         };
         
-        // Remove any existing listeners first
-        mediaQuery.removeEventListener('change', handleChange);
-        // Add the new listener
         mediaQuery.addEventListener('change', handleChange);
 
         // Expose theme utilities
@@ -127,8 +117,14 @@ const ThemeScript: FC = () => {
           getTheme: function() {
             return localStorage.getItem('theme') || 'system';
           },
-          getSystemTheme: getSystemTheme
+          getSystemTheme: getSystemTheme,
+          getCurrentTheme: function() {
+            const stored = localStorage.getItem('theme') || 'system';
+            return stored === 'system' ? getSystemTheme() : stored;
+          }
         };
+        
+        console.log('ThemeScript initialized. Current theme:', theme, 'Resolved:', window.theme.getCurrentTheme());
       } catch (e) {
         console.warn('Theme initialization failed:', e);
       }

@@ -9,7 +9,9 @@ A modern, accessible React component library built with TailwindCSS. Perfect for
 
 - 🎨 **TailwindCSS Integration** - Built-in styling with full customization
 - 🌙 **Dark Mode Support** - Automatic system preference detection + manual toggle
-- ⚡ **Next.js Optimized** - Perfect for App Router and Pages Router
+- ⚡ **Next.js Optimized** - Perfect for App Router and Pages Router (Next.js 15.3.7+)
+- 🔒 **Security First** - Latest security patches and vulnerability fixes
+- 📦 **ES6 Module Support** - Modern import/export syntax with full compatibility
 - 🎯 **TypeScript First** - Full type safety out of the box
 - 📱 **Responsive Design** - Mobile-first approach
 - ♿ **Accessibility** - WCAG compliant components
@@ -25,21 +27,33 @@ npm install @thirdbracket/bracketui
 
 ### Setup TailwindCSS
 
-Add BracketUI to your `tailwind.config.js`:
-
+**ES6 Modules (Recommended):**
 ```js
-const { bracketuiPlugin } = require("@thirdbracket/bracketui");
+// tailwind.config.mjs
+import { bracketuiPlugin } from "@thirdbracket/bracketui";
 
-module.exports = {
+export default {
   darkMode: "class", // Required for dark mode
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@thirdbracket/bracketui/**/*.{js,ts,jsx,tsx}",
   ],
-  plugins: [
-    bracketuiPlugin,
-    // Your other plugins
+  plugins: [bracketuiPlugin],
+};
+```
+
+**CommonJS (Legacy):**
+```js
+// tailwind.config.js
+const { bracketuiPlugin } = require("@thirdbracket/bracketui");
+
+module.exports = {
+  darkMode: "class",
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@thirdbracket/bracketui/**/*.{js,ts,jsx,tsx}",
   ],
+  plugins: [bracketuiPlugin],
 };
 ```
 

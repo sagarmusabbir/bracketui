@@ -19,9 +19,11 @@ npm run dev
 
 Your new project comes with:
 
-- ⚡ **Next.js 15** - Latest App Router setup
+- ⚡ **Next.js 15.3.7+** - Latest App Router with security patches
+- 🔒 **Security First** - CVE-2025-66478 vulnerability fixes included
 - 🎨 **BracketUI Components** - Pre-installed and configured
 - 🌙 **Dark Mode** - ThemeScript and ThemeToggle ready to use
+- 📦 **ES6 Module Support** - Modern Tailwind config with ES6 imports
 - 🎯 **TypeScript** - Full type safety
 - 📱 **TailwindCSS** - Utility-first styling
 - 🔧 **ESLint** - Code quality and consistency
@@ -123,12 +125,13 @@ After creating your project:
 ## 🔧 Customization
 
 ### TailwindCSS Configuration
-The generated project includes a pre-configured `tailwind.config.js` with BracketUI plugin:
+The generated project includes a pre-configured `tailwind.config.mjs` with ES6 imports:
 
 ```js
-const { bracketuiPlugin } = require("@thirdbracket/bracketui");
+// tailwind.config.mjs
+import { bracketuiPlugin } from "@thirdbracket/bracketui";
 
-module.exports = {
+export default {
   darkMode: "class",
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
