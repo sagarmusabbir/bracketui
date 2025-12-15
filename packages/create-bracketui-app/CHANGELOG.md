@@ -1,5 +1,11 @@
 # @thirdbracket/create-bracketui-app
 
+## 1.0.7
+
+### Patch Changes
+
+- [`3f5318b`](https://github.com/thirdbracketuk/bracketui/commit/3f5318b864ae443254eb1bddbc34f2426d23c21e) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - add package metadata and professional READMEs
+
 ## 1.0.6
 
 ### Patch Changes

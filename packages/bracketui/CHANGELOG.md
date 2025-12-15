@@ -1,5 +1,11 @@
 # @thirdbracket/bracketui
 
+## 3.1.11
+
+### Patch Changes
+
+- [`3f5318b`](https://github.com/thirdbracketuk/bracketui/commit/3f5318b864ae443254eb1bddbc34f2426d23c21e) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - add package metadata and professional READMEs
+
 ## 3.1.10
 
 ### Patch Changes
