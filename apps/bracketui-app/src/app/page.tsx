@@ -12,11 +12,11 @@ export default function Home() {
         </div>
 
         <Image
-          className="dark:invert"
+          className="dark:invert h-26 w-auto"
           src="/logo.svg"
           alt="Bracket-UI logo"
-          width={950}
-          height={181}
+          width={375}
+          height={103}
           priority
         />
         <ol className="list-inside list-decimal text-sm/6 ]">
