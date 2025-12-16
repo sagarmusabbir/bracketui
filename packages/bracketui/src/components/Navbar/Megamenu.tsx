@@ -1,7 +1,6 @@
 "use client";
-import { FC, useState, useEffect, useCallback, useRef } from "react";
+import { FC, useState, useEffect, useRef } from "react";
 import clsx from "clsx";
-import { Button } from "../Button";
 
 export interface MegamenuProps {
   label: string;
@@ -58,7 +57,7 @@ const Megamenu: FC<MegamenuProps> = ({
     };
   }, [mobileBreakpoint]);
 
-  const timeoutRef = useRef<NodeJS.Timeout>();
+  const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
 
   const handleMouseEnter = () => {
     if (isMobile) return; // Skip if on mobile

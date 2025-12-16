@@ -9,10 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@thirdbracket/bracketui": "^3.1.12",
+    "@thirdbracket/bracketui": "*",
     "next": "15.3.7",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

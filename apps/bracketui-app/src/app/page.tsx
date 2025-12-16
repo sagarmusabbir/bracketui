@@ -1,3 +1,4 @@
+// import { Button, ThemeToggle } from "@thirdbracket/bracketui";
 import { Button, ThemeToggle } from "@thirdbracket/bracketui";
 import Image from "next/image";
 
@@ -9,12 +10,13 @@ export default function Home() {
         <div className="flex items-center gap-2">
           <ThemeToggle />
         </div>
+
         <Image
           className="dark:invert"
           src="/logo.svg"
           alt="Bracket-UI logo"
-          width={375}
-          height={103}
+          width={950}
+          height={181}
           priority
         />
         <ol className="list-inside list-decimal text-sm/6 ]">
@@ -33,7 +35,11 @@ export default function Home() {
         </ol>
 
         <div className="flex gap-4 items-center flex-row">
-          <Button
+          <Button>Get Started</Button>
+          <Button variant="outline" href="./">
+            Documentation
+          </Button>
+          {/* <Button
             href="/"
             size="md"
             theme={{
@@ -46,7 +52,7 @@ export default function Home() {
 
           <Button outline href="./">
             Documentation
-          </Button>
+          </Button> */}
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">

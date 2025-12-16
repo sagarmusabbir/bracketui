@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeScript } from "@thirdbracket/bracketui";
-import Header from "./Header";
-import HeaderWithMegamenu from "./Header2";
-import MegaHeader from "./MegaHeader";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,7 +29,7 @@ export default function RootLayout({
       <head>
         <ThemeScript />
       </head>
-      <Header />
+
       {/* <HeaderWithMegamenu /> */}
       {/* <MegaHeader /> */}
       <body
