@@ -2,29 +2,46 @@
 
 import { tv } from "tailwind-variants";
 import { colors, focus } from "../../lib/system/tokens";
-import { sizes } from "../../lib/system/sizes";
+import { iconSizes, sizes } from "../../lib/system/sizes";
 
 export const buttonStyles = tv({
   base: [
-    "inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium",
+    "inline-flex items-center justify-center whitespace-nowrap font-medium",
+    "relative select-none",
     "transition-all motion-reduce:transition-none",
-    "disabled:opacity-50 disabled:pointer-events-none",
-    focus.ring, // Apply focus ring styles
+    "disabled:pointer-events-none disabled:opacity-50",
+    focus.ring,
   ],
+
   variants: {
     variant: {
       default: `${colors.primary} ${focus.primary}`,
-      destructive: `${colors.destructive} focus-visible:ring-red-500`,
-      outline: `${colors.outline} bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 ${focus.primary}`,
       secondary: `${colors.secondary} ${focus.primary}`,
+      destructive: `${colors.destructive} focus-visible:ring-red-500`,
+      outline: `bg-transparent ${colors.outline} hover:bg-gray-100 dark:hover:bg-gray-800 ${focus.primary}`,
       ghost: `${colors.ghost} ${focus.primary}`,
-      link: "text-gray-900 dark:text-gray-50 underline-offset-4 hover:underline",
+      link: `${colors.link} ${focus.primary}`,
+      flat: `${colors.flat} ${focus.primary}`,
+      glass: `
+        backdrop-blur-2xl saturate-200
+        hover:backdrop-blur-xl
+        ${colors.glass}
+        ${focus.primary}
+      `,
+      avatar: `rounded-full ${colors.primary} ${focus.primary}`,
     },
+
+    /** Text buttons */
     size: {
-      ...sizes, // Use all the predefined sizes
-      icon: "h-10 w-10", // Add a component-specific size
+      ...sizes, // h + px + text-size
+    },
+
+    /** Icon / avatar buttons */
+    iconSize: {
+      ...iconSizes,
     },
   },
+
   defaultVariants: {
     variant: "default",
     size: "md",
