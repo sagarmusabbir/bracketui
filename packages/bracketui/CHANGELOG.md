@@ -1,5 +1,11 @@
 # @thirdbracket/bracketui
 
+## 4.0.0
+
+### Major Changes
+
+- [`aa3363a`](https://github.com/thirdbracketuk/bracketui/commit/aa3363a998b450ce965e8be4e747e6296497733b) Thanks [@sagarmusabbir](https://github.com/sagarmusabbir)! - Redesigned Card component with token-based architecture and fixed theme system
+
 ## 3.1.12
 
 ### Patch Changes
