@@ -45,24 +45,62 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
     ref
   ) => {
     const isClickable = clickable || !!href || !!onClick;
-    const Component = href ? "a" : "div";
     
-    const linkProps = href
-      ? {
-          href,
-          ...(external ? { target: "_blank", rel: "noopener noreferrer" } : {}),
-        }
-      : {};
+    if (href) {
+      return (
+        <a
+          ref={ref as any}
+          href={href}
+          className={cn(
+            cardStyles({ variant, clickable: isClickable }),
+            className
+          )}
+          onClick={onClick as any}
+          {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        >
+          {image && (
+            <div className="w-full overflow-hidden">
+              <img
+                src={image}
+                alt={imageAlt || title || "Card image"}
+                className={cardImageStyles({ size })}
+              />
+            </div>
+          )}
+          
+          <div className={cardContentStyles({ size })}>
+            {category && (
+              <div className={cardContent.category}>
+                {category}
+              </div>
+            )}
+            
+            {title && (
+              <h3 className={cardTitleStyles({ size })}>
+                {title}
+              </h3>
+            )}
+            
+            {description && (
+              <p className={cardDescriptionStyles({ size })}>
+                {description}
+              </p>
+            )}
+            
+            {children}
+          </div>
+        </a>
+      );
+    }
 
     return (
-      <Component
-        ref={ref as any}
+      <div
+        ref={ref}
         className={cn(
           cardStyles({ variant, clickable: isClickable }),
           className
         )}
-        onClick={onClick as any}
-        {...linkProps}
+        onClick={onClick}
       >
         {image && (
           <div className="w-full overflow-hidden">
@@ -95,7 +133,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
           
           {children}
         </div>
-      </Component>
+      </div>
     );
   }
 );
