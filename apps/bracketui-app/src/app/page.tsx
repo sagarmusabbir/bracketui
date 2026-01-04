@@ -39,6 +39,7 @@ export default function Home() {
           <Button variant="outline" href="./">
             Documentation
           </Button>
+
           {/* <Button
             href="/"
             size="md"
